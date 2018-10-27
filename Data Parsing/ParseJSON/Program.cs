@@ -66,14 +66,16 @@ namespace ParseJSON
             public StringBuilder InitializeCsvContent()
             {
                 StringBuilder csvcontent = new StringBuilder();
-                csvcontent.AppendLine("Node A,Node B,Inputs,Outputs");
+                csvcontent.AppendLine("Node A Name,Node B Name,Node A ID,Node B ID");
                 return csvcontent;
             }
 
-            public void AppendToCsv(string nodeA, string nodeB, string inputNodes, string outputNodes)
+            public void AppendToCsv(string nodeAName, string nodeBName, string nodeAId, string nodeBId)
             {
+                string csvLine = string.Format("{0},{1},{2},{3}",
+                    nodeAName, nodeBName, nodeAId, nodeBId);
 
-                csvcontent.AppendLine(nodeA, nodeB, inputNodes, outputNodes);
+                csvcontent.AppendLine(csvLine);
             }
 
             public void ExportCSV()

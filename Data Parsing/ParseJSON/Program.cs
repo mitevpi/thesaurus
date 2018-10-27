@@ -30,11 +30,15 @@ namespace ParseJSON
                 //Console.WriteLine("JOBJECT");
                 //Console.Write(jObject);
 
+                //Define the Nodes into a JToken
                 JToken nodeObject = jObject["Nodes"];
                 JToken connectorObject = jObject["Connectors"];
-
+                //Define Dictionaries for the node and the In / Out
                 Dictionary<string, string> NodeDictionary = new Dictionary<string, string>();
                 Dictionary<string, string> IODictionary = new Dictionary<string, string>();
+
+                //int countfound;
+                //int countnotfound;
 
                 //Console.Write(nodeObject);
 
@@ -88,21 +92,26 @@ namespace ParseJSON
                     string inputID = connector["Start"].ToString();
                     string outputID = connector["End"].ToString();
 
+                    try
+                    {
+                        string NodeAID = IODictionary[inputID];
+                        string NodeBID = IODictionary[outputID];
 
-                    string NodeAID = IODictionary[inputID];
-                    string NodeBID = IODictionary[outputID];
+                        string NodeASig = NodeDictionary[NodeAID];
+                        string NodeBSig = NodeDictionary[NodeBID];
 
-                    string NodeASig = NodeDictionary[NodeAID];
-                    string NodeBSig = NodeDictionary[NodeBID];
+                        Console.WriteLine(NodeAID);
+                        Console.WriteLine(NodeBID);
+                        Console.WriteLine(NodeASig);
+                        Console.WriteLine(NodeBSig);
+                         }
+                    catch (Exception)
+                    {
+                       
+                    }
 
-                    Console.WriteLine(NodeAID);
-                    Console.WriteLine(NodeBID);
-                    Console.WriteLine(NodeASig);
-                    Console.WriteLine(NodeBSig);
-                    //Console.Writeline("************");
 
-                    //List StartList = List<connector["Start"].ToString)>;
-                }
+                    }
 
                 //foreach (JToken thing in nodeObject.Values())
                 //{

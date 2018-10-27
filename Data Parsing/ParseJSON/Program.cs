@@ -21,7 +21,7 @@ namespace ParseJSON
         public static void ParseJSON()
         {
             string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string filePath = dirPath + "\\dynamoTest.json";
+            string filePath = dirPath + "\\Test Graph_PP_02.dyn";
 
             using (StreamReader reader = File.OpenText(filePath))
             {
@@ -31,15 +31,62 @@ namespace ParseJSON
                 //Console.Write(jObject);
 
                 JToken nodeObject = jObject["Nodes"];
-                //Console.WriteLine("NODES");
-               // Console.Write(nodeObject);
+                JToken connectorObject = jObject["Connectors"];
 
-                //Console.Write(jObject["Nodes"][0]);
+                Dictionary<string, string> NodeDictionary =new Dictionary<string, string>();
+                Dictionary<string, string> IODictionary = new Dictionary<string, string>();
 
-                foreach (var test in nodeObject)
+                //Console.Write(nodeObject);
+
+                //Create dictionary for ID and node name
+                //Create dictionary for connector ID and node ID
+                foreach (var node in nodeObject)
                 {
                     //Console.WriteLine(test);
-                    Console.WriteLine(test["FunctionSignature"]);
+                    Console.WriteLine(node["FunctionSignature"]);
+                    string stringnodeID = node["Id"].ToString();
+                    string stringnodename = node["FunctionSignature"].ToString();
+
+                    NodeDictionary.Add(stringnodeID, stringnodename);
+             
+
+                    JToken outputObject = nodeObject["Outputs"];
+
+                    foreach (var output in outputObject)
+                    {
+                        string outputID = output["Id"].ToString();
+                        IODictionary.Add(outputID, stringnodeID);                              
+                    }
+                    JToken inputObject = nodeObject["Inputs"];
+
+                    foreach (var inputs in inputObject)
+                    {
+                        string inputID = inputs["Id"].ToString();
+                        IODictionary.Add(inputID, stringnodeID);
+                    }
+                    Console.WriteLine(IODictionary);
+
+                }
+                
+
+                foreach (var connector in connectorObject)
+                {
+                    string inputID = connector["Start"].ToString();
+                    string outputID = connector["End"].ToString();
+
+                    string NodeAID = IODictionary[ inputID ];
+                    string NodeBID = IODictionary[ outputID ];
+
+                    string NodeASig = NodeDictionary[ NodeAID ];
+                    string NodeBSig = NodeDictionary[ NodeBID ];
+
+                    Console.WriteLine( NodeAID );
+                    Console.WriteLine( NodeBID );
+                    Console.WriteLine( NodeASig );
+                    Console.WriteLine( NodeBSig );
+                    Console.Writeline("************");
+               
+                    //List StartList = List<connector["Start"].ToString)>;
                 }
 
                 //foreach (JToken thing in nodeObject.Values())

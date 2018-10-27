@@ -2057,8 +2057,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1563.1238919666032,
-        "Y": -321.15728352012172
+        "X": 1336.1034202670585,
+        "Y": -366.97845817491196
       },
       {
         "ShowGeometry": true,
@@ -2067,8 +2067,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1235.0540094973619,
-        "Y": -362.24287128289694
+        "X": 1032.1399017378837,
+        "Y": -405.65340954368054
       },
       {
         "ShowGeometry": true,
@@ -2167,8 +2167,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2766.3900221902077,
-        "Y": -377.27560391585973
+        "X": 2758.4885602003233,
+        "Y": -452.90388296189724
       },
       {
         "ShowGeometry": true,
@@ -2187,8 +2187,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1378.3164627617628,
-        "Y": -243.64825017827721
+        "X": 1070.1378991306608,
+        "Y": -292.683606691743
       },
       {
         "ShowGeometry": true,
@@ -2207,8 +2207,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1885.2551804181978,
-        "Y": -455.52409959744188
+        "X": 1833.3312873418138,
+        "Y": -453.26653902890348
       },
       {
         "ShowGeometry": true,
@@ -2217,8 +2217,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1684.8274820975096,
-        "Y": -502.16250338267429
+        "X": 1665.638217264933,
+        "Y": -533.76835134221233
       },
       {
         "ShowGeometry": true,
@@ -2447,8 +2447,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2335.849354025635,
-        "Y": -237.59373022394198
+        "X": 2350.5234977211348,
+        "Y": -282.74494159471055
       },
       {
         "ShowGeometry": true,
@@ -2457,8 +2457,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2210.9349660125476,
-        "Y": -474.740815573073
+        "X": 2103.7008390069723,
+        "Y": -537.95251149214914
       },
       {
         "ShowGeometry": true,
@@ -2467,8 +2467,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2450.6443750418648,
-        "Y": -410.6793195750368
+        "X": 2359.2131720160583,
+        "Y": -503.23930288511252
       },
       {
         "ShowGeometry": true,
@@ -2477,8 +2477,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2122.7871082407564,
-        "Y": -296.60408915548174
+        "X": 2106.9841842609876,
+        "Y": -388.03529218128824
       },
       {
         "ShowGeometry": true,
@@ -2487,8 +2487,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2511.6326796711282,
-        "Y": -247.7350384807695
+        "X": 2513.8902402396666,
+        "Y": -303.04527240996106
       },
       {
         "ShowGeometry": true,
@@ -2572,6 +2572,49 @@
         "Background": "#FFA4E1FF"
       },
       {
+        "Id": "3f1ccc9e02ed43fe81a1aa87eabc808d",
+        "Title": "Load .csv File",
+        "Nodes": [
+          "9cb20c5ba65740aaadc57f7146a7dab4",
+          "539e02cf540647dcb8cc97fc067d314e",
+          "f133a70701534f78aa740a38c917709e"
+        ],
+        "Left": 1022.1399017378837,
+        "Top": -458.65340954368054,
+        "Width": 520.96351852917473,
+        "Height": 233.96980285193752,
+        "FontSize": 36.0,
+        "InitialTop": -405.65340954368054,
+        "InitialHeight": 210.96980285193752,
+        "TextblockHeight": 43.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "ee4050947cf241a8804e54fd4f57acfc",
+        "Title": "Sort CSV data into a data set for ML",
+        "Nodes": [
+          "1a0b4b8c439b4537ae584eb3ca28fb45",
+          "3854b50c997f455992d57adb98702fbc",
+          "622b1f22ac264175a89186d8ed58dbf4",
+          "ab9a975e17554ad99285284f2063242e",
+          "9edcbe77f80d45c38b9d5e058b868660",
+          "22dca2a2a04a4758aa8a8a169cfeca74",
+          "5fa84b635aa04ca287905c0cb9c4e07d",
+          "5d8117f8b3e547d784ff8256be73d9b0",
+          "58cadfeee12c4ba3a70648155cfb05e4",
+          "de5846f033e2466fa12cb0ebbff51bb9"
+        ],
+        "Left": 1655.638217264933,
+        "Top": -590.95251149214914,
+        "Width": 1343.8503429353902,
+        "Height": 427.20756989743859,
+        "FontSize": 36.0,
+        "InitialTop": -537.95251149214914,
+        "InitialHeight": 404.20756989743859,
+        "TextblockHeight": 43.0,
+        "Background": "#FFFFAA45"
+      },
+      {
         "Id": "608c2979872b4accbf5c39031607fad8",
         "Title": "Naive Bayes Classifier",
         "Nodes": [],
@@ -2600,8 +2643,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": -1055.5432738968832,
-    "Y": 689.01794082287063,
-    "Zoom": 0.80070143620586254
+    "X": -1095.9273397577813,
+    "Y": 649.37181047114632,
+    "Zoom": 0.8859120007109359
   }
 }

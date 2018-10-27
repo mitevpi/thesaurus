@@ -27,14 +27,7 @@ namespace ParseJSON
             {
                 // Read JSON file, and get a JToken from it for iterating
                 JObject jObject = (JObject)JToken.ReadFrom(new JsonTextReader(reader));
-                //Console.WriteLine("JOBJECT");
-                //Console.Write(jObject);
-
                 JToken nodeObject = jObject["Nodes"];
-                //Console.WriteLine("NODES");
-               // Console.Write(nodeObject);
-
-                //Console.Write(jObject["Nodes"][0]);
 
                 foreach (var test in nodeObject)
                 {
@@ -57,8 +50,38 @@ namespace ParseJSON
 
                 //Console.WriteLine(jsonQuerySingle.ToString());
             }
-
             Console.Read();
+        }
+
+
+        public class DataParse
+        {
+            public StringBuilder csvcontent;
+
+            public DataParse()
+            {
+                csvcontent = InitializeCsvContent();
+            }
+
+            public StringBuilder InitializeCsvContent()
+            {
+                StringBuilder csvcontent = new StringBuilder();
+                csvcontent.AppendLine("Node A,Node B,Inputs,Outputs");
+                return csvcontent;
+            }
+
+            public void AppendToCsv(string nodeA, string nodeB, string inputNodes, string outputNodes)
+            {
+
+                csvcontent.AppendLine(nodeA, nodeB, inputNodes, outputNodes);
+            }
+
+            public void ExportCSV()
+            {
+                string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                File.WriteAllText(dirPath + "\\graphData.csv", csvcontent.ToString());
+
+            }
 
         }
     }

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,16 +9,9 @@ using Newtonsoft.Json.Linq;
 
 namespace ParseJSON
 {
-    class Program
+    class NestedSample
     {
-        static void Main(string[] args)
-        {
-            ParseJSON();
-            Console.ReadKey();
-
-        }
-
-        public static void ParseJSON()
+        public static void ParseNestedJSON()
         {
             string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             string filePath = dirPath + "\\dynamoTest.json";
@@ -68,8 +61,5 @@ namespace ParseJSON
             }
             Console.Read();
         }
-
-
-        
     }
 }

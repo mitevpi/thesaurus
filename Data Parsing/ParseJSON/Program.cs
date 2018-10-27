@@ -50,14 +50,14 @@ namespace ParseJSON
                     NodeDictionary.Add(stringnodeID, stringnodename);
              
 
-                    JToken outputObject = nodeObject["Outputs"];
+                    JToken outputObject = node["Outputs"];
 
                     foreach (var output in outputObject)
                     {
                         string outputID = output["Id"].ToString();
                         IODictionary.Add(outputID, stringnodeID);                              
                     }
-                    JToken inputObject = nodeObject["Inputs"];
+                    JToken inputObject = node["Inputs"];
 
                     foreach (var inputs in inputObject)
                     {
@@ -84,30 +84,9 @@ namespace ParseJSON
                     Console.WriteLine( NodeBID );
                     Console.WriteLine( NodeASig );
                     Console.WriteLine( NodeBSig );
-                    Console.Writeline("************");
+                    Console.WriteLine("************");
                
                     //List StartList = List<connector["Start"].ToString)>;
-                }
-
-                //foreach (JToken thing in nodeObject.Values())
-                //{
-                //    Console.WriteLine(thing["FunctionSignature"]);
-                //    Console.WriteLine(("________"));
-                //}
-
-                foreach (JToken test in connectorObject)
-                {
-                    string jTokenString = (string)test["Start"];
-                    //Console.WriteLine(jTokenString);
-
-                    IEnumerable<JToken> jsonQueryEnumerable = from JToken thing in nestedTokenList
-                                                              where thing["Id"].ToString() == "0faed7bef55346c681d5ef3030b97440"
-                                                              select thing;
-
-                    Console.WriteLine("SUCCESS??");
-                    Console.WriteLine(jsonQueryEnumerable.First());
-
-                    //Console.WriteLine(jsonQueryEnumerable.First().ToString());
                 }
             }
 

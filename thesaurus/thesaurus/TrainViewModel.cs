@@ -17,6 +17,17 @@ namespace thesaurus
             set { _directoryPath = value; RaisePropertyChanged(() => DirectoryPath); }
         }
 
+        private List<string> _files;
+        public List<string> Files
+        {
+            get
+            {
+                return _files;
+            }
+
+            set { _files = value; }
+        }
+
         public RelayCommand SelectDirectory { get; set; }
 
         public TrainViewModel(TrainModel model)
@@ -38,9 +49,7 @@ namespace thesaurus
             var path = dialog.SelectedPath;
             DirectoryPath = path;
 
-            var files = DirSearch(path);
-
-            //TODO: files is a List<string> now you can parse them all!
+            Files = DirSearch(path);
         }
 
         /// <summary>
@@ -58,7 +67,7 @@ namespace thesaurus
                     foreach (var f in Directory.GetFiles(d))
                     {
                         // Filter out all the DYN files
-                        if(f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase))
+                        if (f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase))
                             files.Add(f);
                     }
                     DirSearch(d);
@@ -66,7 +75,7 @@ namespace thesaurus
 
                 foreach (var f in Directory.GetFiles(path))
                 {
-                    if(f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase))
+                    if (f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase))
                         files.Add(f);
                 }
             }

@@ -1,62 +1,519 @@
-<Workspace Version="1.3.2.2480" X="267.88560697478" Y="151.601373342868" zoom="0.971483000023245" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
-  <NamespaceResolutionMap />
-  <Elements>
-    <CoreNodeModels.Input.Directory guid="477e4728-7686-49ec-99f7-8275753f3569" type="CoreNodeModels.Input.Directory" nickname="Directory Path" x="-244.868522628896" y="125.201622727342" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
-      <System.String>C:\Users\micha\Google Drive\Courses\C2017-010_Dynamo for Busy People\Scripts\Paid\18 - Batch Upgrade Families\Doors</System.String>
-      <HintPath>C:\Users\micha\Google Drive\Courses\C2017-010_Dynamo for Busy People\Scripts\Paid\18 - Batch Upgrade Families\Doors</HintPath>
-    </CoreNodeModels.Input.Directory>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="f7d3f3b3-f958-42d1-b22e-a02a1514ccc2" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Application.OpenDocumentFile" x="783.332839788707" y="171.787437106994" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="..\..\..\..\..\..\AppData\Roaming\Dynamo\Dynamo Revit\1.3\packages\Rhythm\bin\Rhythm.dll" function="RevitElements.Application.OpenDocumentFile@string">
-      <PortInfo index="0" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="e3f36445-6521-4e28-ade5-cb66b5025c89" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Application.CloseDocument" x="1125.4781650027" y="171.612725466473" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="..\..\..\..\..\..\AppData\Roaming\Dynamo\Dynamo Revit\1.3\packages\Rhythm\bin\Rhythm.dll" function="RevitElements.Application.CloseDocument@var,bool">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <CoreNodeModels.Input.BoolSelector guid="97675985-4473-4a5f-a1c2-e7531f221984" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="842.258630526674" y="317.419678811453" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
-      <System.Boolean>True</System.Boolean>
-    </CoreNodeModels.Input.BoolSelector>
-    <CoreNodeModels.Watch guid="ef82e60c-ba24-488b-b09e-47c49bd615c8" type="CoreNodeModels.Watch" nickname="Watch" x="1481.21234014893" y="169.15562290139" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="False" />
-    </CoreNodeModels.Watch>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="40e6d70b-7633-41bb-bd0c-47a1106b8c3c" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Batch.UpgradeFamilies" x="436.567387555404" y="530.416822338625" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="..\..\..\..\..\..\AppData\Roaming\Dynamo\Dynamo Revit\1.3\packages\Rhythm\bin\Rhythm.dll" function="Tools.Batch.UpgradeFamilies@string">
-      <PortInfo index="0" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="2a5debd4-ad4a-4648-a8c5-56a99c43f61f" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Directory.Contents" x="346.494675894295" y="172.808906685104" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.IO.Directory.Contents@var,string">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="True" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <CoreNodeModels.Input.DirectoryObject guid="1a817be5-90f0-4d60-a7f4-5ff44f7ff48b" type="CoreNodeModels.Input.DirectoryObject" nickname="Directory.FromPath" x="104.174884363256" y="171.20465653928" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="False" />
-    </CoreNodeModels.Input.DirectoryObject>
-  </Elements>
-  <Connectors>
-    <Dynamo.Graph.Connectors.ConnectorModel start="477e4728-7686-49ec-99f7-8275753f3569" start_index="0" end="1a817be5-90f0-4d60-a7f4-5ff44f7ff48b" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="f7d3f3b3-f958-42d1-b22e-a02a1514ccc2" start_index="0" end="e3f36445-6521-4e28-ade5-cb66b5025c89" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="e3f36445-6521-4e28-ade5-cb66b5025c89" start_index="0" end="ef82e60c-ba24-488b-b09e-47c49bd615c8" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="97675985-4473-4a5f-a1c2-e7531f221984" start_index="0" end="e3f36445-6521-4e28-ade5-cb66b5025c89" end_index="1" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="2a5debd4-ad4a-4648-a8c5-56a99c43f61f" start_index="0" end="f7d3f3b3-f958-42d1-b22e-a02a1514ccc2" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="1a817be5-90f0-4d60-a7f4-5ff44f7ff48b" start_index="0" end="2a5debd4-ad4a-4648-a8c5-56a99c43f61f" end_index="0" portType="0" />
-  </Connectors>
-  <Notes>
-    <Dynamo.Graph.Notes.NoteModel guid="7c53fdf0-0ddd-42b1-b693-5801d56f9698" text="From Rhythm Package" x="1172.53901001445" y="297.019421542352" />
-    <Dynamo.Graph.Notes.NoteModel guid="abee1275-05ab-4f33-9f8e-2aeee934f950" text="From Rhythm Package" x="837.819586071675" y="263.962050382735" />
-  </Notes>
-  <Annotations>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="4b03111c-a03d-4685-a539-70e787fd10b7" annotationText="Get All Files in Directory" left="-254.868522628896" top="79.2016227273425" width="870.791769951762" height="213.17871252919" fontSize="30" InitialTop="125.201622727342" InitialHeight="153.081203764147" TextblockHeight="36" backgrouund="#FFFFB8D8">
-      <Models ModelGuid="477e4728-7686-49ec-99f7-8275753f3569" />
-      <Models ModelGuid="1a817be5-90f0-4d60-a7f4-5ff44f7ff48b" />
-      <Models ModelGuid="2a5debd4-ad4a-4648-a8c5-56a99c43f61f" />
-    </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="9ddeb9b8-2754-4592-a50c-0f4433138a47" annotationText="Open then Close and Save File" left="773.332839788707" top="125.612725466473" width="578.145325213993" height="259.949810487837" fontSize="30" InitialTop="171.612725466473" InitialHeight="282.341416329096" TextblockHeight="36" backgrouund="#FFA4E1FF">
-      <Models ModelGuid="f7d3f3b3-f958-42d1-b22e-a02a1514ccc2" />
-      <Models ModelGuid="e3f36445-6521-4e28-ade5-cb66b5025c89" />
-      <Models ModelGuid="97675985-4473-4a5f-a1c2-e7531f221984" />
-      <Models ModelGuid="abee1275-05ab-4f33-9f8e-2aeee934f950" />
-      <Models ModelGuid="7c53fdf0-0ddd-42b1-b693-5801d56f9698" />
-    </Dynamo.Graph.Annotations.AnnotationModel>
-  </Annotations>
-  <Presets />
-  <Cameras>
-    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
-  </Cameras>
-</Workspace>
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "DFBP_19_Batch Upgrade Families",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "477e4728768649ec99f78275753f3569",
+      "Name": "Directory Path",
+      "Type": "string",
+      "Value": "C:\\Users\\micha\\Google Drive\\Courses\\C2017-010_Dynamo for Busy People\\Scripts\\Paid\\18 - Batch Upgrade Families\\Doors",
+      "Description": "Allows you to select a directory on the system to get its path"
+    },
+    {
+      "Id": "9767598544734a5fa1c2e7531f221984",
+      "Name": "Boolean",
+      "Type": "boolean",
+      "Value": "true",
+      "Description": "Selection between a true and false."
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.Directory, CoreNodeModels",
+      "HintPath": "C:\\Users\\micha\\Google Drive\\Courses\\C2017-010_Dynamo for Busy People\\Scripts\\Paid\\18 - Batch Upgrade Families\\Doors",
+      "InputValue": "C:\\Users\\micha\\Google Drive\\Courses\\C2017-010_Dynamo for Busy People\\Scripts\\Paid\\18 - Batch Upgrade Families\\Doors",
+      "NodeType": "ExtensionNode",
+      "Id": "477e4728768649ec99f78275753f3569",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b82121fd34ab4861be58001365dc4a9f",
+          "Name": "",
+          "Description": "Directory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a directory on the system to get its path"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Rhythm.Revit.Application.Application.OpenDocumentFile@string,bool,bool",
+      "Id": "f7d3f3b3f95842d1b22ea02a1514ccc2",
+      "Inputs": [
+        {
+          "Id": "2dc8a5505be44faea092ad45d3cbb512",
+          "Name": "filePath",
+          "Description": "The file to obtain document from.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a665efb19d344dabb5060de119c6b252",
+          "Name": "audit",
+          "Description": "Choose whether or not to audit the file upon opening. (Will run slower with this)\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e7dac220b23d48c59ab24cb4179d55cd",
+          "Name": "detachFromCentral",
+          "Description": "Choose whether or not to detach from central upon opening. Only for RVT files.\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "95f4563a1d27420f950cff8c5c6a3b05",
+          "Name": "Document",
+          "Description": "The document.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "This node will open the given file in the background.\n\nApplication.OpenDocumentFile (filePath: string, audit: bool = false, detachFromCentral: bool = false): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Rhythm.Revit.Application.Application.CloseDocument@var,bool",
+      "Id": "e3f3644565214e28ade5cb66b5025c89",
+      "Inputs": [
+        {
+          "Id": "7f4cf48e5f1d4b64954ab39aeb2dbc30",
+          "Name": "document",
+          "Description": "The document to close.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cc3e1701b38741d0b0303d35afaecef5",
+          "Name": "save",
+          "Description": "Do you want to save?\n\nbool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5473d800addb41299476307a342c472c",
+          "Name": "result",
+          "Description": "Did it work?",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "This node will close the given document with the option to save.\n\nApplication.CloseDocument (document: var, save: bool): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "9767598544734a5fa1c2e7531f221984",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6fe1b3c9f1c04ad991624ed8b3adb4d0",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "ef82e60cba24488bb09e47c49bd615c8",
+      "Inputs": [
+        {
+          "Id": "086de048b5f942b09f9dcd790b3052c4",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "95ff2078bd5a484b8f5e6824cb4e301d",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Rhythm.Revit.Tools.Batch.UpgradeFamilies@string",
+      "Id": "40e6d70b763341bbbd0c47a1106b8c3c",
+      "Inputs": [
+        {
+          "Id": "1f9cc94ea8fd4f7bb4e95f8454f71d77",
+          "Name": "directoryPath",
+          "Description": "The directory to read for ALL families. Including subdirectories.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e4e991cc4e91465dad589c8655fc7031",
+          "Name": "Succesfully Upgraded",
+          "Description": "Files that were upgraded.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a10276c8337642d5ba697d7fa8af08ef",
+          "Name": "Not So Succesfully Upgraded",
+          "Description": "Files that were not upgraded.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "This tool with batch upgrade all the Revit families in a directory and delete the backup files that are generated.\n\nBatch.UpgradeFamilies (directoryPath: string): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.FileSystem.GetDirectoryContents@var,string,bool",
+      "Id": "2a5debd4ad4a4648a8c556a99c43f61f",
+      "Inputs": [
+        {
+          "Id": "686f9609c4244e459ecf8c497deb0986",
+          "Name": "directory",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c3186c7c3a2d4ddcb3e4d9e51dfb0cfc",
+          "Name": "searchString",
+          "Description": "string\nDefault value : \"*.*\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b83e9c9d54434152b75782baca60b33c",
+          "Name": "includeSubdirectories",
+          "Description": "bool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "86c18bf8f5554a8e84022a8af9bcee61",
+          "Name": "files",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "be897d8d6e01491990cdaaa0151b4650",
+          "Name": "directories",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "FileSystem.GetDirectoryContents (directory: var, searchString: string = \"*.*\", includeSubdirectories: bool = false): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DirectoryObject, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "1a817be590f04d60a7f45ff44f7ff48b",
+      "Inputs": [
+        {
+          "Id": "ce6f0ed87c764230ac0e0d2d52de7ef0",
+          "Name": "path",
+          "Description": "Path to the directory.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8e43f39345f84bb59c8a1038bdd738d3",
+          "Name": "directory",
+          "Description": "Directory object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a directory object from a path"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "b82121fd34ab4861be58001365dc4a9f",
+      "End": "ce6f0ed87c764230ac0e0d2d52de7ef0",
+      "Id": "afbaee3e94b945eebc32b82240a88d56"
+    },
+    {
+      "Start": "95f4563a1d27420f950cff8c5c6a3b05",
+      "End": "7f4cf48e5f1d4b64954ab39aeb2dbc30",
+      "Id": "230a4103dfc54c0787fd18759b9d91df"
+    },
+    {
+      "Start": "5473d800addb41299476307a342c472c",
+      "End": "086de048b5f942b09f9dcd790b3052c4",
+      "Id": "9b0f24f5e1f847cc81b1bc478d603740"
+    },
+    {
+      "Start": "6fe1b3c9f1c04ad991624ed8b3adb4d0",
+      "End": "cc3e1701b38741d0b0303d35afaecef5",
+      "Id": "1c9d7af0ebad45fc85a7abda237c12b4"
+    },
+    {
+      "Start": "86c18bf8f5554a8e84022a8af9bcee61",
+      "End": "2dc8a5505be44faea092ad45d3cbb512",
+      "Id": "5c2c018b4952478bb156e9a010dbcea0"
+    },
+    {
+      "Start": "8e43f39345f84bb59c8a1038bdd738d3",
+      "End": "686f9609c4244e459ecf8c497deb0986",
+      "Id": "9a2f3dadd31448be94cb71bc3d5f30c7"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "Id": "477e4728768649ec99f78275753f3569",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Name": "Directory Path",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": -244.868522628896,
+        "Y": 125.201622727342
+      },
+      {
+        "Id": "f7d3f3b3f95842d1b22ea02a1514ccc2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Application.OpenDocumentFile",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 783.332839788707,
+        "Y": 171.787437106994
+      },
+      {
+        "Id": "e3f3644565214e28ade5cb66b5025c89",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Application.CloseDocument",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1125.4781650027,
+        "Y": 171.612725466473
+      },
+      {
+        "Id": "9767598544734a5fa1c2e7531f221984",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Name": "Boolean",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 842.258630526674,
+        "Y": 317.419678811453
+      },
+      {
+        "Id": "ef82e60cba24488bb09e47c49bd615c8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Watch",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1481.21234014893,
+        "Y": 169.15562290139
+      },
+      {
+        "Id": "40e6d70b763341bbbd0c47a1106b8c3c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Batch.UpgradeFamilies",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 436.567387555404,
+        "Y": 530.416822338625
+      },
+      {
+        "Id": "2a5debd4ad4a4648a8c556a99c43f61f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "FileSystem.GetDirectoryContents",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 346.494675894295,
+        "Y": 172.808906685104
+      },
+      {
+        "Id": "1a817be590f04d60a7f45ff44f7ff48b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Directory.FromPath",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 104.174884363256,
+        "Y": 171.20465653928
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "4b03111ca03d4685a53970e787fd10b7",
+        "Title": "Get All Files in Directory",
+        "Nodes": [
+          "477e4728768649ec99f78275753f3569",
+          "1a817be590f04d60a7f45ff44f7ff48b",
+          "2a5debd4ad4a4648a8c556a99c43f61f"
+        ],
+        "Left": -254.868522628896,
+        "Top": 79.201622727342,
+        "Width": 926.69653185652442,
+        "Height": 238.607283957762,
+        "FontSize": 30.0,
+        "InitialTop": 125.201622727342,
+        "InitialHeight": 153.081203764147,
+        "TextblockHeight": 36.0,
+        "Background": "#FFFFB8D8"
+      },
+      {
+        "Id": "9ddeb9b827544592a50c0f4433138a47",
+        "Title": "Open then Close and Save File",
+        "Nodes": [
+          "f7d3f3b3f95842d1b22ea02a1514ccc2",
+          "e3f3644565214e28ade5cb66b5025c89",
+          "9767598544734a5fa1c2e7531f221984",
+          "abee127505ab4f339f8e2aeee934f950",
+          "7c53fdf00ddd42b1b6935801d56f9698"
+        ],
+        "Left": 773.332839788707,
+        "Top": 125.612725466473,
+        "Width": 578.145325213993,
+        "Height": 259.47362001164669,
+        "FontSize": 30.0,
+        "InitialTop": 171.612725466473,
+        "InitialHeight": 282.341416329096,
+        "TextblockHeight": 36.0,
+        "Background": "#FFA4E1FF"
+      },
+      {
+        "Id": "7c53fdf00ddd42b1b6935801d56f9698",
+        "Title": "From Rhythm Package",
+        "Nodes": [],
+        "Left": 1172.53901001445,
+        "Top": 297.019421542352,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "abee127505ab4f339f8e2aeee934f950",
+        "Title": "From Rhythm Package",
+        "Nodes": [],
+        "Left": 837.819586071675,
+        "Top": 263.962050382735,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 267.88560697478,
+    "Y": 151.601373342868,
+    "Zoom": 0.971483000023245
+  }
+}

@@ -10,10 +10,10 @@ using ParseJSON;
 
 namespace thesaurus
 {
-    class ParseJSON
+    class ParseDYN
     {
 
-        public static void ParseDYN(string dirPath)
+        public static void ParseDynData(string dirPath)
         {
             // DEFINE GLOBALS
             //string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);

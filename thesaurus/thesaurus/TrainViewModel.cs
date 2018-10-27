@@ -9,6 +9,7 @@ namespace thesaurus
 {
     public class TrainViewModel : ViewModelBase
     {
+        public TrainModel Model { get; set; }
         private string _directoryPath;
         public string DirectoryPath
         {
@@ -18,8 +19,10 @@ namespace thesaurus
 
         public RelayCommand SelectDirectory { get; set; }
 
-        public TrainViewModel()
+        public TrainViewModel(TrainModel model)
         {
+            Model = model;
+
             SelectDirectory = new RelayCommand(OnSelectDirectory);
         }
 
@@ -29,7 +32,7 @@ namespace thesaurus
             {
                 ShowNewFolderButton = false
             };
-            //var result = dialog.ShowDialog();
+            var unused = dialog.ShowDialog();
             if (string.IsNullOrEmpty(dialog.SelectedPath)) return;
 
             var path = dialog.SelectedPath;
@@ -40,7 +43,12 @@ namespace thesaurus
             //TODO: files is a List<string> now you can parse them all!
         }
 
-        private List<string> DirSearch(string path)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        private static List<string> DirSearch(string path)
         {
             var files = new List<string>();
             try
@@ -50,15 +58,21 @@ namespace thesaurus
                     foreach (var f in Directory.GetFiles(d))
                     {
                         // Filter out all the DYN files
-                        if(f.Contains("DYN"))
+                        if(f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase))
                             files.Add(f);
                     }
                     DirSearch(d);
                 }
+
+                foreach (var f in Directory.GetFiles(path))
+                {
+                    if(f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase))
+                        files.Add(f);
+                }
             }
-            catch (System.Exception excpt)
+            catch (Exception e)
             {
-                Console.WriteLine(excpt.Message);
+                // ignore 
                 return new List<string>();
             }
 

@@ -9,8 +9,11 @@ namespace thesaurus
 {
     public class SuggestionsViewModel : ViewModelBase
     {
-        public SuggestionsViewModel()
+        public SuggestionsModel Model { get; set; }
+
+        public SuggestionsViewModel(SuggestionsModel model)
         {
+            Model = model;
         }
     }
 }

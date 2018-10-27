@@ -36,7 +36,8 @@ namespace thesaurus
             _thesaurusTrainMenuItem.ToolTip = new ToolTip { Content = "Whatever description we use..." };
             _thesaurusTrainMenuItem.Click += (sender, args) =>
             {
-                var viewModel = new TrainViewModel();
+                var m = new TrainModel();
+                var viewModel = new TrainViewModel(m);
                 var window = new TrainView
                 {
                     DataContext = viewModel,
@@ -56,7 +57,8 @@ namespace thesaurus
             _thesaurusShowHideMenuItem.ToolTip = new ToolTip { Content = "Whatever description we use..." };
             _thesaurusShowHideMenuItem.Click += (sender, args) =>
             {
-                var viewModel = new SuggestionsViewModel();
+                var m = new SuggestionsModel();
+                var viewModel = new SuggestionsViewModel(m);
                 var window = new SuggestionsView
                 {
                     DataContext = viewModel,

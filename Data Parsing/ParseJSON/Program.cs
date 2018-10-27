@@ -45,26 +45,40 @@ namespace ParseJSON
                     //Console.WriteLine(test);
                     //Console.WriteLine(node["FunctionSignature"]);
                     string stringnodeID = node["Id"].ToString();
-                    string stringnodename = node["FunctionSignature"].ToString();
 
-                    NodeDictionary.Add(stringnodeID, stringnodename);
-             
+                    string stringnodename = "NONE";
 
-                    JToken outputObject = node["Outputs"];
-
-                    foreach (var output in outputObject)
+                    try
                     {
-                        string outputID = output["Id"].ToString();
-                        IODictionary.Add(outputID, stringnodeID);                              
+                        stringnodename = node["FunctionSignature"].ToString();
+                        Console.WriteLine(stringnodename);
                     }
-                    JToken inputObject = node["Inputs"];
-
-                    foreach (var inputs in inputObject)
+                    catch
                     {
-                        string inputID = inputs["Id"].ToString();
-                        IODictionary.Add(inputID, stringnodeID);
+                        Console.WriteLine("MISSING FUNCTION SIGNATURE");
                     }
-                    //Console.WriteLine(IODictionary);
+
+                    if (stringnodename != "NONE")
+                    {
+                        NodeDictionary.Add(stringnodeID, stringnodename);
+
+
+                        JToken outputObject = node["Outputs"];
+
+                        foreach (var output in outputObject)
+                        {
+                            string outputID = output["Id"].ToString();
+                            IODictionary.Add(outputID, stringnodeID);
+                        }
+                        JToken inputObject = node["Inputs"];
+
+                        foreach (var inputs in inputObject)
+                        {
+                            string inputID = inputs["Id"].ToString();
+                            IODictionary.Add(inputID, stringnodeID);
+                        }
+                        //Console.WriteLine(IODictionary);
+                    }
 
                 }
                 
@@ -73,6 +87,7 @@ namespace ParseJSON
                 {
                     string inputID = connector["Start"].ToString();
                     string outputID = connector["End"].ToString();
+
 
                     string NodeAID = IODictionary[ inputID ];
                     string NodeBID = IODictionary[ outputID ];
@@ -95,7 +110,7 @@ namespace ParseJSON
                 //    Console.WriteLine(("________"));
                 //}
 
-                foreach (JToken test in connectorObject)
+               /* foreach (JToken test in connectorObject)
                 {
                     string jTokenString = (string)test["Start"];
                     //Console.WriteLine(jTokenString);
@@ -108,7 +123,7 @@ namespace ParseJSON
                     Console.WriteLine(jsonQueryEnumerable.First());
 
                     //Console.WriteLine(jsonQueryEnumerable.First().ToString());
-                }
+                }*/
             }
 
             Console.Read();

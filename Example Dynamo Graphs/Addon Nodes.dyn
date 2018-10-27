@@ -1,0 +1,231 @@
+{
+  "Uuid": "24fb3544-2e5b-477d-9a2b-80db6ab500f2",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Addon Nodes",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "25fb7e98-dd92-4eae-b44d-91b4dbc1baa5",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "dc1f6b42192e4454b8d11b44e628e1d0",
+      "Inputs": [
+        {
+          "Id": "4d2dcd47741f415b9dafb3c016ac47a2",
+          "Name": "Address",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fb3b7c33148048298e1c0440b20c3ddb",
+          "Name": "OUT",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "This node will convert an excel address notation from string format (A1) to index format (1,1)."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "0fa72262-6e6f-4aaf-bac2-c1a39c715aef",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "5690ec7880c4498198a01039e0e53b82",
+      "Inputs": [
+        {
+          "Id": "1cecffd346204f79b81db11ad419dc6f",
+          "Name": "MinType",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a262b09a02bc4b518cad484f617d83f2",
+          "Name": "MinValue",
+          "Description": "var\nDefault value : null",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4a5af9c66bfa4690af4c59534a2dfbc3",
+          "Name": "MaxType",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fdce9119b43944fc82c794334f7f39c5",
+          "Name": "MaxValue",
+          "Description": "var\nDefault value : null",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "00e9c53ac03546eca84811116b3c1347",
+          "Name": "DirectionType",
+          "Description": "var\nDefault value : null",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e0898f88ada542f682af404fd2496521",
+          "Name": "GradientFill",
+          "Description": "bool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8c57c03fb1544adbabbcc44f0dbdd518",
+          "Name": "FillColor",
+          "Description": "var\nDefault value : null",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c12589ca0c284103ba06e92a610abf1f",
+          "Name": "BorderColor",
+          "Description": "var\nDefault value : null",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "70318860d1b84a189c7bdd2bf72b1d94",
+          "Name": "FormatCondition",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "This node will generate a Data Bar format condition. Based on range of numbers a small bar will be placed in a cell that graphically represents the value contained within the cell. "
+    },
+    {
+      "ConcreteType": "CoreNodeModels.FromObject, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "e8a3bcf6569040fca8f9fd8bd8a4743e",
+      "Inputs": [
+        {
+          "Id": "53ae4f0faaa14507b600be2afa48325c",
+          "Name": "obj",
+          "Description": "Object to be serialized",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3bfaaf6792384574b03663cd2cb2faee",
+          "Name": "str",
+          "Description": "Result of math computation",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Convert an object to a string representation."
+    }
+  ],
+  "Connectors": [],
+  "Dependencies": [
+    "25fb7e98-dd92-4eae-b44d-91b4dbc1baa5",
+    "0fa72262-6e6f-4aaf-bac2-c1a39c715aef"
+  ],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.0.4654",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Cell Index",
+        "Id": "dc1f6b42192e4454b8d11b44e628e1d0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 450.0,
+        "Y": 277.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Data Bar Format Condition",
+        "Id": "5690ec7880c4498198a01039e0e53b82",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 374.0,
+        "Y": 427.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String from Object",
+        "Id": "e8a3bcf6569040fca8f9fd8bd8a4743e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 320.0,
+        "Y": 119.0
+      }
+    ],
+    "Annotations": [],
+    "X": 0.0,
+    "Y": 0.0,
+    "Zoom": 1.0
+  }
+}

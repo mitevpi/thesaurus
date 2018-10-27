@@ -33,7 +33,8 @@ namespace thesaurus
         public TrainViewModel(TrainModel model)
         {
             Model = model;
-
+            DirectoryPath = "";
+            Files = new List<string>();
             SelectDirectory = new RelayCommand(OnSelectDirectory);
         }
 
@@ -48,7 +49,7 @@ namespace thesaurus
 
             var path = dialog.SelectedPath;
             DirectoryPath = path;
-            Files = DirSearch(path);
+            DirSearch(path);
         }
 
         /// <summary>
@@ -56,35 +57,32 @@ namespace thesaurus
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        private static List<string> DirSearch(string path)
+        private void DirSearch(string path)
         {
-            var files = new List<string>();
             try
             {
                 foreach (var d in Directory.GetDirectories(path))
                 {
+                    Console.Out.WriteLine(d);
                     foreach (var f in Directory.GetFiles(d))
                     {
                         // Filter out all the DYN files
                         if (f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase))
-                            files.Add(f);
+                            Files.Add(f);
                     }
                     DirSearch(d);
                 }
 
-                foreach (var f in Directory.GetFiles(path))
-                {
-                    if (f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase))
-                        files.Add(f);
-                }
+                //foreach (var f in Directory.GetFiles(path))
+                //{
+                //    if (f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase))
+                //        Files.Add(f);
+                //}
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 // ignore 
-                return new List<string>();
             }
-
-            return files;
         }
     }
 }

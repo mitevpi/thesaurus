@@ -29,12 +29,14 @@ namespace ParseJSON
                 JObject jObject = (JObject)JToken.ReadFrom(new JsonTextReader(reader));
                 JToken nodeObject = jObject["Nodes"];
 
-                foreach (var test in nodeObject)
+                foreach (JToken test in nodeObject)
                 {
-                    //Console.WriteLine(test);
-                    Console.WriteLine(test["FunctionSignature"]);
-                }
+                    string jTokenString = (string)test["FunctionSignature"];
+                    Console.WriteLine(jTokenString);
 
+                    //Console.WriteLine(test["FunctionSignature"]);
+                }
+                ;
                 //foreach (JToken thing in nodeObject.Values())
                 //{
                 //    Console.WriteLine(thing["FunctionSignature"]);
@@ -82,7 +84,6 @@ namespace ParseJSON
             {
                 string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 File.WriteAllText(dirPath + "\\graphData.csv", csvcontent.ToString());
-
             }
 
         }

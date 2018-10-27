@@ -48,11 +48,7 @@ namespace thesaurus
 
             var path = dialog.SelectedPath;
             DirectoryPath = path;
-            var files = DirSearch(path);
-
-
-            //TODO: files is a List<string> now you can parse them all!
-            ParseDYN.ParseDynData(DirectoryPath);
+            Files = DirSearch(path);
         }
 
         /// <summary>

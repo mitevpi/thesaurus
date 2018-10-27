@@ -1,0 +1,74 @@
+import clr
+clr.AddReference('RevitAPI')
+from Autodesk.Revit.DB import *
+
+clr.AddReference("RevitNodes")
+import Revit
+clr.ImportExtensions(Revit.Elements)
+
+clr.AddReference("RevitServices")
+import RevitServices
+from RevitServices.Persistence import DocumentManager
+from RevitServices.Transactions import TransactionManager
+
+#define current document
+curDoc = DocumentManager.Instance.CurrentDBDocument
+
+#get inputs
+sheetData = IN[0]
+tBlock = UnwrapElement(IN[1])
+
+#create output list
+sheetList = []
+
+#collect all views in current model file
+viewCollector = FilteredElementCollector(curDoc)
+viewCollector.OfCategory(BuiltInCategory.OST_Views)
+
+#create insertion point for views
+insPt = XYZ(0,0,0)
+
+#Start transaction
+TransactionManager.Instance.EnsureInTransaction(curDoc)
+
+#loop through sheet data
+for curSheet in sheetData:
+	#create new sheet
+	newSheet = ViewSheet.Create(curDoc, tBlock.Id)
+	
+	#update sheet parameters
+	param1 = newSheet.GetParameters("Sheet Number")
+	param1[0].Set(curSheet[0])
+	
+	param2 = newSheet.GetParameters("Sheet Name")
+	param2[0].Set(curSheet[1])
+	
+	param3 = newSheet.GetParameters("Approved By")
+	param3[0].Set(curSheet[3])
+	
+	param4 = newSheet.GetParameters("Designed By")
+	param4[0].Set(curSheet[4])
+	
+	param5 = newSheet.GetParameters("Checked By")
+	param5[0].Set(curSheet[5])
+	
+	param6 = newSheet.GetParameters("Drawn By")
+	param6[0].Set(curSheet[6])
+	
+	param7 = newSheet.GetParameters("Sheet Issue Date")
+	param7[0].Set(curSheet[7])
+	
+	#get view to insert
+	for v in viewCollector:
+		if v.Name == curSheet[2]:
+			#insert view to sheet
+			vp = Viewport.Create(curDoc, newSheet.Id, v.Id, insPt)
+			
+	#add sheet to output list
+	sheetList.append(newSheet)
+	
+#close transaction
+TransactionManager.Instance.TransactionTaskDone()
+
+#Assign your output to the OUT variable
+OUT = sheetList

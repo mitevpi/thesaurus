@@ -13,15 +13,12 @@ namespace thesaurus
     class ParseDYN
     {
 
-        public static void ParseDynData(string dirPath)
+        public static void ParseDynData(List<string> filePaths)
         {
             // DEFINE GLOBALS
-            //string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            //string filePath = dirPath + "\\MPA_Title Block_Key Plan Control.dyn";
             DataParse csvParser = new DataParse();
-            string[] fileEntries = Directory.GetFiles(dirPath); //Get all the files of the input directory
 
-            foreach (string fileName in fileEntries) //Loop over all the files in teh directory
+            foreach (var fileName in filePaths) //Loop over all the files in teh directory
             {
                 string dynTitle = System.IO.Path.GetFileName(fileName);
                 dynTitle = dynTitle.Remove(dynTitle.Length - 4);
@@ -118,7 +115,6 @@ namespace thesaurus
             }
             csvParser.ExportCSV();
             Console.Read();
-
         }
     }
 }

@@ -1,0 +1,244 @@
+<Workspace Version="1.3.2.2480" X="206.383567856257" Y="59.80199804273" zoom="0.761609257187246" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="False">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="c5579c2a-324a-4047-bc41-5294ea2afbdf" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="458.117839520505" y="427.120856998448" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="true;" ShouldFocus="false" />
+    <archilabUI.PrintRangeUi guid="31049427-8d67-4064-96a0-34611d728187" type="archilabUI.PrintRangeUi" nickname="Print Range" x="450.735967490258" y="338.966316458306" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" index="1:Select" />
+    <archilabUI.PrintSettingUi guid="6187dd9f-6157-4ae2-9bc7-47724e6c0368" type="archilabUI.PrintSettingUi" nickname="Print Settings" x="458.034195492676" y="590.371268588856" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="1:PDF - Full Size" />
+    <CoreNodeModels.Input.BoolSelector guid="832749e0-8644-443e-91ee-1523ef52f91e" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="928.128039043331" y="766.271176518011" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <System.Boolean>True</System.Boolean>
+    </CoreNodeModels.Input.BoolSelector>
+    <archilabUI.ViewSetUi guid="1ddf31a4-bd8a-499f-94b5-bf777cdac148" type="archilabUI.ViewSetUi" nickname="View Sets" x="-226.395636395094" y="128.579732008838" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="0:All Sheets" />
+    <Dynamo.Graph.Nodes.CustomNodes.Function guid="8d49e755-e10a-4a73-b90a-9137c1660f1c" type="Dynamo.Graph.Nodes.CustomNodes.Function" nickname="Get Views from View Set" x="-7.46686621219641" y="128.457589467238" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <ID value="018628e6-7bd7-40b6-9255-e49d2291097c" />
+      <Name value="Get Views from View Set" />
+      <Description value="This node will take a name of a view set and return views/sheet elements contained in it. " />
+      <Inputs>
+        <Input value="ViewSet" />
+      </Inputs>
+      <Outputs>
+        <Output value="Views" />
+      </Outputs>
+    </Dynamo.Graph.Nodes.CustomNodes.Function>
+    <CoreNodeModels.Watch guid="97786b49-2700-41b2-92db-627d34a3b630" type="CoreNodeModels.Watch" nickname="Watch" x="1435.17060567087" y="347.194500842905" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.Watch>
+    <PythonNodeModels.PythonNode guid="528833c9-d7ed-4367-b5a0-d55a654961e5" type="PythonNodeModels.PythonNode" nickname="Python Script" x="1230.2776557282" y="443.355095718971" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" inputcount="7">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+      <PortInfo index="3" default="False" />
+      <PortInfo index="4" default="False" />
+      <PortInfo index="5" default="False" />
+      <PortInfo index="6" default="False" />
+      <Script>import clr
+clr.AddReference('ProtoGeometry')
+from Autodesk.DesignScript.Geometry import *
+
+# Import Element wrapper extension methods
+clr.AddReference("RevitNodes")
+import Revit
+clr.ImportExtensions(Revit.Elements)
+
+# Import geometry conversion extension methods
+clr.ImportExtensions(Revit.GeometryConversion)
+
+# Import DocumentManager and TransactionManager
+clr.AddReference("RevitServices")
+import RevitServices
+from RevitServices.Persistence import DocumentManager
+from RevitServices.Transactions import TransactionManager
+
+doc = DocumentManager.Instance.CurrentDBDocument
+uiapp = DocumentManager.Instance.CurrentUIApplication
+app = uiapp.Application
+
+# Import RevitAPI
+clr.AddReference("RevitAPI")
+import Autodesk
+from Autodesk.Revit.DB import *
+
+import sys
+pyt_path = r'C:\Program Files (x86)\IronPython 2.7\Lib'
+sys.path.append(pyt_path)
+import System
+
+# The inputs to this node will be stored as a list in the IN variable.
+dataEnteringNode = IN
+
+sheets = IN[0]
+pRange = System.Enum.Parse(Autodesk.Revit.DB.PrintRange, IN[1])
+combined = IN[2]
+printerName = IN[3]
+printSetting = IN[4]
+filePath = IN[5]
+runIt = IN[6]
+
+####################################################################
+# ADDED THIS
+if isinstance(filePath, list):
+    s_length = len(sheets)
+    fp_length = len(filePath)
+    if len(sheets) == len(filePath):
+        pass
+    else:
+        filePath = filePath * (s_length / fp_length)
+        if len(filePath) == len(sheets):
+            pass
+        else:
+            OUT = "Filepaths and Sheets weren't the same length"
+            exit()
+
+elif isinstance(filePath, str):
+    filepath = [filepath] * len(sheets)
+# ADDED THIS
+#######################################################################
+
+if isinstance(sheets, list):
+    viewSheets = []
+    for i in sheets:
+        viewSheets.append(UnwrapElement(i))
+else:
+    viewSheets = UnwrapElement(sheets)
+
+
+def PrintView(doc, sheet, pRange, printerName, combined, filePath, printSetting):
+    # create view set
+    viewSet = ViewSet()
+    viewSet.Insert(sheet)
+    # determine print range
+    printManager = doc.PrintManager
+    printManager.PrintRange = pRange
+    printManager.Apply()
+    # make new view set current
+    viewSheetSetting = printManager.ViewSheetSetting
+    viewSheetSetting.CurrentViewSheetSet.Views = viewSet
+    # set printer
+    printManager.SelectNewPrintDriver(printerName)
+    printManager.Apply()
+    # set combined and print to file
+    if printManager.IsVirtual:
+        printManager.CombinedFile = combined
+        printManager.Apply()
+        printManager.PrintToFile = True
+        printManager.Apply()
+    else:
+        printManager.CombinedFile = combined
+        printManager.Apply()
+        printManager.PrintToFile = False
+        printManager.Apply()
+    # set file path
+    printManager.PrintToFileName = filePath
+    printManager.Apply()
+    # apply print setting
+    try:
+        printSetup = printManager.PrintSetup
+        printSetup.CurrentPrintSetting = printSetting
+        printManager.Apply()
+    except:
+        pass
+    # save settings and submit print
+    TransactionManager.Instance.EnsureInTransaction(doc)
+    viewSheetSetting.SaveAs("tempSetName")
+    printManager.Apply()
+    printManager.SubmitPrint()
+    viewSheetSetting.Delete()
+    TransactionManager.Instance.TransactionTaskDone()
+
+    return True
+
+
+try:
+    viewSets = FilteredElementCollector(doc).OfClass(ViewSheetSet)
+    for i in viewSets:
+        if i.Name == "tempSetName":
+            TransactionManager.Instance.EnsureInTransaction(doc)
+            doc.Delete(i.Id)
+            TransactionManager.Instance.ForceCloseTransaction()
+        else:
+            continue
+
+    errorReport = None
+    message = "Success"
+    if runIt:
+        if isinstance(viewSheets, list) and isinstance(printSetting, list):
+            # Edited this
+            for i, j, fp in zip(viewSheets, printSetting, filePath):
+                PrintView(doc, i, pRange, printerName, combined, fp, j)
+        elif isinstance(viewSheets, list) and not isinstance(printSetting, list):
+            # Edited this
+            for i, fp in zip(viewSheets, filePath):
+                PrintView(doc, i, pRange, printerName,
+                          combined, fp, printSetting)
+        elif not isinstance(viewSheets, list) and not isinstance(printSetting, list):
+            # Edited this
+            PrintView(doc, viewSheets, pRange, printerName,
+                      combined, filePath[0], printSetting)
+    else:
+        message = "Set RunIt to True"
+except:
+    # if error accurs anywhere in the process catch it
+    import traceback
+    errorReport = traceback.format_exc()
+
+# Assign your output to the OUT variable
+if errorReport is None:
+    OUT = message
+else:
+    OUT = errorReport
+</Script>
+    </PythonNodeModels.PythonNode>
+    <CoreNodeModels.Input.Directory guid="35305bac-09b7-47bb-9808-bc44c4e80345" type="CoreNodeModels.Input.Directory" nickname="Directory Path" x="12.9694282033208" y="773.657843199457" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>C:\Users\micha\Desktop\test files</System.String>
+      <HintPath>C:\Users\micha\Desktop\test files</HintPath>
+    </CoreNodeModels.Input.Directory>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="2842cba8-796a-4a4d-b710-ecd20a1b623b" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Sheet.SheetNumber" x="8.85181313807789" y="876.985512140283" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Views.Sheet.SheetNumber">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Input.StringInput guid="589cb616-6d80-451e-8bc4-197d3818bd0d" type="CoreNodeModels.Input.StringInput" nickname="Printer (String)" x="459.503497306418" y="522.49356794595" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>Adobe PDF</System.String>
+      <System.String value="Adobe PDF" />
+    </CoreNodeModels.Input.StringInput>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="259c1c32-d427-4a18-99a0-237cb74ead77" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="354.987765651146" y="770.381070706896" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="dirPath + &quot;\\&quot; + fileName + &quot;.pdf&quot;;" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="c5579c2a-324a-4047-bc41-5294ea2afbdf" start_index="0" end="528833c9-d7ed-4367-b5a0-d55a654961e5" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="31049427-8d67-4064-96a0-34611d728187" start_index="0" end="528833c9-d7ed-4367-b5a0-d55a654961e5" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6187dd9f-6157-4ae2-9bc7-47724e6c0368" start_index="0" end="528833c9-d7ed-4367-b5a0-d55a654961e5" end_index="4" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="832749e0-8644-443e-91ee-1523ef52f91e" start_index="0" end="528833c9-d7ed-4367-b5a0-d55a654961e5" end_index="6" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="1ddf31a4-bd8a-499f-94b5-bf777cdac148" start_index="0" end="8d49e755-e10a-4a73-b90a-9137c1660f1c" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="8d49e755-e10a-4a73-b90a-9137c1660f1c" start_index="0" end="2842cba8-796a-4a4d-b710-ecd20a1b623b" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="8d49e755-e10a-4a73-b90a-9137c1660f1c" start_index="0" end="528833c9-d7ed-4367-b5a0-d55a654961e5" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="528833c9-d7ed-4367-b5a0-d55a654961e5" start_index="0" end="97786b49-2700-41b2-92db-627d34a3b630" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="35305bac-09b7-47bb-9808-bc44c4e80345" start_index="0" end="259c1c32-d427-4a18-99a0-237cb74ead77" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="2842cba8-796a-4a4d-b710-ecd20a1b623b" start_index="0" end="259c1c32-d427-4a18-99a0-237cb74ead77" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="589cb616-6d80-451e-8bc4-197d3818bd0d" start_index="0" end="528833c9-d7ed-4367-b5a0-d55a654961e5" end_index="3" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="259c1c32-d427-4a18-99a0-237cb74ead77" start_index="0" end="528833c9-d7ed-4367-b5a0-d55a654961e5" end_index="5" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="c40f1a5d-d09f-46da-bbb7-6d25fb2542d8" annotationText="Create File Path" left="-1.14818686192211" top="724.381070706896" width="751.850238227354" height="245.890155719101" fontSize="30" InitialTop="770.381070706896" InitialHeight="256.095819023256" TextblockHeight="36" backgrouund="#FFFFC999">
+      <Models ModelGuid="35305bac-09b7-47bb-9808-bc44c4e80345" />
+      <Models ModelGuid="2842cba8-796a-4a4d-b710-ecd20a1b623b" />
+      <Models ModelGuid="259c1c32-d427-4a18-99a0-237cb74ead77" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="1ec65310-6905-4eaa-9a40-d7d8e0ba96d8" annotationText="Select View Set and Get Views" left="-236.395636395094" top="82.4575894672382" width="440.643055897183" height="139.407856827314" fontSize="30" InitialTop="128.457589467238" InitialHeight="123.407856827314" TextblockHeight="36" backgrouund="#FFFFB8D8">
+      <Models ModelGuid="1ddf31a4-bd8a-499f-94b5-bf777cdac148" />
+      <Models ModelGuid="8d49e755-e10a-4a73-b90a-9137c1660f1c" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="354c64ea-d225-4ec5-a9cd-b9412f272022" annotationText="Print PDFs" left="440.735967490258" top="292.966316458306" width="922.970259666515" height="390.690666416264" fontSize="30" InitialTop="338.966316458306" InitialHeight="374.690666416264" TextblockHeight="36" backgrouund="#FFA4E1FF">
+      <Models ModelGuid="c5579c2a-324a-4047-bc41-5294ea2afbdf" />
+      <Models ModelGuid="31049427-8d67-4064-96a0-34611d728187" />
+      <Models ModelGuid="6187dd9f-6157-4ae2-9bc7-47724e6c0368" />
+      <Models ModelGuid="528833c9-d7ed-4367-b5a0-d55a654961e5" />
+      <Models ModelGuid="589cb616-6d80-451e-8bc4-197d3818bd0d" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>

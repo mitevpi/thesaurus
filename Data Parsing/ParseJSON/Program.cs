@@ -21,7 +21,7 @@ namespace ParseJSON
         public static void ParseJSON()
         {
             string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string filePath = dirPath + "\\Test Graph_PP_02.dyn";
+            string filePath = dirPath + "\\MPA_Title Block_Key Plan Control.dyn";
 
             using (StreamReader reader = File.OpenText(filePath))
             {
@@ -43,28 +43,28 @@ namespace ParseJSON
                 foreach (var node in nodeObject)
                 {
                     //Console.WriteLine(test);
-                    Console.WriteLine(node["FunctionSignature"]);
+                    //Console.WriteLine(node["FunctionSignature"]);
                     string stringnodeID = node["Id"].ToString();
                     string stringnodename = node["FunctionSignature"].ToString();
 
                     NodeDictionary.Add(stringnodeID, stringnodename);
              
 
-                    JToken outputObject = nodeObject["Outputs"];
+                    JToken outputObject = node["Outputs"];
 
                     foreach (var output in outputObject)
                     {
                         string outputID = output["Id"].ToString();
                         IODictionary.Add(outputID, stringnodeID);                              
                     }
-                    JToken inputObject = nodeObject["Inputs"];
+                    JToken inputObject = node["Inputs"];
 
                     foreach (var inputs in inputObject)
                     {
                         string inputID = inputs["Id"].ToString();
                         IODictionary.Add(inputID, stringnodeID);
                     }
-                    Console.WriteLine(IODictionary);
+                    //Console.WriteLine(IODictionary);
 
                 }
                 
@@ -84,7 +84,7 @@ namespace ParseJSON
                     Console.WriteLine( NodeBID );
                     Console.WriteLine( NodeASig );
                     Console.WriteLine( NodeBSig );
-                    Console.Writeline("************");
+                    //Console.Writeline("************");
                
                     //List StartList = List<connector["Start"].ToString)>;
                 }

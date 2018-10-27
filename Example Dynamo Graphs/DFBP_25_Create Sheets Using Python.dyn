@@ -1,0 +1,142 @@
+<Workspace Version="1.3.2.2480" X="39.9556451455178" Y="-241.0207616996" zoom="0.774524526733439" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="a4977299-47ed-4d3c-b2c8-f96fa15a9171" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Excel.ReadFromFile" x="550.922730421563" y="396.769302301561" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSOffice.dll" function="DSOffice.Excel.ReadFromFile@var,string,bool">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Input.Filename guid="a3f04eaf-64fb-4d88-a6b4-d902a95bfc36" type="CoreNodeModels.Input.Filename" nickname="File Path" x="-48.476837612994" y="383.353535562901" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>.\DFBP_01_Sheet List.xlsx</System.String>
+      <HintPath>C:\Users\micha\Google Drive\Courses\C2017-010_Dynamo for Busy People\Scripts\Paid\01 - Create Sheets from Excel\DFBP_01_Sheet List.xlsx</HintPath>
+    </CoreNodeModels.Input.Filename>
+    <CoreNodeModels.Input.FileObject guid="79b4549e-e821-4748-9525-de6b5ac570cb" type="CoreNodeModels.Input.FileObject" nickname="File.FromPath" x="317.829857851368" y="286.593276383635" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.Input.FileObject>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="886d4523-3e62-4bec-a3c5-86b1b04950b2" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="330.07391832653" y="420.677509644974" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;Sheet1&quot;;" ShouldFocus="false" />
+    <CoreNodeModels.Input.BoolSelector guid="0bad2a58-e040-4f54-9b73-b0949187ec87" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="295.36765482761" y="560.459367096378" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Boolean>True</System.Boolean>
+    </CoreNodeModels.Input.BoolSelector>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="370392e2-9624-4e8b-a7f4-08f3dfd5a999" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="List.RemoveItemAtIndex" x="1127.49341939969" y="414.994837402911" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.List.RemoveItemAtIndex@var[]..[],int[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="0f6a6ee8-29df-4c56-af0c-a522b55f88c0" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="899.320692717886" y="511.199070607102" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="0;" ShouldFocus="false" />
+    <PythonNodeModels.PythonNode guid="c3c5c420-2ef1-485a-8c23-4df562e8d58d" type="PythonNodeModels.PythonNode" nickname="Python Script" x="1843.06695736754" y="415.25432148511" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" inputcount="2">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <Script>import clr
+clr.AddReference('RevitAPI')
+from Autodesk.Revit.DB import *
+
+clr.AddReference("RevitNodes")
+import Revit
+clr.ImportExtensions(Revit.Elements)
+
+clr.AddReference("RevitServices")
+import RevitServices
+from RevitServices.Persistence import DocumentManager
+from RevitServices.Transactions import TransactionManager
+
+#define current document
+curDoc = DocumentManager.Instance.CurrentDBDocument
+
+#get inputs
+sheetData = IN[0]
+tBlock = UnwrapElement(IN[1])
+
+#create output list
+sheetList = []
+
+#collect all views in current model file
+viewCollector = FilteredElementCollector(curDoc)
+viewCollector.OfCategory(BuiltInCategory.OST_Views)
+
+#create insertion point for views
+insPt = XYZ(0,0,0)
+
+#Start transaction
+TransactionManager.Instance.EnsureInTransaction(curDoc)
+
+#loop through sheet data
+for curSheet in sheetData:
+	#create new sheet
+	newSheet = ViewSheet.Create(curDoc, tBlock.Id)
+	
+	#update sheet parameters
+	param1 = newSheet.GetParameters("Sheet Number")
+	param1[0].Set(curSheet[0])
+	
+	param2 = newSheet.GetParameters("Sheet Name")
+	param2[0].Set(curSheet[1])
+	
+	param3 = newSheet.GetParameters("Approved By")
+	param3[0].Set(curSheet[3])
+	
+	param4 = newSheet.GetParameters("Designed By")
+	param4[0].Set(curSheet[4])
+	
+	param5 = newSheet.GetParameters("Checked By")
+	param5[0].Set(curSheet[5])
+	
+	param6 = newSheet.GetParameters("Drawn By")
+	param6[0].Set(curSheet[6])
+	
+	param7 = newSheet.GetParameters("Sheet Issue Date")
+	param7[0].Set(curSheet[7])
+	
+	#get view to insert
+	for v in viewCollector:
+		if v.Name == curSheet[2]:
+			#insert view to sheet
+			vp = Viewport.Create(curDoc, newSheet.Id, v.Id, insPt)
+			
+	#add sheet to output list
+	sheetList.append(newSheet)
+	
+#close transaction
+TransactionManager.Instance.TransactionTaskDone()
+
+#Assign your output to the OUT variable
+OUT = sheetList
+</Script>
+    </PythonNodeModels.PythonNode>
+    <DSRevitNodesUI.FamilyTypes guid="61d97f36-9679-4cd0-b698-03b8d38dba5d" type="DSRevitNodesUI.FamilyTypes" nickname="Family Types" x="1486.85119247348" y="531.334683574639" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="0:A0 metric:A0 metric" />
+    <CoreNodeModels.Watch guid="a0657cc3-ce0f-4d69-ab1b-d2b649e5d311" type="CoreNodeModels.Watch" nickname="Watch" x="2082.36711026055" y="419.856685020156" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.Watch>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="a4977299-47ed-4d3c-b2c8-f96fa15a9171" start_index="0" end="370392e2-9624-4e8b-a7f4-08f3dfd5a999" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="a3f04eaf-64fb-4d88-a6b4-d902a95bfc36" start_index="0" end="79b4549e-e821-4748-9525-de6b5ac570cb" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="79b4549e-e821-4748-9525-de6b5ac570cb" start_index="0" end="a4977299-47ed-4d3c-b2c8-f96fa15a9171" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="886d4523-3e62-4bec-a3c5-86b1b04950b2" start_index="0" end="a4977299-47ed-4d3c-b2c8-f96fa15a9171" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="0bad2a58-e040-4f54-9b73-b0949187ec87" start_index="0" end="a4977299-47ed-4d3c-b2c8-f96fa15a9171" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="370392e2-9624-4e8b-a7f4-08f3dfd5a999" start_index="0" end="c3c5c420-2ef1-485a-8c23-4df562e8d58d" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="0f6a6ee8-29df-4c56-af0c-a522b55f88c0" start_index="0" end="370392e2-9624-4e8b-a7f4-08f3dfd5a999" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c3c5c420-2ef1-485a-8c23-4df562e8d58d" start_index="0" end="a0657cc3-ce0f-4d69-ab1b-d2b649e5d311" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="61d97f36-9679-4cd0-b698-03b8d38dba5d" start_index="0" end="c3c5c420-2ef1-485a-8c23-4df562e8d58d" end_index="1" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="ecacb399-e79b-4346-b532-bf1e8ae0aad8" annotationText="Read Data from Excel" left="-58.476837612994" top="240.593276383635" width="858.828139463128" height="388.0089478556" fontSize="30" InitialTop="286.593276383635" InitialHeight="372.0089478556" TextblockHeight="36" backgrouund="#FFD4B6DB">
+      <Models ModelGuid="a4977299-47ed-4d3c-b2c8-f96fa15a9171" />
+      <Models ModelGuid="a3f04eaf-64fb-4d88-a6b4-d902a95bfc36" />
+      <Models ModelGuid="79b4549e-e821-4748-9525-de6b5ac570cb" />
+      <Models ModelGuid="886d4523-3e62-4bec-a3c5-86b1b04950b2" />
+      <Models ModelGuid="0bad2a58-e040-4f54-9b73-b0949187ec87" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="b8306ae9-4edd-4bfb-b931-7b3a0b6d1a09" annotationText="Remove Header" left="889.320692717886" top="368.994837402911" width="452.744155253233" height="235.489947489905" fontSize="30" InitialTop="414.994837402911" InitialHeight="310.594709869773" TextblockHeight="36" backgrouund="#FFFFC999">
+      <Models ModelGuid="370392e2-9624-4e8b-a7f4-08f3dfd5a999" />
+      <Models ModelGuid="0f6a6ee8-29df-4c56-af0c-a522b55f88c0" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="0cbfd60c-001f-4515-b889-bd69092bd9e4" annotationText="Create Sheets" left="1476.85119247348" top="369.25432148511" width="499.644336322631" height="255.366076375243" fontSize="30" InitialTop="415.25432148511" InitialHeight="239.366076375244" TextblockHeight="36" backgrouund="#FFA4E1FF">
+      <Models ModelGuid="c3c5c420-2ef1-485a-8c23-4df562e8d58d" />
+      <Models ModelGuid="61d97f36-9679-4cd0-b698-03b8d38dba5d" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>

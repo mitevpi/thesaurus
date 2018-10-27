@@ -95,14 +95,20 @@ namespace ParseJSON
                 //    Console.WriteLine(("________"));
                 //}
 
-                // Sample JSON query
-                //IEnumerable<JToken> jsonQueryEnumerable = from JToken thing in roomObject.Values()
-                //    where thing["RoomNumber"].ToString() == "206"
-                //    select thing;
+                foreach (JToken test in connectorObject)
+                {
+                    string jTokenString = (string)test["Start"];
+                    //Console.WriteLine(jTokenString);
 
-                //JToken jsonQuerySingle = jsonQueryEnumerable.First();
+                    IEnumerable<JToken> jsonQueryEnumerable = from JToken thing in nestedTokenList
+                                                              where thing["Id"].ToString() == "0faed7bef55346c681d5ef3030b97440"
+                                                              select thing;
 
-                //Console.WriteLine(jsonQuerySingle.ToString());
+                    Console.WriteLine("SUCCESS??");
+                    Console.WriteLine(jsonQueryEnumerable.First());
+
+                    //Console.WriteLine(jsonQueryEnumerable.First().ToString());
+                }
             }
 
             Console.Read();

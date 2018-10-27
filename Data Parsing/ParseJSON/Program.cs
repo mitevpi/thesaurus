@@ -20,19 +20,20 @@ namespace ParseJSON
 
         public static void ParseJSON()
         {
+            // DEFINE GLOBALS
             string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             string filePath = dirPath + "\\MPA_Title Block_Key Plan Control.dyn";
+            DataParse csvParser = new DataParse();
 
             using (StreamReader reader = File.OpenText(filePath))
             {
                 // Read JSON file, and get a JToken from it for iterating
                 JObject jObject = (JObject)JToken.ReadFrom(new JsonTextReader(reader));
-                //Console.WriteLine("JOBJECT");
-                //Console.Write(jObject);
 
                 //Define the Nodes into a JToken
                 JToken nodeObject = jObject["Nodes"];
                 JToken connectorObject = jObject["Connectors"];
+
                 //Define Dictionaries for the node and the In / Out
                 Dictionary<string, string> NodeDictionary = new Dictionary<string, string>();
                 Dictionary<string, string> IODictionary = new Dictionary<string, string>();
@@ -43,7 +44,6 @@ namespace ParseJSON
                 //Console.Write(nodeObject);
 
                 //Create dictionary for ID and node name
-                //Create dictionary for connector ID and node ID
                 foreach (var node in nodeObject)
                 {
                     //Console.WriteLine(test);
@@ -104,37 +104,17 @@ namespace ParseJSON
                         Console.WriteLine(NodeBID);
                         Console.WriteLine(NodeASig);
                         Console.WriteLine(NodeBSig);
-                         }
+
+                        csvParser.AppendToCsv(NodeASig, NodeBSig, NodeAID, NodeBID);
+                    }
                     catch (Exception)
                     {
                        
                     }
-
-
-                    }
-
-                //foreach (JToken thing in nodeObject.Values())
-                //{
-                //    Console.WriteLine(thing["FunctionSignature"]);
-                //    Console.WriteLine(("________"));
-                //}
-
-                /* foreach (JToken test in connectorObject)
-                 {
-                     string jTokenString = (string)test["Start"];
-                     //Console.WriteLine(jTokenString);
-
-                     IEnumerable<JToken> jsonQueryEnumerable = from JToken thing in nestedTokenList
-                                                               where thing["Id"].ToString() == "0faed7bef55346c681d5ef3030b97440"
-                                                               select thing;
-
-                     Console.WriteLine("SUCCESS??");
-                     Console.WriteLine(jsonQueryEnumerable.First());
-
-                     //Console.WriteLine(jsonQueryEnumerable.First().ToString());
-                 }*/
+                }
             }
 
+            csvParser.ExportCSV();
             Console.Read();
 
         }

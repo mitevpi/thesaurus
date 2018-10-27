@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ParseJSON
@@ -10,10 +11,19 @@ namespace ParseJSON
     public class DataParse
     {
         public StringBuilder csvcontent;
+        public Regex regex;
 
         public DataParse()
         {
             csvcontent = InitializeCsvContent();
+            regex = CreateRegexPattern();
+        }
+
+        public Regex CreateRegexPattern()
+        {
+            Regex pattern = new Regex("[;,\t\r ]|[\n]{2}");
+
+            return pattern;
         }
 
         public StringBuilder InitializeCsvContent()
@@ -25,8 +35,13 @@ namespace ParseJSON
 
         public void AppendToCsv(string nodeAName, string nodeBName, string nodeAId, string nodeBId)
         {
+            string cleanNameA = regex.Replace(nodeAName, "_");
+            string cleanNameB = regex.Replace(nodeBName, "_");
+            string cleanIdA = regex.Replace(nodeAId, "_");
+            string cleanIdB = regex.Replace(nodeBId, "_");
+
             string csvLine = string.Format("{0},{1},{2},{3}",
-                nodeAName, nodeBName, nodeAId, nodeBId);
+                cleanNameA, cleanNameB, cleanIdA, cleanIdB);
 
             csvcontent.AppendLine(csvLine);
         }

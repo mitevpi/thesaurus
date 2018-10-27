@@ -1,0 +1,1806 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://assets-cdn.github.com">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" media="all" integrity="sha512-FCg44VGg5ax/5MpZ8otwiPE+/tG1/Sq67mKkl6agbqgoScZtJyXhQSFQMIJfOHMZZ+yXDINb8nEiws60SiLohg==" rel="stylesheet" href="https://assets-cdn.github.com/assets/frameworks-5aa6d9885579bb2359f66266aee26f3b.css" />
+  <link crossorigin="anonymous" media="all" integrity="sha512-57B1/u8hPZmZ1VZDgsTj3398brAST9KDu9LFbhOjwXTfrz15sjyxcScwUdkgHK9MEZlOM4e4ScJeEXhYJ66IXg==" rel="stylesheet" href="https://assets-cdn.github.com/assets/github-a293861d7523c471be7783b3b5ffb601.css" />
+  
+  
+  <link crossorigin="anonymous" media="all" integrity="sha512-i6E/ax63Jh/gVO2FEhdHfp4NBhRWoUsIN20G/eyLiuq4h3zfHSSkMKaGLmqhEmKc5vNQ1og0kN9fJd/Ouuk0aQ==" rel="stylesheet" href="https://assets-cdn.github.com/assets/site-2c07a1055b06224c1a4d10d3b10a1051.css" />
+  
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>machinelearning/wikipedia-detox-250-line-data.tsv at master · dotnet/machinelearning · GitHub</title>
+    <meta name="description" content="ML.NET is an open source and cross-platform machine learning framework for .NET. - dotnet/machinelearning">
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    
+    <meta property="og:image" content="https://avatars0.githubusercontent.com/u/9141961?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="dotnet/machinelearning" /><meta property="og:url" content="https://github.com/dotnet/machinelearning" /><meta property="og:description" content="ML.NET is an open source and cross-platform machine learning framework for .NET. - dotnet/machinelearning" />
+
+  <link rel="assets" href="https://assets-cdn.github.com/">
+  
+  <meta name="pjax-timeout" content="1000">
+  
+  <meta name="request-id" content="9EFD:7209:10EC269:1EC1543:5BD49A18" data-pjax-transient>
+
+
+  
+
+  <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+      <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="9EFD:7209:10EC269:1EC1543:5BD49A18" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" />
+<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
+
+
+
+    <meta name="google-analytics" content="UA-3769691-2">
+
+
+<meta class="js-ga-set" name="dimension1" content="Logged Out">
+
+
+
+  
+
+      <meta name="hostname" content="github.com">
+    <meta name="user-login" content="">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="NzY0YTg0ODJhMzlkNDU5YTY1ODMxN2FjOTU4Y2ZmMjU3MGIwMTE3ZmVlNTc5YmU2NWE5YjA4NWIwNjM1MjkyOXx7InJlbW90ZV9hZGRyZXNzIjoiMzguMjIxLjIwOC43OSIsInJlcXVlc3RfaWQiOiI5RUZEOjcyMDk6MTBFQzI2OToxRUMxNTQzOjVCRDQ5QTE4IiwidGltZXN0YW1wIjoxNTQwNjU5NzQ5LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
+
+    <meta name="enabled-features" content="DASHBOARD_V2_LAYOUT_OPT_IN,EXPLORE_DISCOVER_REPOSITORIES,UNIVERSE_BANNER,MARKETPLACE_PLAN_RESTRICTION_EDITOR">
+
+  <meta name="html-safe-nonce" content="23f8588982247b9c2c40e4719636cd3d771e2d43">
+
+  <meta http-equiv="x-pjax-version" content="3ccd987877829de97461fb1b8bdbe9bf">
+  
+
+      <link href="https://github.com/dotnet/machinelearning/commits/master.atom" rel="alternate" title="Recent Commits to machinelearning:master" type="application/atom+xml">
+
+  <meta name="go-import" content="github.com/dotnet/machinelearning git https://github.com/dotnet/machinelearning.git">
+
+  <meta name="octolytics-dimension-user_id" content="9141961" /><meta name="octolytics-dimension-user_login" content="dotnet" /><meta name="octolytics-dimension-repository_id" content="132021166" /><meta name="octolytics-dimension-repository_nwo" content="dotnet/machinelearning" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="132021166" /><meta name="octolytics-dimension-repository_network_root_nwo" content="dotnet/machinelearning" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
+
+
+    <link rel="canonical" href="https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv" data-pjax-transient>
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://assets-cdn.github.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+  <meta name="u2f-support" content="true">
+
+  <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials">
+
+  </head>
+
+  <body class="logged-out env-production emoji-size-boost page-blob">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" tabindex="1" class="px-2 py-4 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+
+    
+    
+    
+
+
+
+        
+<header class="Header header-logged-out  position-relative f4 py-3" role="banner">
+  <div class="container-lg d-flex px-3">
+    <div class="d-flex flex-justify-between flex-items-center">
+      <a class="header-logo-invertocat my-0" href="https://github.com/" aria-label="Homepage" data-ga-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+        <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a>
+
+    </div>
+
+    <div class="HeaderMenu d-flex flex-justify-between flex-auto">
+        <nav class="mt-0">
+          <ul class="d-flex list-style-none">
+              <li class="ml-2">
+                <a class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:features" data-selected-links="/features /features/project-management /features/code-review /features/project-management /features/integrations /features" href="/features">
+                  Features
+</a>              </li>
+              <li class="ml-4">
+                <a class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:business" data-selected-links="/business /business/security /business/customers /business" href="/business">
+                  Business
+</a>              </li>
+
+              <li class="ml-4">
+                <a class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:explore" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship showcases showcases_search showcases_landing /explore" href="/explore">
+                  Explore
+</a>              </li>
+
+              <li class="ml-4">
+                    <a class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:marketplace" data-selected-links=" /marketplace" href="/marketplace">
+                      Marketplace
+</a>              </li>
+              <li class="ml-4">
+                <a class="js-selected-navigation-item HeaderNavlink px-0 py-2 m-0" data-ga-click="Header, click, Nav menu - item:pricing" data-selected-links="/pricing /pricing/developer /pricing/team /pricing/business-hosted /pricing/business-enterprise /pricing" href="/pricing">
+                  Pricing
+</a>              </li>
+          </ul>
+        </nav>
+
+      <div class="d-flex">
+          <div class="d-lg-flex flex-items-center mr-3">
+            <div class="header-search scoped-search site-scoped-search js-site-search position-relative js-jump-to"
+  role="combobox"
+  aria-owns="jump-to-results"
+  aria-label="Search or jump to"
+  aria-haspopup="listbox"
+  aria-expanded="false"
+>
+  <div class="position-relative">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-site-search-form" data-scope-type="Repository" data-scope-id="132021166" data-scoped-search-url="/dotnet/machinelearning/search" data-unscoped-search-url="/search" action="/dotnet/machinelearning/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+      <label class="form-control header-search-wrapper header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center js-chromeless-input-container">
+        <input type="text"
+          class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+          data-hotkey="s,/"
+          name="q"
+          value=""
+          placeholder="Search"
+          data-unscoped-placeholder="Search GitHub"
+          data-scoped-placeholder="Search"
+          autocapitalize="off"
+          aria-autocomplete="list"
+          aria-controls="jump-to-results"
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=7LX74qVMUM+G9QzKoztWR2WEylPHrMtoqaSRQZK2VVXlYKzAl4ORka25oRCm+MOim82Ngg20uQ1WfWvDo0vmsw=="
+          spellcheck="false"
+          autocomplete="off"
+          >
+          <input type="hidden" class="js-site-search-type-field" name="type" >
+            <img src="https://assets-cdn.github.com/images/search-shortcut-hint.svg" alt="" class="mr-2 header-search-key-slash">
+
+            <div class="Box position-absolute overflow-hidden d-none jump-to-suggestions js-jump-to-suggestions-container">
+              <ul class="d-none js-jump-to-suggestions-template-container">
+                <li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item" role="option">
+                  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center p-2 jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open" href="">
+                    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+                      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+                      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+                      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+                    </div>
+
+                    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="" width="28" height="28">
+
+                    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+                    </div>
+
+                    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+                      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+                        In this repository
+                      </span>
+                      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+                        All GitHub
+                      </span>
+                      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+                    </div>
+
+                    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+                      Jump to
+                      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <ul class="d-none js-jump-to-no-results-template-container">
+                <li class="d-flex flex-justify-center flex-items-center p-3 f5 d-none">
+                  <span class="text-gray">No suggested jump to results</span>
+                </li>
+              </ul>
+
+              <ul id="jump-to-results" role="listbox" class="js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container" >
+                <li class="d-flex flex-justify-center flex-items-center p-0 f5">
+                  <img src="https://assets-cdn.github.com/images/spinners/octocat-spinner-128.gif" alt="Octocat Spinner Icon" class="m-2" width="28">
+                </li>
+              </ul>
+            </div>
+      </label>
+</form>  </div>
+</div>
+
+          </div>
+
+        <span class="d-inline-block">
+            <div class="HeaderNavlink px-0 py-2 m-0">
+              <a class="text-bold text-white no-underline" href="/login?return_to=%2Fdotnet%2Fmachinelearning%2Fblob%2Fmaster%2Ftest%2Fdata%2Fwikipedia-detox-250-line-data.tsv" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+                <span class="text-gray">or</span>
+                <a class="text-bold text-white no-underline" href="/join?source=header-repo" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+            </div>
+        </span>
+      </div>
+    </div>
+  </div>
+</header>
+
+  </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+    <div id="js-flash-container">
+
+
+</div>
+
+
+
+  <div role="main" class="application-main ">
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <div id="js-repo-pjax-container" data-pjax-container >
+      
+
+
+
+
+
+  
+
+
+
+  <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav  ">
+    <div class="repohead-details-container clearfix container">
+
+      <ul class="pagehead-actions">
+  <li>
+      <a href="/login?return_to=%2Fdotnet%2Fmachinelearning"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-s"
+    aria-label="You must be signed in to watch a repository" rel="nofollow">
+    <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+    Watch
+  </a>
+  <a class="social-count" href="/dotnet/machinelearning/watchers"
+     aria-label="552 users are watching this repository">
+    552
+  </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fdotnet%2Fmachinelearning"
+    class="btn btn-sm btn-with-count tooltipped tooltipped-s"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="/dotnet/machinelearning/stargazers"
+      aria-label="4005 users starred this repository">
+      4,005
+    </a>
+
+  </li>
+
+  <li>
+      <a href="/login?return_to=%2Fdotnet%2Fmachinelearning"
+        class="btn btn-sm btn-with-count tooltipped tooltipped-s"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+        Fork
+      </a>
+
+    <a href="/dotnet/machinelearning/network/members" class="social-count"
+       aria-label="737 users forked this repository">
+      737
+    </a>
+  </li>
+</ul>
+
+      <h1 class="public ">
+  <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+  <span class="author" itemprop="author"><a class="url fn" rel="author" href="/dotnet">dotnet</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a data-pjax="#js-repo-pjax-container" href="/dotnet/machinelearning">machinelearning</a></strong>
+
+</h1>
+
+    </div>
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax container"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a class="js-selected-navigation-item selected reponav-item" itemprop="url" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /dotnet/machinelearning" href="/dotnet/machinelearning">
+      <svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a itemprop="url" data-hotkey="g i" class="js-selected-navigation-item reponav-item" data-selected-links="repo_issues repo_labels repo_milestones /dotnet/machinelearning/issues" href="/dotnet/machinelearning/issues">
+        <svg class="octicon octicon-issue-opened" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg>
+        <span itemprop="name">Issues</span>
+        <span class="Counter">318</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a data-hotkey="g p" itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_pulls checks /dotnet/machinelearning/pulls" href="/dotnet/machinelearning/pulls">
+      <svg class="octicon octicon-git-pull-request" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="Counter">23</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+
+    <a data-hotkey="g b" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /dotnet/machinelearning/projects" href="/dotnet/machinelearning/projects">
+      <svg class="octicon octicon-project" viewBox="0 0 15 16" version="1.1" width="15" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      Projects
+      <span class="Counter" >7</span>
+</a>
+
+
+  <a class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph pulse alerts /dotnet/machinelearning/pulse" href="/dotnet/machinelearning/pulse">
+    <svg class="octicon octicon-graph" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"/></svg>
+    Insights
+</a>
+
+</nav>
+
+
+  </div>
+
+<div class="container new-discussion-timeline experiment-repo-nav  ">
+  <div class="repository-content ">
+
+    
+
+  
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/dotnet/machinelearning/blob/5123aeedb91a435236e8b94ba0f17a6d15a20db5/test/data/wikipedia-detox-250-line-data.tsv">Permalink</a>
+
+    <!-- blob contrib key: blob_contributors:v21:bbabc1bb8889dd204f886e758c39b2f5 -->
+
+        <div class="signup-prompt-bg rounded-1">
+      <div class="signup-prompt p-4 text-center mb-4 rounded-1">
+        <div class="position-relative">
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form action="/site/dismiss_signup_prompt" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="psE4lRflU+2JStG3748gNoH25Jm0T9ZsETgcObwA/uZr/1V/gh6cPXKUNvV8b5CwgIQX3gZiLR0Oe4RQeGPfJA==" />
+            <button type="submit" class="position-absolute top-0 right-0 btn-link link-gray" data-ga-click="(Logged out) Sign up prompt, clicked Dismiss, text:dismiss">
+              Dismiss
+            </button>
+</form>          <h3 class="pt-2">Join GitHub today</h3>
+          <p class="col-6 mx-auto">GitHub is home to over 28 million developers working together to host and review code, manage projects, and build software together.</p>
+          <a class="btn btn-primary" href="/join?source=prompt-blob-show" data-ga-click="(Logged out) Sign up prompt, clicked Sign up, text:sign-up">Sign up</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="file-navigation">
+      
+<div class="select-menu branch-select-menu js-menu-container js-select-menu float-left">
+  <button class=" btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    
+    type="button" aria-label="Switch branches or tags" aria-expanded="false" aria-haspopup="true">
+      <i>Branch:</i>
+      <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <svg class="octicon octicon-x js-menu-close" role="img" aria-label="Close" viewBox="0 0 12 16" version="1.1" width="12" height="16"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="form-control js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                master
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/dotnet/machinelearning/blob/release/preview/test/data/wikipedia-detox-250-line-data.tsv"
+               data-name="release/preview"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                release/preview
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/dotnet/machinelearning/blob/release/v0.1/test/data/wikipedia-detox-250-line-data.tsv"
+               data-name="release/v0.1"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                release/v0.1
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/dotnet/machinelearning/tree/v0.6.0/test/data/wikipedia-detox-250-line-data.tsv"
+              data-name="v0.6.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v0.6.0">
+                v0.6.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/dotnet/machinelearning/tree/v0.5.0/test/data/wikipedia-detox-250-line-data.tsv"
+              data-name="v0.5.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v0.5.0">
+                v0.5.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/dotnet/machinelearning/tree/v0.4.0/test/data/wikipedia-detox-250-line-data.tsv"
+              data-name="v0.4.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v0.4.0">
+                v0.4.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/dotnet/machinelearning/tree/v0.3.0/test/data/wikipedia-detox-250-line-data.tsv"
+              data-name="v0.3.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v0.3.0">
+                v0.3.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/dotnet/machinelearning/tree/v0.2.0/test/data/wikipedia-detox-250-line-data.tsv"
+              data-name="v0.2.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v0.2.0">
+                v0.2.0
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/dotnet/machinelearning/tree/v0.1.0/test/data/wikipedia-detox-250-line-data.tsv"
+              data-name="v0.1.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v0.1.0">
+                v0.1.0
+              </span>
+            </a>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+      <div class="BtnGroup float-right">
+        <a href="/dotnet/machinelearning/find/master"
+              class="js-pjax-capture-input btn btn-sm BtnGroup-item"
+              data-pjax
+              data-hotkey="t">
+          Find file
+        </a>
+        <clipboard-copy for="blob-path" class="btn btn-sm BtnGroup-item">
+          Copy path
+        </clipboard-copy>
+      </div>
+      <div id="blob-path" class="breadcrumb">
+        <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/dotnet/machinelearning"><span>machinelearning</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/dotnet/machinelearning/tree/master/test"><span>test</span></a></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/dotnet/machinelearning/tree/master/test/data"><span>data</span></a></span><span class="separator">/</span><strong class="final-path">wikipedia-detox-250-line-data.tsv</strong>
+      </div>
+    </div>
+
+
+    
+  <div class="commit-tease">
+      <span class="float-right">
+        <a class="commit-tease-sha" href="/dotnet/machinelearning/commit/76cb2cdf5cc8b6c88ca44b8969153836e589df04" data-pjax>
+          76cb2cd
+        </a>
+        <relative-time datetime="2018-05-04T19:47:21Z">May 5, 2018</relative-time>
+      </span>
+      <div>
+        <a rel="contributor" data-skip-pjax="true" data-hovercard-user-id="155076" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/sandyarmstrong"><img class="avatar" src="https://avatars1.githubusercontent.com/u/155076?s=40&amp;v=4" width="20" height="20" alt="@sandyarmstrong" /></a>
+        <a class="user-mention" rel="contributor" data-hovercard-user-id="155076" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="/sandyarmstrong">sandyarmstrong</a>
+          <a data-pjax="true" title="Get a working build (#1)
+
+* Set missing executable bits
+
+* Ignore tests that need a missing dataset
+
+* Add missing data sets.  Disable tests for external data sets.
+
+* Respond to PR feedback
+
+* Reformat test data README file to use quoting block." class="message" href="/dotnet/machinelearning/commit/76cb2cdf5cc8b6c88ca44b8969153836e589df04">Get a working build (</a><a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="320346061" data-permission-text="Issue title is private" data-url="https://github.com/dotnet/machinelearning/issues/1" href="https://github.com/dotnet/machinelearning/pull/1">#1</a><a data-pjax="true" title="Get a working build (#1)
+
+* Set missing executable bits
+
+* Ignore tests that need a missing dataset
+
+* Add missing data sets.  Disable tests for external data sets.
+
+* Respond to PR feedback
+
+* Reformat test data README file to use quoting block." class="message" href="/dotnet/machinelearning/commit/76cb2cdf5cc8b6c88ca44b8969153836e589df04">)</a>
+      </div>
+
+    <div class="commit-tease-contributors">
+      
+<details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark float-left mr-2" id="blob_contributors_box">
+  <summary class="btn-link" aria-haspopup="dialog"  >
+    
+    <span><strong>1</strong> contributor</span>
+  </summary>
+  <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast " aria-label="Users who have contributed to this file">
+    <div class="Box-header">
+      <button class="Box-btn-octicon btn-octicon float-right" type="button" aria-label="Close dialog" data-close-dialog>
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </button>
+      <h3 class="Box-title">Users who have contributed to this file</h3>
+    </div>
+    
+        <ul class="list-style-none overflow-auto">
+            <li class="Box-row">
+              <a class="link-gray-dark no-underline" href="/sandyarmstrong">
+                <img class="avatar mr-2" alt="" src="https://avatars1.githubusercontent.com/u/155076?s=40&amp;v=4" width="20" height="20" />
+                sandyarmstrong
+</a>            </li>
+        </ul>
+
+  </details-dialog>
+</details>
+      
+    </div>
+  </div>
+
+
+
+    <div class="file ">
+      <div class="file-header">
+  <div class="file-actions">
+
+    <div class="BtnGroup">
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/dotnet/machinelearning/raw/master/test/data/wikipedia-detox-250-line-data.tsv">Raw</a>
+        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/dotnet/machinelearning/blame/master/test/data/wikipedia-detox-250-line-data.tsv">Blame</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/dotnet/machinelearning/commits/master/test/data/wikipedia-detox-250-line-data.tsv">History</a>
+    </div>
+
+        <a class="btn-octicon tooltipped tooltipped-nw"
+           href="https://desktop.github.com"
+           aria-label="Open this file in GitHub Desktop"
+           data-ga-click="Repository, open with desktop, type:mac">
+            <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
+        </a>
+
+        <button type="button" class="btn-octicon disabled tooltipped tooltipped-nw"
+          aria-label="You must be signed in to make or propose changes">
+          <svg class="octicon octicon-pencil" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"/></svg>
+        </button>
+        <button type="button" class="btn-octicon btn-octicon-danger disabled tooltipped tooltipped-nw"
+          aria-label="You must be signed in to make or propose changes">
+          <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
+        </button>
+  </div>
+
+  <div class="file-info">
+      252 lines (251 sloc)
+      <span class="file-info-divider"></span>
+    69.1 KB
+  </div>
+</div>
+
+      
+    <div class="render-notice">
+      We can make this file <a href='https://help.github.com/articles/rendering-csv-and-tsv-data'>beautiful and searchable</a> if this error is corrected: Unclosed quoted field on line 83.
+    </div>
+
+  <div itemprop="text" class="blob-wrapper data type-text ">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tr>
+        <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line">Sentiment	SentimentText</td>
+      </tr>
+      <tr>
+        <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="LC2" class="blob-code blob-code-inner js-file-line">1	  ==RUDE== Dude, you are rude upload that carl picture back, or else.</td>
+      </tr>
+      <tr>
+        <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="LC3" class="blob-code blob-code-inner js-file-line">1	  == OK! ==  IM GOING TO VANDALIZE WILD ONES WIKI THEN!!!   </td>
+      </tr>
+      <tr>
+        <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="LC4" class="blob-code blob-code-inner js-file-line">1	   Stop trolling, zapatancas, calling me a liar merely demonstartes that you arer Zapatancas. You may choose to chase every legitimate editor from this site and ignore me but I am an editor with a record that isnt 99% trolling and therefore my wishes are not to be completely ignored by a sockpuppet like yourself. The consensus is overwhelmingly against you and your trollin g lover Zapatancas,  </td>
+      </tr>
+      <tr>
+        <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="LC5" class="blob-code blob-code-inner js-file-line">1	  ==You&#39;re cool==  You seem like a really cool guy... *bursts out laughing at sarcasm*.</td>
+      </tr>
+      <tr>
+        <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="LC6" class="blob-code blob-code-inner js-file-line">1	 ::::: Why are you threatening me? I&#39;m not being disruptive, its you who is being disruptive.   </td>
+      </tr>
+      <tr>
+        <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="LC7" class="blob-code blob-code-inner js-file-line">1	  == hey waz up? ==  hey ummm... the fif four fifty one song... was the info inacurate?  did i spell something wrong? hmm... cause i don&#39;t think you have a right to delete ANYTHING that is accurate and that peple may want to read about fool. i don&#39;t like being pushed around especially by some little boy. got it?</td>
+      </tr>
+      <tr>
+        <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="LC8" class="blob-code blob-code-inner js-file-line">0	 ::::::::::I&#39;m not sure either. I think it has something to do with merely ahistorical vs being derived from pagan myths. Price does believe the latter, I&#39;m not sure about other CMT proponents.   </td>
+      </tr>
+      <tr>
+        <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="LC9" class="blob-code blob-code-inner js-file-line">0	&quot; *::Your POV and propaganda pushing is dully noted. However listing interesting facts in a netral and unacusitory tone is not POV. You seem to be confusing Censorship with POV monitoring. I see nothing POV expressed in the listing of intersting facts. If you want to contribute more facts or edit wording of the cited fact to make them sound more netral then go ahead. No need to CENSOR interesting factual information. &quot;</td>
+      </tr>
+      <tr>
+        <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="LC10" class="blob-code blob-code-inner js-file-line">0	  == File:Hildebrandt-Greg and Tim.jpg listed for deletion == An image or media file that you uploaded or altered, File:Hildebrandt-Greg and Tim.jpg, has been listed at Wikipedia:Files for deletion. Please see the discussion to see why this is (you may have to search for the title of the image to find its entry), if you are interested in it not being deleted.     </td>
+      </tr>
+      <tr>
+        <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="LC11" class="blob-code blob-code-inner js-file-line">0	  ::::::::This is a gross exaggeration. Nobody is setting a kangaroo court. There was a simple addition concerning the airline. It is the only one disputed here.   </td>
+      </tr>
+      <tr>
+        <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="LC12" class="blob-code blob-code-inner js-file-line">1	&quot;::No, I won&#39;t unrevert your edits!&quot;&quot; &quot;&quot;sounds more like you&#39;re writing their MARKETING material!!&quot;&quot;  Don&#39;t get bossy with me. Or snippy either, Miss religious Bigot!  Kindly leave your hatred for Christianity at DailyKos before you log out there and log in over here as a...er...ahem...NPOV editor     &quot;</td>
+      </tr>
+      <tr>
+        <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="LC13" class="blob-code blob-code-inner js-file-line">1	 ::::I heard Mark Kermode say today that Turbo was rubbish, and he&#39;s never *cough* wrong! He doesn&#39;t like F1 but he loved Senna and liked Rush as well.   </td>
+      </tr>
+      <tr>
+        <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="LC14" class="blob-code blob-code-inner js-file-line">1	   I am a sock puppet? THAT is my ban reason? This is my only account, and thanks for ignoring the bulk of my text. Wikipedia IS corrupt AND populated by idiots. I am free to say this, so please refrain from saying anything like that again. I didn&#39;t get banned for trolling, or personal attacks, I got banned because I changed an article to NPOV when the far majority of the editors here would rather the see the BNP article as a diatribe denouncing the party.</td>
+      </tr>
+      <tr>
+        <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="LC15" class="blob-code blob-code-inner js-file-line">1	   You twit, read the article before you revert edits. Power-mad jerks like you are ruining  this place</td>
+      </tr>
+      <tr>
+        <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="LC16" class="blob-code blob-code-inner js-file-line">0	&quot; A tag has been placed on Jerome leung kam, requesting that it be speedily deleted from Wikipedia. This has been done because the article appears to be about a person, group of people, band, club, company, or web content, but it does not indicate how or why the subject is notable: that is, why an article about that subject should be included in an encyclopedia. Under the criteria for speedy deletion, articles that do not assert the subject&#39;s importance or significance may be deleted at any time. Please see the guidelines for what is generally accepted as notable.   If you think that you can assert the notability of the subject, you may contest the deletion. To do this, add  on the top of the page (just below the existing speedy deletion or &quot;&quot;db&quot;&quot; tag) and leave a note on the article&#39;s talk page explaining your position. Please do not remove the speedy deletion tag yourself, but don&#39;t hesitate to add information to the article that would confirm the subject&#39;s notability under Wikipedia guidelines.  For guidelines on specific types of articles, you may want to check out our criteria for biographies, for web sites, for bands, or for companies. Feel free to leave a note on my talk page if you have any questions about this.   &quot;</td>
+      </tr>
+      <tr>
+        <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="LC17" class="blob-code blob-code-inner js-file-line">1	  ==READ THIS== This is Wikipedia. It is a place where people come for infomation. So tell me how it is that a guy wants to check John Cena&#39;s recent activity in the WWE can&#39;t because SOME people want to keep the page unedited. It is not worth my time to try to bring new infomation to a page every month or two if you NERDS just change it back. THERE IS NO POINT WHATSOEVER! If I want to put what happened at Backlash I WILL BLODDY WELL PUT WHAT HAPPENED AT BACKLASH! Don&#39;t any of you nerds try and stop me!   </td>
+      </tr>
+      <tr>
+        <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="LC18" class="blob-code blob-code-inner js-file-line">0	&quot;  == Administrator Complaint Filed Against You ==  I requested that you do not edit the article until the editor assistance has been sought. But you still added and the tag you added is fault because this is a professionally written article, besides the last section there is nothing about the article having a fan flavor to it. Before you add the add again please do show which section besides the &quot;&quot;What Ram&#39;s Fan&#39;s have to say about him&quot;&quot; seems written from a fan point of view. This article besides the last section adheres to the Wikpedia standard of writing. IF not please first prove it in my notes. As for the resource the technical person on the team is in the process of adding the refernce link to the source after which we will remove that tag as well.   Once again please do not add false tags, lets wait for the editor and the administrator, I did tell the administrator to look at the history and have provided your notes to him. So at this time, just have patience and lets wait.  I am  also forwarding this to the administrator from whom I have requested help. Like I said before, as adminstrator came to the page and made the necessary changes, she did not find the article sub-standard, so please refrain from adding tags.    &quot;</td>
+      </tr>
+      <tr>
+        <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="LC19" class="blob-code blob-code-inner js-file-line">1	  It is a shame what people are here, I am disgusting of you.</td>
+      </tr>
+      <tr>
+        <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="LC20" class="blob-code blob-code-inner js-file-line">0	  :Hello Cielomobile. I have to say that I also belive that the edits made recently to the United States-Mexico barrier page were not vandalism. I understand that the topic of the border can be polemic, but I don&#39;t think that User:68.2.242.165 was vandalizing the page. Maybe you could use the talk page Talk:United States–Mexico barrier to lay out your objections to those edits without deleting them entirely. I think they were good-faith efforts to improve the article, and that is also one of the guiding principles of Wikipedia, to Assume Good Faith. It might help though, if the author of those edits were to register with Wikipedia so the edits won&#39;t appear merely with an IP address.  </td>
+      </tr>
+      <tr>
+        <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
+        <td id="LC21" class="blob-code blob-code-inner js-file-line">0	&quot;  == my removal of your content on DNA melting ==  I removed the content you placed when creating the article because it was wrong and unreferenced. Mutations do not have &quot;&quot;weird structures&quot;&quot;  a point mutation might start with a single nucleotide mismatch, but those are rapidly detected and repaired to form a stable bonded double-helix structure, and subsequent rounds of DNA replication match each base with its complement. Perhaps your wording was wrong, perhaps you were thinking of an obscure related technology that I have heard of, but you didn&#39;t give a reference and I&#39;m not going to help you with this, because you&#39;re being rude. I find it disturbing that you apparently made this scientific page on wikipedia claiming a statement of fact that was in merely based on your own speculations.  &quot;</td>
+      </tr>
+      <tr>
+        <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
+        <td id="LC22" class="blob-code blob-code-inner js-file-line">1	wiki shold dye!they should be ashame!j</td>
+      </tr>
+      <tr>
+        <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="LC23" class="blob-code blob-code-inner js-file-line">1	 I suggest you kill yourself.  </td>
+      </tr>
+      <tr>
+        <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
+        <td id="LC24" class="blob-code blob-code-inner js-file-line">1	 Yes, I was blocked for losing patience with you, and what I did then would constitute personal attack. Honest outspoken criticism that is based on fact is permitted though, and the shameless hate speech expressed here deserves more than just vocal criticism. As for you, I&#39;ll discuss you elsewhere. This isn&#39;t the place for that.     </td>
+      </tr>
+      <tr>
+        <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
+        <td id="LC25" class="blob-code blob-code-inner js-file-line">0	  Get yourself some help.  </td>
+      </tr>
+      <tr>
+        <td id="L26" class="blob-num js-line-number" data-line-number="26"></td>
+        <td id="LC26" class="blob-code blob-code-inner js-file-line">1	  == regarding threats ==  is not revert of person&#39;s edits, only unwarranted edit by bot. appeal has been made to bot but presumption of guilt on part of administrative base is sign of censorship so made edits again to see if reversion would occur second time. has not. please keep baseless threats to self, vulgar pedant.</td>
+      </tr>
+      <tr>
+        <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
+        <td id="LC27" class="blob-code blob-code-inner js-file-line">1	   Alright, your lack of fact checking and denial of truth is pathetic, especially by your staff.   Stop making comments, just to harass me.   You are assuming I&#39;m everyone who doesn&#39;t agree with your wiki article. Pathetic.   I will continue to report them until your competent employees do the right thing.</td>
+      </tr>
+      <tr>
+        <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
+        <td id="LC28" class="blob-code blob-code-inner js-file-line">1	  Telling that you wouldn&#39;t answer my question. You are a hypocrit as anyone can see  </td>
+      </tr>
+      <tr>
+        <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
+        <td id="LC29" class="blob-code blob-code-inner js-file-line">1	  == YOUR INFORMATIONS ARE MISLEADING AND FULL OF ERRORS.  ==  YOUR INFORMATIONS ARE MISLEADING AND FULL OF ERRORS. IF THIS IS THE WAY YOU SERVE PEOPLE, I PITY THEM FOR BEING BRAINWASHED WITH LIES OF YOU.</td>
+      </tr>
+      <tr>
+        <td id="L30" class="blob-num js-line-number" data-line-number="30"></td>
+        <td id="LC30" class="blob-code blob-code-inner js-file-line">0	 AND I EVEN PUT A LINK TO A HIGHLIGHTS VIDEO ON YOUTUBE</td>
+      </tr>
+      <tr>
+        <td id="L31" class="blob-num js-line-number" data-line-number="31"></td>
+        <td id="LC31" class="blob-code blob-code-inner js-file-line">0	  Wind in the Sahara rawks, too.  Much more accessible than 7 pillars.</td>
+      </tr>
+      <tr>
+        <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
+        <td id="LC32" class="blob-code blob-code-inner js-file-line">1	 ::Excellent, thanks for looking into it. Some socks are quite dumb...   </td>
+      </tr>
+      <tr>
+        <td id="L33" class="blob-num js-line-number" data-line-number="33"></td>
+        <td id="LC33" class="blob-code blob-code-inner js-file-line">1	 Hypocrit! you just cited a newspaper that claims to be reliable. i will incorporate and make a newspaper company then ill site it. its called TEADRINKERNEWS.com this site has no merit and you have no integrity!</td>
+      </tr>
+      <tr>
+        <td id="L34" class="blob-num js-line-number" data-line-number="34"></td>
+        <td id="LC34" class="blob-code blob-code-inner js-file-line">1	  == Conflict of interest ==  You are a person who is doing some sort of harm to this lady Saman Hasnain.. It is apparent that you are making sure that her name is defamed.... Okay no problem... Will get a better source... you are playing dirty... DOG Sonisona </td>
+      </tr>
+      <tr>
+        <td id="L35" class="blob-num js-line-number" data-line-number="35"></td>
+        <td id="LC35" class="blob-code blob-code-inner js-file-line">1	REALLY REALLY ANGRY NOW GRRRRRRRRRRRR</td>
+      </tr>
+      <tr>
+        <td id="L36" class="blob-num js-line-number" data-line-number="36"></td>
+        <td id="LC36" class="blob-code blob-code-inner js-file-line">0	&quot;  ::I also found use of the word &quot;&quot;humanists&quot;&quot; confusing.  The types of people listed preceding &quot;&quot;humanists&quot;&quot; are defined by what they *do* (i.e. study, teach, do medical research) which makes sense in the context of talking about the commonplace book as one of their tools.  &quot;&quot;Humanists&quot;&quot; defines people of a certain ethical ideologywhat does that have to do with the function of a commonplace book?  Is the use of a commonplace book particularly defined by one&#39;s world perspective?  To me this would be akin to writing &quot;&quot;many blogs are maintained by writers, professors, lawyers, editorialists, and Republicans/Democrats&quot;&quot; in an article about blogs.  True though it may be, it confuses the reader into thinking that the subject being written about is somehow ideologically specific when it is not.&quot;</td>
+      </tr>
+      <tr>
+        <td id="L37" class="blob-num js-line-number" data-line-number="37"></td>
+        <td id="LC37" class="blob-code blob-code-inner js-file-line">1	 :the category was unnecesary, as explained in my edit summary. Your threats are disgrace to wikipedia. </td>
+      </tr>
+      <tr>
+        <td id="L38" class="blob-num js-line-number" data-line-number="38"></td>
+        <td id="LC38" class="blob-code blob-code-inner js-file-line">1	  == I hate you. ==  I hate you. I hate you!</td>
+      </tr>
+      <tr>
+        <td id="L39" class="blob-num js-line-number" data-line-number="39"></td>
+        <td id="LC39" class="blob-code blob-code-inner js-file-line">0	&quot;  ==Drovers&#39; Award== Better you hear it from me, and early, I suppose:  The Wikipedia logo is &quot;&quot;All Rights Reserved, Wikimedia Foundation, Inc.&quot;&quot;, and use of it is governed by the Wikimedia visual identity guidelines, which states that &quot;&quot;no derivative of the Wikimedia logo can be published without prior approval from the Foundation.&quot;&quot;   &quot;</td>
+      </tr>
+      <tr>
+        <td id="L40" class="blob-num js-line-number" data-line-number="40"></td>
+        <td id="LC40" class="blob-code blob-code-inner js-file-line">0	&quot;    Please stop. If you continue to vandalize Wikipedia, you will be blocked from editing.   |  &quot;</td>
+      </tr>
+      <tr>
+        <td id="L41" class="blob-num js-line-number" data-line-number="41"></td>
+        <td id="LC41" class="blob-code blob-code-inner js-file-line">0	  == removing a deletion review?!? ==  WP:SNOW doesn&#39;t apply to my deletion review since the issue is controversial.  </td>
+      </tr>
+      <tr>
+        <td id="L42" class="blob-num js-line-number" data-line-number="42"></td>
+        <td id="LC42" class="blob-code blob-code-inner js-file-line">0	  Oooooh thank you Mr. DietLimeCola. Once again, nice job trying to pretend you have some authority over anybody here. You are a wannabe admin, which is even sadder than a real admin  </td>
+      </tr>
+      <tr>
+        <td id="L43" class="blob-num js-line-number" data-line-number="43"></td>
+        <td id="LC43" class="blob-code blob-code-inner js-file-line">1	Grow up you biased child.  </td>
+      </tr>
+      <tr>
+        <td id="L44" class="blob-num js-line-number" data-line-number="44"></td>
+        <td id="LC44" class="blob-code blob-code-inner js-file-line">0	 :Saved without renaming; marked for rapid del.  </td>
+      </tr>
+      <tr>
+        <td id="L45" class="blob-num js-line-number" data-line-number="45"></td>
+        <td id="LC45" class="blob-code blob-code-inner js-file-line">1	 ==Terrible== Anyone else agree this list is garbage? </td>
+      </tr>
+      <tr>
+        <td id="L46" class="blob-num js-line-number" data-line-number="46"></td>
+        <td id="LC46" class="blob-code blob-code-inner js-file-line">1	  == DON&#39;T INTERFERE! ==  Look, I am telling you: YOU DON&#39;T INTERFERE between me and Ohnoitsjamie. He is a filthy hog, an oldest enemy, and i can go to any extent to insult him to the fullest extent. So be a good boy, and eat potato crisps (Yummy... yummy ... munch crunch. -  </td>
+      </tr>
+      <tr>
+        <td id="L47" class="blob-num js-line-number" data-line-number="47"></td>
+        <td id="LC47" class="blob-code blob-code-inner js-file-line">0	&quot;  :Going by immediate place of origin is much more in keeping with the definition of &quot;&quot;Hispanic or Latino&quot;&quot;. You&#39;re acting in good faith, obviously, but claiming every Hispanic/Latino person based on ancestry is too OR, too subjective, as can be seen from all that explaining you&#39;ve had to do. There is a way to include these people we&#39;re discussing: with the support of reliable sources that refer to them as Hispanic or Latino, something that ideally should be done for everyone on the list.   &quot;</td>
+      </tr>
+      <tr>
+        <td id="L48" class="blob-num js-line-number" data-line-number="48"></td>
+        <td id="LC48" class="blob-code blob-code-inner js-file-line">1	  == Pathetic ==  This user needs a life</td>
+      </tr>
+      <tr>
+        <td id="L49" class="blob-num js-line-number" data-line-number="49"></td>
+        <td id="LC49" class="blob-code blob-code-inner js-file-line">0	See the section below about the Macedonian last names, and common endings of the Macedonian last names, as well some common endings of the last names in the Slavic Languages.    </td>
+      </tr>
+      <tr>
+        <td id="L50" class="blob-num js-line-number" data-line-number="50"></td>
+        <td id="LC50" class="blob-code blob-code-inner js-file-line">0	&quot;Hauskalainen|Tom]]   RFC Response The &quot;&quot;criticism&quot;&quot; section reads like a POV essay without adequate references. I have added the appropriate tag. [[User:&quot;</td>
+      </tr>
+      <tr>
+        <td id="L51" class="blob-num js-line-number" data-line-number="51"></td>
+        <td id="LC51" class="blob-code blob-code-inner js-file-line">1	  And, frankly, you are just as pathetic and immature, clearly these acts of annoyance are your favourite past time.</td>
+      </tr>
+      <tr>
+        <td id="L52" class="blob-num js-line-number" data-line-number="52"></td>
+        <td id="LC52" class="blob-code blob-code-inner js-file-line">1	  She&#39;s insane and a zealot.</td>
+      </tr>
+      <tr>
+        <td id="L53" class="blob-num js-line-number" data-line-number="53"></td>
+        <td id="LC53" class="blob-code blob-code-inner js-file-line">0	&quot;  : I know you listed your English as on the &quot;&quot;level 2&quot;&quot;, but don&#39;t worry, you seem to be doing nicely otherwise, judging by the same page - so don&#39;t be taken aback. I just wanted to know if you were aware of what you wrote, and think it&#39;s an interesting case. : I would write that sentence simply as &quot;&quot;Theoretically I am an altruist, but only by word, not by my actions.&quot;&quot;. : PS. You can reply to me on this same page, as I have it on my watchlist.  &quot;</td>
+      </tr>
+      <tr>
+        <td id="L54" class="blob-num js-line-number" data-line-number="54"></td>
+        <td id="LC54" class="blob-code blob-code-inner js-file-line">1	  == A bit of education for you... ==  Here is the link to Bay Lake, Florida.  Now, what was that you were saying about it NOT being a city?   Educate yourself a bit before you make such ludicrous ignorant comments   </td>
+      </tr>
+      <tr>
+        <td id="L55" class="blob-num js-line-number" data-line-number="55"></td>
+        <td id="LC55" class="blob-code blob-code-inner js-file-line">1	  He is a CHEATER, and the article should say that.   </td>
+      </tr>
+      <tr>
+        <td id="L56" class="blob-num js-line-number" data-line-number="56"></td>
+        <td id="LC56" class="blob-code blob-code-inner js-file-line">1	&quot; :: a.k.a.  (among others) can&#39;t even get the air dates right, and the rest is a POV that is well-covered in the interesting book I cited, Hollywood Kryptonite. &quot;&quot;These&quot;&quot; users also cannot write proper English, which is what gives away that &quot;&quot;they&quot;&quot; are the same user, despite &quot;&quot;their&quot;&quot; denials.   ==Reply to vandal Wakkeenah== To all the vandals and so called just administrators, the air dates are minor problems, the facts and details surrounding Reeves suicided are not being written well enough, as everybody else is reporting, the fact that Reeves was to fight Moore next day, is also being reverted, this is pure vandalism. As far as spelling goes by Vesa or Projects or whoever, well, if you keep on repeating yourself and have no time, some spelling errors might occur, but it&#39;s not the spelling that counts but content which is being vandalised by so called just users and administrators of this so called just wikipedia. And it is obvious wahkeenah has some personal interest in this, proof: All over internet we have Reeves&#39; death explained in detail and possible people involved, but over here he is taking everything down, the idiotic administratotors are reversing it, thus making themselves look stupid and ignorant by not realizing the historical facts.&quot;</td>
+      </tr>
+      <tr>
+        <td id="L57" class="blob-num js-line-number" data-line-number="57"></td>
+        <td id="LC57" class="blob-code blob-code-inner js-file-line">1	  == Ridiculous == It&#39;s absolutely RIDICULOUS how long and detailed this article is.  This is why Wikipedia is laughed at and why teachers won&#39;t allow Wikipedia to be used in schoolwork  1)the |diots writing this article are trying to demonize certain groups and 2) they&#39;re trying to revise the facts of the incident to make it seem something that it wasn&#39;t.</td>
+      </tr>
+      <tr>
+        <td id="L58" class="blob-num js-line-number" data-line-number="58"></td>
+        <td id="LC58" class="blob-code blob-code-inner js-file-line">0	  ::I agree. Trolling snitches should be protected. Where are these days when crybabies just haven&#39;t been payed attention to ? Eh, I&#39;m waxing nostalgic.... </td>
+      </tr>
+      <tr>
+        <td id="L59" class="blob-num js-line-number" data-line-number="59"></td>
+        <td id="LC59" class="blob-code blob-code-inner js-file-line">0	 ==Fixed== Hi, I fixed up the Religion in Vietnam lead with atheism as state religion first as per your request, please take a look. The disparity in the pie chart seems mainly caused by that US institute counting 45% ancestor worship and traditional beliefs as religion, wheras officially that 45% are non-believers. It&#39;s a bit of a grey area...  Second question: What do you think is better title chữ nho or chữ Hán? To my mind chữ Hán can still include Japanese and Chinese, but chữ nho is clearly Vietnamese-only, and is what Lonely Planet uses. Do you have any view? Cheers!   </td>
+      </tr>
+      <tr>
+        <td id="L60" class="blob-num js-line-number" data-line-number="60"></td>
+        <td id="LC60" class="blob-code blob-code-inner js-file-line">1	  ::You should be ashamed of yourself for wasting adults&#39; time, you ridiculous runt.    </td>
+      </tr>
+      <tr>
+        <td id="L61" class="blob-num js-line-number" data-line-number="61"></td>
+        <td id="LC61" class="blob-code blob-code-inner js-file-line">1	   Good god, you wiped out my post just now. You can&#39;t even speak in coherent sentences.  Bascially, you&#39;ve been busted.</td>
+      </tr>
+      <tr>
+        <td id="L62" class="blob-num js-line-number" data-line-number="62"></td>
+        <td id="LC62" class="blob-code blob-code-inner js-file-line">0	  ::::I&#39;ve explained beneath your unblock request that I do not feel comfortable with your proclamation. You indicated that you did not realize Banglapedia was a copyrighted source. This source bears copyright notice on every page. How can we be certain, given that, that you will not copy from other copyrighted sources without noticing that they cannot be used? I myself do not feel comfortable unblocking you until you promise not to copy from any source that you cannot prove to be without copyright restriction.   </td>
+      </tr>
+      <tr>
+        <td id="L63" class="blob-num js-line-number" data-line-number="63"></td>
+        <td id="LC63" class="blob-code blob-code-inner js-file-line">1	 : Good grief have you nothing useful to do with your time? Oh well, I&#39;ll add you to the list. Fool   </td>
+      </tr>
+      <tr>
+        <td id="L64" class="blob-num js-line-number" data-line-number="64"></td>
+        <td id="LC64" class="blob-code blob-code-inner js-file-line">1	   SOMETHING AWFUL IS DEAD DEAD DEAD DEAD DEAD</td>
+      </tr>
+      <tr>
+        <td id="L65" class="blob-num js-line-number" data-line-number="65"></td>
+        <td id="LC65" class="blob-code blob-code-inner js-file-line">0	&quot;  == To the contributors of the article ==    Anonymiss Madchen has given you a cookie! Cookies promote WikiLove and hopefully this one has made your day better. You can Spread the &quot;&quot;WikiLove&quot;&quot; by giving someone else a cookie, whether it be someone you have had disagreements with in the past or a good friend.      To spread the goodness of cookies, you can add  to someone&#39;s talk page with a friendly message, or eat this cookie on the giver&#39;s talk page with !      Thank you for your hard work, and sorry about rough times in the past.  I&#39;m going to go edit other articles now.  : &quot;</td>
+      </tr>
+      <tr>
+        <td id="L66" class="blob-num js-line-number" data-line-number="66"></td>
+        <td id="LC66" class="blob-code blob-code-inner js-file-line">1	  == get a life loser. ==  get a life loser.</td>
+      </tr>
+      <tr>
+        <td id="L67" class="blob-num js-line-number" data-line-number="67"></td>
+        <td id="LC67" class="blob-code blob-code-inner js-file-line">1	 :::::Actually, you are the cockroach that followed me to the notice board, and repeatedly comes back to revert what I had written. FYI. 206.45.24.242 (talk) </td>
+      </tr>
+      <tr>
+        <td id="L68" class="blob-num js-line-number" data-line-number="68"></td>
+        <td id="LC68" class="blob-code blob-code-inner js-file-line">1	 I believe your actions to be pure vandalism either based on pig ignorant, racism or because you are being paid to do so. But if no one else agrees enjoy. It&#39;s more likely no one else cares either way you will reduce this to a stub or start supporting your own prejudices here. It&#39;s only wiki grow up son. This is not a conversation. The promise was a ban without farther notice so please don&#39;t give me any more notice you pathetic stooge</td>
+      </tr>
+      <tr>
+        <td id="L69" class="blob-num js-line-number" data-line-number="69"></td>
+        <td id="LC69" class="blob-code blob-code-inner js-file-line">1	  You are one of the worst page vandals I have ever seen. Your repeated vandalism of a user page shows what a pathetically insecure individual you are.</td>
+      </tr>
+      <tr>
+        <td id="L70" class="blob-num js-line-number" data-line-number="70"></td>
+        <td id="LC70" class="blob-code blob-code-inner js-file-line">0	&quot;  :::I think the apple pie image is pretty dated.  The expression &quot;&quot;as American as apple pie&quot;&quot; is dated and baseball&#39;s no longer the most popular sport in the US (football is).  Plus, it&#39;s sort of weird having them on the flag.  - &quot;</td>
+      </tr>
+      <tr>
+        <td id="L71" class="blob-num js-line-number" data-line-number="71"></td>
+        <td id="LC71" class="blob-code blob-code-inner js-file-line">1	ME  IF YOU PROTECT THIS PAGE I&#39;M GONNA KILL YOUR USER PAGE TOMORROW MORNING</td>
+      </tr>
+      <tr>
+        <td id="L72" class="blob-num js-line-number" data-line-number="72"></td>
+        <td id="LC72" class="blob-code blob-code-inner js-file-line">0	&quot;  :::Ok, whatever, but if this separate Frankish province existed as such, then I still believe that it should be included as separate entry into disambiguation page, but I can live with the current version of the page as well.   &quot;</td>
+      </tr>
+      <tr>
+        <td id="L73" class="blob-num js-line-number" data-line-number="73"></td>
+        <td id="LC73" class="blob-code blob-code-inner js-file-line">1	  Why are you threatening me, buddy?  I didn&#39;t do anything to you!   And like I care about editing Wikipedia.  Loser.</td>
+      </tr>
+      <tr>
+        <td id="L74" class="blob-num js-line-number" data-line-number="74"></td>
+        <td id="LC74" class="blob-code blob-code-inner js-file-line">0	  == April 2009 ==  Please do not attack other editors. If you continue, you will be blocked from editing Wikipedia.     :If this is a shared IP address, and you didn&#39;t make any unconstructive edits, consider creating an account for yourself so you can avoid further irrelevant warnings.</td>
+      </tr>
+      <tr>
+        <td id="L75" class="blob-num js-line-number" data-line-number="75"></td>
+        <td id="LC75" class="blob-code blob-code-inner js-file-line">1	&quot;  == HOW DARE YOU, HOW DARE YOU KUBIGULA, HOW  DARE YOU!!!!!!!!!!!! ==  HOW DARE YOU DELETE BRILLIANT ARTICLE ON NILLIAM &quot;&quot;THE PHENOMENA&quot;&quot; TOWNSIRIS  I CAN SENSE A PRESENCE ABOUT YOU BOY, AN EVIL PRESENCE, MAY THE FORCE FROM THE SPIRIT OF A SEAHORSE UNLEASH THE EXPECTO PATRONUM UPON YOU, YOU MUST EXPRESS KINDNESS TO NILLIAM TOWNSIRIS, FOR HE IS OUR SAVIOUR, THE ANSWER TO OUR ULLILOQUITY. IF YOU AS SO MUCH BLINK WHEN READING THE NEXT ARTICLE, THEN YOU WILL JUST MISS OUT THERE TIGER.&quot;</td>
+      </tr>
+      <tr>
+        <td id="L76" class="blob-num js-line-number" data-line-number="76"></td>
+        <td id="LC76" class="blob-code blob-code-inner js-file-line">1	, 16 August 2008 (UTC)  *I&#39;m terribly disappointed by this.  There are enough disagreeable people on wikipedia.  I sincerely hope you change your mind again and retire, again.  You suck.   14:23</td>
+      </tr>
+      <tr>
+        <td id="L77" class="blob-num js-line-number" data-line-number="77"></td>
+        <td id="LC77" class="blob-code blob-code-inner js-file-line">1	  == Blind as bats ==  Not one of you has seen what I have done to this page. Obviously you rely on some form of program to revert vandalism and not your own eyes.</td>
+      </tr>
+      <tr>
+        <td id="L78" class="blob-num js-line-number" data-line-number="78"></td>
+        <td id="LC78" class="blob-code blob-code-inner js-file-line">1	  == You are just Jealous ==  that you aren&#39;t a part of the GAYTOURAGE... you probably don&#39;t even now how to WERQ it!  Megna James</td>
+      </tr>
+      <tr>
+        <td id="L79" class="blob-num js-line-number" data-line-number="79"></td>
+        <td id="LC79" class="blob-code blob-code-inner js-file-line">0	 I hope this helps.</td>
+      </tr>
+      <tr>
+        <td id="L80" class="blob-num js-line-number" data-line-number="80"></td>
+        <td id="LC80" class="blob-code blob-code-inner js-file-line">0	&quot; ::I did provide a notable source for the references I was providinga book written by a respected journalist from a patient&#39;s perspective. I created a separate article for it, with tons of references, and merely put a reference to it under See Also. You deleted even that because it&#39;s allegedly an &quot;&quot;obscure anti-psychiatry book.&quot;&quot; The fact is that you are biased because you have vested interests to protect. It is people like you who make sure the truth never becomes known because it would endanger your pocketbook.   &quot;</td>
+      </tr>
+      <tr>
+        <td id="L81" class="blob-num js-line-number" data-line-number="81"></td>
+        <td id="LC81" class="blob-code blob-code-inner js-file-line">0	 ==Hello== I just wanted to let you know how you can be a nicer person through therapy and talking about your past experiences that led you to be an angry antisocial person today.</td>
+      </tr>
+      <tr>
+        <td id="L82" class="blob-num js-line-number" data-line-number="82"></td>
+        <td id="LC82" class="blob-code blob-code-inner js-file-line">1	  Yes, and this page is wayyyyy too long as well. It really needs to be condensed heavily. There are much more important shows that don&#39;t have a tenth of what this article has. Shame.  </td>
+      </tr>
+      <tr>
+        <td id="L83" class="blob-num js-line-number" data-line-number="83"></td>
+        <td id="LC83" class="blob-code blob-code-inner js-file-line">0	&quot;==  Inclusion of school type, gender, and religious information for HNMCS ==  There have been repeated deletions by Mikeycanuck (aka 99.254.17.230) which remove pertinent information about Holy Name of Mary College School (HNMCS) from this article. The two schools are brother and sister schools, and as per the History section in the HNMCS article, &quot;&quot;The Felician Sisters and St. Michael&#39;s College School co-founded the independent Holy Name of Mary College School&quot;&quot;. As such, it is appropriate to contain some basic information about HNMCS in this article and in the same way, to include some basic information about SMCS in the Holy Name of Mary College School article. The inclusion of the school type (independent), gender (all-girls), and religious information (Catholic) of Holy Name of Mary College School in this article, is meant to illustrate the parallels to the school type (private), gender (all-boys), and religious information (Catholic) of St. Michael&#39;s College School.    I don&#39;t agree that it is relevant information to give these details about Holy Name on the SMCS wiki. People reading the SMCS page quickly learn that Holy Name of Mary is the official sister school, and that it must be an all-girls school. That Holy Name is Catholic or private is also irrelavant in the SMCS article. If a reader interested in information on Holy Name wants to learn about it, he/she can go to the Holy Name wiki. I believe it should be removed as not necessary in an article about SMCS (and the same for St. Mike&#39;s info on the HNMCS wiki).  — Preceding unsigned comment added by      The point of including this basic information is to show how Holy Name of Mary College School and St. Michael&#39;s College School are connected by virtue of their school type, single-gender, and religious affiliation. The inclusion of this basic information is included to illustrate the parallels between the two schools.  These parallels are part of the reason they are brother and sister schools, and therefore this information is relevant and should be included in the article.     They are two separate institutions. If you want to write a paragraph describing the schools&#39; connections, that can be done in sub-article within the main article. Readers can go to the other school&#39;s wiki for more detailed information and don&#39;t need to see it in the introduction, where it appears as self-serving PR. See Basic Navigation in Wikipedia  &quot;&quot;Wikipedia articles are all linked, or cross-referenced. When highlighted text like this is seen, it means there is a link to some relevant article or Wikipedia page with further in-depth information elsewhere. Holding the mouse over the link will often show to where the link will lead. The reader is always one click away from more information on any point that has a link attached.&quot;&quot;http://en.wikipedia.org/wiki/Wikipedia:About    So if understand correctly, the inclusion of a section on each wiki describing the links between the schools is an acceptable compromise in your view?     I only ask Mikeycanuck for clarification because it goes against his reasoning for removing the very basic information previously included in the introduction that drew the parallels between the two schools. In removing that content, Mikeycanuck commented (see View History), &quot;&quot;Removed superfluous information on Holy Name. Should be in HNM&#39;s wiki.&quot;&quot;  So Mikeycanuck, you are adverse to very basic information included in the introduction, but you would welcome an entire paragraph within the article?  I want to ensure we have reached agreement before I go ahead and add that paragraph.     The detailed information does not belong in the introduction, which should always be concise and relevant. In a later section, a description of the school&#39;s links is acceptable, if it is relevant. If SMCS chose Holy Name as its &quot;&quot;sister school&quot;&quot; for certain reasons, and they are verifiable, I would not object. I am never opposed to compromise and reasonable discussion and discourse.     I never</td>
+      </tr>
+      <tr>
+        <td id="L84" class="blob-num js-line-number" data-line-number="84"></td>
+        <td id="LC84" class="blob-code blob-code-inner js-file-line">0	  ==Image copyright problem with Image:KissBOTI.jpg==   Thank you for uploading Image:KissBOTI.jpg. However, it currently is missing information on its copyright status. Wikipedia takes copyright very seriously. It may be deleted soon, unless we can determine the license and the source of the image. If you know this information, then you can add a copyright tag to the image description page.  If you have any questions, please feel free to ask them at the media copyright questions page. Thanks again for your cooperation.   </td>
+      </tr>
+      <tr>
+        <td id="L85" class="blob-num js-line-number" data-line-number="85"></td>
+        <td id="LC85" class="blob-code blob-code-inner js-file-line">0	Thanx efe, i noticed you remove 800 bytes of info on my watchlist so i went into red alert but it was a good call.     </td>
+      </tr>
+      <tr>
+        <td id="L86" class="blob-num js-line-number" data-line-number="86"></td>
+        <td id="LC86" class="blob-code blob-code-inner js-file-line">0	  == Woah! ==  As someone who&#39;d been the victim of his power abuse, this *really* came as a surprise to me when someone e-mailed this info to me this morning! Sorry he couldn&#39;t be more adult with his admin powers, but as Stan Lee said over four decades ago, with great power comes great responsibility.   Of course, the big question now is who Matthew Fenton will run and hide behind when he gets his head handed to him over his wanton edits of the Jericho and Lost pages. </td>
+      </tr>
+      <tr>
+        <td id="L87" class="blob-num js-line-number" data-line-number="87"></td>
+        <td id="LC87" class="blob-code blob-code-inner js-file-line">0	&quot;  == Newsletter ==  Thanks Indon. I tried to hide it until the delivery day, hehehhe. Have you seen it before? If not, then I have done a somewhat good job of hiding it P. Cheers   &quot;</td>
+      </tr>
+      <tr>
+        <td id="L88" class="blob-num js-line-number" data-line-number="88"></td>
+        <td id="LC88" class="blob-code blob-code-inner js-file-line">0	  == List of Malcolm in the Middle characters ==  Your addition to List of Malcolm in the Middle characters was excellent. Welcome!   </td>
+      </tr>
+      <tr>
+        <td id="L89" class="blob-num js-line-number" data-line-number="89"></td>
+        <td id="LC89" class="blob-code blob-code-inner js-file-line">1	  OH MY just CALL THEM ROCK YOU IDIOTS!!!!</td>
+      </tr>
+      <tr>
+        <td id="L90" class="blob-num js-line-number" data-line-number="90"></td>
+        <td id="LC90" class="blob-code blob-code-inner js-file-line">1	&quot;  ::::::::: I am not user 168.209.97.34. On what basis are you acusing me of being that user? Please answer the very simple question: Is the phrase &quot;&quot;anti-Islamic cut and past [sic] troll&quot;&quot; a personal attack or is  it not a personal attack?  Do you deem this to be acceptable language on Wikipedia? Pename&quot;</td>
+      </tr>
+      <tr>
+        <td id="L91" class="blob-num js-line-number" data-line-number="91"></td>
+        <td id="LC91" class="blob-code blob-code-inner js-file-line">0	 :You did a great job in the Bailando por un sueño (Argentina) article. Congratulations!</td>
+      </tr>
+      <tr>
+        <td id="L92" class="blob-num js-line-number" data-line-number="92"></td>
+        <td id="LC92" class="blob-code blob-code-inner js-file-line">0	  : Saw your message on my homepage.  Is there some reason you don&#39;t like my solution? —  3 July 2005 05:18 (UTC)</td>
+      </tr>
+      <tr>
+        <td id="L93" class="blob-num js-line-number" data-line-number="93"></td>
+        <td id="LC93" class="blob-code blob-code-inner js-file-line">1	  HHHHHHHHHHHHHHAAAAAAHAHA      you&#39;re funny.. Na seriously dude. I&#39;m reallyyyyyyy drunknnnk but ya&#39;re funny!</td>
+      </tr>
+      <tr>
+        <td id="L94" class="blob-num js-line-number" data-line-number="94"></td>
+        <td id="LC94" class="blob-code blob-code-inner js-file-line">1	  dont u speak to me like that id advise u to watch ur mouth!!  </td>
+      </tr>
+      <tr>
+        <td id="L95" class="blob-num js-line-number" data-line-number="95"></td>
+        <td id="LC95" class="blob-code blob-code-inner js-file-line">1	&quot; :You call MacDonald&#39;s a part of your &quot;&quot;culture&quot;&quot;? Nonsense! Spend some 10 years in France, and then you will have a hint of what Culture is!   &quot;</td>
+      </tr>
+      <tr>
+        <td id="L96" class="blob-num js-line-number" data-line-number="96"></td>
+        <td id="LC96" class="blob-code blob-code-inner js-file-line">1	&quot; ::&quot;&quot;Somebody, go write one.&quot;&quot;  Do it yourself lazy.  &quot;</td>
+      </tr>
+      <tr>
+        <td id="L97" class="blob-num js-line-number" data-line-number="97"></td>
+        <td id="LC97" class="blob-code blob-code-inner js-file-line">0	  Please do not make personal attacks. Wikipedia has a strict policy against personal attacks. Attack pages and images are not tolerated by Wikipedia and are speedily deleted. Users who continue to create or repost such pages and images, especially those in violation of our biographies of living persons policy, will be blocked from editing Wikipedia. Thank you.   </td>
+      </tr>
+      <tr>
+        <td id="L98" class="blob-num js-line-number" data-line-number="98"></td>
+        <td id="LC98" class="blob-code blob-code-inner js-file-line">0	Thanks for your response in this matter. Our plan worke like a charm. We finally got the article negativity under control and then got it protected!     </td>
+      </tr>
+      <tr>
+        <td id="L99" class="blob-num js-line-number" data-line-number="99"></td>
+        <td id="LC99" class="blob-code blob-code-inner js-file-line">1	&quot;  ::This is ridiculous. ::Aside from the reference not actually calling it a war crime, saying that &quot;&quot;some&quot;&quot; characterize it as one doesn&#39;t make it one. ::War crimes are serious violations of the laws of war.  The key words here are &quot;&quot;laws&quot;&quot; and &quot;&quot;war.&quot;&quot;  Unless one lives in a corrupt town, laws are made by legislatures, or in this case ratified by them, after being written and argued over by diplomats in consultation with their military&#39;s generals.  The laws of war were written with the understanding that killing large numbers of people may be a legitimate and necessary part of that process.  The laws of war were not written by corrupt and ignorant peaceniks sitting around dreaming up what they think would be moral. ::I&#39;m deleting this section.  It&#39;s not salvageable. ::   &quot;</td>
+      </tr>
+      <tr>
+        <td id="L100" class="blob-num js-line-number" data-line-number="100"></td>
+        <td id="LC100" class="blob-code blob-code-inner js-file-line">1	  == Who he really is ==  This poor guy had his IP stolen by me. Pwned! Too bad his ISP will permban him.</td>
+      </tr>
+      <tr>
+        <td id="L101" class="blob-num js-line-number" data-line-number="101"></td>
+        <td id="LC101" class="blob-code blob-code-inner js-file-line">0	   == POV issue ==  This article does not tell about the laws that require boards of directors, typical officers on a board, typical educations, experiences, contacts, etc. of board members.  There is also nothing about the history of the concept of boards of directors.  Almost the entire article is devoted to pointing out the alleged shortcomings of boards, and none of the statements have sources to verify them.  I&#39;m tagging this article as POV until these issues are resolved.   </td>
+      </tr>
+      <tr>
+        <td id="L102" class="blob-num js-line-number" data-line-number="102"></td>
+        <td id="LC102" class="blob-code blob-code-inner js-file-line">1	  I&#39;m Not vandalizing. You refuse my evidence on the talk area. You seem to be blind in your support of a Racist who calls for violence.</td>
+      </tr>
+      <tr>
+        <td id="L103" class="blob-num js-line-number" data-line-number="103"></td>
+        <td id="LC103" class="blob-code blob-code-inner js-file-line">1	I&#39;m not the deranged harrasser here.  You and yours are.  Project your personality onto someone else.     </td>
+      </tr>
+      <tr>
+        <td id="L104" class="blob-num js-line-number" data-line-number="104"></td>
+        <td id="LC104" class="blob-code blob-code-inner js-file-line">0	   Please refrain from making unconstructive edits to Wikipedia, as you did to Meat grinder. Your edits appear to constitute vandalism and have been reverted. If you would like to experiment, please use the sandbox. Thank you. cab (talk)  :Don&#39;t you mean: &#39;If you would like to experiment, please use a condom. Thank you.&#39;</td>
+      </tr>
+      <tr>
+        <td id="L105" class="blob-num js-line-number" data-line-number="105"></td>
+        <td id="LC105" class="blob-code blob-code-inner js-file-line">0	&quot; :Nothing wrong with that portrait, but she was queen for 22 years, mostly as an adult. It&#39;s great for the section on her childhood. Haven&#39;t hade time to look at your English yet and help you with that, if needed. I don&#39;t see why you only took this as criticism, question my &quot;&quot;goal&quot;&quot; and got so grumpy. Of course all your positive input to improve the article is appreciated by everyone, including me. I have tried to do my bit earlier.   &quot;</td>
+      </tr>
+      <tr>
+        <td id="L106" class="blob-num js-line-number" data-line-number="106"></td>
+        <td id="LC106" class="blob-code blob-code-inner js-file-line">0	 ::Thanks for the tip! I&#39;ve been looking at the mediation thing a bit already - and suspect you may be correct that a wholesale revert may be the answer...  </td>
+      </tr>
+      <tr>
+        <td id="L107" class="blob-num js-line-number" data-line-number="107"></td>
+        <td id="LC107" class="blob-code blob-code-inner js-file-line">1	  Only a complete loser writes a Wiki profile about themself!  5 July 2005 21:21 (UTC)</td>
+      </tr>
+      <tr>
+        <td id="L108" class="blob-num js-line-number" data-line-number="108"></td>
+        <td id="LC108" class="blob-code blob-code-inner js-file-line">1	    MY CHANGES DO NOT AFFECT ANY OF THE CONCOCTED OFFENSES YOU HAVE BROUGHT UP!   WP:NPOV issues / synthesis    WP:Verifiable    WP:OR   I want to bring your OWN STANCE, as being pro orthodox which in itself is BIASED!  i am again going to put the changes back on, BECAUSE I believe your STANCE IS TO PROTECT THE CURRENT SINGH SABHA ideological stance on sikhism, WHICH MEANS that wikipedia ONLY ACCEPTS ORTHODOX POV and NOT unorthodox! Which means going by your OWN judgment, that the CHRISTIAN UNORTHODOX CHURCH, which exist, on real life and on wiki, HAS NO merit!  THAT IS A BIASED APPROACH!</td>
+      </tr>
+      <tr>
+        <td id="L109" class="blob-num js-line-number" data-line-number="109"></td>
+        <td id="LC109" class="blob-code blob-code-inner js-file-line">1	  == HiDrNick ==  Present for you fatty. Relax. don&#39;t get too excited, it&#39;s not a 5000 Rhino meal. [] []</td>
+      </tr>
+      <tr>
+        <td id="L110" class="blob-num js-line-number" data-line-number="110"></td>
+        <td id="LC110" class="blob-code blob-code-inner js-file-line">0	 ==Unblock==   Blocking me will not solve anything. I meant what I called that person and I shall not take it back. Today he allows himself to deleate all of our images, tommorow all of articles, then he calls us second class people. Shame on you for giving such users admin rights. See my messages on Wikipedia:Requests for comment/Lupo   </td>
+      </tr>
+      <tr>
+        <td id="L111" class="blob-num js-line-number" data-line-number="111"></td>
+        <td id="LC111" class="blob-code blob-code-inner js-file-line">1	  == you know? ==  I already finish the main temple structure. whatever you say, arrogant guy. </td>
+      </tr>
+      <tr>
+        <td id="L112" class="blob-num js-line-number" data-line-number="112"></td>
+        <td id="LC112" class="blob-code blob-code-inner js-file-line">0	 Waaaaahh erase comments on this page too, do you really think anybody is reading this? Are you that insecure?</td>
+      </tr>
+      <tr>
+        <td id="L113" class="blob-num js-line-number" data-line-number="113"></td>
+        <td id="LC113" class="blob-code blob-code-inner js-file-line">0	  == Wikipedia:Counter Un-civility Unit ==  Wikipedia:Counter Un-civility Unit is a new wiki-project I have thought up. I was wondering if you thought it was a good idea and if you wanted to join up. I need some users backing me before I construct a wikiproject, and you seem to share my views on subjects such as concensus, civilty, etc. Reply on my talkpage if you&#39;re interested. Thanks, -MegamanZero|Talk </td>
+      </tr>
+      <tr>
+        <td id="L114" class="blob-num js-line-number" data-line-number="114"></td>
+        <td id="LC114" class="blob-code blob-code-inner js-file-line">0	I am refering to List of Chinese languages and dialects.   </td>
+      </tr>
+      <tr>
+        <td id="L115" class="blob-num js-line-number" data-line-number="115"></td>
+        <td id="LC115" class="blob-code blob-code-inner js-file-line">0	&quot;A rough google tally: *AIDS denialist 13,100 hits *Big Tobacco denialist/ Big Tobacco denialism 0 hits *Holocaust denialist 486 hits *Holocaust denier 306,000 hits  So there are 486 hits on Holocaust denialists who are getting some personal gain from their denailism, but 306,000 google hits on Holocaust deniers who are not getting personal gain from their denialism? Is that what you maintain? And &quot;&quot;Big Tobacco denialism&quot;&quot; actually gets 0 google hits because it is so well known those denialists are doing it for personal gain? And so on and so forth. This is ludicrous. Give it up.    &quot;</td>
+      </tr>
+      <tr>
+        <td id="L116" class="blob-num js-line-number" data-line-number="116"></td>
+        <td id="LC116" class="blob-code blob-code-inner js-file-line">0	&quot;  == Taken from Bell X1 External Links section == Bell X1 Flock Album Review at WERS.org • &quot;</td>
+      </tr>
+      <tr>
+        <td id="L117" class="blob-num js-line-number" data-line-number="117"></td>
+        <td id="LC117" class="blob-code blob-code-inner js-file-line">1	  == Goodbye Cruel World ==  I have decided to kill myself.  My Dad died two weeks ago, and I wish to join him.  I just wanted to say goodbye.</td>
+      </tr>
+      <tr>
+        <td id="L118" class="blob-num js-line-number" data-line-number="118"></td>
+        <td id="LC118" class="blob-code blob-code-inner js-file-line">0	&quot;  ==Kobe Tai==  A proposed deletion template has been added to the article Kobe Tai, suggesting that it be deleted according to the proposed deletion process. All contributions are appreciated, but this article may not satisfy Wikipedia&#39;s criteria for inclusion, and the deletion notice should explain why (see also &quot;&quot;What Wikipedia is not&quot;&quot; and Wikipedia&#39;s deletion policy).  You may prevent the proposed deletion by removing the  notice, but please explain why you disagree with the proposed deletion in your edit summary or on its talk page. Also, please consider improving the article to address the issues raised. Even though removing the deletion notice will prevent deletion through the proposed deletion process, the article may still be deleted if it matches any of the speedy deletion criteria or it can be sent to Articles for Deletion, where it may be deleted if consensus to delete is reached. If you agree with the deletion of the article, and you are the only person who has made substantial edits to the page, please add  to the top of Kobe Tai.  &#39;&#39;&#39;&#39;&#39;&#39; * &quot;</td>
+      </tr>
+      <tr>
+        <td id="L119" class="blob-num js-line-number" data-line-number="119"></td>
+        <td id="LC119" class="blob-code blob-code-inner js-file-line">1	 Yeah thanks to however did that because now the stupid fish guy can get off on stupid information Wrestlinglover420</td>
+      </tr>
+      <tr>
+        <td id="L120" class="blob-num js-line-number" data-line-number="120"></td>
+        <td id="LC120" class="blob-code blob-code-inner js-file-line">1	  Pss Rex, be sure to DOCUMENT all the things you&#39;ve discovered  on the John Kerry page etc.  It&#39;s awesome that you and I INDEPENDENTLY observed (and can corrorborate) virtually the exactsame  pattern by these liberals. Demonizing conservatives; lionizing liberals. It&#39;s repeated ad infinitum, ad nauseum.  The more proof we have, the easier it will be to persuade all but their fellow brain-dead truth haters to give a red cent to Wikipedia. And, until WHOLESALE changes are made from the top down, that&#39;s exactly what&#39;s about to happen. It&#39;s almost like this is the liberal&#39;s religion. Too bad they&#39;re gonna have to find a church other than Wikipedia to practice their faith, huh?  I&#39;ve heard rumors that my actions are already sending users Hippocrite, Fred Bauder, WoohooKitty, Kizzle, FVW, Derex and especially the pimply faced 15 year old RedWolf  to become so verklempt they don&#39;t know whether to schedule an appointement with their psychiatrist...or their gynecologist.  Big Daddy- PHASE II Dry up the funding  (on the road)</td>
+      </tr>
+      <tr>
+        <td id="L121" class="blob-num js-line-number" data-line-number="121"></td>
+        <td id="LC121" class="blob-code blob-code-inner js-file-line">1	 Your ignorant comments   Before acting as a functional illiterate, you should have read the pertinent prior discussion already took place in the talk page on the removed content which has no place in a biography. By the way, how is your boyfriend Bertil Videt doing? I read sensational stuff on his talk page which he keeps hiding. Did you get to meet with his other boyfriends yet?   </td>
+      </tr>
+      <tr>
+        <td id="L122" class="blob-num js-line-number" data-line-number="122"></td>
+        <td id="LC122" class="blob-code blob-code-inner js-file-line">1	. I&#39;m afraid to say that if anyone agreed with your interpretation on what denotes a comment or remark by one to be an insult, well I&#39;d have to say that you&#39;re all stark raving, bloody mad!</td>
+      </tr>
+      <tr>
+        <td id="L123" class="blob-num js-line-number" data-line-number="123"></td>
+        <td id="LC123" class="blob-code blob-code-inner js-file-line">0	  === Age of Modern Humans ===  The article says the age of modern humans is 200 thousands years which is unsourced material obviously becausee no one knows.  However the source provided says 130,000 years.  So how old are humans?  200 thousand years old, 130 years old, or the millions of other numbers that science has claimed?   </td>
+      </tr>
+      <tr>
+        <td id="L124" class="blob-num js-line-number" data-line-number="124"></td>
+        <td id="LC124" class="blob-code blob-code-inner js-file-line">1	  It wasn&#39;t a personal attack. If your grasp of english is so poor you shouldn&#39;t be attempting to censor people.</td>
+      </tr>
+      <tr>
+        <td id="L125" class="blob-num js-line-number" data-line-number="125"></td>
+        <td id="LC125" class="blob-code blob-code-inner js-file-line">0	 :::*Generic fair use rationales are, by definition, impossible.  </td>
+      </tr>
+      <tr>
+        <td id="L126" class="blob-num js-line-number" data-line-number="126"></td>
+        <td id="LC126" class="blob-code blob-code-inner js-file-line">1	&quot; :That isnt going to work, and you dont seem stupid enough to think that it will. &#39;&#39;&#39;&#39;&#39;&#39; - &quot;</td>
+      </tr>
+      <tr>
+        <td id="L127" class="blob-num js-line-number" data-line-number="127"></td>
+        <td id="LC127" class="blob-code blob-code-inner js-file-line">1	 ::: Get off your high horse, or block me.   </td>
+      </tr>
+      <tr>
+        <td id="L128" class="blob-num js-line-number" data-line-number="128"></td>
+        <td id="LC128" class="blob-code blob-code-inner js-file-line">1	  You&#39;re very unreasonable and bored, sick person! If you have no reason to delete an article without knowing or seeing the full content. Hold your horses and then decide. If you have an e-mail address I&#39;d like to debate this with you. -Wikipedia Supervisor!</td>
+      </tr>
+      <tr>
+        <td id="L129" class="blob-num js-line-number" data-line-number="129"></td>
+        <td id="LC129" class="blob-code blob-code-inner js-file-line">0	&quot; ::The problem is not only with the sections concerning &quot;&quot;Controversy about media coverage&quot;&quot;, the major problem is that many major points about the Greek debt crisis are missing in the lead and the article, even though it consists of &gt;100 pages. This is addressed in  ::* section #4 - &quot;&quot;&gt;100 pages, but still main points missing?&quot;&quot; ::* section #5 - &quot;&quot; Why did Greece need fiscal austerity in the midst of its crisis? &quot;&quot; ::* section #6 -  &quot;&quot; POV / LEAD debate &quot;&quot; ::Two weeks ago, I proposed in this section #4 to have the main points at least in summary style in the lead (as important ones are not even in the article) ::Just let&#39;s only take the first point listed in #4, being joining the Euro without sufficient financial convergence and competitiveness in the summary list of causes for the Greek debt crisis. It is the major single and early root cause for the Greek debt crisis. Without this root cause Greece could technically not have had this debt crisis because it could always have printed itself out of every debt volume as they did before with the drachma. But this cause is missing in the 100 WP pages and in the WP lead. The current lead only lists normal problems like &quot;&quot;structural weaknesses&quot;&quot; and &quot;&quot;recessions&quot;&quot;  (even though it is clear that Greece faced those normal problems for decades and always solved them with high drachma inflation if needed) - so without naming the root cause there is no cause for the Greek debt crisis. ::What happened after I proposed to have the main points in the article (at least in the lead as a summary) and also invited everybody to add/change/delete from my proposed the main point list? There were strong opponents working in a coordinated action, threatening to fight any significant change, saying one can not summarize a Greek debt crisis, saying &quot;&quot;Greek interests [need to have] a prominence&quot;&quot;) when describing the debt crisis in WP, saying they will not let other editors summarize it, and so on. So we have almost 100 new pages in the talk section, and main points about the lemma not in the article (like it was during the last 5 years) ::  &quot;</td>
+      </tr>
+      <tr>
+        <td id="L130" class="blob-num js-line-number" data-line-number="130"></td>
+        <td id="LC130" class="blob-code blob-code-inner js-file-line">1	 | decline=Nobody on Wikipedia wants your moronic edits! Take a hike!   </td>
+      </tr>
+      <tr>
+        <td id="L131" class="blob-num js-line-number" data-line-number="131"></td>
+        <td id="LC131" class="blob-code blob-code-inner js-file-line">0	 Welcome!  Hello, , and welcome to Wikipedia! Thank you for your contributions. I hope you like the place and decide to stay. Here are a few good links for newcomers: *The five pillars of Wikipedia *How to edit a page *Help pages *Tutorial *How to write a great article *Manual of Style I hope you enjoy editing here and being a Wikipedian! Please sign your name on talk pages using four tildes (~~~~); this will automatically produce your name and the date. If you need help, check out Wikipedia:Questions, ask me on my talk page, or place {{helpme}} on your talk page and someone will show up shortly to answer your questions. Again, welcome!   By the way, I noticed you have created the article Dr. Manfred Gerstenfeld. Some of the sentences there seem copied directly from Dr Gerstenfeld’s homepage; this is not desirable, because it creates the impression that the article was copied from the homepage, which might be be a copyright violation. Perhaps you should try to rewrite the article a bit to avoid that. Also, some kind of indication about why Dr Gerstenfeld is notable would be nice to have (cf. WP:BIO and WP:PROFTEST for ideas on how to do that). — </td>
+      </tr>
+      <tr>
+        <td id="L132" class="blob-num js-line-number" data-line-number="132"></td>
+        <td id="LC132" class="blob-code blob-code-inner js-file-line">1	  == i hate your guts ==  i hope you feel good about that</td>
+      </tr>
+      <tr>
+        <td id="L133" class="blob-num js-line-number" data-line-number="133"></td>
+        <td id="LC133" class="blob-code blob-code-inner js-file-line">1	 :: oh i bet you are little boy. now go up stairs, your mummy made your lunch</td>
+      </tr>
+      <tr>
+        <td id="L134" class="blob-num js-line-number" data-line-number="134"></td>
+        <td id="LC134" class="blob-code blob-code-inner js-file-line">1	  PS:  you&#39;re all middle-aged losers at home in your parents basements living off 50 bucks a week</td>
+      </tr>
+      <tr>
+        <td id="L135" class="blob-num js-line-number" data-line-number="135"></td>
+        <td id="LC135" class="blob-code blob-code-inner js-file-line">1	Samuell, if you do not want to be the one dead, better proceed as requested. Either that or we&#39;ll keep beating!  </td>
+      </tr>
+      <tr>
+        <td id="L136" class="blob-num js-line-number" data-line-number="136"></td>
+        <td id="LC136" class="blob-code blob-code-inner js-file-line">1	  == i dare you ==  Block me. I will do it again, i dare you to reply to my discussions rather owning articles and issuing warnings.</td>
+      </tr>
+      <tr>
+        <td id="L137" class="blob-num js-line-number" data-line-number="137"></td>
+        <td id="LC137" class="blob-code blob-code-inner js-file-line">1	 WELL SAID Loremaster you do not own the article, you tyrannical anti-knowledge hater. </td>
+      </tr>
+      <tr>
+        <td id="L138" class="blob-num js-line-number" data-line-number="138"></td>
+        <td id="LC138" class="blob-code blob-code-inner js-file-line">1	 I didn&#39;t say that I myself don&#39;t agree with what the reference says, or I myself know better than what the reference says, so I am going to correct it or remove it based on my own original research. Do not distort my words. I said Myanmar has nothing to do with the topic. You have problems with understanding.      </td>
+      </tr>
+      <tr>
+        <td id="L139" class="blob-num js-line-number" data-line-number="139"></td>
+        <td id="LC139" class="blob-code blob-code-inner js-file-line">1	 ::So  you think you know better than the admin! Are you excusing all of the above? Are you ignoring all of his breaks on the mediation - do you not remember your reaction when I changed BOMBER to Volunteer, you seem very quite of this, do you not think that is total hypocritical? </td>
+      </tr>
+      <tr>
+        <td id="L140" class="blob-num js-line-number" data-line-number="140"></td>
+        <td id="LC140" class="blob-code blob-code-inner js-file-line">1	  == October 2013 ==  You want ME for understanding? I&#39;ll give you understanding, you annoying editor!   </td>
+      </tr>
+      <tr>
+        <td id="L141" class="blob-num js-line-number" data-line-number="141"></td>
+        <td id="LC141" class="blob-code blob-code-inner js-file-line">0	, 6 January 2014 (UTC) ::::Ok, so Anon IP from Tempe, Arizona aka 174.19.166.126 aka 174.19.169.92, who apparently only edits the Ted Cruz article and no other, now that I have conclusively answered your question, please provide me reasons that the Ted Cruz article should be edited just like Jennifer Granholm article.  It was your suggestion I assume you have some thoughts on this topic, right?  22:38</td>
+      </tr>
+      <tr>
+        <td id="L142" class="blob-num js-line-number" data-line-number="142"></td>
+        <td id="LC142" class="blob-code blob-code-inner js-file-line">1	You&#39;re a real glutton for punishment. ;-) </td>
+      </tr>
+      <tr>
+        <td id="L143" class="blob-num js-line-number" data-line-number="143"></td>
+        <td id="LC143" class="blob-code blob-code-inner js-file-line">0	&quot;I&#39;m the latest yet, but congratulations on your re-adminship.  That&#39;s the third time I&#39;ve voted for you, don&#39;t make me do it again! -P  30 June 2005 17:17 (UTC)  &quot;</td>
+      </tr>
+      <tr>
+        <td id="L144" class="blob-num js-line-number" data-line-number="144"></td>
+        <td id="LC144" class="blob-code blob-code-inner js-file-line">0	&quot; :Erm, thank you. &quot;</td>
+      </tr>
+      <tr>
+        <td id="L145" class="blob-num js-line-number" data-line-number="145"></td>
+        <td id="LC145" class="blob-code blob-code-inner js-file-line">1	 : LOTHAT VON TROTHA WAS POISONED, THAT&#39;S WHAT CONTAMINATION IS! YOU GET TYPHOID FEVER ONLY THROUGH POISONED FOOD OR DRINK!</td>
+      </tr>
+      <tr>
+        <td id="L146" class="blob-num js-line-number" data-line-number="146"></td>
+        <td id="LC146" class="blob-code blob-code-inner js-file-line">1	  == Robbie Hummel ==  Way to speedy delete my Robbie Hummel article! It&#39;s now a real article and you can&#39;t do anything about it. I can&#39;t believe you would do this to me. You must hate black people.   </td>
+      </tr>
+      <tr>
+        <td id="L147" class="blob-num js-line-number" data-line-number="147"></td>
+        <td id="LC147" class="blob-code blob-code-inner js-file-line">0	  :Merge and redirect as per , also for Base 32 into Base32 (I just edited Base32, and needed Base64 in UTF-1).   </td>
+      </tr>
+      <tr>
+        <td id="L148" class="blob-num js-line-number" data-line-number="148"></td>
+        <td id="LC148" class="blob-code blob-code-inner js-file-line">1	&quot; You&#39;re a dumb American, right? No degree? Knows nothing of engineering? Thinks mathematics is &quot;&quot;universal&quot;&quot;? Played monopoly in high school instead of learning? How am I doing so far?&quot;</td>
+      </tr>
+      <tr>
+        <td id="L149" class="blob-num js-line-number" data-line-number="149"></td>
+        <td id="LC149" class="blob-code blob-code-inner js-file-line">1	 :::::::::::You read it; your note addressed something else.  (Incidentally, your reasoning above is unsound; whether or not my Rushdie comparison holds up, it does not fail to hold up because his literary career is not a failure).  But I hope you understand, I am not trying to get any decision reversed (and never was).  Rather, I am yelling at you for enforcing a stupid policy. - </td>
+      </tr>
+      <tr>
+        <td id="L150" class="blob-num js-line-number" data-line-number="150"></td>
+        <td id="LC150" class="blob-code blob-code-inner js-file-line">1	  Sandifer, I&#39;m going BUY my way back into wikipedia.  For all your puffery, I&#39;ll bet you&#39;ve never forked over a penny to the cause.  And even you have, I&#39;ll make your contribution seem like pennies.</td>
+      </tr>
+      <tr>
+        <td id="L151" class="blob-num js-line-number" data-line-number="151"></td>
+        <td id="LC151" class="blob-code blob-code-inner js-file-line">1	  ==  Hello, Nawlins ==  Why do you like to deflower prepubescent girls? Don’t you know that’s a felony?   </td>
+      </tr>
+      <tr>
+        <td id="L152" class="blob-num js-line-number" data-line-number="152"></td>
+        <td id="LC152" class="blob-code blob-code-inner js-file-line">1	  Vinny Burgoo = suspected sock puppet  Are you ever going to withdraw this accusation? It&#39;s currently the second hit with a Google search with &#39;Vinny Burgoo&#39; (my one and only online identity for nearly ten years) and it&#39;s wholly bogus. Someone posted something in support of something very stupid I had done at Wiktionary (I called a serial Wiki tyrant a &#39;c**t&#39; after he had unambiguously broken Wiki&#39;s rules, then I compounded this by threatening him in what I thought at the time to be a transparently jocular manner, but wasn&#39;t) and this &#39;supporter&#39; was assumed to be me using another identity and another IP trying to get around a temporary block. I still use Wikipedia a lot but have no interest whatsoever in editing it ever again, so by all means say that I was blocked for disruptive editing (guilty: I got fed up with the lot of you) or whatever else I was accused of before this puppeteer nonsense was settled on (the crime kept changing) but I&#39;m not happy with what you currently show.  Take it down or else.  A genuine threat this time? We&#39;ll see.</td>
+      </tr>
+      <tr>
+        <td id="L153" class="blob-num js-line-number" data-line-number="153"></td>
+        <td id="LC153" class="blob-code blob-code-inner js-file-line">0	 Other than that you could see how the side bar looks intergrated into the top welcome section on the right and make it just one section. Providing you make it the same length and shrink the other pics down a little it should fit in the top? </td>
+      </tr>
+      <tr>
+        <td id="L154" class="blob-num js-line-number" data-line-number="154"></td>
+        <td id="LC154" class="blob-code blob-code-inner js-file-line">1	 I reckon you should die </td>
+      </tr>
+      <tr>
+        <td id="L155" class="blob-num js-line-number" data-line-number="155"></td>
+        <td id="LC155" class="blob-code blob-code-inner js-file-line">0	This is British form and does not correspond to French nobiliary rules, which, in any case, are defunct, given that French noble titles were rendered obsolete more than a century ago. I think that, technically, she is merely Raine Spencer, having retrieved her previous surname upon her divorce from Chambrun. (And during the French marriage, she was not Countess of Chambrun, she was Countess Jean-Francois de Chambrun, and, as per French usage, would be referred to as Mme de Chambrun, with the title used only by servants and so-called inferiors.)  </td>
+      </tr>
+      <tr>
+        <td id="L156" class="blob-num js-line-number" data-line-number="156"></td>
+        <td id="LC156" class="blob-code blob-code-inner js-file-line">1	  Hey jerk we may do a deal: please let in peace the articles of Carl Grissom and Bob the goon. Also unlock the Chase Meridian articles and accept that Jack Napier are in Batman Forever. In change I let of vandalize the user articles.</td>
+      </tr>
+      <tr>
+        <td id="L157" class="blob-num js-line-number" data-line-number="157"></td>
+        <td id="LC157" class="blob-code blob-code-inner js-file-line">1	wikipedia.org for my fans i leave for one second and Wikipedia has blocked my published content for racist organizations who spam and/or advertize in the search engines under wikipedia.org name. would you like me to should you the links or the world the links? I am sick of the racism on wikipedia.org. stop blocking my publishing that is in fact not spam and not advertizing anything. It is my life, a real american, in america.</td>
+      </tr>
+      <tr>
+        <td id="L158" class="blob-num js-line-number" data-line-number="158"></td>
+        <td id="LC158" class="blob-code blob-code-inner js-file-line">1	  Once again the TYRANNY of Liberal opinions rules over all, just like the Nazis or Facists.</td>
+      </tr>
+      <tr>
+        <td id="L159" class="blob-num js-line-number" data-line-number="159"></td>
+        <td id="LC159" class="blob-code blob-code-inner js-file-line">1	ok so its the currupt admin: desucka,crooked bullet,and krappydude. made a mental note </td>
+      </tr>
+      <tr>
+        <td id="L160" class="blob-num js-line-number" data-line-number="160"></td>
+        <td id="LC160" class="blob-code blob-code-inner js-file-line">1	PAGE GO DIE YOU STUPID ARSEWHOLE AUTOMATED FILTER</td>
+      </tr>
+      <tr>
+        <td id="L161" class="blob-num js-line-number" data-line-number="161"></td>
+        <td id="LC161" class="blob-code blob-code-inner js-file-line">0	&quot;  :::The article as it stands is of almost no use to the readership it&#39;s aimed at, that&#39;s the problem. I can&#39;t imagine why any medical professional would choose to use Wikipedia, but even if they do, they have easy access to better source material. The general reader doesn&#39;t have that easy access, so it would make sense to aim to the article at them.   &quot;</td>
+      </tr>
+      <tr>
+        <td id="L162" class="blob-num js-line-number" data-line-number="162"></td>
+        <td id="LC162" class="blob-code blob-code-inner js-file-line">1	 ::Dai antagonized me with he comment of my &#39;first&#39; page move. Then Snowded suggested I was a either a drunk or just plain stupid. They should be attacking me on those public talkpages &amp; through their &#39;edi summaries&#39;. I used to be a happy bloke, but Dai &amp; Snowy continue to poke &amp; provoke me, via stalking, harrassment &amp; contant ABF. They treat me like dirt, on thos public pages.   </td>
+      </tr>
+      <tr>
+        <td id="L163" class="blob-num js-line-number" data-line-number="163"></td>
+        <td id="LC163" class="blob-code blob-code-inner js-file-line">0	&quot;  == How rumours get started ==  Here is how rumours get started.  Ramsquire is caught again starting a rumour.  *RPJ: There is no chain of custody on the rifle. *Ramsquire: &quot;&quot;Yes there is.&quot;&quot; *RPJ: Where? *Ramsquire: &quot;&quot;Its not in the article.&quot;&quot; and &quot;&quot;I&#39;m not going to do any research for you.&quot;&quot;  *RPJ: Ramsquire, please, just admit you made the whole story up about a there being &quot;&quot;chain of custody&quot;&quot; on the rifle.    &quot;</td>
+      </tr>
+      <tr>
+        <td id="L164" class="blob-num js-line-number" data-line-number="164"></td>
+        <td id="LC164" class="blob-code blob-code-inner js-file-line">0	 :::This discussion was dead from more than half of month when I archived it. I really want to see Heta, Stigma and Sho in article, but I cannot add them again effectively, because of threat of edit war triggering mentioned above by me, which is manifested by reverts made by other editors after readding these letters by me.   </td>
+      </tr>
+      <tr>
+        <td id="L165" class="blob-num js-line-number" data-line-number="165"></td>
+        <td id="LC165" class="blob-code blob-code-inner js-file-line">0	 ::::::::Oh seriously, you&#39;re definitely a challenging one. As I said, it&#39;s a legal matter.   </td>
+      </tr>
+      <tr>
+        <td id="L166" class="blob-num js-line-number" data-line-number="166"></td>
+        <td id="LC166" class="blob-code blob-code-inner js-file-line">1	 One thing I hate is people who talk about other people behind their backs because they are too gutless to confront them in person. You go bad mouthing people like me and Slim Virgin and others off behind our backs. Really honorable behaviour. You are a weak person.</td>
+      </tr>
+      <tr>
+        <td id="L167" class="blob-num js-line-number" data-line-number="167"></td>
+        <td id="LC167" class="blob-code blob-code-inner js-file-line">0	 *Please refrain from adding nonsense to Wikipedia, as you did to WWE RAW. It is considered vandalism. If you would like to experiment, use the sandbox.   </td>
+      </tr>
+      <tr>
+        <td id="L168" class="blob-num js-line-number" data-line-number="168"></td>
+        <td id="LC168" class="blob-code blob-code-inner js-file-line">1	  == ... ==  WHY DO YOU ACT SO HOSTILE WHEN YOU GET INSULTED?!?! LEARN TO FRIGGIN FIND SOURCES BEFORE YOU DELETE THOSE PRICING GAME ARTICLES, GD</td>
+      </tr>
+      <tr>
+        <td id="L169" class="blob-num js-line-number" data-line-number="169"></td>
+        <td id="LC169" class="blob-code blob-code-inner js-file-line">0	  :::If you two weren&#39;t ganging up on me I&#39;d get to report you first and get you banned.  </td>
+      </tr>
+      <tr>
+        <td id="L170" class="blob-num js-line-number" data-line-number="170"></td>
+        <td id="LC170" class="blob-code blob-code-inner js-file-line">1	  if this is really world you enter my yard, I will use my hunter rifle blow out you head. but we are in wiki, so I will flag you as vandals.</td>
+      </tr>
+      <tr>
+        <td id="L171" class="blob-num js-line-number" data-line-number="171"></td>
+        <td id="LC171" class="blob-code blob-code-inner js-file-line">0	  == Your break ==  Hey Mr V. I hope you have a safe and restful break. But don&#39;t be gone for too long! ) Best wishes,   </td>
+      </tr>
+      <tr>
+        <td id="L172" class="blob-num js-line-number" data-line-number="172"></td>
+        <td id="LC172" class="blob-code blob-code-inner js-file-line">1	  My edits are fine. You people are on the losing side. You have no shame. </td>
+      </tr>
+      <tr>
+        <td id="L173" class="blob-num js-line-number" data-line-number="173"></td>
+        <td id="LC173" class="blob-code blob-code-inner js-file-line">1	  == Dont go on making a FOOL of yourself , Paula! The whole school is laughing already! ==  Too bad that you cannot  quit popping that stuff! Drugs are gonna get you in trouble one day! (much more then the stuff you do with half the guys in our class , at the movies! Jonathan told his mom, when she asked what the spots on his pants were!) Stop lying, stop accusing people of sockpuppetry who seem continents apart, stop hiding exactly those tracks about you that you accuse others of. You get yourself into a shambles, credibility wise. Anyhow, what business of yours is it what people without remotest relation to you do on wikipedia? You seem drunk, on drugs and having your period ??? </td>
+      </tr>
+      <tr>
+        <td id="L174" class="blob-num js-line-number" data-line-number="174"></td>
+        <td id="LC174" class="blob-code blob-code-inner js-file-line">0	The place where it is now it&#39;s the correct place. It&#39;s chronologically and historically correct as it is now. Otherwise you have to move also your data as well</td>
+      </tr>
+      <tr>
+        <td id="L175" class="blob-num js-line-number" data-line-number="175"></td>
+        <td id="LC175" class="blob-code blob-code-inner js-file-line">1	  Before I accuse you of cringeworthy acts with donkeys, what does sprotected mean?</td>
+      </tr>
+      <tr>
+        <td id="L176" class="blob-num js-line-number" data-line-number="176"></td>
+        <td id="LC176" class="blob-code blob-code-inner js-file-line">0	&quot;  ::Thanks for the reply – my biggest issue at the moment is whether to include &quot;&quot;sales figures&quot;&quot; for earlier years... as far as I know, there were no published end of year sales figures before 1994, and the sales published at the time for 1994 to 1996 have since been discredited and revised, so are basically worthless. The figures currently quoted in the articles up to 1996 are usually &quot;&quot;estimates&quot;&quot; that have been taken from various charts message boards, calculated by enthusiasts from officially published yearly sales figures per artist (i.e. sales could be made up of one or more singles or albums, and estimating what percentage of sales were assigned to each record). As these are completely unofficial and unverifiable, I am thinking to remove them altogether or at least add a note that all figures are unofficial and estimated. In any case I don&#39;t think most people are interested in how many records the 37th best selling album of 1987 sold that year – it makes more sense to me to concentrate efforts into keeping List of best-selling singles in the United Kingdom up to date.   &quot;</td>
+      </tr>
+      <tr>
+        <td id="L177" class="blob-num js-line-number" data-line-number="177"></td>
+        <td id="LC177" class="blob-code blob-code-inner js-file-line">0	If you do have Welsh friends there ask them how my Welsh is? I cannot tell you if I&#39;m a native speaker or not - I could be, I&#39;m a cosmopolitan. Personally, my favorite version was .    </td>
+      </tr>
+      <tr>
+        <td id="L178" class="blob-num js-line-number" data-line-number="178"></td>
+        <td id="LC178" class="blob-code blob-code-inner js-file-line">1	  :Spot, grow up!  The article is being improved with the new structure.  Please stop your nonsense. </td>
+      </tr>
+      <tr>
+        <td id="L179" class="blob-num js-line-number" data-line-number="179"></td>
+        <td id="LC179" class="blob-code blob-code-inner js-file-line">1	   SINCE WHEN IS &gt;&gt;&gt;&gt;SOURCED&lt;&lt;&lt;&lt; EDITING VANDALISM??? READ THE CITED SOURCES! WHERE pray tell me DOES IT SAY THAT IRAN EVER (I SAY EVER) HAD A DEMOCRATICAL ELECTION OF ANY SORT OR SHAPE in HISTORY?? QUIT CONVERTING WIKIPEDIA INTO A TRASH BIN with YOUR SILLY AND INFANTILE PRANKS! KISSING EACH OTHER&#39;S REAR ENDS DOESN*T MAKE POV less POV     </td>
+      </tr>
+      <tr>
+        <td id="L180" class="blob-num js-line-number" data-line-number="180"></td>
+        <td id="LC180" class="blob-code blob-code-inner js-file-line">1	  == Eww, I can s m e l l something horrible round here! ==  Ewwww is that you? i can s m e l l you from here, man! peee-yewww!go take a bath or something, fleabag!</td>
+      </tr>
+      <tr>
+        <td id="L181" class="blob-num js-line-number" data-line-number="181"></td>
+        <td id="LC181" class="blob-code blob-code-inner js-file-line">1	&quot;  == Hi ==  How dare you? try to delete my words.  Are you Libra, Gemini or some haters else?  The picture on the &quot;&quot;front page&quot;&quot; was so show-off.   &quot;</td>
+      </tr>
+      <tr>
+        <td id="L182" class="blob-num js-line-number" data-line-number="182"></td>
+        <td id="LC182" class="blob-code blob-code-inner js-file-line">1	 UKDoctor responds  Shut Up, David Ruben - can&#39;t you see JdWolff referring to others as TIGERS IN CAGES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! David Ruben is not any better and should go take a flying leap into the deep end of the Pacific Ocean if he wants to. . . WE WHITE DOCTORS ARE TOTALLY ASHAMED OF THE GENERAL MEDICAL COUNCIL -and we certainly have the right to say our piece in any way fit.  </td>
+      </tr>
+      <tr>
+        <td id="L183" class="blob-num js-line-number" data-line-number="183"></td>
+        <td id="LC183" class="blob-code blob-code-inner js-file-line">1	&quot;== Your ignorant comments ==  In response to your Please do not remove content from Wikipedia. It is considered vandalism. If you would like to experiment, please use the sandbox. Thank you.   — @  Your record indicates that you were banned as a vandal several times and asked for a defense several times. Also, your record indicates that Bertil videt asked you to revert some legitimate changes without reason and you did it because he asked you, vandalazing good content that did not suit him or you. You should talk. Also please read your own talk page regarding many other warnings given to you by other users. Also be a man (at least try) and deal with your own talk page rather than begging others to hold your hand.  Before acting as a functional illiterate, you should have read the pertinent prior discussion already took place in the talk page on the removed content which has no place in a biography. By the way, how is your boyfriend Bertil Videt doing? I read sensational stuff on his talk page which he keeps hiding. Did you get to meet with his other boyfriends yet?   &quot;</td>
+      </tr>
+      <tr>
+        <td id="L184" class="blob-num js-line-number" data-line-number="184"></td>
+        <td id="LC184" class="blob-code blob-code-inner js-file-line">1	&quot; ::::Based on ChrisO&#39;s behavior that&#39;s a load of bull, he&#39;s just pretexting to attack me. Further, he NEVER gave me a &quot;&quot;warning&quot;&quot; about being blocked, the only &quot;&quot;warning&quot;&quot; I had was this  and I RESPONDED to the abusive jerk by placing a question of his interpretation of the rule which he flatly refused to respond to. &quot;</td>
+      </tr>
+      <tr>
+        <td id="L185" class="blob-num js-line-number" data-line-number="185"></td>
+        <td id="LC185" class="blob-code blob-code-inner js-file-line">0	REDIRECT Talk:57th Directors Guild of America Awards</td>
+      </tr>
+      <tr>
+        <td id="L186" class="blob-num js-line-number" data-line-number="186"></td>
+        <td id="LC186" class="blob-code blob-code-inner js-file-line">1	 ::::Ouch! That sounded like a threat and since I didn&#39;t actually attack you but instead criticised your behaviour, I see you are again out of line.   /  </td>
+      </tr>
+      <tr>
+        <td id="L187" class="blob-num js-line-number" data-line-number="187"></td>
+        <td id="LC187" class="blob-code blob-code-inner js-file-line">1	&quot;  &quot;&quot;he grew up in Russia, he was training with Russians, he talks Russian, even Russian President came to see his fights, thats why he repeatedly has identified himself as Russian in interviews&quot;&quot;  And that doesn&#39;t make him Russian? You really are very stupid, as the banderlogs are, of course. your whole ideology is based on stupidity and ignorance, after all.  &quot;</td>
+      </tr>
+      <tr>
+        <td id="L188" class="blob-num js-line-number" data-line-number="188"></td>
+        <td id="LC188" class="blob-code blob-code-inner js-file-line">1	  == ... ==  WHY DO YOU ACT SO HOSTILE WHEN YOU GET INSULTED?!?! LEARN TO FRIGGIN FIND SOURCES BEFORE YOU DELETE THOSE PRICING GAME ARTICLES, GD       </td>
+      </tr>
+      <tr>
+        <td id="L189" class="blob-num js-line-number" data-line-number="189"></td>
+        <td id="LC189" class="blob-code blob-code-inner js-file-line">0	&quot; :Time to call in the &quot;&quot;Three Revert Rule&quot;&quot;, as I see both have editted it again?  I have left a message for both PeeJay2k3 and Oragina2 to not change the table again, until a consensus is come to here on the talk page. If not, we might need to move down the Resolving Disputes road.  &quot;</td>
+      </tr>
+      <tr>
+        <td id="L190" class="blob-num js-line-number" data-line-number="190"></td>
+        <td id="LC190" class="blob-code blob-code-inner js-file-line">1	, and to suggest that is flabbergastingly arrogant</td>
+      </tr>
+      <tr>
+        <td id="L191" class="blob-num js-line-number" data-line-number="191"></td>
+        <td id="LC191" class="blob-code blob-code-inner js-file-line">0	&quot;  :Look, you are clearly trolling now and I am becoming more than a little fed up of you wasting the time of those of us who are here to write a good encyclopaedia. I am of course prepared to accept your argument that Alan Whicker&#39;s position is &#39;absolutely, unequivocally, and unquestionably definitive&#39;: but only if you are prepared to accept that my next-door-neighbour Mr Osborne&#39;s position that Manchester is the second city is also &#39;absolutely, unequivocally, and unquestionably definitive&#39;, since there&#39;s just as much reason to take his word on the matter as Mr Whicker&#39;s. ⁿɡ͡b \ &quot;</td>
+      </tr>
+      <tr>
+        <td id="L192" class="blob-num js-line-number" data-line-number="192"></td>
+        <td id="LC192" class="blob-code blob-code-inner js-file-line">1	  == Respect is earned by respect ==  That user IS a troll and a stalker. They are not respected and are close to being banned. Did you bother to read the inflammatory garbage that they write on wikipedia? Or are you just part of a troll posse?   </td>
+      </tr>
+      <tr>
+        <td id="L193" class="blob-num js-line-number" data-line-number="193"></td>
+        <td id="LC193" class="blob-code blob-code-inner js-file-line">0	  ==No Personal Attacks==  Stop trying to cover up the truth about Wikipedia. I asked the user a question about whether or not the allegations in that article were true. I didn&#39;t write that article. P.S. I actually didnt need to even ask if they were true- its obvious that they were.   </td>
+      </tr>
+      <tr>
+        <td id="L194" class="blob-num js-line-number" data-line-number="194"></td>
+        <td id="LC194" class="blob-code blob-code-inner js-file-line">1	 : you are a notorious troll and vandal too Hrafn.   </td>
+      </tr>
+      <tr>
+        <td id="L195" class="blob-num js-line-number" data-line-number="195"></td>
+        <td id="LC195" class="blob-code blob-code-inner js-file-line">0	I just want to point something out (and I&#39;m in no way a supporter of the strange old git), but he is referred to as Dear Leader, and his father was referred to as Great Leader.</td>
+      </tr>
+      <tr>
+        <td id="L196" class="blob-num js-line-number" data-line-number="196"></td>
+        <td id="LC196" class="blob-code blob-code-inner js-file-line">0	harmony between people of this village, or maybe vice versa ... .. / Blerim Shabani. /</td>
+      </tr>
+      <tr>
+        <td id="L197" class="blob-num js-line-number" data-line-number="197"></td>
+        <td id="LC197" class="blob-code blob-code-inner js-file-line">1	  ===hahahahahahaha=== Your fake information u have filled wikipedia wont be tolerated , stop spread propaganda in wikipedia , all information is  fake as the fake state of fyrom. The truth shall prevail</td>
+      </tr>
+      <tr>
+        <td id="L198" class="blob-num js-line-number" data-line-number="198"></td>
+        <td id="LC198" class="blob-code blob-code-inner js-file-line">0	&quot; :I can sympathize with your frustration. I know many comic book professionals and I know a lot of things I would love to include in articles but I can&#39;t. I am not a linked source that other people can double-check. Your conversation with Heck is useful in that you can let it guide you as you look for sources that you can link as references, but in Wikipedia, a personal conversation is not an appropriate source for citation.   &quot;</td>
+      </tr>
+      <tr>
+        <td id="L199" class="blob-num js-line-number" data-line-number="199"></td>
+        <td id="LC199" class="blob-code blob-code-inner js-file-line">1	  ==Reversion==  Given that some jerk vandalized the characters section by changing the names to various Nintendo characters, I have reverted to a much older version.   </td>
+      </tr>
+      <tr>
+        <td id="L200" class="blob-num js-line-number" data-line-number="200"></td>
+        <td id="LC200" class="blob-code blob-code-inner js-file-line">1	&quot;  well first, &quot;&quot;accidental suicide&quot;&quot; made me laugh.  There are accidents and you die and then there are suicides and you die.  Second the next sentences hurt my head.  You ASSUME checkers?  I don&#39;t.  Some writer is &quot;&quot;theorizing&quot;&quot;?  Well this guy believed that George Hodel was the killer of the Black Dahlia.  He has been humiliated for being wrong up and down the internets.  So why not put down MY theory?  Theone in which Martians killed her?  Oh, right, because it is not relevant  &quot;</td>
+      </tr>
+      <tr>
+        <td id="L201" class="blob-num js-line-number" data-line-number="201"></td>
+        <td id="LC201" class="blob-code blob-code-inner js-file-line">0	  ==Cell (film)== Why is it such a horrible thing for me to create a page for the film?  I&#39;ve seen pages for other movies that are currently in production.  H-E doulbe hocky sticks, I&#39;ve seen pages for movies that aren&#39;t even in production yet.  Can I get some answers, and don&#39;t just tell me to read some other WP:BOLOGNA.   </td>
+      </tr>
+      <tr>
+        <td id="L202" class="blob-num js-line-number" data-line-number="202"></td>
+        <td id="LC202" class="blob-code blob-code-inner js-file-line">1	So, in other words, you are professionally on the dole. You must live in your parents basement and leech off of them, like a 11-year old. Maybe if you had a bit of motivation, you could look for a real job, and not play your fantasy as a Wiki boy. I&#39;m sure you couls start a career as a video game player.  </td>
+      </tr>
+      <tr>
+        <td id="L203" class="blob-num js-line-number" data-line-number="203"></td>
+        <td id="LC203" class="blob-code blob-code-inner js-file-line">1	What a joker you are. European parliament has no power to do anything. It is non binding because it is not serious and silly reports like that are not meant to be serious. what is more important is that we ruled your ancestors for centuries and trying to put negative images of turks in the turkey page is not going to change that. This is not a place for you to get your &#39;revenge&#39;. Go and edit the golden dawn wikipedia because your ideas will only be welcome there.  </td>
+      </tr>
+      <tr>
+        <td id="L204" class="blob-num js-line-number" data-line-number="204"></td>
+        <td id="LC204" class="blob-code blob-code-inner js-file-line">1	&quot;  == Ban of &quot;&quot;Bryansee&quot;&quot; from Wikipediocracy. ==  Hey, you are Zoloft. The one who banned me from Wikipediocracy with a threat that I die. &quot;&quot;Well&quot;&quot; means dead. &quot;&quot;Recover&quot;&quot; means &quot;&quot;die&quot;&quot;. You are wanting me to die by a medication increase or meet my maker. Check this out:    &quot;</td>
+      </tr>
+      <tr>
+        <td id="L205" class="blob-num js-line-number" data-line-number="205"></td>
+        <td id="LC205" class="blob-code blob-code-inner js-file-line">1	MODERATORS ARE SOME OF THE MOST INGORANT AND SELF SERVING JERKS YOU WILL FIND ON THE NET</td>
+      </tr>
+      <tr>
+        <td id="L206" class="blob-num js-line-number" data-line-number="206"></td>
+        <td id="LC206" class="blob-code blob-code-inner js-file-line">0	&quot;  :So I will start with a criticism of the quote from Ollier and Pain, with whom I have more general issues than the &quot;&quot;postorogenic part&quot;&quot;. Phrase by phrase that I disagree with: :# Only much later was it realized that the two processes [deformation and the creation of topography] were mostly not closely related, either in origin or in time. Very wrong. Deformation causes topography, and the generation of topography is synchronous with deformation. I will email you a copy of Dahlen and Suppe (1988), which shows that this is the case - send me a message so I have your address and can attach a PDF. They tackle the large-scale deformation of sedimentary rocks via folding and thrusting during orogenesis. :# ...fold-belt mountainous areas...: &quot;&quot;fold-belt&quot;&quot; isn&#39;t used professionally (AFAIK) to refer to a collisional mountain-building event. A minor thing though. :# Only in the very youngest, late Cenozoic mountains is there any evident causal relation between rock structure and surface landscape. and the following sentence: If I were British, I would call this &quot;&quot;utter twaddle&quot;&quot;. As I mentioned above, there is no way for many of the exposed structures to get to the surface without large amounts of rock uplift and erosion. And as a matter of fact, the trajectory of different units of rock through an orogen is in part determined by patterns of surface erosion. To keep it simple and send you one paper, you&#39;ll find this in and at the end of the paper by Dahlen and Suppe (1988). :  &quot;</td>
+      </tr>
+      <tr>
+        <td id="L207" class="blob-num js-line-number" data-line-number="207"></td>
+        <td id="LC207" class="blob-code blob-code-inner js-file-line">1	 ::::::What are you deaf can&#39;t you hear ?</td>
+      </tr>
+      <tr>
+        <td id="L208" class="blob-num js-line-number" data-line-number="208"></td>
+        <td id="LC208" class="blob-code blob-code-inner js-file-line">1	WAS HERE. HE POWNS NOOBS ALL DAY!</td>
+      </tr>
+      <tr>
+        <td id="L209" class="blob-num js-line-number" data-line-number="209"></td>
+        <td id="LC209" class="blob-code blob-code-inner js-file-line">1	 :::And as fully expected, yet another abusive admin gets away with abusing their tools.   </td>
+      </tr>
+      <tr>
+        <td id="L210" class="blob-num js-line-number" data-line-number="210"></td>
+        <td id="LC210" class="blob-code blob-code-inner js-file-line">1	  :Grow up, you immature little brat.  This edit warring seems to be the only thing you do around here.  </td>
+      </tr>
+      <tr>
+        <td id="L211" class="blob-num js-line-number" data-line-number="211"></td>
+        <td id="LC211" class="blob-code blob-code-inner js-file-line">0	&quot;   Please do not vandalize pages, as you did with this edit to American Eagle Outfitters. If you continue to do so, you will be blocked from editing.    &quot;</td>
+      </tr>
+      <tr>
+        <td id="L212" class="blob-num js-line-number" data-line-number="212"></td>
+        <td id="LC212" class="blob-code blob-code-inner js-file-line">0	&quot; * The &quot;&quot;bold move&quot;&quot; was at 05:48, 3 December 2013‎ by . Someone listed this move back as uncontroversial, and I have changed it into discussed, at Talk:Run Devil Run (Girls&#39; Generation song)#Move? (2).   &quot;</td>
+      </tr>
+      <tr>
+        <td id="L213" class="blob-num js-line-number" data-line-number="213"></td>
+        <td id="LC213" class="blob-code blob-code-inner js-file-line">0	  ==THEN WHY IS  Attacking my edits by removing my talk page comments==  THAT IS SHOWING CONTEMPT FOR OTHER EDITORS AND IS VERY UNCIVIL AS WELL AS YOU UNEVEN AND UNFAIR LABELING ME...  </td>
+      </tr>
+      <tr>
+        <td id="L214" class="blob-num js-line-number" data-line-number="214"></td>
+        <td id="LC214" class="blob-code blob-code-inner js-file-line">1	 If there was a cure for AIDs, it would probably be bought up by rich jerks and sold for double. I believe that if u have AIDs, then that is sad for you, but many people have said that the ones to blame are ..... well, I wont go into that here. many people have there own opinion of who it is. But that is just my opinion. It must suck to be a person with Aids. I would not know.</td>
+      </tr>
+      <tr>
+        <td id="L215" class="blob-num js-line-number" data-line-number="215"></td>
+        <td id="LC215" class="blob-code blob-code-inner js-file-line">1	These people are INSANE. ==</td>
+      </tr>
+      <tr>
+        <td id="L216" class="blob-num js-line-number" data-line-number="216"></td>
+        <td id="LC216" class="blob-code blob-code-inner js-file-line">0	But then I rarely get my evil way with anything these days, must be getting old or lazy. Or perhaps both. </td>
+      </tr>
+      <tr>
+        <td id="L217" class="blob-num js-line-number" data-line-number="217"></td>
+        <td id="LC217" class="blob-code blob-code-inner js-file-line">1	&quot;:I have painstakingly taken the time to scan in the CD on my desk showing that &quot;&quot;Extreme Jaime&quot;&quot;&#39;s name is &quot;&quot;Jaime Guse&quot;&quot;.  Additionally, I continue to point out that Hiram skits are available both at DaveRyanShow.com and the Best of The Dave Ryan in the Morning Show CDs.  The contents are viewable on Amazon.    Additionally, I have taken some time to review your edits and history on Wikipedia.  It appears you are trying to present yourself as authoritative, when you are not.  You have tried multiple times to become an Administrator, but if you continue to act in such a reckless, inconsistent and immature manner, I doubt that it will ever happen.     &quot;</td>
+      </tr>
+      <tr>
+        <td id="L218" class="blob-num js-line-number" data-line-number="218"></td>
+        <td id="LC218" class="blob-code blob-code-inner js-file-line">0	This is not an encyclopedia article, especially this bit: Armed once again with a song that possesses all the classic attributes of a successful Eurovision entry - a catchy, feel-good melody, and a key-change that builds up to a big finish - Chiara is highly likely to enter the contest as one of the favourites. This is more like a newspaper article. It should be removed. Chiara&#39;s fame is also not worthy of mention in an encyclopedia. We might as well start writing about the grocer or shopowner round the corner.</td>
+      </tr>
+      <tr>
+        <td id="L219" class="blob-num js-line-number" data-line-number="219"></td>
+        <td id="LC219" class="blob-code blob-code-inner js-file-line">1	 you should die  from cancer.  </td>
+      </tr>
+      <tr>
+        <td id="L220" class="blob-num js-line-number" data-line-number="220"></td>
+        <td id="LC220" class="blob-code blob-code-inner js-file-line">1	  Hard to be constructive when the other party behaves like a godking thug.</td>
+      </tr>
+      <tr>
+        <td id="L221" class="blob-num js-line-number" data-line-number="221"></td>
+        <td id="LC221" class="blob-code blob-code-inner js-file-line">1	So, in other words, you are professionally on the dole. You must live in your parents basement and leech off of them, like a 11-year old. Maybe if you had a bit of motivation, you could look for a real job, and not play your fantasy as a Wiki boy. I&#39;m sure you couls start a career as a video game player.  </td>
+      </tr>
+      <tr>
+        <td id="L222" class="blob-num js-line-number" data-line-number="222"></td>
+        <td id="LC222" class="blob-code blob-code-inner js-file-line">0	  == Librier ==  Anon raised this issue in their edit summary. I agree that this term seems imprecisely added and not accurate. It is not generally or strictly associated with the Kelb tal-Fenek.   </td>
+      </tr>
+      <tr>
+        <td id="L223" class="blob-num js-line-number" data-line-number="223"></td>
+        <td id="LC223" class="blob-code blob-code-inner js-file-line">1	  == ARRHGH! ==  Frederica is the most annoying talking head ever</td>
+      </tr>
+      <tr>
+        <td id="L224" class="blob-num js-line-number" data-line-number="224"></td>
+        <td id="LC224" class="blob-code blob-code-inner js-file-line">1	  Someone is threatning an annon and that is uncivilised wiki conduct. </td>
+      </tr>
+      <tr>
+        <td id="L225" class="blob-num js-line-number" data-line-number="225"></td>
+        <td id="LC225" class="blob-code blob-code-inner js-file-line">1	  I&#39;ll bet 80% of what she did was rubbish...</td>
+      </tr>
+      <tr>
+        <td id="L226" class="blob-num js-line-number" data-line-number="226"></td>
+        <td id="LC226" class="blob-code blob-code-inner js-file-line">1	  ==Hello== Dude your mother is totally hot.</td>
+      </tr>
+      <tr>
+        <td id="L227" class="blob-num js-line-number" data-line-number="227"></td>
+        <td id="LC227" class="blob-code blob-code-inner js-file-line">1	I doubt this will get through your thick head (it&#39;s not an insult, it&#39;s an opinion based on your response) but the problem is not the issue itself. It&#39;s that people like you seem to enjoy (whether or not your side gets it right) to discuss, turn, twist and frankly abuse topics like this which are detrimental to the basic goals of Wikis in general and Wikipedia in particular. As John Stewart said to two hacks; You&#39;re hurting us. </td>
+      </tr>
+      <tr>
+        <td id="L228" class="blob-num js-line-number" data-line-number="228"></td>
+        <td id="LC228" class="blob-code blob-code-inner js-file-line">1	2 words learn them SHUT UP DONT FOLLOW ME EVERYWHERE   </td>
+      </tr>
+      <tr>
+        <td id="L229" class="blob-num js-line-number" data-line-number="229"></td>
+        <td id="LC229" class="blob-code blob-code-inner js-file-line">1	&quot; :::hey buddy, hey buddy, guess what? &quot;&quot;I&quot;&quot; dont care realy what &quot;&quot;your&quot;&quot; excuse is, and couldn&#39;t care less what Roaringflamer says, but you are obviously obsessed with redirects. If there is anybody that should be banned, its you for vandalism and disruption so there&quot;</td>
+      </tr>
+      <tr>
+        <td id="L230" class="blob-num js-line-number" data-line-number="230"></td>
+        <td id="LC230" class="blob-code blob-code-inner js-file-line">1	&quot;OOOOHHHH With a big long Intellectually Terrifying and Superior name like &quot;&quot;(referenced to Journal of Labelled Compounds and Radiopharmaceuticals)&quot;&quot;. How Could the quote be wrong Hey!! How dare I even question it, or possibly be right, in saying the &quot;&quot;supposed&quot;&quot; quote is wrong. What a stupid ignoramus I must be to challenge that.    &quot;</td>
+      </tr>
+      <tr>
+        <td id="L231" class="blob-num js-line-number" data-line-number="231"></td>
+        <td id="LC231" class="blob-code blob-code-inner js-file-line">1	  == YOUR THREATENING BEHAVIOUR ==   == YOUR CONSTANT BLOCKING AND SABOTAGE OF MY EDITS IS TANTAMOUNT TO STALIKING. ARE YOU STALKING ME? ARE YOU THREATENING ME STEVE? IS THIS WHAT YOURE ABOUT, THREATENING AND HARRASSING ME? WHY DO YOU KEEP STALKING ME THROUGH WIKIPEDIA? ARE YOU A TWISTED WACKO, DO YOU WISH ME HARM? WHY? WHY ARE YOU HARRASSING ME!!!!!!!!!!!   LEAVE ME ALONE YOU RACIST WACKO!!!!!!!!! ==</td>
+      </tr>
+      <tr>
+        <td id="L232" class="blob-num js-line-number" data-line-number="232"></td>
+        <td id="LC232" class="blob-code blob-code-inner js-file-line">1	  :O: I can&#39;t believe you thought that I would call you such a thing. I just wanted to give a cookie so you could get bigger and stronger. Obviously it wasn&#39;t because you&#39;re a fat pig. I&#39;m sorry for the misunderstanding.   </td>
+      </tr>
+      <tr>
+        <td id="L233" class="blob-num js-line-number" data-line-number="233"></td>
+        <td id="LC233" class="blob-code blob-code-inner js-file-line">0	  It&#39;s those biography and political articles you should watch out for.</td>
+      </tr>
+      <tr>
+        <td id="L234" class="blob-num js-line-number" data-line-number="234"></td>
+        <td id="LC234" class="blob-code blob-code-inner js-file-line">1	  FURTHERMORE.... I HAVE JUST VISITED RAGIB&#39;S PAGE AND STUDIED THE DISCUSSION AREA. RAGIB IS OBVIOUSLY FROM BANGLADESH AND SEEMS TO BE A SIMILARLY PAROCHIAL CHAUVINIST EDITOR OF MANY OTHER ARTICLES, EVEN ASKING FOR UN-NECESSARY DELETIONS OF ARTICLES THAT HE DOES NOT LIKE..... AND GETTING SNUBBED FOR THE EFFORT!!</td>
+      </tr>
+      <tr>
+        <td id="L235" class="blob-num js-line-number" data-line-number="235"></td>
+        <td id="LC235" class="blob-code blob-code-inner js-file-line">1	I beg your pardon? I am from the region, and berbers are a minority. How dare you presume to know people&#39;s origins? you can live in your make-belief world, but do not post it as fact and don&#39;t delete my posts either to further veil the truth. I am contacting Wikipedia immediately concerning this largely fictitious, vicious article and discussion.   </td>
+      </tr>
+      <tr>
+        <td id="L236" class="blob-num js-line-number" data-line-number="236"></td>
+        <td id="LC236" class="blob-code blob-code-inner js-file-line">0	, as, this is my IP adress</td>
+      </tr>
+      <tr>
+        <td id="L237" class="blob-num js-line-number" data-line-number="237"></td>
+        <td id="LC237" class="blob-code blob-code-inner js-file-line">1	Would you believe it.. This frenchie threatens to ban me because I talk badly upon Foie Gras. I already said once that this page is protected by lobbyists. That includes frog eaters.  </td>
+      </tr>
+      <tr>
+        <td id="L238" class="blob-num js-line-number" data-line-number="238"></td>
+        <td id="LC238" class="blob-code blob-code-inner js-file-line">1	  == HOW DARE YOU, TOO....... ==  HOW DARE YOU FOR ATTACKING ME!</td>
+      </tr>
+      <tr>
+        <td id="L239" class="blob-num js-line-number" data-line-number="239"></td>
+        <td id="LC239" class="blob-code blob-code-inner js-file-line">1	  == This is for removing my post on 100% ==  I&#39;m going to DDOS your toaster for this. </td>
+      </tr>
+      <tr>
+        <td id="L240" class="blob-num js-line-number" data-line-number="240"></td>
+        <td id="LC240" class="blob-code blob-code-inner js-file-line">1	 you&#39;ve made your point  freakin heck what do you want me to do huh? I&#39;ve explained why i changed mold to mould, i&#39;ve made a user name now leave me alone already.... what is your problem.    </td>
+      </tr>
+      <tr>
+        <td id="L241" class="blob-num js-line-number" data-line-number="241"></td>
+        <td id="LC241" class="blob-code blob-code-inner js-file-line">0	&quot;  == Need your help in an article ==  Hi Kansas bear, I need your help in an article called &quot;&quot;Sultanate of Rum&quot;&quot;, vandalized by Turkish nationalist and even including dubious sources from books like lonelyplanet travel guides. The guy has a profound anti neutrality agenda, even removing the Persianate description of the state and changing a section about Sultanate&#39;s architecture, by renaming it as &quot;&quot;culture&quot;&quot;, in order to move around the sources for the Persianate terms. I think it needs to be addressed by more than one person to kick out the nationalistic bias from the article.  &quot;</td>
+      </tr>
+      <tr>
+        <td id="L242" class="blob-num js-line-number" data-line-number="242"></td>
+        <td id="LC242" class="blob-code blob-code-inner js-file-line">1	This is pure tripe stolen from their bio on their official website, which is outdated by the way. That&#39;s bad wiki practice.</td>
+      </tr>
+      <tr>
+        <td id="L243" class="blob-num js-line-number" data-line-number="243"></td>
+        <td id="LC243" class="blob-code blob-code-inner js-file-line">0	I saw it before watching the episode. Oh well.</td>
+      </tr>
+      <tr>
+        <td id="L244" class="blob-num js-line-number" data-line-number="244"></td>
+        <td id="LC244" class="blob-code blob-code-inner js-file-line">1	  Stupid! You&#39;re the one who stops for massive and undiscussed removal on the article. Also, you say you&#39;re interest in Chinese history well then go for it and don&#39;t ever pay attention to Vietnamese history.   </td>
+      </tr>
+      <tr>
+        <td id="L245" class="blob-num js-line-number" data-line-number="245"></td>
+        <td id="LC245" class="blob-code blob-code-inner js-file-line">0	&quot;Jackson didn&#39;t perform at the WMA because he can&#39;t sing at all anymore. That is the real reason he hasn&#39;t toured for a decade, along with his bankruptcy. Even his vocals on &quot;&quot;We&#39;ve Had Enough&quot;&quot; four years ago were poor and he never had a strong voice to begin with, certainly not comparable with the real King, Elvis Presley. Jackson has had financial problems since at least 1998 due to his declining sales and popularity, as well as his inactivity and having to support all his siblings and parents. In 2002 it was revealed he was in debt to various international banks to the tune of tens of millions of dollars, and after losing those lawsuits in May 2003 he was confirmed as on the verge of bankuptcy with debts of $400 million. Invincible was a flop because it sold less than a third of his last album, &quot;&quot;Dangerous&quot;&quot;, and it was thoroughly mediocre music. Almost all of Jackson&#39;s remaining fans regard it as his worst album. In 1989 Jackson made it known he had to be addressed as the King of Pop - a meaningless, self-proclaimed title. He even planned to buy Graceland so he could demolish it, which certainly says far more about Jackson&#39;s megalomania than it does about Presley. Half the songs on the Dangerous album weren&#39;t good, especially the unbelievably awful Heal the World, and it only sold 30 million copies on the strength of his previous three albums. Yeah, WJ was unique all right, but the less said about that the better. You must know some very sad 20-year-olds if they still admire the disgraced former King of Pop. Anyway, most people know him as Wacko Jacko. Justin is the real King of Pop and like Eminem he just doesn&#39;t want to risk offending WJ&#39;s fans. Justin will continue to perform, while Jackson&#39;s active career finished a decade ago. ( )  &quot;</td>
+      </tr>
+      <tr>
+        <td id="L246" class="blob-num js-line-number" data-line-number="246"></td>
+        <td id="LC246" class="blob-code blob-code-inner js-file-line">1	  ==Appears to Be Uncontructive?==  Since when do your mere feelings = evidence? Get a clue hypocrite. You are the one being unconstructive.</td>
+      </tr>
+      <tr>
+        <td id="L247" class="blob-num js-line-number" data-line-number="247"></td>
+        <td id="LC247" class="blob-code blob-code-inner js-file-line">1	WHy are you ugly and fat?  </td>
+      </tr>
+      <tr>
+        <td id="L248" class="blob-num js-line-number" data-line-number="248"></td>
+        <td id="LC248" class="blob-code blob-code-inner js-file-line">1	 ::Is that so? Than why so many people questiong your incredibly arrogant, and entirely inappropriate edit actions? Maybe you&#39;re such an arrogant person, you think YOU are the only member of the community that matters?</td>
+      </tr>
+      <tr>
+        <td id="L249" class="blob-num js-line-number" data-line-number="249"></td>
+        <td id="LC249" class="blob-code blob-code-inner js-file-line">1	Yep, he be the mouthpiece, but his law still stands.  Oh, that was friggin&#39; bad.    </td>
+      </tr>
+      <tr>
+        <td id="L250" class="blob-num js-line-number" data-line-number="250"></td>
+        <td id="LC250" class="blob-code blob-code-inner js-file-line">1	 **And we have a winner for the douchiest comment award.</td>
+      </tr>
+      <tr>
+        <td id="L251" class="blob-num js-line-number" data-line-number="251"></td>
+        <td id="LC251" class="blob-code blob-code-inner js-file-line">0	harmony between people of this village, or maybe vice versa ... .. / Blerim Shabani. /  </td>
+      </tr>
+</table>
+
+  <details class="details-reset details-overlay BlobToolbar position-absolute js-file-line-actions dropdown d-none" aria-hidden="true">
+    <summary class="btn-octicon ml-0 px-2 p-0 bg-white border border-gray-dark rounded-1" aria-label="Inline file action toolbar">
+      <svg class="octicon octicon-kebab-horizontal" viewBox="0 0 13 16" version="1.1" width="13" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM13 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/></svg>
+    </summary>
+    <details-menu>
+      <ul class="BlobToolbar-dropdown dropdown-menu dropdown-menu-se mt-2">
+        <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-lines" style="cursor:pointer;" data-original-text="Copy lines">Copy lines</clipboard-copy></li>
+        <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-permalink" style="cursor:pointer;" data-original-text="Copy permalink">Copy permalink</clipboard-copy></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/dotnet/machinelearning/blame/5123aeedb91a435236e8b94ba0f17a6d15a20db5/test/data/wikipedia-detox-250-line-data.tsv">View git blame</a></li>
+          <li><a class="dropdown-item" id="js-new-issue" role="menuitem" href="/dotnet/machinelearning/issues/new">Open new issue</a></li>
+      </ul>
+    </details-menu>
+  </details>
+
+  </div>
+
+    </div>
+
+  
+
+  <details class="details-reset details-overlay details-overlay-dark">
+    <summary data-hotkey="l" aria-label="Jump to line"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast linejump" aria-label="Jump to line">
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-jump-to-line-form Box-body d-flex" action="" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+        <input class="form-control flex-auto mr-3 linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
+        <button type="submit" class="btn" data-close-dialog>Go</button>
+</form>    </details-dialog>
+  </details>
+
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+        
+<div class="footer container-lg px-3" role="contentinfo">
+  <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <ul class="list-style-none d-flex flex-wrap ">
+      <li class="mr-3">&copy; 2018 <span title="0.12440s from unicorn-7dd479f8d7-v72bz">GitHub</span>, Inc.</li>
+        <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
+        <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
+        <li class="mr-3"><a href="https://help.github.com/articles/github-security/" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li class="mr-3"><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com">Help</a></li>
+    </ul>
+
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon mr-lg-4" href="https://github.com">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+   <ul class="list-style-none d-flex flex-wrap ">
+        <li class="mr-3"><a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
+        <li class="mr-3"><a href="https://github.com/pricing" data-ga-click="Footer, go to Pricing, text:Pricing">Pricing</a></li>
+      <li class="mr-3"><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li class="mr-3"><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+        <li class="mr-3"><a href="https://blog.github.com" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a data-ga-click="Footer, go to about, text:about" href="https://github.com/about">About</a></li>
+
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+</div>
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+    </button>
+    You can’t perform that action at this time.
+  </div>
+
+
+    
+    <script crossorigin="anonymous" integrity="sha512-MvNlmXbTAwL0N0zMxw8W6vtjWLf0QFvwVzvN8rZIJNdzFy9OJp2d4LQD9WA2rDNcHewz0PB9x/0G0Z9FOuUWgw==" type="application/javascript" src="https://assets-cdn.github.com/assets/frameworks-a2f69f341e3df821fdcb56e335ef9920.js"></script>
+    
+    <script crossorigin="anonymous" async="async" integrity="sha512-I3M3AWMKQOl/+Fsw6kL34F+wx2fvmAJccY2PUmvIpTRqL2xNAC1GaVaTUNK+C+6XE9ISpOOMvMk4blccgZrVgg==" type="application/javascript" src="https://assets-cdn.github.com/assets/github-7f1f066185e799dd56b16502fb47c080.js"></script>
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+  </div>
+  <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+    </button>
+  </div>
+</div>
+
+  <template id="site-details-dialog">
+  <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark" open>
+    <summary aria-haspopup="dialog" aria-label="Close dialog"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast">
+      <button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog>
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </button>
+      <div class="octocat-spinner my-6 js-details-dialog-spinner"></div>
+    </details-dialog>
+  </details>
+</template>
+
+  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+  </div>
+</div>
+
+<div id="hovercard-aria-description" class="sr-only">
+  Press h to open a hovercard with more details.
+</div>
+
+
+  </body>
+</html>
+

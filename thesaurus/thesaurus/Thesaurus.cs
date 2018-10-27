@@ -28,7 +28,7 @@ namespace thesaurus
         public void Loaded(ViewLoadedParams p)
         {
             _thesaurusMenuItem = new MenuItem { Header = "Thesaurus" };
-            var vm = p.DynamoWindow.DataContext as DynamoViewModel;
+            var dynamoViewModel = p.DynamoWindow.DataContext as DynamoViewModel;
 
             #region Train Menu Item
 
@@ -57,7 +57,7 @@ namespace thesaurus
             _thesaurusShowHideMenuItem.ToolTip = new ToolTip { Content = "Whatever description we use..." };
             _thesaurusShowHideMenuItem.Click += (sender, args) =>
             {
-                var m = new SuggestionsModel();
+                var m = new SuggestionsModel(dynamoViewModel);
                 var viewModel = new SuggestionsViewModel(m);
                 var window = new SuggestionsView
                 {

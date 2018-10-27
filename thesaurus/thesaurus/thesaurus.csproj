@@ -127,6 +127,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\System.Windows.Interactivity.dll</HintPath>
@@ -146,7 +147,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SuggestionNodeView.xaml.cs">
+      <DependentUpon>SuggestionNodeView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SuggestionsModel.cs" />
+    <Compile Include="SuggestionsNodeViewModel.cs" />
     <Compile Include="SuggestionsView.xaml.cs">
       <DependentUpon>SuggestionsView.xaml</DependentUpon>
     </Compile>
@@ -164,6 +169,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="SuggestionNodeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SuggestionsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -21,35 +21,79 @@ namespace ParseJSON
         public static void ParseJSON()
         {
             string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string filePath = dirPath + "\\dynamoTest.json";
+            string filePath = dirPath + "\\Test Graph_PP_02.dyn";
 
             using (StreamReader reader = File.OpenText(filePath))
             {
                 // Read JSON file, and get a JToken from it for iterating
                 JObject jObject = (JObject)JToken.ReadFrom(new JsonTextReader(reader));
+                //Console.WriteLine("JOBJECT");
+                //Console.Write(jObject);
+
                 JToken nodeObject = jObject["Nodes"];
                 JToken connectorObject = jObject["Connectors"];
 
-                List<JToken> nestedTokenList = new List<JToken>();
+                Dictionary<string, string> NodeDictionary =new Dictionary<string, string>();
+                Dictionary<string, string> IODictionary = new Dictionary<string, string>();
 
-                foreach (JToken test in nodeObject)
+                //Console.Write(nodeObject);
+
+                //Create dictionary for ID and node name
+                //Create dictionary for connector ID and node ID
+                foreach (var node in nodeObject)
                 {
-                    JObject tempObj = JObject.Parse(test.ToString());
-                    Console.WriteLine(tempObj);
-                    JToken nestedObj = tempObj["Outputs"];
+                    //Console.WriteLine(test);
+                    Console.WriteLine(node["FunctionSignature"]);
+                    string stringnodeID = node["Id"].ToString();
+                    string stringnodename = node["FunctionSignature"].ToString();
 
-                    foreach (JToken test2 in nestedObj)
+                    NodeDictionary.Add(stringnodeID, stringnodename);
+             
+
+                    JToken outputObject = nodeObject["Outputs"];
+
+                    foreach (var output in outputObject)
                     {
-                        Console.WriteLine(test2);
-                        nestedTokenList.Add(test2);
+                        string outputID = output["Id"].ToString();
+                        IODictionary.Add(outputID, stringnodeID);                              
                     }
+                    JToken inputObject = nodeObject["Inputs"];
 
+                    foreach (var inputs in inputObject)
+                    {
+                        string inputID = inputs["Id"].ToString();
+                        IODictionary.Add(inputID, stringnodeID);
+                    }
+                    Console.WriteLine(IODictionary);
 
-                    string jTokenString = (string)test["FunctionSignature"];
-                    //Console.WriteLine(jTokenString);
-
-                    //Console.WriteLine(test["FunctionSignature"]);
                 }
+                
+
+                foreach (var connector in connectorObject)
+                {
+                    string inputID = connector["Start"].ToString();
+                    string outputID = connector["End"].ToString();
+
+                    string NodeAID = IODictionary[ inputID ];
+                    string NodeBID = IODictionary[ outputID ];
+
+                    string NodeASig = NodeDictionary[ NodeAID ];
+                    string NodeBSig = NodeDictionary[ NodeBID ];
+
+                    Console.WriteLine( NodeAID );
+                    Console.WriteLine( NodeBID );
+                    Console.WriteLine( NodeASig );
+                    Console.WriteLine( NodeBSig );
+                    Console.Writeline("************");
+               
+                    //List StartList = List<connector["Start"].ToString)>;
+                }
+
+                //foreach (JToken thing in nodeObject.Values())
+                //{
+                //    Console.WriteLine(thing["FunctionSignature"]);
+                //    Console.WriteLine(("________"));
+                //}
 
                 foreach (JToken test in connectorObject)
                 {
@@ -66,10 +110,9 @@ namespace ParseJSON
                     //Console.WriteLine(jsonQueryEnumerable.First().ToString());
                 }
             }
+
             Console.Read();
+
         }
-
-
-        
     }
 }

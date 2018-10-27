@@ -147,6 +147,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExportCSV.cs" />
+    <Compile Include="ParseJSON.cs" />
     <Compile Include="SuggestionNodeView.xaml.cs">
       <DependentUpon>SuggestionNodeView.xaml</DependentUpon>
     </Compile>
@@ -207,5 +209,15 @@
     <Copy SourceFiles="$(TargetDir)Microsoft.Expression.Interactions.dll" DestinationFolder="$(APPDATA)\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
     <Copy SourceFiles="$(TargetDir)System.Windows.Interactivity.dll" DestinationFolder="$(APPDATA)\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
     <Copy SourceFiles="$(TargetDir)thesaurus_ViewExtensionDefinition.xml" DestinationFolder="$(APPDATA)\Dynamo Revit\2.0\packages\thesaurus\extra" ContinueOnError="true" />
+
+    <Message Text="$(TargetPath) copied to: $(APPDATA)\Dynamo Revit\2.1\packages\thesaurus\bin" Importance="high" />
+    <Message Text="$(TargetDir)thesaurus_ViewExtensionDefinition.xml copied to: $(APPDATA)\Dynamo Revit\2.1\packages\thesaurus\extra" Importance="high" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(APPDATA)\Dynamo Revit\2.1\packages\thesaurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)GalaSoft.MvvmLight.dll" DestinationFolder="$(APPDATA)\Dynamo Revit\2.1\packages\thesaurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)GalaSoft.MvvmLight.Extras.dll" DestinationFolder="$(APPDATA)\Dynamo Revit\2.1\packages\thesaurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)GalaSoft.MvvmLight.Platform.dll" DestinationFolder="$(APPDATA)\Dynamo Revit\2.1\packages\thesaurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)Microsoft.Expression.Interactions.dll" DestinationFolder="$(APPDATA)\Dynamo Revit\2.1\packages\thesaurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)System.Windows.Interactivity.dll" DestinationFolder="$(APPDATA)\Dynamo Revit\2.1\packages\thesaurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)thesaurus_ViewExtensionDefinition.xml" DestinationFolder="$(APPDATA)\Dynamo Revit\2.1\packages\thesaurus\extra" ContinueOnError="true" />
   </Target>
 </Project>

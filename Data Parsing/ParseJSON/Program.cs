@@ -21,9 +21,14 @@ namespace ParseJSON
         public static void ParseJSON()
         {
             // DEFINE GLOBALS
-            string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string filePath = dirPath + "\\MPA_Title Block_Key Plan Control.dyn";
+            //string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            //string filePath = dirPath + "\\MPA_Title Block_Key Plan Control.dyn";
             DataParse csvParser = new DataParse();
+
+            Console.WriteLine("Enter Directory Path"); //Prompt user to enter directory to search for PDFS
+            string dirPath = Console.ReadLine(); //Read user input
+            string[] fileEntries = Directory.GetFiles(dirPath); //Get all the files of the input directory
+
 
             using (StreamReader reader = File.OpenText(filePath))
             {

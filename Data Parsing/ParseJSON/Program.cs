@@ -48,15 +48,25 @@ namespace ParseJSON
 
                     string stringnodename = "NONE";
 
+<<<<<<< HEAD
                     try
                     {
                         stringnodename = node["FunctionSignature"].ToString();
                         Console.WriteLine(stringnodename);
                     }
                     catch
+=======
+                    JToken outputObject = node["Outputs"];
+
+                    foreach (var output in outputObject)
+>>>>>>> a4eea0ad05b0cbeab5e1ea37518836c8e1fb3f5d
                     {
                         Console.WriteLine("MISSING FUNCTION SIGNATURE");
                     }
+<<<<<<< HEAD
+=======
+                    JToken inputObject = node["Inputs"];
+>>>>>>> a4eea0ad05b0cbeab5e1ea37518836c8e1fb3f5d
 
                     if (stringnodename != "NONE")
                     {
@@ -99,6 +109,7 @@ namespace ParseJSON
                     Console.WriteLine( NodeBID );
                     Console.WriteLine( NodeASig );
                     Console.WriteLine( NodeBSig );
+<<<<<<< HEAD
                     //Console.Writeline("************");
                
                     //List StartList = List<connector["Start"].ToString)>;
@@ -124,6 +135,12 @@ namespace ParseJSON
 
                     //Console.WriteLine(jsonQueryEnumerable.First().ToString());
                 }*/
+=======
+                    Console.WriteLine("************");
+               
+                    //List StartList = List<connector["Start"].ToString)>;
+                }
+>>>>>>> a4eea0ad05b0cbeab5e1ea37518836c8e1fb3f5d
             }
 
             Console.Read();

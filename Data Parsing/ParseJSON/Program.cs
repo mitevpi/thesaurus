@@ -33,7 +33,7 @@ namespace ParseJSON
                 JToken nodeObject = jObject["Nodes"];
                 JToken connectorObject = jObject["Connectors"];
 
-                Dictionary<string, string> NodeDictionary =new Dictionary<string, string>();
+                Dictionary<string, string> NodeDictionary = new Dictionary<string, string>();
                 Dictionary<string, string> IODictionary = new Dictionary<string, string>();
 
                 //Console.Write(nodeObject);
@@ -48,25 +48,15 @@ namespace ParseJSON
 
                     string stringnodename = "NONE";
 
-<<<<<<< HEAD
                     try
                     {
                         stringnodename = node["FunctionSignature"].ToString();
                         Console.WriteLine(stringnodename);
                     }
                     catch
-=======
-                    JToken outputObject = node["Outputs"];
-
-                    foreach (var output in outputObject)
->>>>>>> a4eea0ad05b0cbeab5e1ea37518836c8e1fb3f5d
                     {
                         Console.WriteLine("MISSING FUNCTION SIGNATURE");
                     }
-<<<<<<< HEAD
-=======
-                    JToken inputObject = node["Inputs"];
->>>>>>> a4eea0ad05b0cbeab5e1ea37518836c8e1fb3f5d
 
                     if (stringnodename != "NONE")
                     {
@@ -91,7 +81,7 @@ namespace ParseJSON
                     }
 
                 }
-                
+
 
                 foreach (var connector in connectorObject)
                 {
@@ -99,19 +89,18 @@ namespace ParseJSON
                     string outputID = connector["End"].ToString();
 
 
-                    string NodeAID = IODictionary[ inputID ];
-                    string NodeBID = IODictionary[ outputID ];
+                    string NodeAID = IODictionary[inputID];
+                    string NodeBID = IODictionary[outputID];
 
-                    string NodeASig = NodeDictionary[ NodeAID ];
-                    string NodeBSig = NodeDictionary[ NodeBID ];
+                    string NodeASig = NodeDictionary[NodeAID];
+                    string NodeBSig = NodeDictionary[NodeBID];
 
-                    Console.WriteLine( NodeAID );
-                    Console.WriteLine( NodeBID );
-                    Console.WriteLine( NodeASig );
-                    Console.WriteLine( NodeBSig );
-<<<<<<< HEAD
+                    Console.WriteLine(NodeAID);
+                    Console.WriteLine(NodeBID);
+                    Console.WriteLine(NodeASig);
+                    Console.WriteLine(NodeBSig);
                     //Console.Writeline("************");
-               
+
                     //List StartList = List<connector["Start"].ToString)>;
                 }
 
@@ -121,26 +110,20 @@ namespace ParseJSON
                 //    Console.WriteLine(("________"));
                 //}
 
-               /* foreach (JToken test in connectorObject)
-                {
-                    string jTokenString = (string)test["Start"];
-                    //Console.WriteLine(jTokenString);
+                /* foreach (JToken test in connectorObject)
+                 {
+                     string jTokenString = (string)test["Start"];
+                     //Console.WriteLine(jTokenString);
 
-                    IEnumerable<JToken> jsonQueryEnumerable = from JToken thing in nestedTokenList
-                                                              where thing["Id"].ToString() == "0faed7bef55346c681d5ef3030b97440"
-                                                              select thing;
+                     IEnumerable<JToken> jsonQueryEnumerable = from JToken thing in nestedTokenList
+                                                               where thing["Id"].ToString() == "0faed7bef55346c681d5ef3030b97440"
+                                                               select thing;
 
-                    Console.WriteLine("SUCCESS??");
-                    Console.WriteLine(jsonQueryEnumerable.First());
+                     Console.WriteLine("SUCCESS??");
+                     Console.WriteLine(jsonQueryEnumerable.First());
 
-                    //Console.WriteLine(jsonQueryEnumerable.First().ToString());
-                }*/
-=======
-                    Console.WriteLine("************");
-               
-                    //List StartList = List<connector["Start"].ToString)>;
-                }
->>>>>>> a4eea0ad05b0cbeab5e1ea37518836c8e1fb3f5d
+                     //Console.WriteLine(jsonQueryEnumerable.First().ToString());
+                 }*/
             }
 
             Console.Read();

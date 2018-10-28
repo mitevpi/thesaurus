@@ -6,21 +6,15 @@ using Dynamo.Models;
 using Accord.Statistics.Models.Markov;
 using Accord.Statistics.Filters;
 using Accord.IO;
-using System.Linq;
+using Accord.MachineLearning.Bayes;
 
 namespace thesaurus
 {
     public class SuggestionsModel
     {
-        private DynamoViewModel _dynamoViewModel { get; set; }
-
-        public DynamoViewModel DynamoViewModel
-        {
-            get { return _dynamoViewModel; }
-            set { _dynamoViewModel = value; }
-        }
-        private HiddenMarkovModel loadedHMM;
-        private Codification loadedCodebook;
+        public DynamoViewModel DynamoViewModel { get; set; }
+        private object _loadedModel;
+        private Codification _loadedCodebook;
 
         public SuggestionsModel(DynamoViewModel dvm)
         {
@@ -65,21 +59,41 @@ namespace thesaurus
 
         private void LoadModel()
         {
-            loadedHMM = Serializer.Load<HiddenMarkovModel>("thesaurus_HMModel.accord");
-            loadedCodebook = Serializer.Load<Codification>("thesaurus_codebook.accord");
+            switch (TrainModel.TrainingMode)
+            {
+                case "bayes":
+                    _loadedModel = Serializer.Load<NaiveBayes>("thesaurus_bayes.accord");
+                    _loadedCodebook = Serializer.Load<Codification>("thesaurus_codebook.accord");
+                    break;
+                case "markov":
+                    _loadedModel = Serializer.Load<HiddenMarkovModel>("thesaurus_HMModel.accord");
+                    _loadedCodebook = Serializer.Load<Codification>("thesaurus_codebook.accord");
+                    break;
+            }
         }
 
         public string[] Predict(string nodeName)
         {
             try
             {
-                loadedCodebook.Columns["Nodes"].HasMissingValue = true;
-                // Test a hard coded example
-                var code = loadedCodebook.Transform("Nodes", nodeName);
-                var predictSample = loadedHMM.Predict(new[] { code }, 10);
-                var predictResult = loadedCodebook.Revert("Nodes", predictSample);
+                switch (TrainModel.TrainingMode)
+                {
+                    case "bayes":
+                        var bayesModel = _loadedModel as NaiveBayes;
+                        var instance = _loadedCodebook.Transform(nodeName);
+                        var c = bayesModel.Decide(instance);
+                        var result = _loadedCodebook.Revert("output", c);
 
-                return predictResult;
+                        return new[] { result };
+                    case "markov":
+                        var markovModel = _loadedModel as HiddenMarkovModel;
+                        var code = _loadedCodebook.Transform("Nodes", nodeName);
+                        var predictSample = markovModel.Predict(new[] { code }, 1);
+                        var predictResult = _loadedCodebook.Revert("Nodes", predictSample);
+                        return predictResult;
+                }
+
+                return new string[] { };
             }
             catch
             {

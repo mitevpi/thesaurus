@@ -61,6 +61,7 @@ namespace ParseJSON
             string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             string filePath = dirPath + "\\graphData.csv";
 
+            int idCounter = 0;
             using (TextFieldParser parser = new TextFieldParser(filePath))
             {
                 parser.TextFieldType = FieldType.Delimited;
@@ -75,7 +76,9 @@ namespace ParseJSON
                     {
                         NodeDataModel newModel =
                             NodeDataModel.CreateNewDataModel(fields[0], fields[1], fields[3], fields[2]);
+                        newModel.UniqueIdCounter = idCounter;
                         nodeDataContainer.AppendToDataContainer(newModel);
+                        idCounter++;
                     }
                     else
                     {
@@ -86,7 +89,9 @@ namespace ParseJSON
                         {
                             NodeDataModel newModel =
                                 NodeDataModel.CreateNewDataModel(fields[0], fields[1], fields[3], fields[2]);
+                            newModel.UniqueIdCounter = idCounter;
                             nodeDataContainer.AppendToDataContainer(newModel);
+                            idCounter++;
                         }
                         else
                         {
@@ -115,7 +120,7 @@ namespace ParseJSON
 
             // NEW CSV SHIT
             StringBuilder csvcontent = new StringBuilder();
-            csvcontent.AppendLine("Node A Name,Node B Name,# Connections,# Connections Unique,Type,Node A ID,Node B ID");
+            csvcontent.AppendLine("Node A Name,Node B Name,# Connections,# Connections Unique,Type,Node A ID,Node B ID,UniqueID");
             Regex pattern = new Regex("^([^.]+)");
 
             foreach (NodeDataModel nd in nodeDataContainer.DataModels)
@@ -146,8 +151,8 @@ namespace ParseJSON
                 }
 
                 // Create csv row
-                string csvLine = string.Format("{0},{1},{2},{3},{4},{5},{6}",
-                   nd.NodeAName, nd.NodeBName, nd.TotalConnectionsCount, nd.UniqueConnectionsCount, nodeType, nd.NodeAId, nd.NodeBId);
+                string csvLine = string.Format("{0},{1},{2},{3},{4},{5},{6},{7}",
+                   nd.NodeAName, nd.NodeBName, nd.TotalConnectionsCount, nd.UniqueConnectionsCount, nodeType, nd.NodeAId, nd.NodeBId, nd.UniqueIdCounter);
 
                 csvcontent.AppendLine(csvLine);
             }

@@ -60,6 +60,16 @@ namespace thesaurus
             {
                 var trainingData = ParseDYN.ParseDynData(Files);
                 Model.TrainHiddenMarkovModel(trainingData);
+
+                switch (TrainModel.TrainingMode)
+                {
+                    case "bayes":
+                        Model.TrainNaiveBayesClassifier(trainingData);
+                        break;
+                    case "markov":
+                        Model.TrainHiddenMarkovModel(trainingData);
+                        break;
+                }
             }
             else
             {

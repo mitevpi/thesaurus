@@ -49,6 +49,7 @@ namespace thesaurus
 
             var path = dialog.SelectedPath;
             DirectoryPath = path;
+            Files = new List<string>();
             DirSearch(path);
         }
 
@@ -73,11 +74,11 @@ namespace thesaurus
                     DirSearch(d);
                 }
 
-                //foreach (var f in Directory.GetFiles(path))
-                //{
-                //    if (f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase))
-                //        Files.Add(f);
-                //}
+                foreach (var f in Directory.GetFiles(path))
+                {
+                    if (f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase))
+                        Files.Add(f);
+                }
             }
             catch (Exception)
             {

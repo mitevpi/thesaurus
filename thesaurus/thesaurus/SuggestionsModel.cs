@@ -66,9 +66,8 @@ namespace thesaurus
 
         private void LoadModel()
         {
-            string path = "C:/Users/toulkev/dev/thesaurus/thesaurus/thesaurus/bin/Debug";
-            loadedHMM = Serializer.Load<HiddenMarkovModel>(Path.Combine(path, "thesaurus_HMModel.accord"));
-            loadedCodebook = Serializer.Load<Codification>(Path.Combine(path, "thesaurus_codebook.accord"));
+            loadedHMM = Serializer.Load<HiddenMarkovModel>("thesaurus_HMModel.accord");
+            loadedCodebook = Serializer.Load<Codification>("thesaurus_codebook.accord");
         }
 
         public string[] Predict(string nodeName)

@@ -115,7 +115,7 @@ namespace ParseJSON
 
             // NEW CSV SHIT
             StringBuilder csvcontent = new StringBuilder();
-            csvcontent.AppendLine("Node A Name,Node B Name,# Connections,# Connections Unique,Type");
+            csvcontent.AppendLine("Node A Name,Node B Name,# Connections,# Connections Unique,Type,Node A ID,Node B ID");
             Regex pattern = new Regex("^([^.]+)");
 
             foreach (NodeDataModel nd in nodeDataContainer.DataModels)
@@ -123,23 +123,31 @@ namespace ParseJSON
                 List<string> matchStrings = new List<string>(); //Create empty container
                 MatchCollection matches = pattern.Matches(nd.NodeAName); //Get all match occurances in a document
 
-                string resultString = "EMPTY"; //Set default value for the string to placate MSVS
+                string nodeType = "EMPTY"; //Set default value for the string to placate MSVS
 
                 // Try to get node types
                 foreach (Match match in matches) //Loop over all regex matches found
                 {
                     if (match.Success) //If the match is successful
                     {
-                        resultString = match.Value;
-                        matchStrings.Add(resultString); 
+                        nodeType = match.Value;
+                        matchStrings.Add(nodeType); 
                     }
                 }
 
-
+                // Work with raw node types
+                if (nodeType.Length > 20)
+                {
+                    nodeType = "Zero Touch";
+                }
+                else if (nodeType.Contains("@var"))
+                {
+                    nodeType = "Code Block??";
+                }
 
                 // Create csv row
-                string csvLine = string.Format("{0},{1},{2},{3},{4}",
-                   nd.NodeAName, nd.NodeBName, nd.TotalConnectionsCount, nd.UniqueConnectionsCount, resultString);
+                string csvLine = string.Format("{0},{1},{2},{3},{4},{5},{6}",
+                   nd.NodeAName, nd.NodeBName, nd.TotalConnectionsCount, nd.UniqueConnectionsCount, nodeType, nd.NodeAId, nd.NodeBId);
 
                 csvcontent.AppendLine(csvLine);
             }

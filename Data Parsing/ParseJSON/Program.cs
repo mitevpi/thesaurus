@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -16,6 +17,7 @@ namespace ParseJSON
             //ParseJSON();
             string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string packagePath = appDataPath + "\\" + "Dynamo" + "\\" + "Dynamo Revit" + "\\" + "2.1" + "\\" + "packages";
+            Regex reg = ParseDYF.CreateIDRegex();
 
             List<string> paths =  ParseDYF.GetDyfsInDir(packagePath);
             ParseDYF.ParseDyfData(paths);

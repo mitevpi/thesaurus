@@ -21,12 +21,26 @@ namespace ParseJSON
                     foreach (var f in Directory.GetFiles(d))
                     {
                         files.Add(f);
-                        Console.WriteLine(f);
+                        //Console.WriteLine(f);
 
                         // Filter out all the DYF files
                         if (f.EndsWith("dyf", StringComparison.OrdinalIgnoreCase))
                             files.Add(f);
-                        Console.WriteLine(f);
+
+                        string[] fullText = System.IO.File.ReadAllLines(f);
+                        string lines = fullText[0];
+                        List<string> matches = GetMatches(lines);
+
+                        try
+                        {
+                            Console.WriteLine(matches[0]);
+                        }
+                        catch
+                        {
+                        }
+
+
+                        //Console.WriteLine(f);
                     }
 
                     GetDyfsInDir(d);
@@ -50,12 +64,15 @@ namespace ParseJSON
             foreach (var fileName in filePaths) //Loop over all the files in teh directory
             {
                 string dyfTitle = System.IO.Path.GetFileName(fileName);
-                dyfTitle = dyfTitle.Remove(dyfTitle.Length - 4);
-                Console.WriteLine(dyfTitle);
+                ////dyfTitle = dyfTitle.Remove(dyfTitle.Length - 4);
+                //Console.WriteLine(dyfTitle);
 
                 string[] temp2 = System.IO.File.ReadAllLines(fileName);
-                var temp3 = temp2[0];
-                Console.WriteLine(temp3);
+                string temp3 = temp2[0];
+                //Console.WriteLine(temp3);
+
+                //List<string> matches = GetMatches(temp3);
+                //Console.WriteLine(matches);
 
                 //txtFirstLine.Text = lines(0)
                 //txtLastLine.Text = lines(lines.Length - 1)
@@ -65,28 +82,51 @@ namespace ParseJSON
                 //Console.WriteLine("");
                 //Console.WriteLine(temp);
 
-                //using (StreamReader reader = File.OpenText(fileName))
-                //{
-                //}
+                using (StreamReader reader = File.OpenText(fileName))
+                {
+                    var temp = reader.ReadLine();
+                    //Console.WriteLine(temp);
+                }
             }
         }
 
-        static Regex CreateIDRegex()
+        public static Regex CreateIDRegex()
         {
             string sample = "ID = 6c712c67-329c-4499-a399-d1cedd2b45bf";
 
-            string re1 = "([A-Z])";	// Uppercase Single Word Character (Not Whitespace) 1
-            string re2 = "([A-Z])"; // Uppercase Single Word Character (Not Whitespace) 2
-            string re3 = "(-)"; // Dash
-            string re4 = "([A-Z])"; // Uppercase Single Word Character (Not Whitespace) 3
-            string re5 = "([A-Z])"; // Uppercase Single Word Character (Not Whitespace) 4
-            string re6 = "(-)"; // Dash
-            string re7 = "(\\d)";   // Any Single Digit 1
-            string re8 = "(\\d)";   // Any Single Digit 2
 
-            Regex regKTMS = new Regex(re1 + re2 + re3 + re4 + re5 + re6 + re7 + re8, RegexOptions.Singleline);
+            string dash = "(-)"; // Dash
+            string id = "(ID=)"; // LETTERS
+            string chars = "([0-9a-fA-F]+)";
 
-            return regKTMS;
+            Regex reg = new Regex(@"ID=.[0-9a-fA-F]+-[0-9a-fA-F]+-[0-9a-fA-F]+-[0-9a-fA-F]+-[0-9a-fA-F]+.");
+            Regex reg2 = new Regex(id);
+
+
+            return reg;
+        }
+
+        public static List<string> GetMatches(string fileString)
+        {
+            List<string> matchStrings = new List<string>(); //Create empty container
+
+            Regex reg = CreateIDRegex();
+            MatchCollection matches = reg.Matches(fileString); //Get all match occurances in a document
+
+            string resultString = "EMPTY"; //Set default value for the string to placate MSVS
+
+            foreach (Match match in matches) //Loop over all regex matches found
+            {
+                if (match.Success) //If the match is successful
+                {
+                    resultString = match.Value; //Get the text of the matched KTMS code
+                    //Console.WriteLine(match.Value);
+                    matchStrings.Add(resultString); //Add the text to the list of matched KTMS codes
+                }
+            }
+
+            return matchStrings;
+
         }
 
     }

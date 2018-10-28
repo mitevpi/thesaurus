@@ -73,10 +73,11 @@ namespace thesaurus
         {
             try
             {
+                loadedCodebook.Columns["Nodes"].HasMissingValue = true;
                 // Test a hard coded example
-                int code = loadedCodebook.Transform("Nodes", nodeName);
-                int[] predictSample = loadedHMM.Predict(observations: new[] { code }, next: 1);
-                string[] predictResult = loadedCodebook.Revert("Nodes", predictSample);
+                var code = loadedCodebook.Transform("Nodes", nodeName);
+                var predictSample = loadedHMM.Predict(new[] { code }, 10);
+                var predictResult = loadedCodebook.Revert("Nodes", predictSample);
 
                 return predictResult;
             }

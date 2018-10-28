@@ -18,6 +18,7 @@ namespace thesaurus
         public SuggestionsViewModel(SuggestionsModel model)
         {
             Model = model;
+            Nodes = new ObservableCollection<SuggestionsNodeViewModel> { };
             this.Model.DynamoViewModel.Model.CurrentWorkspace.NodeAdded += delegate(NodeModel nodeModel)
             {
                 string[] predictions = model.Predict(nodeModel.CreationName);
@@ -28,12 +29,6 @@ namespace thesaurus
                     Nodes.Add(new SuggestionsNodeViewModel(model) { NodeName = predictedNode.Split('@')[0] });
                 }
             };
-
-            //Nodes = new ObservableCollection<SuggestionsNodeViewModel>
-            //{
-            //    new SuggestionsNodeViewModel(model) {NodeName = "Point.ByCoordinates"},
-            //    new SuggestionsNodeViewModel(model) {NodeName = "Line.ByStartPointEndPoint"}
-            //};
         }
     }
 }

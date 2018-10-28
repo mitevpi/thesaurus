@@ -20,7 +20,6 @@ namespace thesaurus
 
             Accord.Math.Random.Generator.Seed = 42;
 
-            // Dummy data
             string[][] nodePairs = trainingData.ToArray();
 
             // Transform data to sequence of integer labels using a codification codebook:

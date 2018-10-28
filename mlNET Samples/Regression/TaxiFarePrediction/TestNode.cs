@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TaxiFarePrediction
+namespace Regression
 {
     // <Snippet1>
     static class TestNode
@@ -11,11 +11,11 @@ namespace TaxiFarePrediction
         // <Snippet2>
         internal static readonly NodeObject Node1 = new NodeObject
         {
-            NodeAName = "DSCore.String.Join@string_string[]",
-            CountAllConnections = 3,
-            CountUniqueConnections = 1,
+            NodeAName = "DSCore.List.AddItemToFront@var[]..[]_var[]..[]\r\n",
+            CountAllConnections = 1,
+            CountUniqueConnections = 0,
             NodeType = "DSCore",
-            NodeBName = ""// predict it. actual = 29.5
+            NodeBName = ""// predict it. actual = 2who the hell knows man
         };
         // </Snippet2>
     }

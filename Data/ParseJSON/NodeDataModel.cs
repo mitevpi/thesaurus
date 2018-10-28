@@ -26,6 +26,8 @@ namespace ParseJSON
         public int TotalConnectionsCount { get; set; }
         public int UniqueConnectionsCount { get; set; }
 
+        public int UniqueIdCounter { get; set; }
+
         public bool CoreNode { get; set; }
         public bool CustomNode { get; set; }
         public bool ZeroTouchNode { get; set; }

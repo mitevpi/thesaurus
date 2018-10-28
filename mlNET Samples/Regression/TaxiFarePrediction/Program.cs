@@ -13,7 +13,7 @@ using Microsoft.ML.Legacy.Transforms;
 using System.Threading.Tasks;
 // </Snippet9>
 
-namespace TaxiFarePrediction
+namespace Regression
 {
     class Program
     {
@@ -38,7 +38,8 @@ namespace TaxiFarePrediction
 
             // <Snippet16>
             NodePrediction prediction = model.Predict(TestNode.Node1);
-            Console.WriteLine("Predicted fare: {0}, actual fare: 29.5", prediction.NodeBName);
+            Console.WriteLine("Predicted Node ID: {0}", prediction.NodeIdCounter);
+            Console.ReadKey();
             // </Snippet16>
         }
 
@@ -50,11 +51,11 @@ namespace TaxiFarePrediction
             var pipeline = new LearningPipeline
             {
                 new TextLoader(_datapath).CreateFrom<NodeObject>(useHeader: true, separator: ','),
-                new ColumnCopier(("NodeBName", "Label")),
+                new ColumnCopier(("NodeIdCounter", "Label")),
                 new CategoricalOneHotVectorizer(
                     "NodeAName",
-                    "NodeType",
-                    "PaymentType"),
+                    "NodeBName",
+                    "NodeType"),
                 new ColumnConcatenator(
                     "Features",
                     "NodeAName",
@@ -62,16 +63,13 @@ namespace TaxiFarePrediction
                     "CountUniqueConnections",
                     "NodeType"),
                 new FastTreeRegressor()
+                //new NaiveBayesClassifier()
             };
-            // </Snippet3>
-
-            // <Snippet4>
+            
             PredictionModel<NodeObject, NodePrediction> model = pipeline.Train<NodeObject, NodePrediction>();
-            // </Snippet4>
-            // <Snippet5>
+           
             await model.WriteAsync(_modelpath);
             return model;
-            // </Snippet5>
         }
 
         private static void Evaluate(PredictionModel<NodeObject, NodePrediction> model)

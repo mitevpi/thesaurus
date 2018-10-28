@@ -1,335 +1,336 @@
-node_a_name,node_b_name,count_connections,count_unique,type_nodeA,type_nodeB
-DSCore.List.Transpose@var[]..[],DSOffice.Data.ExportExcel@string_string_int_int_var[][]_bool,0,0,DSCore,db067dc59e0147bda0cf858b0da3fc97,74aaea7e6e4546088068f93bcfc61ff2
-DSOffice.Data.ImportExcel@var_string_bool_bool,DSCore.List.Transpose@var[]..[],0,0,DSOffice,c692d78907aa4d9ebaa4244cb92c20e4,b76189ba8c4a49dd875ddc88e806d5df
-DSCore.List.Transpose@var[]..[],DSCore.List.GetItemAtIndex@var[]..[]_int,1,1,DSCore,b76189ba8c4a49dd875ddc88e806d5df,032d6f78041b4d3bba296768d9c16eea
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,a2d2a3d30ff14eaaa120993bca904c53,d625ac5a20cd40ab88760f2266110977
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,032d6f78041b4d3bba296768d9c16eea,1ef2f7c4a2ac4b159e2e304a633f2ac9
-DSCore.Math.Sum@double[],/@var[]..[]_var[]..[],0,0,DSCore,b5b8be87676947c48a5cc2d7c0af965e,ab84b72bd6754671b106d73f0f4fe7f8
-GetValues@var[]..[],DSCore.Math.Sum@double[],0,0,Code Block??,002ea4d8c7664a6dbb9e8ac970bcf50d,b5b8be87676947c48a5cc2d7c0af965e
-DSCore.Math.Sum@double[],/@var[]..[]_var[]..[],0,0,DSCore,4cb1e5c2bca844f59e82c59da0f2269b,ab84b72bd6754671b106d73f0f4fe7f8
-GetValues@var[]..[],DSCore.Math.Sum@double[],0,0,Code Block??,fb8cb26f85634ef09470123e713c763e,4cb1e5c2bca844f59e82c59da0f2269b
-1db71931-aac7-4e82-b5b8-5c7bcf16332f,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Zero Touch,b0adfdfb226249ffa7cc5b6daed4aaaf,88de44b1ad8b425dacde34da56e88c83
-1db71931-aac7-4e82-b5b8-5c7bcf16332f,==@var[]..[]_var[]..[],0,0,Zero Touch,9b1167a9ae364b328999b04368788304,f58796d8bfd34de3a934f248ebf22e15
-==@var[]..[]_var[]..[],DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Code Block??,f58796d8bfd34de3a934f248ebf22e15,88de44b1ad8b425dacde34da56e88c83
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],archilab.Revit.Selection.Select.ByElementId@var,0,0,DSCore,88de44b1ad8b425dacde34da56e88c83,c23fd434e93643b99b0f09db150506af
-a8b0f382-e8bc-4198-93af-a93c1afcf265,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],6,6,Zero Touch,b63ea965728a4f6595f5b0ada9630bab,1cb4b763c4cd47fb99d677a3bb8c89b5
-b223cace-86e4-435e-8e6c-94a60e29ecb6,1db71931-aac7-4e82-b5b8-5c7bcf16332f,8,8,Zero Touch,53e88a8dd4814f68b606214fd3f0a71b,b0adfdfb226249ffa7cc5b6daed4aaaf
-_UI.MultipleInputForm_++,5c6eba64-17ff-4764-9134-0afcdb6716a4,2,2,_UI,662f14de44904c419280b81ff3b7bdcd,5d8306bf06c24aafa37cf35294ea646c
-5c6eba64-17ff-4764-9134-0afcdb6716a4,b223cace-86e4-435e-8e6c-94a60e29ecb6,0,0,Zero Touch,5d8306bf06c24aafa37cf35294ea646c,53e88a8dd4814f68b606214fd3f0a71b
-_UI.FilePath_Data,_UI.MultipleInputForm_++,0,0,_UI,a362ee84145449b293b4a77c9ad78297,662f14de44904c419280b81ff3b7bdcd
-1db71931-aac7-4e82-b5b8-5c7bcf16332f,==@var[]..[]_var[]..[],0,0,Zero Touch,0219d71cbe834ed59e8a6748428a2382,823219be3e844f6cad3feb6103c5d573
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],_UI.Listview_Data,1,0,DSCore,1cb4b763c4cd47fb99d677a3bb8c89b5,fc7f6d58d3a042fcaf39b62434161421
-==@var[]..[]_var[]..[],DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Code Block??,823219be3e844f6cad3feb6103c5d573,1cb4b763c4cd47fb99d677a3bb8c89b5
-_UI.MultipleInputForm_++,DSCore.List.GetItemAtIndex@var[]..[]_int,4,4,_UI,b51c2292d6b94fd68f33615ef472162f,cc358e1eba7546879d1cb2f580687d90
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],_UI.Listview_Data,1,0,DSCore,8ffc04d06efe46da813d377f573a7d3d,bd5c57a0ae5b448eaab94bd89ce66066
-==@var[]..[]_var[]..[],DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Code Block??,fa177d6e53b44a4591c7535b544ff89b,8ffc04d06efe46da813d377f573a7d3d
-1db71931-aac7-4e82-b5b8-5c7bcf16332f,==@var[]..[]_var[]..[],0,0,Zero Touch,4eee8b0f7c264b4c874371813c6ee882,fa177d6e53b44a4591c7535b544ff89b
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,cc358e1eba7546879d1cb2f580687d90,01032842a3984b21bf4b7bc2e64429f2
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,62e1125f33734ca580e70dcaa5b3c187,63effb5a1b164f4f986d1110174f6535
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],_UI.Listview_Data,1,0,DSCore,df89019f3673447d902ec7cbc71c4f73,5c87c946ffc64aeaa269cfdb535516d7
-==@var[]..[]_var[]..[],DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Code Block??,d37f5d13e5904b86b9c43cb10092f4a4,df89019f3673447d902ec7cbc71c4f73
-1db71931-aac7-4e82-b5b8-5c7bcf16332f,==@var[]..[]_var[]..[],0,0,Zero Touch,b411c7725ebd472496b97c20140d4f21,d37f5d13e5904b86b9c43cb10092f4a4
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],_UI.Listview_Data,1,0,DSCore,87ea9771ac1142bbb9e0ca2350e342d1,345d7bf8343041b9bcb44094e4bb0eeb
-==@var[]..[]_var[]..[],DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Code Block??,a09ddb2b4a7b42fd801a4ca1743282fb,87ea9771ac1142bbb9e0ca2350e342d1
-1db71931-aac7-4e82-b5b8-5c7bcf16332f,==@var[]..[]_var[]..[],0,0,Zero Touch,4691617093c44399a2eae93e99083aba,a09ddb2b4a7b42fd801a4ca1743282fb
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],_UI.Listview_Data,1,0,DSCore,46261e007d7a4c66b64c3ae91c0bf103,214511841edf4bdf81717dd34737cb20
-==@var[]..[]_var[]..[],DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Code Block??,aff4e5e3f2424f7486c81c1d306b6761,46261e007d7a4c66b64c3ae91c0bf103
-1db71931-aac7-4e82-b5b8-5c7bcf16332f,==@var[]..[]_var[]..[],0,0,Zero Touch,9ea87c1d0fea4464a155c7522e1ec8ef,aff4e5e3f2424f7486c81c1d306b6761
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,fa77aecdd4704d908e6c41a5b0594f4e,a72f510f51f042f7ac58a592a3a76f3d
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,3e957e712cdc45f7bdaa732d7a8dc5a0,711fc74be7864172bc7dd075e807b639
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,666737d7f6eb4d8eaaa8dee8b89f7cf3,91067cfa33fe4e0da65cd077281e94b1
-DSCore.IO.Image.ReadFromFile@var,_UI.MultipleInputForm_++,1,0,DSCore,46e0350ca3ce43568735758fe8221272,662f14de44904c419280b81ff3b7bdcd
-DSCore.IO.Image.ReadFromFile@var,_UI.MultipleInputForm_++,0,0,DSCore,564fb58afe0849d6bf2f9bd0e3e7b01c,b51c2292d6b94fd68f33615ef472162f
-1db71931-aac7-4e82-b5b8-5c7bcf16332f,==@var[]..[]_var[]..[],1,1,Zero Touch,1e5157beca244490aefa0e872eb421a9,6ccc3048041847c48d49bba4dc4f6be2
-==@var[]..[]_var[]..[],DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Code Block??,6ccc3048041847c48d49bba4dc4f6be2,40673299056e4653803bb7f1cce0384d
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],DSCore.List.Flatten@var[]..[]_int,0,0,DSCore,40673299056e4653803bb7f1cce0384d,e63184e30588456d82837b61d808f2b4
-DSCore.List.Flatten@var[]..[]_int,+@var[]..[]_var[]..[],0,0,DSCore,e63184e30588456d82837b61d808f2b4,c932eccaceab49d88213e72c666f6911
-archilab.Revit.Selection.Select.ByElementId@var,a8b0f382-e8bc-4198-93af-a93c1afcf265,0,0,archilab,c23fd434e93643b99b0f09db150506af,b63ea965728a4f6595f5b0ada9630bab
-Revit.Elements.CurveElement.Curve,Autodesk.DesignScript.Geometry.Curve.PointsAtEqualSegmentLength@int,1,0,Revit,f92c5894967e42aeb6d8b2bd0f92291b,e85495584e96474980de27a49a4526f3
-Autodesk.DesignScript.Geometry.Curve.PointsAtEqualSegmentLength@int,DSCore.List.Flatten@var[]..[]_int,1,1,Autodesk,e85495584e96474980de27a49a4526f3,e9745700625849f9b659bfe6323e2872
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.UniqueItems@var[]..[],1,0,DSCore,1814025ab13b4286a8d1c7d97b25bcd6,4cf8ce1900e442d8a40ac70b3a3d4495
-92960965-5bfc-41ab-9ceb-d61917dfe6c5,a2d5ef3c-b3a2-403f-8b95-fd94457ce395,0,0,Zero Touch,a5ff29fc5fa844b385ea6bb331462b28,a8a2c54c4b6949688681ba42ed240df7
-Autodesk.DesignScript.Geometry.Plane.ByOriginNormal@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Vector,_BoundingBox.PerimeterCurvesOnPlane,0,0,Autodesk,8b0a6b791f4b458a9cab80267ea309e0,b91cf371c410410fa28dfe2a876f96d8
-Autodesk.DesignScript.Geometry.BoundingBox.ByGeometry@Autodesk.DesignScript.Geometry.Geometry[],DSCore.List.Flatten@var[]..[]_int,0,0,Autodesk,18ff4673dd9c4b03be12b7cad9300a29,f7d72f9d73ef4682ab1abf498c683311
-DSCore.List.Flatten@var[]..[]_int,Autodesk.DesignScript.Geometry.BoundingBox.Contains@Autodesk.DesignScript.Geometry.Point,0,0,DSCore,f7d72f9d73ef4682ab1abf498c683311,7d46d1cb3f184cbea69bff28c90d61bd
-1db71931-aac7-4e82-b5b8-5c7bcf16332f,2c408f1b-9655-4d54-8984-c9062c87b41d,0,0,Zero Touch,88f525a3ea894c389a769c08081c8084,ae7fbfaccda740cfbc4468cc1ecd6ffd
-2c408f1b-9655-4d54-8984-c9062c87b41d,DSCore.String.ToNumber@string,0,0,Zero Touch,ae7fbfaccda740cfbc4468cc1ecd6ffd,1d472d68b25b4487b70607f739e76344
-Geometry.Points.NumbersToPoint@double[],DSCore.List.Flatten@var[]..[]_int,0,0,Geometry,736f3805dd2b46f980d6ccce9b03d346,3b0e0e07690041d8ab0adc4977b8bb95
-DSCore.List.Flatten@var[]..[]_int,Autodesk.DesignScript.Geometry.Geometry.Translate@double_double_double,0,0,DSCore,3b0e0e07690041d8ab0adc4977b8bb95,0ef94e93b6ba46ce956303ce2e8a8c90
-Autodesk.DesignScript.Geometry.Geometry.Translate@double_double_double,Autodesk.DesignScript.Geometry.Geometry.Rotate@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Vector_double,0,0,Autodesk,0ef94e93b6ba46ce956303ce2e8a8c90,a6a91183a6a349c98062d836b24c1c23
-Autodesk.DesignScript.Geometry.Geometry.Rotate@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Vector_double,Revit.Elements.FamilyInstance.ByPoint@Revit.Elements.FamilyType_Autodesk.DesignScript.Geometry.Point,0,0,Autodesk,a6a91183a6a349c98062d836b24c1c23,1be337bccc6a4a9dac663df3125d4311
-Autodesk.DesignScript.Geometry.Vector.ZAxis,Autodesk.DesignScript.Geometry.Geometry.Rotate@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Vector_double,0,0,Autodesk,d39586c2e7394388b27ce0909c4b2c1f,a6a91183a6a349c98062d836b24c1c23
-Autodesk.DesignScript.Geometry.Point.Origin,Autodesk.DesignScript.Geometry.Geometry.Rotate@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Vector_double,0,0,Autodesk,3a5daa72d46342a5842da4e78582f34e,a6a91183a6a349c98062d836b24c1c23
-_All_Family_Types_Of_Category,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Zero Touch,81cd924d6127402fb7f2f4122d7be527,47689cf1382d45dda81db8337399992c
-DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,189fa72330d64489b1babb7b3cfb9c0f,47689cf1382d45dda81db8337399992c
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],_UI.Listview_Data,1,0,DSCore,47689cf1382d45dda81db8337399992c,f8efd927ca74473b87bbbc014305c708
-DSCore.List.GetItemAtIndex@var[]..[]_int,b223cace-86e4-435e-8e6c-94a60e29ecb6,0,0,DSCore,fdd6ecb448474116b0799c2282b7e028,53e88a8dd4814f68b606214fd3f0a71b
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.FamilyInstance.ByPoint@Revit.Elements.FamilyType_Autodesk.DesignScript.Geometry.Point,0,0,DSCore,1c3ebc87fa2c42d6ad559a0c90bc8abf,1be337bccc6a4a9dac663df3125d4311
-Revit.Elements.Element.GetParameterValueByName@string,DSCore.List.Flatten@var[]..[]_int,1,0,Revit,87391469ea794ba8a4af6727770114fd,3d1c45796f18464f9d541ba07110ddc9
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,1,1,DSCore,3d1c45796f18464f9d541ba07110ddc9,7e9063de39a3416b86de77f94cd28145
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,1,1,DSCore,d6393af4e04343ee8682666d63366673,7e9063de39a3416b86de77f94cd28145
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,1,1,DSCore,e247ff65091544e6b4ce7c87ea000283,ef19e145a5874320b650894bd2fc8831
-_Document.ActiveViewFromCurrentDocument,_Schedule.GetCalculatedValues,4,3,_Document,e5c3ca26fc68433abdd6da920edcc0ac,78e44557ce2249d3a997f834bf691bf9
-DSCore.IO.Image.ReadFromFile@var,_UI.MultipleInputForm_++,0,0,DSCore,6f593249dc584eeeaa2a0c61e26933f2,833623deee544733994d28bf709c9247
-_UI.MultipleInputForm_++,DSCore.List.GetItemAtIndex@var[]..[]_int,2,2,_UI,833623deee544733994d28bf709c9247,9257cccf457b4b38a99c1e3febd053dd
-Revit.Elements.Views.ScheduleView.Fields,_UI.DropDown_Data,5,4,Revit,0318f05d464243f993541aa616c3ee46,da4b8b4d35404da9b2da2153350a6409
-_Math.Ceiling+,/@var[]..[]_var[]..[],0,0,_Math,b018e7e51ccc497e88a91fd0d7af12ca,8d41b24a2ac54cadac9b8da5f423c216
-/@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,8d41b24a2ac54cadac9b8da5f423c216,550b8806061646f7b12a9317983613ab
-DSCore.String.ToNumber@string,_Math.Ceiling+,0,0,DSCore,c84a737f04904e959cbd2fd3bb9c6764,b018e7e51ccc497e88a91fd0d7af12ca
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,7e9063de39a3416b86de77f94cd28145,ef19e145a5874320b650894bd2fc8831
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.String.ToNumber@string,0,0,DSCore,ef19e145a5874320b650894bd2fc8831,c84a737f04904e959cbd2fd3bb9c6764
-Revit.Elements.Element.GetParameterValueByName@string,DSCore.String.Substring@string_int_int,0,0,Revit,c0ccfca5c23b4aa5b2a90bb775844aa9,4bb2b432597047e5ae3b8e7a8e5e3c7e
-DSCore.String.Join@string_string[],DSCore.List.Flatten@var[]..[]_int,0,0,DSCore,fa58147575d14f6b85a232ca3aa6ac4a,95a9ba78b564492180dc60c08713362d
-DSCore.List.Transpose@var[]..[],DSCore.String.Join@string_string[],0,0,DSCore,326a566807164bb7b30c4d156efaadfe,fa58147575d14f6b85a232ca3aa6ac4a
-DSCore.List.Flatten@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,95a9ba78b564492180dc60c08713362d,50cabcd48fe6483d86c699104d5f71fe
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.String.ToNumber@string,0,0,DSCore,1c7988bb25a44715aec9bceb68e0459b,e5915ef9e82a4b93a7fd06cc27e7972d
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,6836f80f80e94593bd8ee0b2cd2c156e,1c7988bb25a44715aec9bceb68e0459b
-DSCore.String.ToNumber@string,_Math.Ceiling+,0,0,DSCore,e5915ef9e82a4b93a7fd06cc27e7972d,6e5168bf89804c2ebd9990242a3d4b05
-/@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,370471fe2d644c0abbc1517a01c316c5,550b8806061646f7b12a9317983613ab
-_Math.Ceiling+,/@var[]..[]_var[]..[],0,0,_Math,6e5168bf89804c2ebd9990242a3d4b05,370471fe2d644c0abbc1517a01c316c5
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,7232ee48c5964d78b7a7e47924397b03,c5fcfca006dc4706926f95f91ed05bed
-DSCore.List.GetItemAtIndex@var[]..[]_int,*@var[]..[]_var[]..[],0,0,DSCore,c5fcfca006dc4706926f95f91ed05bed,93963d81bda542399728e6d60a89ef68
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.GetItemAtIndex@var[]..[]_int,8,8,Zero Touch,faccf85521ba48d98aca3717ba376d7d,2a249509ff9048e48621609d4802c68d
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,7,7,DSCore,2a249509ff9048e48621609d4802c68d,7232ee48c5964d78b7a7e47924397b03
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,5876ebee7b7c48ab89c61a3788f62dc0,c5fcfca006dc4706926f95f91ed05bed
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,84fd390956f346c79894fc3683178f87,5876ebee7b7c48ab89c61a3788f62dc0
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,1dcfc15b9dda48428a59afaedfa15d3d,8a49a7ba745f4bd68caaa93b64411afd
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,8a49a7ba745f4bd68caaa93b64411afd,84fd390956f346c79894fc3683178f87
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,86bda4f2841249749fed6568878105ec,0249bfe3856e46efb34edac74e65f9cd
-DSCore.List.GetItemAtIndex@var[]..[]_int,*@var[]..[]_var[]..[],0,0,DSCore,0249bfe3856e46efb34edac74e65f9cd,470740509ff84657a5b4d7c1534032cf
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,e40c5756823843e6bd0f092b3d974514,0249bfe3856e46efb34edac74e65f9cd
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,deae0b0cab634806acf2932d17077f8c,e40c5756823843e6bd0f092b3d974514
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,83e85836fe1d429fa2cbe0d4f58841c0,e259d32e9f0548a396fc0f74c14176c8
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,e259d32e9f0548a396fc0f74c14176c8,deae0b0cab634806acf2932d17077f8c
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,2c397d7651ba412e875968f49dd5a63a,83e3958318524a1f8f06b05bee5ebf1c
-DSCore.List.GetItemAtIndex@var[]..[]_int,*@var[]..[]_var[]..[],0,0,DSCore,83e3958318524a1f8f06b05bee5ebf1c,20d03ea8aa2e4e1f850d43734e86716c
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,5eddf096ff464013b21e6fd5193eec2a,83e3958318524a1f8f06b05bee5ebf1c
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,6e8234cff6504db783697aee57253a56,5eddf096ff464013b21e6fd5193eec2a
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,bd39491d19cc46339246c4c3f81b96d7,d2ffeb8625ab4efd8be54879d07a4c90
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,d2ffeb8625ab4efd8be54879d07a4c90,6e8234cff6504db783697aee57253a56
-*@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,20d03ea8aa2e4e1f850d43734e86716c,8240e8507a164589973ac4e693c88614
-*@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,470740509ff84657a5b4d7c1534032cf,a4b50ddab1d24f45a6f756790352f335
-*@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,93963d81bda542399728e6d60a89ef68,da8cf2a3fdfd4e4599b5e68c1474b9b4
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,54d816d3b12a43d18af2a546915ba88c,12e9306d9fb64a90ac8e6c978dcf55a5
-DSCore.List.GetItemAtIndex@var[]..[]_int,*@var[]..[]_var[]..[],0,0,DSCore,12e9306d9fb64a90ac8e6c978dcf55a5,05cd06ad330b42a197fa5d8a7b4f9cb8
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,454df36340ea49d0aa2ce7ca90e37599,12e9306d9fb64a90ac8e6c978dcf55a5
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,2c7a3d3fad11487eb17f6f83a160c3fe,454df36340ea49d0aa2ce7ca90e37599
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,391131717f704668b366eabf5db34c82,31d18576ce0f4b16850338bb5903997b
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,31d18576ce0f4b16850338bb5903997b,2c7a3d3fad11487eb17f6f83a160c3fe
-*@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,05cd06ad330b42a197fa5d8a7b4f9cb8,6f874efe0a01490db928608874a540d4
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,0806194aa9b74371b5c6a6e0c2de1c35,d136704ff01045acae03269f24b6ea75
-DSCore.List.GetItemAtIndex@var[]..[]_int,*@var[]..[]_var[]..[],0,0,DSCore,d136704ff01045acae03269f24b6ea75,b2235be8bd124ddd8747312a0e9a3740
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,9e59005ce0d9420393c36e0a80999ba0,d136704ff01045acae03269f24b6ea75
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,13a0f4ddcc1348e79cef37c3354d87b8,9e59005ce0d9420393c36e0a80999ba0
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,1daa917a93264ab6a6dd295e2329f715,c0df44cba34c42d5b14e5aff1970905b
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,c0df44cba34c42d5b14e5aff1970905b,13a0f4ddcc1348e79cef37c3354d87b8
-*@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,b2235be8bd124ddd8747312a0e9a3740,e356956a7c8e44db95102717b60d4c77
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.GetItemAtIndex@var[]..[]_int,14,14,Zero Touch,12f8c52971314f5f8943d348c421a94f,7feb89af59584da48c0b78b5648eacdf
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,13,13,DSCore,7feb89af59584da48c0b78b5648eacdf,a8204d767ffe481b9f18018b9a26fe93
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,a8204d767ffe481b9f18018b9a26fe93,b806b5b1bb0b42e88d15d0d60147cc50
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,b806b5b1bb0b42e88d15d0d60147cc50,fcc553f5128a4d4b89df9a0faab1e696
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,b845c818d2c1455fa131d2ed94a60394,b806b5b1bb0b42e88d15d0d60147cc50
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,69ab1bf5cf654a20912d6cf7d755a528,b845c818d2c1455fa131d2ed94a60394
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,a17189ccf0f84cffb110099d45bef790,613e2d87eff64317bb4f5b4a8d465098
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,613e2d87eff64317bb4f5b4a8d465098,69ab1bf5cf654a20912d6cf7d755a528
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,c27d95d0626240b7879a1f29226f54e1,82d0be17dee14e44b2f2c0f17074552e
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,82d0be17dee14e44b2f2c0f17074552e,ab04dfd5c47446febc57860051c0f900
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,4bf5e01ce7754f3aae70de764acfc80c,82d0be17dee14e44b2f2c0f17074552e
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,356aa5afd1f04af7b6f2072c61c663fa,4bf5e01ce7754f3aae70de764acfc80c
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,5ef036a84a434eeaa2a7a25fb94738d5,35c30dc0ea6d4ebfae3ee5992bd617a5
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,35c30dc0ea6d4ebfae3ee5992bd617a5,356aa5afd1f04af7b6f2072c61c663fa
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,e018b7d5f89045b9bc8eb4afdfb99d97,6b476672375f449eadaa3ba78e4a2233
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,6b476672375f449eadaa3ba78e4a2233,e6b1a25f46f24bf4872130812e649822
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,7337e6c828144c119401b7280e904964,6b476672375f449eadaa3ba78e4a2233
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,304aaca1ee24441a87b0f54ad176e8bf,7337e6c828144c119401b7280e904964
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,99241b9c4f3247df988bda91b70a962a,6118b839751e41df81834075e0e3b0b5
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,6118b839751e41df81834075e0e3b0b5,304aaca1ee24441a87b0f54ad176e8bf
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,6a4351e424304c90af5734ca48cd79d5,2a23d456c51c4aaba99946c329606f03
-DSCore.List.GetItemAtIndex@var[]..[]_int,*@var[]..[]_var[]..[],0,0,DSCore,2a23d456c51c4aaba99946c329606f03,bc778279c3a04ecbb91b2347519f9471
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,635230cbb4304e5cbccd871774492bab,2a23d456c51c4aaba99946c329606f03
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,a1d127f360e64574be503dcaf32d6a72,635230cbb4304e5cbccd871774492bab
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,70baba6a8a3a4dad84b2f467f1a420f5,fe9f53e2ba914ea9a4775bf847752c30
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,fe9f53e2ba914ea9a4775bf847752c30,a1d127f360e64574be503dcaf32d6a72
-*@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,bc778279c3a04ecbb91b2347519f9471,95858654554c4055a84abdc948a97911
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,d635d55eca4c415aa7a7c7ffee9bbf84,ca1f9dcda5bd44a1bfe665be466d73e9
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,ca1f9dcda5bd44a1bfe665be466d73e9,175e1f7e9f994c5d8c073dcdaf6a6459
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,414a771fd3ad4397a901214c365656c1,ca1f9dcda5bd44a1bfe665be466d73e9
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,455382444f8b47b488cf408a203c2fdb,414a771fd3ad4397a901214c365656c1
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,cb21499674164ef88a10461aa800106a,50f0dfa7bcad4145beed0b2271d1f6b3
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,50f0dfa7bcad4145beed0b2271d1f6b3,455382444f8b47b488cf408a203c2fdb
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,f3f65cae64ef4dcd8acd38ea007b1b16,e4db2aa7b1b742d9be29cead023b500c
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,e4db2aa7b1b742d9be29cead023b500c,0ac3f84e5d5b497fa3cbaf8fb4c4b8c1
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,681ea082531d433c9821bdee73e10c08,e4db2aa7b1b742d9be29cead023b500c
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,fb01a330ea72441789b412704f5e91a9,681ea082531d433c9821bdee73e10c08
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,93ce5ef6ebc741b69f517bca703ca6b1,08ac3cdea5b44ec2abf2d43136de9ae6
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,08ac3cdea5b44ec2abf2d43136de9ae6,fb01a330ea72441789b412704f5e91a9
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,3dd3e828421f45c48a20fad09784a73b,2952e060e11440cb84a56fe9fdd6a77a
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,2952e060e11440cb84a56fe9fdd6a77a,e51f12c3635a46cf90d66040edff8460
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,7f04cd39cbc24c6587c3f3cb3afc3d4b,2952e060e11440cb84a56fe9fdd6a77a
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,2f45de41157c4652b2f3e6f83cccede1,7f04cd39cbc24c6587c3f3cb3afc3d4b
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,34daaecc11164e41bc24002b99a39c0a,e480802a74fa4f6f84182481706f615c
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,e480802a74fa4f6f84182481706f615c,2f45de41157c4652b2f3e6f83cccede1
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,8e09250c0e1b4b87b7fc9d50f3d6ee0d,c9a0f51c3c294476a1106fddbd36084f
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,c9a0f51c3c294476a1106fddbd36084f,b26c083a31724ea3a27d1cb4d339fd1b
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,6c8405a08ebd4065bc7d605d563da184,c9a0f51c3c294476a1106fddbd36084f
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,1c8d5c9bdbae47fd82a97aa0c5f62971,6c8405a08ebd4065bc7d605d563da184
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,dc4a5e39cab6444e9b52da0cde2b28a3,0a0ca172724b44daa489c5c75407e7f4
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,0a0ca172724b44daa489c5c75407e7f4,1c8d5c9bdbae47fd82a97aa0c5f62971
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,21,21,DSCore,57a895c1cd564c69a10f481596560cbf,b26c083a31724ea3a27d1cb4d339fd1b
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],DSCore.List.FirstIndexOf@var[]..[]_var,21,21,DSCore,9a68a71494f845d4aeee37bb33f39c91,8e09250c0e1b4b87b7fc9d50f3d6ee0d
-DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],1,1,DSCore,b554661bd1e144eebdbd4f96b9fbb411,57a895c1cd564c69a10f481596560cbf
-Revit.Elements.Element.GetParameterValueByName@string,DSCore.String.Contains@string_string_bool,0,0,Revit,c5a79e4aabd94f2cb72ab22d5f10a764,b554661bd1e144eebdbd4f96b9fbb411
-Revit.Elements.Element.GetParameterValueByName@string,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Revit,0fedacd73ccb4c3887858bf195d04cdf,9a68a71494f845d4aeee37bb33f39c91
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,b56bf1ead5d442c79d0a56cb47f808e5,81e5921efa7148d49f518d47c1e60ae3
-DSCore.List.GetItemAtIndex@var[]..[]_int,*@var[]..[]_var[]..[],0,0,DSCore,81e5921efa7148d49f518d47c1e60ae3,e14772f5ff7d4f6882f72cd539e2793a
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,145b7b8857b549b2835bd5e714dea43a,81e5921efa7148d49f518d47c1e60ae3
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,35fc3c34f78f4f7daa1ce2ac02e6ca79,145b7b8857b549b2835bd5e714dea43a
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,03416a5dc6e848d68814d1f45146465b,0709d6c115334405b00eede162f82391
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,0709d6c115334405b00eede162f82391,35fc3c34f78f4f7daa1ce2ac02e6ca79
-*@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,e14772f5ff7d4f6882f72cd539e2793a,96c895bf2b8b41dda36e0acb3e1529e9
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,96dc0f50b36a4582afe71116890b6fcf,61e00772c40948e7b175f55d621516b9
-DSCore.List.GetItemAtIndex@var[]..[]_int,*@var[]..[]_var[]..[],0,0,DSCore,61e00772c40948e7b175f55d621516b9,a9dcacbe280546bb86312e3bf8ef57a5
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,aadfbd30f5cb40dd98ca3e6d32b2a50d,61e00772c40948e7b175f55d621516b9
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,5087ddc07ec74ae9bcb5dcde63960c50,aadfbd30f5cb40dd98ca3e6d32b2a50d
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,5081b3cc254c426f95be85ee9a469eb1,68b98a0962754d0893e4caa008133777
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,68b98a0962754d0893e4caa008133777,5087ddc07ec74ae9bcb5dcde63960c50
-*@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,a9dcacbe280546bb86312e3bf8ef57a5,9ac7498cef04480fbdc1afbc52c1de11
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,9262ebf5b4664e9bb3febad90df718ec,824b3cc6a83540a4b53aeef1b472fdc0
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,824b3cc6a83540a4b53aeef1b472fdc0,4a13d1d247744557aeb392250bf43117
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,9fb9fcc6c6c7480ca6abb49f52820bf6,824b3cc6a83540a4b53aeef1b472fdc0
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,8c2e9f4d203440069eb3d34a892c787a,9fb9fcc6c6c7480ca6abb49f52820bf6
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,38f14d07b6d647379c8fcb80311e2014,e66347acfd1c475b80bbec32cc206dc5
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,e66347acfd1c475b80bbec32cc206dc5,8c2e9f4d203440069eb3d34a892c787a
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,12b5a0692f7b4d0589762648196e7987,49742ad20b7f4bd6beb62cf9bb1a107f
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,49742ad20b7f4bd6beb62cf9bb1a107f,954c2f190acf4282bda6d96ba701253e
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,d27475a041b44d59a52ad42ccaadc9d8,49742ad20b7f4bd6beb62cf9bb1a107f
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,d3ce5acb86784bfdaff8da21cbafeb47,d27475a041b44d59a52ad42ccaadc9d8
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,d716cfff44124c478509912e09b54f97,9db85755944848c2aae482d7edc9d649
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,9db85755944848c2aae482d7edc9d649,d3ce5acb86784bfdaff8da21cbafeb47
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,bd7b5d9fe6124eeba58479027e221b4e,b95a445c23c444dab107179e7629b827
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,b95a445c23c444dab107179e7629b827,af45e8aedc1a4e8a9a3be9d4058fe895
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,49be3a2cb6f94096ac26dcca0e16a74b,b95a445c23c444dab107179e7629b827
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,893b51bf76de4ea78a7138dbe5c0c12a,49be3a2cb6f94096ac26dcca0e16a74b
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,4729a9ad267a42d7ab1ea5148a6cbb38,7a3754a777794e5faaa0d5bc05f53655
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,7a3754a777794e5faaa0d5bc05f53655,893b51bf76de4ea78a7138dbe5c0c12a
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,1cc74d28386845599bb32d5d2dca8b21,973c12ff3181483abcbc4689990ae633
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,973c12ff3181483abcbc4689990ae633,12e0bfd18df845be883195b669497fda
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,7b33879fe1d54f62aa6f68b32fcf73f0,973c12ff3181483abcbc4689990ae633
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,0783750dd62f404a9f6f1cd9ecf85605,7b33879fe1d54f62aa6f68b32fcf73f0
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,a159f717345d48fdac5fd4294f49b309,7a790bfede8d42ca91e2e11756390907
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,7a790bfede8d42ca91e2e11756390907,0783750dd62f404a9f6f1cd9ecf85605
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,a802fec93c06462f96a6b64707089679,ed614625c31945d9bb233a2b0431c02a
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,ed614625c31945d9bb233a2b0431c02a,a7a097c2022a4dc0aa60825a579a5bb4
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,0c2c957272364147ac1c162ea5b0dee4,ed614625c31945d9bb233a2b0431c02a
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,842aef3bcd5c4c6590c494931640388d,0c2c957272364147ac1c162ea5b0dee4
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,56b6304dc83f4b0fabe114eb760eb3e6,3f72eb0dc4034de9b5c5dd5800a5a735
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,3f72eb0dc4034de9b5c5dd5800a5a735,842aef3bcd5c4c6590c494931640388d
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,36c5ab0e373445269e1393da3cd3a977,7d90675f95604d1d96844718fe575e19
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,7d90675f95604d1d96844718fe575e19,031480667310462e859b38f58e75c39e
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,0123e9057e564c00bb68b69c38079d72,7d90675f95604d1d96844718fe575e19
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,dd7de023d3c6456688b0070ab6d918fd,0123e9057e564c00bb68b69c38079d72
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,004fcec309e345b4a0da3a94a63773e9,4b5e8c9885a64f72871de09e062eb966
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,4b5e8c9885a64f72871de09e062eb966,dd7de023d3c6456688b0070ab6d918fd
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,ff5a732b3fe540fb9268203b7546c474,db736bbf80d94b509691c2465077d6b9
-DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,db736bbf80d94b509691c2465077d6b9,359be26204054cd7b007af8a0a8bda73
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,180f3647320942dc99172aaac97b92b8,db736bbf80d94b509691c2465077d6b9
-DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,c6ba358fe78f4028937d69c35c15b972,180f3647320942dc99172aaac97b92b8
-6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,9b8fefea470f48fda1070c6a063944cf,783b33cf39724925b66a4d19ad3d759f
-DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,783b33cf39724925b66a4d19ad3d759f,c6ba358fe78f4028937d69c35c15b972
-DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,bbe776d3ec2346b9a5061617e529d4e3,693653644f954f96b12f5ada78a545d8
-Revit.Elements.Element.GetParameterValueByName@string,DSCore.String.Contains@string_string_bool,0,0,Revit,2fabf54273cd4d60a5855b41fc423f23,bbe776d3ec2346b9a5061617e529d4e3
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.GetParameterValueByName@string,0,0,DSCore,693653644f954f96b12f5ada78a545d8,c5a79e4aabd94f2cb72ab22d5f10a764
-DSCore.List.AddItemToFront@var[]..[]_var[]..[],DSOffice.Data.ExportExcel@string_string_int_int_var[][]_bool,1,0,DSCore,71a9115cb8b444d8b51c5115781de96b,7d145ce7bb754c989200a339fc066288
-DSCore.List.AddItemToEnd@var[]..[]_var[]..[],DSCore.List.AddItemToFront@var[]..[]_var[]..[],1,0,DSCore,cf1f8b273e454b3a9d14bfa811677098,71a9115cb8b444d8b51c5115781de96b
-DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],1,0,DSCore,d9c5811088fc42f185419f73331a9775,f8f81e688d3340d1a83af9dd8c984bda
-Revit.Elements.Element.GetParameterValueByName@string,DSCore.String.Contains@string_string_bool,1,0,Revit,9f3e64791e4e4cf6aa0bd90e4500c5b7,d9c5811088fc42f185419f73331a9775
-DSCore.List.Flatten@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,73d7f8fbdd7241b19da4886d1774423c,ee7510d63e364ed1bfda9f56d50c3b15
-_Elements_in_Space,DSCore.List.Flatten@var[]..[]_int,0,0,_Elements_in_Space,0bf888dc85a941a9bc5ba55f790877b4,73d7f8fbdd7241b19da4886d1774423c
-DSCore.List.OfRepeatedItem@var[]..[]_int,DSCore.List.Flatten@var[]..[]_int,0,0,DSCore,d8b5b6a7df0646cc9d062936c27f1d65,1d28059617d947da9dab466ebb92e832
-DSCore.List.Flatten@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,1d28059617d947da9dab466ebb92e832,ee7510d63e364ed1bfda9f56d50c3b15
-DSCore.List.Flatten@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,fcf99a60a3d049738d7043d2c08a8413,df3328bfe9ad4f419d341230489ed1b4
-_Elements_in_Space,DSCore.List.Flatten@var[]..[]_int,0,0,_Elements_in_Space,cada6f25eb8b4453b3d4596e0bfc7a93,fcf99a60a3d049738d7043d2c08a8413
-DSCore.List.OfRepeatedItem@var[]..[]_int,DSCore.List.Flatten@var[]..[]_int,0,0,DSCore,da176cf0c6f24d01b7302e23ddc05689,9ac9f4e3822248649d03472810034642
-DSCore.List.Flatten@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,9ac9f4e3822248649d03472810034642,df3328bfe9ad4f419d341230489ed1b4
-Revit.Elements.Grid.Curve,Autodesk.DesignScript.Geometry.Curve.StartPoint,0,0,Revit,5612a7b4db2c4f3589be65e9aa60b653,fc17365788454f619c6cfb8ad1d93ed4
-Autodesk.DesignScript.Geometry.Curve.StartPoint,DSCore.List.FirstItem@var[]..[],1,1,Autodesk,fc17365788454f619c6cfb8ad1d93ed4,61f2c02f0d4443adabf604dc03a98644
-DSCore.List.FirstItem@var[]..[],Autodesk.DesignScript.Geometry.Line.ByStartPointEndPoint@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Point,0,0,DSCore,61f2c02f0d4443adabf604dc03a98644,c1926bcdc3604b40a46100314e08a20b
-DSCore.List.LastItem@var[]..[],Autodesk.DesignScript.Geometry.Line.ByStartPointEndPoint@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Point,0,0,DSCore,7154d63d2cf248b8a6a7c3ecb788dee5,c1926bcdc3604b40a46100314e08a20b
-Autodesk.DesignScript.Geometry.Line.ByStartPointEndPoint@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Curve.Offset@double,0,0,Autodesk,c1926bcdc3604b40a46100314e08a20b,e02957a797304316baf23798f30bb206
-Autodesk.DesignScript.Geometry.Curve.StartPoint,DSCore.List.Flatten@var[]..[]_int,0,0,Autodesk,f459192cfbe04b3d82269f5fe9c5164c,27a1dc7b614a4f5fa5f9b49fcb2e1dd8
-Revit.Elements.Element.Curves,Autodesk.DesignScript.Geometry.Curve.StartPoint,0,0,Revit,5d184e933b8f49748603d97062f79a7a,f459192cfbe04b3d82269f5fe9c5164c
-_DetailCurve.ByCurve+,Revit.Elements.Element.Curves,0,0,_DetailCurve,fcb7876491eb409697b1a6582b9857f3,3a27c05721e543438b3ebfc211a12d11
-92960965-5bfc-41ab-9ceb-d61917dfe6c5,_DetailCurve.ByCurve+,0,0,Zero Touch,56e72590ca374766bc00f7139f4a650b,fcb7876491eb409697b1a6582b9857f3
-Revit.Elements.Element.Curves,Autodesk.DesignScript.Geometry.Curve.StartPoint,0,0,Revit,1166e9d4088e43bb846fc959ce90fa49,a26edbf7c3984a80806d8e50e21f483e
-Autodesk.DesignScript.Geometry.Curve.StartPoint,DSCore.List.Flatten@var[]..[]_int,0,0,Autodesk,a26edbf7c3984a80806d8e50e21f483e,6ed80693c75e415b9fc38347458ab269
-Revit.Elements.Element.Geometry,DSCore.List.Flatten@var[]..[]_int,1,0,Revit,df43ff465d204a3b9e6ff4ca86ecf341,7be9826db3bf459bb25365317712144a
-DSCore.Math.Sum@double[],_Mass_Addition,1,0,DSCore,af56e3caa3d4473fb658f6b1b9c87574,db9a79014ec045b6bbf6ad0d6033908e
-DSCore.List.Flatten@var[]..[]_int,DSCore.Math.Sum@double[],1,0,DSCore,6a9259bdb1ac45288d4091e56b3469fb,af56e3caa3d4473fb658f6b1b9c87574
-DSCore.List.Flatten@var[]..[]_int,_List.FilterByString,1,0,DSCore,7be9826db3bf459bb25365317712144a,e44ed95d04b640bb8eb7f6b9eedebca3
-_List.FilterByString,DSCore.List.Flatten@var[]..[]_int,1,0,_List,e44ed95d04b640bb8eb7f6b9eedebca3,be2954801f3b49c8b5aa69359a720cfb
-DSCore.List.Flatten@var[]..[]_int,Autodesk.DesignScript.Geometry.Solid.ByUnion@Autodesk.DesignScript.Geometry.Solid[],1,0,DSCore,be2954801f3b49c8b5aa69359a720cfb,026b9687dc454ab09672ff529a023203
-036abfeb-d77d-40e7-8be0-78a41034d11d,DSCore.String.Contains@string_string_bool,1,1,Zero Touch,39f6a06493584d3c8c9af56f0c7c1249,dd50173163d4496dab15c43f279d2d32
-DSCore.IO.FileSystem.FileName@string_bool,DSCore.String.Replace@string_string_string,0,0,DSCore,a8ceb43ce1f44a8a98c01b577660c577,2661444113b94b03b302b71ab07c63fe
-DSCore.List.Transpose@var[]..[],DSOffice.Data.ExportExcel@string_string_int_int_var[][]_bool,0,0,DSCore,72260493b4a9436387ebce4ffad5040a,5b5d72b307fe466687d3de05bca9f301
-DSCore.String.Replace@string_string_string,DSCore.String.Split@string_string[],0,0,DSCore,3adb4787a0164647aa7a99cdec081b22,2826081fd7884ddf9ca780551395749f
-DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,dd50173163d4496dab15c43f279d2d32,fd710ca5eb424ee584991a5588be8404
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],DSCore.IO.FileSystem.FileName@string_bool,1,1,DSCore,fd710ca5eb424ee584991a5588be8404,a8ceb43ce1f44a8a98c01b577660c577
-Autodesk.DesignScript.Geometry.PolySurface.Surfaces,Autodesk.DesignScript.Geometry.Surface.NormalAtParameter@double_double,2,2,Autodesk,0c0ca946389d49269427444869993db2,c6725fa1abc14164b0b6693a62ac0e9b
-Autodesk.DesignScript.Geometry.PolySurface.ByLoft@Autodesk.DesignScript.Geometry.Curve[],Autodesk.DesignScript.Geometry.PolySurface.Surfaces,0,0,Autodesk,ee63541e59424f22bfee709951d1de0e,0c0ca946389d49269427444869993db2
-Revit.Elements.CurveElement.Curve,Autodesk.DesignScript.Geometry.PolySurface.ByLoft@Autodesk.DesignScript.Geometry.Curve[],0,0,Revit,c081e17b5f8e46b6a9a423cf05635f73,ee63541e59424f22bfee709951d1de0e
-Autodesk.DesignScript.Geometry.Geometry.Translate@Autodesk.DesignScript.Geometry.Vector_double,fd584cb1-8b89-47b9-bf78-d7fb8912ff98,0,0,Autodesk,499380db5265429c9b533f8514f038a2,55366dd1b8754150b0357062b1379dc8
-Autodesk.DesignScript.Geometry.Surface.NormalAtParameter@double_double,Autodesk.DesignScript.Geometry.Geometry.Translate@Autodesk.DesignScript.Geometry.Vector_double,1,1,Autodesk,c6725fa1abc14164b0b6693a62ac0e9b,499380db5265429c9b533f8514f038a2
-Autodesk.DesignScript.Geometry.Geometry.Translate@Autodesk.DesignScript.Geometry.Vector_double,Autodesk.DesignScript.Geometry.Geometry.Translate@Autodesk.DesignScript.Geometry.Vector_double,1,1,Autodesk,2ad16c42f1c04b2682d1ead48f0798f9,499380db5265429c9b533f8514f038a2
-DSCore.List.Flatten@var[]..[]_int,_Springs.FamilyInstance.ByGeometry,0,0,DSCore,7970c79dc38840c49f5b53cb39899f3e,5c30a65e2d5946f098cd971510c7209a
-Autodesk.DesignScript.Geometry.Curve.ExtrudeAsSolid@double,Autodesk.DesignScript.Geometry.Solid.Difference@Autodesk.DesignScript.Geometry.Solid,0,0,Autodesk,afbad15afebe4bfe9b8716ca5c5f3bf9,0c1d0571f53b4bb69d77f5095ca3c3dc
-Autodesk.DesignScript.Geometry.Curve.ExtrudeAsSolid@double,Autodesk.DesignScript.Geometry.Solid.ByUnion@Autodesk.DesignScript.Geometry.Solid[],0,0,Autodesk,3e1560ffff58469fa957366b6f6ab183,1420cd092ca84444a039dcbe894adebd
-Autodesk.DesignScript.Geometry.Solid.ByUnion@Autodesk.DesignScript.Geometry.Solid[],Autodesk.DesignScript.Geometry.Solid.Difference@Autodesk.DesignScript.Geometry.Solid,0,0,Autodesk,1420cd092ca84444a039dcbe894adebd,0c1d0571f53b4bb69d77f5095ca3c3dc
-_Element.IsOfType,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,_Element,c2c4c7a9aea34ba484031311f855c083,30ceea0049b64662b87deb403a2ab5d1
-_Element.IsOfType,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,_Element,a91e1ab6df5f4c889a2c7642cecfa756,8fb9b94e743540ee9f8fd2cc0829f4f1
-Revit.Elements.Element.Geometry,Autodesk.DesignScript.Geometry.Geometry.DoesIntersect@Autodesk.DesignScript.Geometry.Geometry,0,0,Revit,eaa823b3acab46e7be6c1ac23c8a02f5,b18eee78f4584c58ac11d9e9105a50fd
-DSCore.List.GroupByKey@var[]..[]_var[]..[],DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],1,1,DSCore,cad55675a3e3444391026a2445324380,3e8621b096b2433b97a3f5b022b7a5bc
-DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,1f4aec9320d24b7e8e66108caf188f48,3e8621b096b2433b97a3f5b022b7a5bc
-Revit.Elements.Element.GetParameterValueByName@string,DSCore.List.GroupByKey@var[]..[]_var[]..[],0,0,Revit,0fe0c9b313554c059302a822e9c099e9,cad55675a3e3444391026a2445324380
-Revit.Elements.Element.GetParameterValueByName@string,DSCore.String.Contains@string_string_bool,0,0,Revit,d3bfe3865baf4be7a2113dcdb432502b,1f4aec9320d24b7e8e66108caf188f48
-Revit.Elements.Element.Geometry,Modifiers.GeometryColor.ByGeometryColor@Autodesk.DesignScript.Geometry.Geometry_DSCore.Color,1,1,Revit,ad0c0992c3e34622b88394a9c5b9cdef,6e625dbf84bf43538ce3f7dbd35f4d35
-DSCore.List.Sort@var[],_List.FilterByString,0,0,DSCore,0c3e6c6d68ac465dbdf1ae1188d0ea52,29e90e71b9f54963a8ba9ba8a4fd7d60
-DSCore.Color.ByARGB@int_int_int_int,Modifiers.GeometryColor.ByGeometryColor@Autodesk.DesignScript.Geometry.Geometry_DSCore.Color,0,0,DSCore,9f3b7bf635594afb860f522b50deeac7,6e625dbf84bf43538ce3f7dbd35f4d35
-DSCore.List.Flatten@var[]..[]_int,_List.FilterByString,0,0,DSCore,f8f4c158d27d4a2fabc2ec4772801312,3515259a27c84515b08fe21c6903c35b
-_List.FilterByString,DSCore.List.Flatten@var[]..[]_int,0,0,_List,3515259a27c84515b08fe21c6903c35b,811d1a5cec284be9ac9d2406df57ac77
-DSCore.List.Flatten@var[]..[]_int,Autodesk.DesignScript.Geometry.Solid.ByUnion@Autodesk.DesignScript.Geometry.Solid[],0,0,DSCore,811d1a5cec284be9ac9d2406df57ac77,0823d391a92d474094c2b1f2cd59567b
-DSOffice.Data.ImportCSV@string_bool,DSCore.List.GetItemAtIndex@var[]..[]_int,1,1,DSOffice,9cb20c5ba65740aaadc57f7146a7dab4,622b1f22ac264175a89186d8ed58dbf4
-Lists.DataSets.CreateDataTable@string_string[]_var[][],MachineLearning.Classification.NaiveBayesClassifier@string[]_var_string[]_string_int,0,0,Lists,1a0b4b8c439b4537ae584eb3ca28fb45,956fa5e74fdb4b709f705b5dda582ab3
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,622b1f22ac264175a89186d8ed58dbf4,5fa84b635aa04ca287905c0cb9c4e07d
-DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,9edcbe77f80d45c38b9d5e058b868660,58cadfeee12c4ba3a70648155cfb05e4
-d46bc80c-81c9-49db-909f-d091d3f2617f,Revit.Elements.Element.GetParameterValueByName@string,0,0,Zero Touch,1e4f0ead4731414dae8a64fb1b19e9fa,892247028e6c4825a9f32af37128c006
-Lists.DataSets.CreateDataTable@string_string[]_var[][],MachineLearning.Classification.NaiveBayesClassifier@string[]_var_string[]_string_int,0,0,Lists,f0ad70b776464ccc969ab9eb1fd2c7d2,66be160e936d4ec3b686fc5dd73d57e0
-DSCore.List.Transpose@var[]..[],Lists.DataSets.CreateDataTable@string_string[]_var[][],0,0,DSCore,658ea23341f04cf585fd4a23c51b49a7,f0ad70b776464ccc969ab9eb1fd2c7d2
-DSCore.List.Transpose@var[]..[],Lists.DataSets.CreateDataTable@string_string[]_var[][],0,0,DSCore,de5846f033e2466fa12cb0ebbff51bb9,1a0b4b8c439b4537ae584eb3ca28fb45
-Revit.Elements.FamilyType.Name,DSCore.String.StartsWith@string_string_bool,0,0,Revit,f7d077abd32043408919745152ccae5e,eb92afb0ebe449bdba9a85db9376f18e
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Parameter.ParameterByName@Revit.Elements.Element_string,10,10,DSCore,11eee97dbfc24637860f76a83a0824f0,d24773d2011b4b71b03c82133358b458
-DSCore.String.StartsWith@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,eb92afb0ebe449bdba9a85db9376f18e,11eee97dbfc24637860f76a83a0824f0
-DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,41a2a5c4ed5b42fb9fd10407a1a6976d,a769ac0b264d433888e99fa6f16c2a88
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,a769ac0b264d433888e99fa6f16c2a88,ed6c93c934544240a8251a476048a08f
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,ecadd96889a145a28692df6bf4ec6c17,89312d3591c64ca5af6cf6efb073ff28
-DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,01c12c6487a848db9d9a01984bec1d67,ecadd96889a145a28692df6bf4ec6c17
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,c0b49802535d4a43a5ab41b362706eb4,55183e5de3424aa9822f4c4fcf97bf62
-DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,15461daf7f334571bc66f7f037e98f39,c0b49802535d4a43a5ab41b362706eb4
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,8459e4dd43754871a50e9c380ab37091,194b620026904c4caa1489d6ba45a5f3
-DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,e1d7b0510b20496fb3939f26cb06e0be,8459e4dd43754871a50e9c380ab37091
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,41b8231098f64786b9061df5b59f1cfc,9dab6ffa1ba74dc7b3fa31f611e34532
-DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,036c65d30cf74f63a28852971b136767,41b8231098f64786b9061df5b59f1cfc
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,562ebc4ff3584291afceccd340bb26b1,99d449d6553a4326890faed1086741a1
-DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,b232194922d14aa8a7921de34e3ab460,562ebc4ff3584291afceccd340bb26b1
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,bd19bc9f491f4cf281f2cad2e9beca6a,26e97942f7e348768d435327b20510d2
-DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,0182ed5d886242dea9d1f8cfc9361c4d,bd19bc9f491f4cf281f2cad2e9beca6a
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,0d870fe070a0481eaf2af9b3188d1973,8be6785d99554bb7b533118793a0b09c
-DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,f6e79939397f4cb98815f1e90e783123,0d870fe070a0481eaf2af9b3188d1973
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,11448f832aa1425f9baffad3b5fb27b8,1dd88b7e698b40db887ddccf14c1e706
-DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,206a91da8fb14dfe956e316fbdc5714c,11448f832aa1425f9baffad3b5fb27b8
-DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,9c90bb05eee64a679b793383811cec3f,3881b24ed02a49aeb4ee58f2323d1052
-DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,4af500877e9746d887e9ee2a5a80818d,9c90bb05eee64a679b793383811cec3f
-Autodesk.DesignScript.Geometry.Geometry.BoundingBox,Autodesk.DesignScript.Geometry.BoundingBox.Contains@Autodesk.DesignScript.Geometry.Point,0,0,Autodesk,c7d4afc9e8de438a9ef28d69838f7356,3d266a6037f24fe3b9a7ecda77890f3b
-_Element.IsOfCategory,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,_Element,be9f6f4130334e26b55513e4a6d4d1ea,30ceea0049b64662b87deb403a2ab5d1
-DSCore.List.Flatten@var[]..[]_int,_Springs.Form.ByGeometry,0,0,DSCore,93f405920df74b0b85e1e30d0ee92082,d4592c59f9694796985db46fc3ee4097
-Autodesk.DesignScript.Geometry.Point.ByCoordinates@double_double_double,Autodesk.DesignScript.Geometry.Line.ByStartPointEndPoint@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Point,0,0,Autodesk,8ec740b7e8ea49b69c57ee9586be8e08,c8f30194a3ba49f29ad8e4ec1ebf000f
-Autodesk.DesignScript.Geometry.Point.ByCoordinates@double_double_double,Autodesk.DesignScript.Geometry.Line.ByStartPointEndPoint@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Point,0,0,Autodesk,d3a5479f11414a2286e7cad7d59364ac,c8f30194a3ba49f29ad8e4ec1ebf000f
+Node A Name,Node B Name,# Connections,# Connections Unique,Type,Node A ID,Node B ID,UniqueID
+Node A Name,Node B Name,0,0,Node A Name,Node A ID,Node B ID,0
+DSCore.List.Transpose@var[]..[],DSOffice.Data.ExportExcel@string_string_int_int_var[][]_bool,0,0,DSCore,db067dc59e0147bda0cf858b0da3fc97,74aaea7e6e4546088068f93bcfc61ff2,1
+DSOffice.Data.ImportExcel@var_string_bool_bool,DSCore.List.Transpose@var[]..[],0,0,DSOffice,c692d78907aa4d9ebaa4244cb92c20e4,b76189ba8c4a49dd875ddc88e806d5df,2
+DSCore.List.Transpose@var[]..[],DSCore.List.GetItemAtIndex@var[]..[]_int,1,1,DSCore,b76189ba8c4a49dd875ddc88e806d5df,032d6f78041b4d3bba296768d9c16eea,3
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,a2d2a3d30ff14eaaa120993bca904c53,d625ac5a20cd40ab88760f2266110977,4
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,032d6f78041b4d3bba296768d9c16eea,1ef2f7c4a2ac4b159e2e304a633f2ac9,5
+DSCore.Math.Sum@double[],/@var[]..[]_var[]..[],0,0,DSCore,b5b8be87676947c48a5cc2d7c0af965e,ab84b72bd6754671b106d73f0f4fe7f8,6
+GetValues@var[]..[],DSCore.Math.Sum@double[],0,0,Code Block??,002ea4d8c7664a6dbb9e8ac970bcf50d,b5b8be87676947c48a5cc2d7c0af965e,7
+DSCore.Math.Sum@double[],/@var[]..[]_var[]..[],0,0,DSCore,4cb1e5c2bca844f59e82c59da0f2269b,ab84b72bd6754671b106d73f0f4fe7f8,8
+GetValues@var[]..[],DSCore.Math.Sum@double[],0,0,Code Block??,fb8cb26f85634ef09470123e713c763e,4cb1e5c2bca844f59e82c59da0f2269b,9
+1db71931-aac7-4e82-b5b8-5c7bcf16332f,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Zero Touch,b0adfdfb226249ffa7cc5b6daed4aaaf,88de44b1ad8b425dacde34da56e88c83,10
+1db71931-aac7-4e82-b5b8-5c7bcf16332f,==@var[]..[]_var[]..[],0,0,Zero Touch,9b1167a9ae364b328999b04368788304,f58796d8bfd34de3a934f248ebf22e15,11
+==@var[]..[]_var[]..[],DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Code Block??,f58796d8bfd34de3a934f248ebf22e15,88de44b1ad8b425dacde34da56e88c83,12
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],archilab.Revit.Selection.Select.ByElementId@var,0,0,DSCore,88de44b1ad8b425dacde34da56e88c83,c23fd434e93643b99b0f09db150506af,13
+a8b0f382-e8bc-4198-93af-a93c1afcf265,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],6,6,Zero Touch,b63ea965728a4f6595f5b0ada9630bab,1cb4b763c4cd47fb99d677a3bb8c89b5,14
+b223cace-86e4-435e-8e6c-94a60e29ecb6,1db71931-aac7-4e82-b5b8-5c7bcf16332f,8,8,Zero Touch,53e88a8dd4814f68b606214fd3f0a71b,b0adfdfb226249ffa7cc5b6daed4aaaf,15
+_UI.MultipleInputForm_++,5c6eba64-17ff-4764-9134-0afcdb6716a4,2,2,_UI,662f14de44904c419280b81ff3b7bdcd,5d8306bf06c24aafa37cf35294ea646c,16
+5c6eba64-17ff-4764-9134-0afcdb6716a4,b223cace-86e4-435e-8e6c-94a60e29ecb6,0,0,Zero Touch,5d8306bf06c24aafa37cf35294ea646c,53e88a8dd4814f68b606214fd3f0a71b,17
+_UI.FilePath_Data,_UI.MultipleInputForm_++,0,0,_UI,a362ee84145449b293b4a77c9ad78297,662f14de44904c419280b81ff3b7bdcd,18
+1db71931-aac7-4e82-b5b8-5c7bcf16332f,==@var[]..[]_var[]..[],0,0,Zero Touch,0219d71cbe834ed59e8a6748428a2382,823219be3e844f6cad3feb6103c5d573,19
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],_UI.Listview_Data,1,0,DSCore,1cb4b763c4cd47fb99d677a3bb8c89b5,fc7f6d58d3a042fcaf39b62434161421,20
+==@var[]..[]_var[]..[],DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Code Block??,823219be3e844f6cad3feb6103c5d573,1cb4b763c4cd47fb99d677a3bb8c89b5,21
+_UI.MultipleInputForm_++,DSCore.List.GetItemAtIndex@var[]..[]_int,4,4,_UI,b51c2292d6b94fd68f33615ef472162f,cc358e1eba7546879d1cb2f580687d90,22
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],_UI.Listview_Data,1,0,DSCore,8ffc04d06efe46da813d377f573a7d3d,bd5c57a0ae5b448eaab94bd89ce66066,23
+==@var[]..[]_var[]..[],DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Code Block??,fa177d6e53b44a4591c7535b544ff89b,8ffc04d06efe46da813d377f573a7d3d,24
+1db71931-aac7-4e82-b5b8-5c7bcf16332f,==@var[]..[]_var[]..[],0,0,Zero Touch,4eee8b0f7c264b4c874371813c6ee882,fa177d6e53b44a4591c7535b544ff89b,25
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,cc358e1eba7546879d1cb2f580687d90,01032842a3984b21bf4b7bc2e64429f2,26
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,62e1125f33734ca580e70dcaa5b3c187,63effb5a1b164f4f986d1110174f6535,27
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],_UI.Listview_Data,1,0,DSCore,df89019f3673447d902ec7cbc71c4f73,5c87c946ffc64aeaa269cfdb535516d7,28
+==@var[]..[]_var[]..[],DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Code Block??,d37f5d13e5904b86b9c43cb10092f4a4,df89019f3673447d902ec7cbc71c4f73,29
+1db71931-aac7-4e82-b5b8-5c7bcf16332f,==@var[]..[]_var[]..[],0,0,Zero Touch,b411c7725ebd472496b97c20140d4f21,d37f5d13e5904b86b9c43cb10092f4a4,30
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],_UI.Listview_Data,1,0,DSCore,87ea9771ac1142bbb9e0ca2350e342d1,345d7bf8343041b9bcb44094e4bb0eeb,31
+==@var[]..[]_var[]..[],DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Code Block??,a09ddb2b4a7b42fd801a4ca1743282fb,87ea9771ac1142bbb9e0ca2350e342d1,32
+1db71931-aac7-4e82-b5b8-5c7bcf16332f,==@var[]..[]_var[]..[],0,0,Zero Touch,4691617093c44399a2eae93e99083aba,a09ddb2b4a7b42fd801a4ca1743282fb,33
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],_UI.Listview_Data,1,0,DSCore,46261e007d7a4c66b64c3ae91c0bf103,214511841edf4bdf81717dd34737cb20,34
+==@var[]..[]_var[]..[],DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Code Block??,aff4e5e3f2424f7486c81c1d306b6761,46261e007d7a4c66b64c3ae91c0bf103,35
+1db71931-aac7-4e82-b5b8-5c7bcf16332f,==@var[]..[]_var[]..[],0,0,Zero Touch,9ea87c1d0fea4464a155c7522e1ec8ef,aff4e5e3f2424f7486c81c1d306b6761,36
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,fa77aecdd4704d908e6c41a5b0594f4e,a72f510f51f042f7ac58a592a3a76f3d,37
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,3e957e712cdc45f7bdaa732d7a8dc5a0,711fc74be7864172bc7dd075e807b639,38
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,666737d7f6eb4d8eaaa8dee8b89f7cf3,91067cfa33fe4e0da65cd077281e94b1,39
+DSCore.IO.Image.ReadFromFile@var,_UI.MultipleInputForm_++,1,0,DSCore,46e0350ca3ce43568735758fe8221272,662f14de44904c419280b81ff3b7bdcd,40
+DSCore.IO.Image.ReadFromFile@var,_UI.MultipleInputForm_++,0,0,DSCore,564fb58afe0849d6bf2f9bd0e3e7b01c,b51c2292d6b94fd68f33615ef472162f,41
+1db71931-aac7-4e82-b5b8-5c7bcf16332f,==@var[]..[]_var[]..[],1,1,Zero Touch,1e5157beca244490aefa0e872eb421a9,6ccc3048041847c48d49bba4dc4f6be2,42
+==@var[]..[]_var[]..[],DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Code Block??,6ccc3048041847c48d49bba4dc4f6be2,40673299056e4653803bb7f1cce0384d,43
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],DSCore.List.Flatten@var[]..[]_int,0,0,DSCore,40673299056e4653803bb7f1cce0384d,e63184e30588456d82837b61d808f2b4,44
+DSCore.List.Flatten@var[]..[]_int,+@var[]..[]_var[]..[],0,0,DSCore,e63184e30588456d82837b61d808f2b4,c932eccaceab49d88213e72c666f6911,45
+archilab.Revit.Selection.Select.ByElementId@var,a8b0f382-e8bc-4198-93af-a93c1afcf265,0,0,archilab,c23fd434e93643b99b0f09db150506af,b63ea965728a4f6595f5b0ada9630bab,46
+Revit.Elements.CurveElement.Curve,Autodesk.DesignScript.Geometry.Curve.PointsAtEqualSegmentLength@int,1,0,Revit,f92c5894967e42aeb6d8b2bd0f92291b,e85495584e96474980de27a49a4526f3,47
+Autodesk.DesignScript.Geometry.Curve.PointsAtEqualSegmentLength@int,DSCore.List.Flatten@var[]..[]_int,1,1,Autodesk,e85495584e96474980de27a49a4526f3,e9745700625849f9b659bfe6323e2872,48
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.UniqueItems@var[]..[],1,0,DSCore,1814025ab13b4286a8d1c7d97b25bcd6,4cf8ce1900e442d8a40ac70b3a3d4495,49
+92960965-5bfc-41ab-9ceb-d61917dfe6c5,a2d5ef3c-b3a2-403f-8b95-fd94457ce395,0,0,Zero Touch,a5ff29fc5fa844b385ea6bb331462b28,a8a2c54c4b6949688681ba42ed240df7,50
+Autodesk.DesignScript.Geometry.Plane.ByOriginNormal@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Vector,_BoundingBox.PerimeterCurvesOnPlane,0,0,Autodesk,8b0a6b791f4b458a9cab80267ea309e0,b91cf371c410410fa28dfe2a876f96d8,51
+Autodesk.DesignScript.Geometry.BoundingBox.ByGeometry@Autodesk.DesignScript.Geometry.Geometry[],DSCore.List.Flatten@var[]..[]_int,0,0,Autodesk,18ff4673dd9c4b03be12b7cad9300a29,f7d72f9d73ef4682ab1abf498c683311,52
+DSCore.List.Flatten@var[]..[]_int,Autodesk.DesignScript.Geometry.BoundingBox.Contains@Autodesk.DesignScript.Geometry.Point,0,0,DSCore,f7d72f9d73ef4682ab1abf498c683311,7d46d1cb3f184cbea69bff28c90d61bd,53
+1db71931-aac7-4e82-b5b8-5c7bcf16332f,2c408f1b-9655-4d54-8984-c9062c87b41d,0,0,Zero Touch,88f525a3ea894c389a769c08081c8084,ae7fbfaccda740cfbc4468cc1ecd6ffd,54
+2c408f1b-9655-4d54-8984-c9062c87b41d,DSCore.String.ToNumber@string,0,0,Zero Touch,ae7fbfaccda740cfbc4468cc1ecd6ffd,1d472d68b25b4487b70607f739e76344,55
+Geometry.Points.NumbersToPoint@double[],DSCore.List.Flatten@var[]..[]_int,0,0,Geometry,736f3805dd2b46f980d6ccce9b03d346,3b0e0e07690041d8ab0adc4977b8bb95,56
+DSCore.List.Flatten@var[]..[]_int,Autodesk.DesignScript.Geometry.Geometry.Translate@double_double_double,0,0,DSCore,3b0e0e07690041d8ab0adc4977b8bb95,0ef94e93b6ba46ce956303ce2e8a8c90,57
+Autodesk.DesignScript.Geometry.Geometry.Translate@double_double_double,Autodesk.DesignScript.Geometry.Geometry.Rotate@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Vector_double,0,0,Autodesk,0ef94e93b6ba46ce956303ce2e8a8c90,a6a91183a6a349c98062d836b24c1c23,58
+Autodesk.DesignScript.Geometry.Geometry.Rotate@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Vector_double,Revit.Elements.FamilyInstance.ByPoint@Revit.Elements.FamilyType_Autodesk.DesignScript.Geometry.Point,0,0,Autodesk,a6a91183a6a349c98062d836b24c1c23,1be337bccc6a4a9dac663df3125d4311,59
+Autodesk.DesignScript.Geometry.Vector.ZAxis,Autodesk.DesignScript.Geometry.Geometry.Rotate@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Vector_double,0,0,Autodesk,d39586c2e7394388b27ce0909c4b2c1f,a6a91183a6a349c98062d836b24c1c23,60
+Autodesk.DesignScript.Geometry.Point.Origin,Autodesk.DesignScript.Geometry.Geometry.Rotate@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Vector_double,0,0,Autodesk,3a5daa72d46342a5842da4e78582f34e,a6a91183a6a349c98062d836b24c1c23,61
+_All_Family_Types_Of_Category,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Zero Touch,81cd924d6127402fb7f2f4122d7be527,47689cf1382d45dda81db8337399992c,62
+DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,189fa72330d64489b1babb7b3cfb9c0f,47689cf1382d45dda81db8337399992c,63
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],_UI.Listview_Data,1,0,DSCore,47689cf1382d45dda81db8337399992c,f8efd927ca74473b87bbbc014305c708,64
+DSCore.List.GetItemAtIndex@var[]..[]_int,b223cace-86e4-435e-8e6c-94a60e29ecb6,0,0,DSCore,fdd6ecb448474116b0799c2282b7e028,53e88a8dd4814f68b606214fd3f0a71b,65
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.FamilyInstance.ByPoint@Revit.Elements.FamilyType_Autodesk.DesignScript.Geometry.Point,0,0,DSCore,1c3ebc87fa2c42d6ad559a0c90bc8abf,1be337bccc6a4a9dac663df3125d4311,66
+Revit.Elements.Element.GetParameterValueByName@string,DSCore.List.Flatten@var[]..[]_int,1,0,Revit,87391469ea794ba8a4af6727770114fd,3d1c45796f18464f9d541ba07110ddc9,67
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,1,1,DSCore,3d1c45796f18464f9d541ba07110ddc9,7e9063de39a3416b86de77f94cd28145,68
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,1,1,DSCore,d6393af4e04343ee8682666d63366673,7e9063de39a3416b86de77f94cd28145,69
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,1,1,DSCore,e247ff65091544e6b4ce7c87ea000283,ef19e145a5874320b650894bd2fc8831,70
+_Document.ActiveViewFromCurrentDocument,_Schedule.GetCalculatedValues,4,3,_Document,e5c3ca26fc68433abdd6da920edcc0ac,78e44557ce2249d3a997f834bf691bf9,71
+DSCore.IO.Image.ReadFromFile@var,_UI.MultipleInputForm_++,0,0,DSCore,6f593249dc584eeeaa2a0c61e26933f2,833623deee544733994d28bf709c9247,72
+_UI.MultipleInputForm_++,DSCore.List.GetItemAtIndex@var[]..[]_int,2,2,_UI,833623deee544733994d28bf709c9247,9257cccf457b4b38a99c1e3febd053dd,73
+Revit.Elements.Views.ScheduleView.Fields,_UI.DropDown_Data,5,4,Revit,0318f05d464243f993541aa616c3ee46,da4b8b4d35404da9b2da2153350a6409,74
+_Math.Ceiling+,/@var[]..[]_var[]..[],0,0,_Math,b018e7e51ccc497e88a91fd0d7af12ca,8d41b24a2ac54cadac9b8da5f423c216,75
+/@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,8d41b24a2ac54cadac9b8da5f423c216,550b8806061646f7b12a9317983613ab,76
+DSCore.String.ToNumber@string,_Math.Ceiling+,0,0,DSCore,c84a737f04904e959cbd2fd3bb9c6764,b018e7e51ccc497e88a91fd0d7af12ca,77
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,7e9063de39a3416b86de77f94cd28145,ef19e145a5874320b650894bd2fc8831,78
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.String.ToNumber@string,0,0,DSCore,ef19e145a5874320b650894bd2fc8831,c84a737f04904e959cbd2fd3bb9c6764,79
+Revit.Elements.Element.GetParameterValueByName@string,DSCore.String.Substring@string_int_int,0,0,Revit,c0ccfca5c23b4aa5b2a90bb775844aa9,4bb2b432597047e5ae3b8e7a8e5e3c7e,80
+DSCore.String.Join@string_string[],DSCore.List.Flatten@var[]..[]_int,0,0,DSCore,fa58147575d14f6b85a232ca3aa6ac4a,95a9ba78b564492180dc60c08713362d,81
+DSCore.List.Transpose@var[]..[],DSCore.String.Join@string_string[],0,0,DSCore,326a566807164bb7b30c4d156efaadfe,fa58147575d14f6b85a232ca3aa6ac4a,82
+DSCore.List.Flatten@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,95a9ba78b564492180dc60c08713362d,50cabcd48fe6483d86c699104d5f71fe,83
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.String.ToNumber@string,0,0,DSCore,1c7988bb25a44715aec9bceb68e0459b,e5915ef9e82a4b93a7fd06cc27e7972d,84
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,6836f80f80e94593bd8ee0b2cd2c156e,1c7988bb25a44715aec9bceb68e0459b,85
+DSCore.String.ToNumber@string,_Math.Ceiling+,0,0,DSCore,e5915ef9e82a4b93a7fd06cc27e7972d,6e5168bf89804c2ebd9990242a3d4b05,86
+/@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,370471fe2d644c0abbc1517a01c316c5,550b8806061646f7b12a9317983613ab,87
+_Math.Ceiling+,/@var[]..[]_var[]..[],0,0,_Math,6e5168bf89804c2ebd9990242a3d4b05,370471fe2d644c0abbc1517a01c316c5,88
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,7232ee48c5964d78b7a7e47924397b03,c5fcfca006dc4706926f95f91ed05bed,89
+DSCore.List.GetItemAtIndex@var[]..[]_int,*@var[]..[]_var[]..[],0,0,DSCore,c5fcfca006dc4706926f95f91ed05bed,93963d81bda542399728e6d60a89ef68,90
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.GetItemAtIndex@var[]..[]_int,8,8,Zero Touch,faccf85521ba48d98aca3717ba376d7d,2a249509ff9048e48621609d4802c68d,91
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,7,7,DSCore,2a249509ff9048e48621609d4802c68d,7232ee48c5964d78b7a7e47924397b03,92
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,5876ebee7b7c48ab89c61a3788f62dc0,c5fcfca006dc4706926f95f91ed05bed,93
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,84fd390956f346c79894fc3683178f87,5876ebee7b7c48ab89c61a3788f62dc0,94
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,1dcfc15b9dda48428a59afaedfa15d3d,8a49a7ba745f4bd68caaa93b64411afd,95
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,8a49a7ba745f4bd68caaa93b64411afd,84fd390956f346c79894fc3683178f87,96
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,86bda4f2841249749fed6568878105ec,0249bfe3856e46efb34edac74e65f9cd,97
+DSCore.List.GetItemAtIndex@var[]..[]_int,*@var[]..[]_var[]..[],0,0,DSCore,0249bfe3856e46efb34edac74e65f9cd,470740509ff84657a5b4d7c1534032cf,98
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,e40c5756823843e6bd0f092b3d974514,0249bfe3856e46efb34edac74e65f9cd,99
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,deae0b0cab634806acf2932d17077f8c,e40c5756823843e6bd0f092b3d974514,100
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,83e85836fe1d429fa2cbe0d4f58841c0,e259d32e9f0548a396fc0f74c14176c8,101
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,e259d32e9f0548a396fc0f74c14176c8,deae0b0cab634806acf2932d17077f8c,102
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,2c397d7651ba412e875968f49dd5a63a,83e3958318524a1f8f06b05bee5ebf1c,103
+DSCore.List.GetItemAtIndex@var[]..[]_int,*@var[]..[]_var[]..[],0,0,DSCore,83e3958318524a1f8f06b05bee5ebf1c,20d03ea8aa2e4e1f850d43734e86716c,104
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,5eddf096ff464013b21e6fd5193eec2a,83e3958318524a1f8f06b05bee5ebf1c,105
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,6e8234cff6504db783697aee57253a56,5eddf096ff464013b21e6fd5193eec2a,106
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,bd39491d19cc46339246c4c3f81b96d7,d2ffeb8625ab4efd8be54879d07a4c90,107
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,d2ffeb8625ab4efd8be54879d07a4c90,6e8234cff6504db783697aee57253a56,108
+*@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,20d03ea8aa2e4e1f850d43734e86716c,8240e8507a164589973ac4e693c88614,109
+*@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,470740509ff84657a5b4d7c1534032cf,a4b50ddab1d24f45a6f756790352f335,110
+*@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,93963d81bda542399728e6d60a89ef68,da8cf2a3fdfd4e4599b5e68c1474b9b4,111
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,54d816d3b12a43d18af2a546915ba88c,12e9306d9fb64a90ac8e6c978dcf55a5,112
+DSCore.List.GetItemAtIndex@var[]..[]_int,*@var[]..[]_var[]..[],0,0,DSCore,12e9306d9fb64a90ac8e6c978dcf55a5,05cd06ad330b42a197fa5d8a7b4f9cb8,113
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,454df36340ea49d0aa2ce7ca90e37599,12e9306d9fb64a90ac8e6c978dcf55a5,114
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,2c7a3d3fad11487eb17f6f83a160c3fe,454df36340ea49d0aa2ce7ca90e37599,115
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,391131717f704668b366eabf5db34c82,31d18576ce0f4b16850338bb5903997b,116
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,31d18576ce0f4b16850338bb5903997b,2c7a3d3fad11487eb17f6f83a160c3fe,117
+*@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,05cd06ad330b42a197fa5d8a7b4f9cb8,6f874efe0a01490db928608874a540d4,118
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,0806194aa9b74371b5c6a6e0c2de1c35,d136704ff01045acae03269f24b6ea75,119
+DSCore.List.GetItemAtIndex@var[]..[]_int,*@var[]..[]_var[]..[],0,0,DSCore,d136704ff01045acae03269f24b6ea75,b2235be8bd124ddd8747312a0e9a3740,120
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,9e59005ce0d9420393c36e0a80999ba0,d136704ff01045acae03269f24b6ea75,121
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,13a0f4ddcc1348e79cef37c3354d87b8,9e59005ce0d9420393c36e0a80999ba0,122
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,1daa917a93264ab6a6dd295e2329f715,c0df44cba34c42d5b14e5aff1970905b,123
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,c0df44cba34c42d5b14e5aff1970905b,13a0f4ddcc1348e79cef37c3354d87b8,124
+*@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,b2235be8bd124ddd8747312a0e9a3740,e356956a7c8e44db95102717b60d4c77,125
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.GetItemAtIndex@var[]..[]_int,14,14,Zero Touch,12f8c52971314f5f8943d348c421a94f,7feb89af59584da48c0b78b5648eacdf,126
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,13,13,DSCore,7feb89af59584da48c0b78b5648eacdf,a8204d767ffe481b9f18018b9a26fe93,127
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,a8204d767ffe481b9f18018b9a26fe93,b806b5b1bb0b42e88d15d0d60147cc50,128
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,b806b5b1bb0b42e88d15d0d60147cc50,fcc553f5128a4d4b89df9a0faab1e696,129
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,b845c818d2c1455fa131d2ed94a60394,b806b5b1bb0b42e88d15d0d60147cc50,130
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,69ab1bf5cf654a20912d6cf7d755a528,b845c818d2c1455fa131d2ed94a60394,131
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,a17189ccf0f84cffb110099d45bef790,613e2d87eff64317bb4f5b4a8d465098,132
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,613e2d87eff64317bb4f5b4a8d465098,69ab1bf5cf654a20912d6cf7d755a528,133
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,c27d95d0626240b7879a1f29226f54e1,82d0be17dee14e44b2f2c0f17074552e,134
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,82d0be17dee14e44b2f2c0f17074552e,ab04dfd5c47446febc57860051c0f900,135
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,4bf5e01ce7754f3aae70de764acfc80c,82d0be17dee14e44b2f2c0f17074552e,136
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,356aa5afd1f04af7b6f2072c61c663fa,4bf5e01ce7754f3aae70de764acfc80c,137
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,5ef036a84a434eeaa2a7a25fb94738d5,35c30dc0ea6d4ebfae3ee5992bd617a5,138
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,35c30dc0ea6d4ebfae3ee5992bd617a5,356aa5afd1f04af7b6f2072c61c663fa,139
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,e018b7d5f89045b9bc8eb4afdfb99d97,6b476672375f449eadaa3ba78e4a2233,140
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,6b476672375f449eadaa3ba78e4a2233,e6b1a25f46f24bf4872130812e649822,141
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,7337e6c828144c119401b7280e904964,6b476672375f449eadaa3ba78e4a2233,142
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,304aaca1ee24441a87b0f54ad176e8bf,7337e6c828144c119401b7280e904964,143
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,99241b9c4f3247df988bda91b70a962a,6118b839751e41df81834075e0e3b0b5,144
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,6118b839751e41df81834075e0e3b0b5,304aaca1ee24441a87b0f54ad176e8bf,145
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,6a4351e424304c90af5734ca48cd79d5,2a23d456c51c4aaba99946c329606f03,146
+DSCore.List.GetItemAtIndex@var[]..[]_int,*@var[]..[]_var[]..[],0,0,DSCore,2a23d456c51c4aaba99946c329606f03,bc778279c3a04ecbb91b2347519f9471,147
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,635230cbb4304e5cbccd871774492bab,2a23d456c51c4aaba99946c329606f03,148
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,a1d127f360e64574be503dcaf32d6a72,635230cbb4304e5cbccd871774492bab,149
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,70baba6a8a3a4dad84b2f467f1a420f5,fe9f53e2ba914ea9a4775bf847752c30,150
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,fe9f53e2ba914ea9a4775bf847752c30,a1d127f360e64574be503dcaf32d6a72,151
+*@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,bc778279c3a04ecbb91b2347519f9471,95858654554c4055a84abdc948a97911,152
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,d635d55eca4c415aa7a7c7ffee9bbf84,ca1f9dcda5bd44a1bfe665be466d73e9,153
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,ca1f9dcda5bd44a1bfe665be466d73e9,175e1f7e9f994c5d8c073dcdaf6a6459,154
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,414a771fd3ad4397a901214c365656c1,ca1f9dcda5bd44a1bfe665be466d73e9,155
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,455382444f8b47b488cf408a203c2fdb,414a771fd3ad4397a901214c365656c1,156
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,cb21499674164ef88a10461aa800106a,50f0dfa7bcad4145beed0b2271d1f6b3,157
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,50f0dfa7bcad4145beed0b2271d1f6b3,455382444f8b47b488cf408a203c2fdb,158
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,f3f65cae64ef4dcd8acd38ea007b1b16,e4db2aa7b1b742d9be29cead023b500c,159
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,e4db2aa7b1b742d9be29cead023b500c,0ac3f84e5d5b497fa3cbaf8fb4c4b8c1,160
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,681ea082531d433c9821bdee73e10c08,e4db2aa7b1b742d9be29cead023b500c,161
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,fb01a330ea72441789b412704f5e91a9,681ea082531d433c9821bdee73e10c08,162
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,93ce5ef6ebc741b69f517bca703ca6b1,08ac3cdea5b44ec2abf2d43136de9ae6,163
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,08ac3cdea5b44ec2abf2d43136de9ae6,fb01a330ea72441789b412704f5e91a9,164
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,3dd3e828421f45c48a20fad09784a73b,2952e060e11440cb84a56fe9fdd6a77a,165
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,2952e060e11440cb84a56fe9fdd6a77a,e51f12c3635a46cf90d66040edff8460,166
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,7f04cd39cbc24c6587c3f3cb3afc3d4b,2952e060e11440cb84a56fe9fdd6a77a,167
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,2f45de41157c4652b2f3e6f83cccede1,7f04cd39cbc24c6587c3f3cb3afc3d4b,168
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,34daaecc11164e41bc24002b99a39c0a,e480802a74fa4f6f84182481706f615c,169
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,e480802a74fa4f6f84182481706f615c,2f45de41157c4652b2f3e6f83cccede1,170
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,8e09250c0e1b4b87b7fc9d50f3d6ee0d,c9a0f51c3c294476a1106fddbd36084f,171
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,c9a0f51c3c294476a1106fddbd36084f,b26c083a31724ea3a27d1cb4d339fd1b,172
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,6c8405a08ebd4065bc7d605d563da184,c9a0f51c3c294476a1106fddbd36084f,173
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,1c8d5c9bdbae47fd82a97aa0c5f62971,6c8405a08ebd4065bc7d605d563da184,174
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,dc4a5e39cab6444e9b52da0cde2b28a3,0a0ca172724b44daa489c5c75407e7f4,175
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,0a0ca172724b44daa489c5c75407e7f4,1c8d5c9bdbae47fd82a97aa0c5f62971,176
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,21,21,DSCore,57a895c1cd564c69a10f481596560cbf,b26c083a31724ea3a27d1cb4d339fd1b,177
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],DSCore.List.FirstIndexOf@var[]..[]_var,21,21,DSCore,9a68a71494f845d4aeee37bb33f39c91,8e09250c0e1b4b87b7fc9d50f3d6ee0d,178
+DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],1,1,DSCore,b554661bd1e144eebdbd4f96b9fbb411,57a895c1cd564c69a10f481596560cbf,179
+Revit.Elements.Element.GetParameterValueByName@string,DSCore.String.Contains@string_string_bool,0,0,Revit,c5a79e4aabd94f2cb72ab22d5f10a764,b554661bd1e144eebdbd4f96b9fbb411,180
+Revit.Elements.Element.GetParameterValueByName@string,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,Revit,0fedacd73ccb4c3887858bf195d04cdf,9a68a71494f845d4aeee37bb33f39c91,181
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,b56bf1ead5d442c79d0a56cb47f808e5,81e5921efa7148d49f518d47c1e60ae3,182
+DSCore.List.GetItemAtIndex@var[]..[]_int,*@var[]..[]_var[]..[],0,0,DSCore,81e5921efa7148d49f518d47c1e60ae3,e14772f5ff7d4f6882f72cd539e2793a,183
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,145b7b8857b549b2835bd5e714dea43a,81e5921efa7148d49f518d47c1e60ae3,184
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,35fc3c34f78f4f7daa1ce2ac02e6ca79,145b7b8857b549b2835bd5e714dea43a,185
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,03416a5dc6e848d68814d1f45146465b,0709d6c115334405b00eede162f82391,186
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,0709d6c115334405b00eede162f82391,35fc3c34f78f4f7daa1ce2ac02e6ca79,187
+*@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,e14772f5ff7d4f6882f72cd539e2793a,96c895bf2b8b41dda36e0acb3e1529e9,188
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,96dc0f50b36a4582afe71116890b6fcf,61e00772c40948e7b175f55d621516b9,189
+DSCore.List.GetItemAtIndex@var[]..[]_int,*@var[]..[]_var[]..[],0,0,DSCore,61e00772c40948e7b175f55d621516b9,a9dcacbe280546bb86312e3bf8ef57a5,190
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,aadfbd30f5cb40dd98ca3e6d32b2a50d,61e00772c40948e7b175f55d621516b9,191
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,5087ddc07ec74ae9bcb5dcde63960c50,aadfbd30f5cb40dd98ca3e6d32b2a50d,192
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,5081b3cc254c426f95be85ee9a469eb1,68b98a0962754d0893e4caa008133777,193
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,68b98a0962754d0893e4caa008133777,5087ddc07ec74ae9bcb5dcde63960c50,194
+*@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,Code Block??,a9dcacbe280546bb86312e3bf8ef57a5,9ac7498cef04480fbdc1afbc52c1de11,195
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,9262ebf5b4664e9bb3febad90df718ec,824b3cc6a83540a4b53aeef1b472fdc0,196
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,824b3cc6a83540a4b53aeef1b472fdc0,4a13d1d247744557aeb392250bf43117,197
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,9fb9fcc6c6c7480ca6abb49f52820bf6,824b3cc6a83540a4b53aeef1b472fdc0,198
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,8c2e9f4d203440069eb3d34a892c787a,9fb9fcc6c6c7480ca6abb49f52820bf6,199
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,38f14d07b6d647379c8fcb80311e2014,e66347acfd1c475b80bbec32cc206dc5,200
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,e66347acfd1c475b80bbec32cc206dc5,8c2e9f4d203440069eb3d34a892c787a,201
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,12b5a0692f7b4d0589762648196e7987,49742ad20b7f4bd6beb62cf9bb1a107f,202
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,49742ad20b7f4bd6beb62cf9bb1a107f,954c2f190acf4282bda6d96ba701253e,203
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,d27475a041b44d59a52ad42ccaadc9d8,49742ad20b7f4bd6beb62cf9bb1a107f,204
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,d3ce5acb86784bfdaff8da21cbafeb47,d27475a041b44d59a52ad42ccaadc9d8,205
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,d716cfff44124c478509912e09b54f97,9db85755944848c2aae482d7edc9d649,206
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,9db85755944848c2aae482d7edc9d649,d3ce5acb86784bfdaff8da21cbafeb47,207
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,bd7b5d9fe6124eeba58479027e221b4e,b95a445c23c444dab107179e7629b827,208
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,b95a445c23c444dab107179e7629b827,af45e8aedc1a4e8a9a3be9d4058fe895,209
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,49be3a2cb6f94096ac26dcca0e16a74b,b95a445c23c444dab107179e7629b827,210
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,893b51bf76de4ea78a7138dbe5c0c12a,49be3a2cb6f94096ac26dcca0e16a74b,211
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,4729a9ad267a42d7ab1ea5148a6cbb38,7a3754a777794e5faaa0d5bc05f53655,212
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,7a3754a777794e5faaa0d5bc05f53655,893b51bf76de4ea78a7138dbe5c0c12a,213
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,1cc74d28386845599bb32d5d2dca8b21,973c12ff3181483abcbc4689990ae633,214
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,973c12ff3181483abcbc4689990ae633,12e0bfd18df845be883195b669497fda,215
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,7b33879fe1d54f62aa6f68b32fcf73f0,973c12ff3181483abcbc4689990ae633,216
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,0783750dd62f404a9f6f1cd9ecf85605,7b33879fe1d54f62aa6f68b32fcf73f0,217
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,a159f717345d48fdac5fd4294f49b309,7a790bfede8d42ca91e2e11756390907,218
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,7a790bfede8d42ca91e2e11756390907,0783750dd62f404a9f6f1cd9ecf85605,219
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,a802fec93c06462f96a6b64707089679,ed614625c31945d9bb233a2b0431c02a,220
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,ed614625c31945d9bb233a2b0431c02a,a7a097c2022a4dc0aa60825a579a5bb4,221
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,0c2c957272364147ac1c162ea5b0dee4,ed614625c31945d9bb233a2b0431c02a,222
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,842aef3bcd5c4c6590c494931640388d,0c2c957272364147ac1c162ea5b0dee4,223
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,56b6304dc83f4b0fabe114eb760eb3e6,3f72eb0dc4034de9b5c5dd5800a5a735,224
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,3f72eb0dc4034de9b5c5dd5800a5a735,842aef3bcd5c4c6590c494931640388d,225
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,36c5ab0e373445269e1393da3cd3a977,7d90675f95604d1d96844718fe575e19,226
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,7d90675f95604d1d96844718fe575e19,031480667310462e859b38f58e75c39e,227
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,0123e9057e564c00bb68b69c38079d72,7d90675f95604d1d96844718fe575e19,228
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,dd7de023d3c6456688b0070ab6d918fd,0123e9057e564c00bb68b69c38079d72,229
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,004fcec309e345b4a0da3a94a63773e9,4b5e8c9885a64f72871de09e062eb966,230
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,4b5e8c9885a64f72871de09e062eb966,dd7de023d3c6456688b0070ab6d918fd,231
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,ff5a732b3fe540fb9268203b7546c474,db736bbf80d94b509691c2465077d6b9,232
+DSCore.List.GetItemAtIndex@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,db736bbf80d94b509691c2465077d6b9,359be26204054cd7b007af8a0a8bda73,233
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,180f3647320942dc99172aaac97b92b8,db736bbf80d94b509691c2465077d6b9,234
+DSCore.List.FirstIndexOf@var[]..[]_var,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,c6ba358fe78f4028937d69c35c15b972,180f3647320942dc99172aaac97b92b8,235
+6cf7f3b9-69ab-40da-b41c-62068370e1b8,DSCore.List.Flatten@var[]..[]_int,0,0,Zero Touch,9b8fefea470f48fda1070c6a063944cf,783b33cf39724925b66a4d19ad3d759f,236
+DSCore.List.Flatten@var[]..[]_int,DSCore.List.FirstIndexOf@var[]..[]_var,0,0,DSCore,783b33cf39724925b66a4d19ad3d759f,c6ba358fe78f4028937d69c35c15b972,237
+DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,bbe776d3ec2346b9a5061617e529d4e3,693653644f954f96b12f5ada78a545d8,238
+Revit.Elements.Element.GetParameterValueByName@string,DSCore.String.Contains@string_string_bool,0,0,Revit,2fabf54273cd4d60a5855b41fc423f23,bbe776d3ec2346b9a5061617e529d4e3,239
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.GetParameterValueByName@string,0,0,DSCore,693653644f954f96b12f5ada78a545d8,c5a79e4aabd94f2cb72ab22d5f10a764,240
+DSCore.List.AddItemToFront@var[]..[]_var[]..[],DSOffice.Data.ExportExcel@string_string_int_int_var[][]_bool,1,0,DSCore,71a9115cb8b444d8b51c5115781de96b,7d145ce7bb754c989200a339fc066288,241
+DSCore.List.AddItemToEnd@var[]..[]_var[]..[],DSCore.List.AddItemToFront@var[]..[]_var[]..[],1,0,DSCore,cf1f8b273e454b3a9d14bfa811677098,71a9115cb8b444d8b51c5115781de96b,242
+DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],1,0,DSCore,d9c5811088fc42f185419f73331a9775,f8f81e688d3340d1a83af9dd8c984bda,243
+Revit.Elements.Element.GetParameterValueByName@string,DSCore.String.Contains@string_string_bool,1,0,Revit,9f3e64791e4e4cf6aa0bd90e4500c5b7,d9c5811088fc42f185419f73331a9775,244
+DSCore.List.Flatten@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,73d7f8fbdd7241b19da4886d1774423c,ee7510d63e364ed1bfda9f56d50c3b15,245
+_Elements_in_Space,DSCore.List.Flatten@var[]..[]_int,0,0,_Elements_in_Space,0bf888dc85a941a9bc5ba55f790877b4,73d7f8fbdd7241b19da4886d1774423c,246
+DSCore.List.OfRepeatedItem@var[]..[]_int,DSCore.List.Flatten@var[]..[]_int,0,0,DSCore,d8b5b6a7df0646cc9d062936c27f1d65,1d28059617d947da9dab466ebb92e832,247
+DSCore.List.Flatten@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,1d28059617d947da9dab466ebb92e832,ee7510d63e364ed1bfda9f56d50c3b15,248
+DSCore.List.Flatten@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,fcf99a60a3d049738d7043d2c08a8413,df3328bfe9ad4f419d341230489ed1b4,249
+_Elements_in_Space,DSCore.List.Flatten@var[]..[]_int,0,0,_Elements_in_Space,cada6f25eb8b4453b3d4596e0bfc7a93,fcf99a60a3d049738d7043d2c08a8413,250
+DSCore.List.OfRepeatedItem@var[]..[]_int,DSCore.List.Flatten@var[]..[]_int,0,0,DSCore,da176cf0c6f24d01b7302e23ddc05689,9ac9f4e3822248649d03472810034642,251
+DSCore.List.Flatten@var[]..[]_int,Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,9ac9f4e3822248649d03472810034642,df3328bfe9ad4f419d341230489ed1b4,252
+Revit.Elements.Grid.Curve,Autodesk.DesignScript.Geometry.Curve.StartPoint,0,0,Revit,5612a7b4db2c4f3589be65e9aa60b653,fc17365788454f619c6cfb8ad1d93ed4,253
+Autodesk.DesignScript.Geometry.Curve.StartPoint,DSCore.List.FirstItem@var[]..[],1,1,Autodesk,fc17365788454f619c6cfb8ad1d93ed4,61f2c02f0d4443adabf604dc03a98644,254
+DSCore.List.FirstItem@var[]..[],Autodesk.DesignScript.Geometry.Line.ByStartPointEndPoint@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Point,0,0,DSCore,61f2c02f0d4443adabf604dc03a98644,c1926bcdc3604b40a46100314e08a20b,255
+DSCore.List.LastItem@var[]..[],Autodesk.DesignScript.Geometry.Line.ByStartPointEndPoint@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Point,0,0,DSCore,7154d63d2cf248b8a6a7c3ecb788dee5,c1926bcdc3604b40a46100314e08a20b,256
+Autodesk.DesignScript.Geometry.Line.ByStartPointEndPoint@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Curve.Offset@double,0,0,Autodesk,c1926bcdc3604b40a46100314e08a20b,e02957a797304316baf23798f30bb206,257
+Autodesk.DesignScript.Geometry.Curve.StartPoint,DSCore.List.Flatten@var[]..[]_int,0,0,Autodesk,f459192cfbe04b3d82269f5fe9c5164c,27a1dc7b614a4f5fa5f9b49fcb2e1dd8,258
+Revit.Elements.Element.Curves,Autodesk.DesignScript.Geometry.Curve.StartPoint,0,0,Revit,5d184e933b8f49748603d97062f79a7a,f459192cfbe04b3d82269f5fe9c5164c,259
+_DetailCurve.ByCurve+,Revit.Elements.Element.Curves,0,0,_DetailCurve,fcb7876491eb409697b1a6582b9857f3,3a27c05721e543438b3ebfc211a12d11,260
+92960965-5bfc-41ab-9ceb-d61917dfe6c5,_DetailCurve.ByCurve+,0,0,Zero Touch,56e72590ca374766bc00f7139f4a650b,fcb7876491eb409697b1a6582b9857f3,261
+Revit.Elements.Element.Curves,Autodesk.DesignScript.Geometry.Curve.StartPoint,0,0,Revit,1166e9d4088e43bb846fc959ce90fa49,a26edbf7c3984a80806d8e50e21f483e,262
+Autodesk.DesignScript.Geometry.Curve.StartPoint,DSCore.List.Flatten@var[]..[]_int,0,0,Autodesk,a26edbf7c3984a80806d8e50e21f483e,6ed80693c75e415b9fc38347458ab269,263
+Revit.Elements.Element.Geometry,DSCore.List.Flatten@var[]..[]_int,1,0,Revit,df43ff465d204a3b9e6ff4ca86ecf341,7be9826db3bf459bb25365317712144a,264
+DSCore.Math.Sum@double[],_Mass_Addition,1,0,DSCore,af56e3caa3d4473fb658f6b1b9c87574,db9a79014ec045b6bbf6ad0d6033908e,265
+DSCore.List.Flatten@var[]..[]_int,DSCore.Math.Sum@double[],1,0,DSCore,6a9259bdb1ac45288d4091e56b3469fb,af56e3caa3d4473fb658f6b1b9c87574,266
+DSCore.List.Flatten@var[]..[]_int,_List.FilterByString,1,0,DSCore,7be9826db3bf459bb25365317712144a,e44ed95d04b640bb8eb7f6b9eedebca3,267
+_List.FilterByString,DSCore.List.Flatten@var[]..[]_int,1,0,_List,e44ed95d04b640bb8eb7f6b9eedebca3,be2954801f3b49c8b5aa69359a720cfb,268
+DSCore.List.Flatten@var[]..[]_int,Autodesk.DesignScript.Geometry.Solid.ByUnion@Autodesk.DesignScript.Geometry.Solid[],1,0,DSCore,be2954801f3b49c8b5aa69359a720cfb,026b9687dc454ab09672ff529a023203,269
+036abfeb-d77d-40e7-8be0-78a41034d11d,DSCore.String.Contains@string_string_bool,1,1,Zero Touch,39f6a06493584d3c8c9af56f0c7c1249,dd50173163d4496dab15c43f279d2d32,270
+DSCore.IO.FileSystem.FileName@string_bool,DSCore.String.Replace@string_string_string,0,0,DSCore,a8ceb43ce1f44a8a98c01b577660c577,2661444113b94b03b302b71ab07c63fe,271
+DSCore.List.Transpose@var[]..[],DSOffice.Data.ExportExcel@string_string_int_int_var[][]_bool,0,0,DSCore,72260493b4a9436387ebce4ffad5040a,5b5d72b307fe466687d3de05bca9f301,272
+DSCore.String.Replace@string_string_string,DSCore.String.Split@string_string[],0,0,DSCore,3adb4787a0164647aa7a99cdec081b22,2826081fd7884ddf9ca780551395749f,273
+DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,dd50173163d4496dab15c43f279d2d32,fd710ca5eb424ee584991a5588be8404,274
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],DSCore.IO.FileSystem.FileName@string_bool,1,1,DSCore,fd710ca5eb424ee584991a5588be8404,a8ceb43ce1f44a8a98c01b577660c577,275
+Autodesk.DesignScript.Geometry.PolySurface.Surfaces,Autodesk.DesignScript.Geometry.Surface.NormalAtParameter@double_double,2,2,Autodesk,0c0ca946389d49269427444869993db2,c6725fa1abc14164b0b6693a62ac0e9b,276
+Autodesk.DesignScript.Geometry.PolySurface.ByLoft@Autodesk.DesignScript.Geometry.Curve[],Autodesk.DesignScript.Geometry.PolySurface.Surfaces,0,0,Autodesk,ee63541e59424f22bfee709951d1de0e,0c0ca946389d49269427444869993db2,277
+Revit.Elements.CurveElement.Curve,Autodesk.DesignScript.Geometry.PolySurface.ByLoft@Autodesk.DesignScript.Geometry.Curve[],0,0,Revit,c081e17b5f8e46b6a9a423cf05635f73,ee63541e59424f22bfee709951d1de0e,278
+Autodesk.DesignScript.Geometry.Geometry.Translate@Autodesk.DesignScript.Geometry.Vector_double,fd584cb1-8b89-47b9-bf78-d7fb8912ff98,0,0,Autodesk,499380db5265429c9b533f8514f038a2,55366dd1b8754150b0357062b1379dc8,279
+Autodesk.DesignScript.Geometry.Surface.NormalAtParameter@double_double,Autodesk.DesignScript.Geometry.Geometry.Translate@Autodesk.DesignScript.Geometry.Vector_double,1,1,Autodesk,c6725fa1abc14164b0b6693a62ac0e9b,499380db5265429c9b533f8514f038a2,280
+Autodesk.DesignScript.Geometry.Geometry.Translate@Autodesk.DesignScript.Geometry.Vector_double,Autodesk.DesignScript.Geometry.Geometry.Translate@Autodesk.DesignScript.Geometry.Vector_double,1,1,Autodesk,2ad16c42f1c04b2682d1ead48f0798f9,499380db5265429c9b533f8514f038a2,281
+DSCore.List.Flatten@var[]..[]_int,_Springs.FamilyInstance.ByGeometry,0,0,DSCore,7970c79dc38840c49f5b53cb39899f3e,5c30a65e2d5946f098cd971510c7209a,282
+Autodesk.DesignScript.Geometry.Curve.ExtrudeAsSolid@double,Autodesk.DesignScript.Geometry.Solid.Difference@Autodesk.DesignScript.Geometry.Solid,0,0,Autodesk,afbad15afebe4bfe9b8716ca5c5f3bf9,0c1d0571f53b4bb69d77f5095ca3c3dc,283
+Autodesk.DesignScript.Geometry.Curve.ExtrudeAsSolid@double,Autodesk.DesignScript.Geometry.Solid.ByUnion@Autodesk.DesignScript.Geometry.Solid[],0,0,Autodesk,3e1560ffff58469fa957366b6f6ab183,1420cd092ca84444a039dcbe894adebd,284
+Autodesk.DesignScript.Geometry.Solid.ByUnion@Autodesk.DesignScript.Geometry.Solid[],Autodesk.DesignScript.Geometry.Solid.Difference@Autodesk.DesignScript.Geometry.Solid,0,0,Autodesk,1420cd092ca84444a039dcbe894adebd,0c1d0571f53b4bb69d77f5095ca3c3dc,285
+_Element.IsOfType,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,_Element,c2c4c7a9aea34ba484031311f855c083,30ceea0049b64662b87deb403a2ab5d1,286
+_Element.IsOfType,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,_Element,a91e1ab6df5f4c889a2c7642cecfa756,8fb9b94e743540ee9f8fd2cc0829f4f1,287
+Revit.Elements.Element.Geometry,Autodesk.DesignScript.Geometry.Geometry.DoesIntersect@Autodesk.DesignScript.Geometry.Geometry,0,0,Revit,eaa823b3acab46e7be6c1ac23c8a02f5,b18eee78f4584c58ac11d9e9105a50fd,288
+DSCore.List.GroupByKey@var[]..[]_var[]..[],DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],1,1,DSCore,cad55675a3e3444391026a2445324380,3e8621b096b2433b97a3f5b022b7a5bc,289
+DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,1f4aec9320d24b7e8e66108caf188f48,3e8621b096b2433b97a3f5b022b7a5bc,290
+Revit.Elements.Element.GetParameterValueByName@string,DSCore.List.GroupByKey@var[]..[]_var[]..[],0,0,Revit,0fe0c9b313554c059302a822e9c099e9,cad55675a3e3444391026a2445324380,291
+Revit.Elements.Element.GetParameterValueByName@string,DSCore.String.Contains@string_string_bool,0,0,Revit,d3bfe3865baf4be7a2113dcdb432502b,1f4aec9320d24b7e8e66108caf188f48,292
+Revit.Elements.Element.Geometry,Modifiers.GeometryColor.ByGeometryColor@Autodesk.DesignScript.Geometry.Geometry_DSCore.Color,1,1,Revit,ad0c0992c3e34622b88394a9c5b9cdef,6e625dbf84bf43538ce3f7dbd35f4d35,293
+DSCore.List.Sort@var[],_List.FilterByString,0,0,DSCore,0c3e6c6d68ac465dbdf1ae1188d0ea52,29e90e71b9f54963a8ba9ba8a4fd7d60,294
+DSCore.Color.ByARGB@int_int_int_int,Modifiers.GeometryColor.ByGeometryColor@Autodesk.DesignScript.Geometry.Geometry_DSCore.Color,0,0,DSCore,9f3b7bf635594afb860f522b50deeac7,6e625dbf84bf43538ce3f7dbd35f4d35,295
+DSCore.List.Flatten@var[]..[]_int,_List.FilterByString,0,0,DSCore,f8f4c158d27d4a2fabc2ec4772801312,3515259a27c84515b08fe21c6903c35b,296
+_List.FilterByString,DSCore.List.Flatten@var[]..[]_int,0,0,_List,3515259a27c84515b08fe21c6903c35b,811d1a5cec284be9ac9d2406df57ac77,297
+DSCore.List.Flatten@var[]..[]_int,Autodesk.DesignScript.Geometry.Solid.ByUnion@Autodesk.DesignScript.Geometry.Solid[],0,0,DSCore,811d1a5cec284be9ac9d2406df57ac77,0823d391a92d474094c2b1f2cd59567b,298
+DSOffice.Data.ImportCSV@string_bool,DSCore.List.GetItemAtIndex@var[]..[]_int,1,1,DSOffice,9cb20c5ba65740aaadc57f7146a7dab4,622b1f22ac264175a89186d8ed58dbf4,299
+Lists.DataSets.CreateDataTable@string_string[]_var[][],MachineLearning.Classification.NaiveBayesClassifier@string[]_var_string[]_string_int,0,0,Lists,1a0b4b8c439b4537ae584eb3ca28fb45,956fa5e74fdb4b709f705b5dda582ab3,300
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,622b1f22ac264175a89186d8ed58dbf4,5fa84b635aa04ca287905c0cb9c4e07d,301
+DSCore.List.GetItemAtIndex@var[]..[]_int,DSCore.List.GetItemAtIndex@var[]..[]_int,0,0,DSCore,9edcbe77f80d45c38b9d5e058b868660,58cadfeee12c4ba3a70648155cfb05e4,302
+d46bc80c-81c9-49db-909f-d091d3f2617f,Revit.Elements.Element.GetParameterValueByName@string,0,0,Zero Touch,1e4f0ead4731414dae8a64fb1b19e9fa,892247028e6c4825a9f32af37128c006,303
+Lists.DataSets.CreateDataTable@string_string[]_var[][],MachineLearning.Classification.NaiveBayesClassifier@string[]_var_string[]_string_int,0,0,Lists,f0ad70b776464ccc969ab9eb1fd2c7d2,66be160e936d4ec3b686fc5dd73d57e0,304
+DSCore.List.Transpose@var[]..[],Lists.DataSets.CreateDataTable@string_string[]_var[][],0,0,DSCore,658ea23341f04cf585fd4a23c51b49a7,f0ad70b776464ccc969ab9eb1fd2c7d2,305
+DSCore.List.Transpose@var[]..[],Lists.DataSets.CreateDataTable@string_string[]_var[][],0,0,DSCore,de5846f033e2466fa12cb0ebbff51bb9,1a0b4b8c439b4537ae584eb3ca28fb45,306
+Revit.Elements.FamilyType.Name,DSCore.String.StartsWith@string_string_bool,0,0,Revit,f7d077abd32043408919745152ccae5e,eb92afb0ebe449bdba9a85db9376f18e,307
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Parameter.ParameterByName@Revit.Elements.Element_string,10,10,DSCore,11eee97dbfc24637860f76a83a0824f0,d24773d2011b4b71b03c82133358b458,308
+DSCore.String.StartsWith@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,eb92afb0ebe449bdba9a85db9376f18e,11eee97dbfc24637860f76a83a0824f0,309
+DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,41a2a5c4ed5b42fb9fd10407a1a6976d,a769ac0b264d433888e99fa6f16c2a88,310
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,a769ac0b264d433888e99fa6f16c2a88,ed6c93c934544240a8251a476048a08f,311
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,ecadd96889a145a28692df6bf4ec6c17,89312d3591c64ca5af6cf6efb073ff28,312
+DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,01c12c6487a848db9d9a01984bec1d67,ecadd96889a145a28692df6bf4ec6c17,313
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,c0b49802535d4a43a5ab41b362706eb4,55183e5de3424aa9822f4c4fcf97bf62,314
+DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,15461daf7f334571bc66f7f037e98f39,c0b49802535d4a43a5ab41b362706eb4,315
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,8459e4dd43754871a50e9c380ab37091,194b620026904c4caa1489d6ba45a5f3,316
+DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,e1d7b0510b20496fb3939f26cb06e0be,8459e4dd43754871a50e9c380ab37091,317
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,41b8231098f64786b9061df5b59f1cfc,9dab6ffa1ba74dc7b3fa31f611e34532,318
+DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,036c65d30cf74f63a28852971b136767,41b8231098f64786b9061df5b59f1cfc,319
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,562ebc4ff3584291afceccd340bb26b1,99d449d6553a4326890faed1086741a1,320
+DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,b232194922d14aa8a7921de34e3ab460,562ebc4ff3584291afceccd340bb26b1,321
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,bd19bc9f491f4cf281f2cad2e9beca6a,26e97942f7e348768d435327b20510d2,322
+DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,0182ed5d886242dea9d1f8cfc9361c4d,bd19bc9f491f4cf281f2cad2e9beca6a,323
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,0d870fe070a0481eaf2af9b3188d1973,8be6785d99554bb7b533118793a0b09c,324
+DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,f6e79939397f4cb98815f1e90e783123,0d870fe070a0481eaf2af9b3188d1973,325
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,11448f832aa1425f9baffad3b5fb27b8,1dd88b7e698b40db887ddccf14c1e706,326
+DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,206a91da8fb14dfe956e316fbdc5714c,11448f832aa1425f9baffad3b5fb27b8,327
+DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],Revit.Elements.Element.SetParameterByName@string_var,0,0,DSCore,9c90bb05eee64a679b793383811cec3f,3881b24ed02a49aeb4ee58f2323d1052,328
+DSCore.String.Contains@string_string_bool,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,DSCore,4af500877e9746d887e9ee2a5a80818d,9c90bb05eee64a679b793383811cec3f,329
+Autodesk.DesignScript.Geometry.Geometry.BoundingBox,Autodesk.DesignScript.Geometry.BoundingBox.Contains@Autodesk.DesignScript.Geometry.Point,0,0,Autodesk,c7d4afc9e8de438a9ef28d69838f7356,3d266a6037f24fe3b9a7ecda77890f3b,330
+_Element.IsOfCategory,DSCore.List.FilterByBoolMask@var[]..[]_var[]..[],0,0,_Element,be9f6f4130334e26b55513e4a6d4d1ea,30ceea0049b64662b87deb403a2ab5d1,331
+DSCore.List.Flatten@var[]..[]_int,_Springs.Form.ByGeometry,0,0,DSCore,93f405920df74b0b85e1e30d0ee92082,d4592c59f9694796985db46fc3ee4097,332
+Autodesk.DesignScript.Geometry.Point.ByCoordinates@double_double_double,Autodesk.DesignScript.Geometry.Line.ByStartPointEndPoint@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Point,0,0,Autodesk,8ec740b7e8ea49b69c57ee9586be8e08,c8f30194a3ba49f29ad8e4ec1ebf000f,333
+Autodesk.DesignScript.Geometry.Point.ByCoordinates@double_double_double,Autodesk.DesignScript.Geometry.Line.ByStartPointEndPoint@Autodesk.DesignScript.Geometry.Point_Autodesk.DesignScript.Geometry.Point,0,0,Autodesk,d3a5479f11414a2286e7cad7d59364ac,c8f30194a3ba49f29ad8e4ec1ebf000f,334

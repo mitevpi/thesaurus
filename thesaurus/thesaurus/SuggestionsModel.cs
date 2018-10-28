@@ -71,11 +71,19 @@ namespace thesaurus
 
         public string[] Predict(string nodeName)
         {
-            // Test a hard coded example
-            int code = loadedCodebook.Transform("Nodes", nodeName);
-            int[] predictSample = loadedHMM.Predict(observations: new[] { code }, next: 1);
-            string[] predictResult = loadedCodebook.Revert("Nodes", predictSample);
-            return predictResult;
+            try
+            {
+                // Test a hard coded example
+                int code = loadedCodebook.Transform("Nodes", nodeName);
+                int[] predictSample = loadedHMM.Predict(observations: new[] { code }, next: 1);
+                string[] predictResult = loadedCodebook.Revert("Nodes", predictSample);
+
+                return predictResult;
+            }
+            catch
+            {
+                return new string[] { };
+            }
         }
     }
 }

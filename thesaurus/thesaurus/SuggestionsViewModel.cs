@@ -30,6 +30,7 @@ namespace thesaurus
                 string[] predictions = model.Predict(inputName);
                 // Hook up with running ML module here and provide nodeModel.CreationName as input
                 // Then construct a SuggestionsNodeViewModel based on that info, the panel should update automatically
+
                 foreach (var predictedNode in predictions)
                 {
                     Nodes.Add(new SuggestionsNodeViewModel(model) { NodeName = predictedNode.Split('@')[0] });

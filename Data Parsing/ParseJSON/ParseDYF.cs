@@ -10,7 +10,15 @@ namespace ParseJSON
 {
     public class ParseDYF
     {
-        public static List<string> GetDyfsInDir(string path)
+        public StringBuilder csvcontent;
+        public Regex regex;
+
+        public ParseDYF()
+        {
+            csvcontent = InitializeCsvContent();
+        }
+
+        public List<string> GetDyfsInDir(string path)
         {
             List<string> files = new List<string>();
             try
@@ -34,6 +42,8 @@ namespace ParseJSON
                         try
                         {
                             Console.WriteLine(matches[0]);
+                            string csvLine = matches[0] + "," + f;
+                            csvcontent.AppendLine(csvLine);
                         }
                         catch
                         {
@@ -54,6 +64,19 @@ namespace ParseJSON
             Console.WriteLine("FINISHED PARSING");
 
             return files;
+        }
+
+        public StringBuilder InitializeCsvContent()
+        {
+            StringBuilder csvcontent = new StringBuilder();
+            //csvcontent.AppendLine("A,B");
+            return csvcontent;
+        }
+
+        public void ExportCSV()
+        {
+            string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            File.WriteAllText(dirPath + "\\packageData.csv", csvcontent.ToString());
         }
 
         public static void ParseDyfData(List<string> filePaths)

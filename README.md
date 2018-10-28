@@ -1,6 +1,6 @@
 # the-Saurus
 
-![Logo](Assets/stolenLogo.png)
+![Logo](Assets/logo2.png)
 
 ### TT Hackathon 2018 Project
 

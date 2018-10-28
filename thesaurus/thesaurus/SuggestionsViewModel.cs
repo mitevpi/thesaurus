@@ -18,12 +18,13 @@ namespace thesaurus
         public SuggestionsViewModel(SuggestionsModel model)
         {
             Model = model;
-            Nodes = new ObservableCollection<SuggestionsNodeViewModel> {};
+            Nodes = new ObservableCollection<SuggestionsNodeViewModel> { };
 
             //Nodes.Add(new SuggestionsNodeViewModel(model) { NodeName = "BB Data" });
 
             this.Model.DynamoViewModel.Model.CurrentWorkspace.NodeAdded += delegate(NodeModel nodeModel)
             {
+                Nodes.Clear();
                 var inputName = nodeModel.CreationName;
                 if (string.IsNullOrEmpty(inputName)) inputName = nodeModel.GetType().FullName;
                 string[] predictions = model.Predict(inputName);

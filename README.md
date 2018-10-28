@@ -1,8 +1,13 @@
 # the-Saurus
+![Logo](Assets/stolenLogo.png)
 
-TT Hackathon 2018 Project
-"Autocomplete" for Dynamo based on statistical/machine learning models.
+### TT Hackathon 2018 Project
+**"Autocomplete" for [Dynamo](https://github.com/DynamoDS/Dynamo) based on statistical/machine learning models.**
+
+
 ![Basic Workflow](Assets/workflowV1.gif)
+
+
 
 ## Data Models
 

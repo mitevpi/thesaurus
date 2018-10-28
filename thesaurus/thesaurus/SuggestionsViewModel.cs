@@ -18,11 +18,14 @@ namespace thesaurus
         public SuggestionsViewModel(SuggestionsModel model)
         {
             Model = model;
-            Nodes = new ObservableCollection<SuggestionsNodeViewModel> { };
+            Nodes = new ObservableCollection<SuggestionsNodeViewModel> {};
+
+            //Nodes.Add(new SuggestionsNodeViewModel(model) { NodeName = "BB Data" });
+
             this.Model.DynamoViewModel.Model.CurrentWorkspace.NodeAdded += delegate(NodeModel nodeModel)
             {
                 string[] predictions = model.Predict(nodeModel.CreationName);
-                // TODO: Hook up with running ML module here and provide nodeModel.CreationName as input
+                // Hook up with running ML module here and provide nodeModel.CreationName as input
                 // Then construct a SuggestionsNodeViewModel based on that info, the panel should update automatically
                 foreach (var predictedNode in predictions)
                 {

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Dynamo.ViewModels;
-using GalaSoft.MvvmLight.Command;
+﻿using GalaSoft.MvvmLight.Command;
 using ViewModelBase = GalaSoft.MvvmLight.ViewModelBase;
 
 namespace thesaurus

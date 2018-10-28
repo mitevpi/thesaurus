@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace thesaurus
 {
@@ -16,7 +17,9 @@ namespace thesaurus
         {
             if ((this.DataContext as TrainViewModel).Files.Count != 0)
             {
-                ParseDYN.ParseDynData((this.DataContext as TrainViewModel).Files);
+                TrainViewModel trainViewModel = this.DataContext as TrainViewModel;
+                List<string[]> trainingData = ParseDYN.ParseDynData(trainViewModel.Files);
+                trainViewModel.Model.TrainHiddenMarkovModel(trainingData);
             }
             else
             {

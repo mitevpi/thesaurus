@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 using System.Collections.ObjectModel;
+using Dynamo.Graph.Nodes;
 
 namespace thesaurus
 {
@@ -17,11 +18,22 @@ namespace thesaurus
         public SuggestionsViewModel(SuggestionsModel model)
         {
             Model = model;
+            Nodes = new ObservableCollection<SuggestionsNodeViewModel> { };
 
-            Nodes = new ObservableCollection<SuggestionsNodeViewModel>
+            //Nodes.Add(new SuggestionsNodeViewModel(model) { NodeName = "BB Data" });
+
+            this.Model.DynamoViewModel.Model.CurrentWorkspace.NodeAdded += delegate(NodeModel nodeModel)
             {
-                new SuggestionsNodeViewModel(model) {NodeName = "Point.ByCoordinates"},
-                new SuggestionsNodeViewModel(model) {NodeName = "Line.ByStartPointEndPoint"}
+                Nodes.Clear();
+                var inputName = nodeModel.CreationName;
+                if (string.IsNullOrEmpty(inputName)) inputName = nodeModel.GetType().FullName;
+                string[] predictions = model.Predict(inputName);
+                // Hook up with running ML module here and provide nodeModel.CreationName as input
+                // Then construct a SuggestionsNodeViewModel based on that info, the panel should update automatically
+                foreach (var predictedNode in predictions)
+                {
+                    Nodes.Add(new SuggestionsNodeViewModel(model) { NodeName = predictedNode.Split('@')[0] });
+                }
             };
         }
     }

@@ -5,14 +5,20 @@ using System.Reflection;
 using Dynamo.Models;
 using Accord.Statistics.Models.Markov;
 using Accord.Statistics.Filters;
-using System.Diagnostics;
 using Accord.IO;
+using System.Linq;
 
 namespace thesaurus
 {
     public class SuggestionsModel
     {
-        private DynamoViewModel DynamoViewModel { get; set; }
+        private DynamoViewModel _dynamoViewModel { get; set; }
+
+        public DynamoViewModel DynamoViewModel
+        {
+            get { return _dynamoViewModel; }
+            set { _dynamoViewModel = value; }
+        }
         private HiddenMarkovModel loadedHMM;
         private Codification loadedCodebook;
 
@@ -22,6 +28,12 @@ namespace thesaurus
             LoadModel();
         }
 
+        /// <summary>
+        /// This handler responds to clicking on the SuggestionNodeButton and create node to the Dynamo
+        /// session current workspace
+        /// </summary>
+        /// <param name="nodeName"></param>
+        /// <returns></returns>
         public bool PlaceNode(string nodeName)
         {
             // Get Reference of DynamoModel
@@ -30,9 +42,7 @@ namespace thesaurus
 
             foreach (var se in nsm.SearchEntries)
             {
-                
-
-                if (se.FullName.EndsWith(nodeName, StringComparison.OrdinalIgnoreCase))
+                if (se.FullName.EndsWith(nodeName, StringComparison.OrdinalIgnoreCase) || se.CreationName.EndsWith(nodeName, StringComparison.OrdinalIgnoreCase))
                 {
                     var dynMethod = se.GetType().GetMethod("ConstructNewNodeModel",
                         BindingFlags.NonPublic | BindingFlags.Instance);
@@ -55,23 +65,17 @@ namespace thesaurus
 
         private void LoadModel()
         {
-            loadedHMM = Serializer.Load<HiddenMarkovModel>("thesaurus_HMM.accord");
+            loadedHMM = Serializer.Load<HiddenMarkovModel>("thesaurus_HMModel.accord");
             loadedCodebook = Serializer.Load<Codification>("thesaurus_codebook.accord");
         }
 
-        private void Predict()
+        public string[] Predict(string nodeName)
         {
             // Test a hard coded example
-            int code = loadedCodebook.Transform("Nodes", "int");
+            int code = loadedCodebook.Transform("Nodes", nodeName);
             int[] predictSample = loadedHMM.Predict(observations: new[] { code }, next: 1);
             string[] predictResult = loadedCodebook.Revert("Nodes", predictSample);
-
-            string seed = "int -> ";
-            foreach (string node in predictResult)
-            {
-                seed += node;
-            }
-            Debug.WriteLine(seed);
+            return predictResult;
         }
     }
 }

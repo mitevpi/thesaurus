@@ -1,38 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Accord.Statistics.Models.Markov;
+﻿using Accord.Statistics.Models.Markov;
 using Accord.Statistics.Models.Markov.Learning;
 using Accord.Statistics.Filters;
 using Accord.Statistics.Models.Markov.Topology;
-using System.Diagnostics;
+using System.Collections.Generic;
 using Accord.IO;
 
 namespace thesaurus
 {
     public class TrainModel
     {
+
         public TrainModel()
         {
 
         }
 
-        static void TrainHiddenMarkovModel()
+        public void TrainHiddenMarkovModel(List<string[]> trainingData)
         {
 
             Accord.Math.Random.Generator.Seed = 42;
 
             // Dummy data
-            string[][] nodePairs =
-            {
-                new[] { "int", "point"},
-                new[] { "int", "point"},
-                new[] { "point", "line"},
-                new[] { "point", "radius"},
-                new[] { "int", "list"},
-            };
+            string[][] nodePairs = trainingData.ToArray();
 
             // Transform data to sequence of integer labels using a codification codebook:
             var codebook = new Codification("Nodes", nodePairs);
@@ -52,20 +41,6 @@ namespace thesaurus
 
             // Teach the model
             teacher.Learn(sequence);
-
-     
-            // TEST
-            int code = codebook.Transform("Nodes", "int");
-            int[] predictSample = hmm.Predict(observations: new[] { code }, next: 1);
-            // And the result will be: "those", "are", "words".
-            string[] predictResult = codebook.Revert("Nodes", predictSample);
-
-            string seed = "int -> ";
-            foreach (string node in predictResult)
-            {
-                seed += node;
-            }
-            Debug.WriteLine(seed);
 
             // Use the Serializer class to save model and codebook
             Serializer.Save(obj: codebook, path: "thesaurus_codebook.accord");

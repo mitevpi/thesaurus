@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -11,14 +12,23 @@ namespace ParseJSON
 {
     public class ParseJSON
     {
+        public List<NodeDataModel> DataModels { get; set; }
+
+        public ParseJSON()
+        {
+            DataModels = new List<NodeDataModel>();
+        }
 
         public void ParseJSONs(ParseDYF dyfObj)
         {
             // DEFINE GLOBALS
             GraphDataParse csvParser = new GraphDataParse();
+            //GraphDataParseFeaturized csvParserFeaturized = new GraphDataParseFeaturized();
 
-            Console.WriteLine("Enter Directory Path"); //Prompt user to enter directory to search for PDFS
-            string dirPath = Console.ReadLine(); //Read user input
+            //Console.WriteLine("Enter Directory Path"); //Prompt user to enter directory to search for PDFS
+            //string dirPath = Console.ReadLine(); //Read user input
+
+            string dirPath = "C:\\Users\\pmitev\\Desktop\\graphs";
             string[] fileEntries = Directory.GetFiles(dirPath); //Get all the files of the input directory
 
             foreach (var filepath in fileEntries)
@@ -31,7 +41,6 @@ namespace ParseJSON
                     try
                     {
                         JObject jObject = (JObject)JToken.ReadFrom(new JsonTextReader(reader));
-                        //Define the Nodes into a JToken
                         JToken nodeObject = jObject["Nodes"];
                         JToken connectorObject = jObject["Connectors"];
 
@@ -39,18 +48,10 @@ namespace ParseJSON
                         Dictionary<string, string> NodeDictionary = new Dictionary<string, string>();
                         Dictionary<string, string> IODictionary = new Dictionary<string, string>();
 
-                        //int countfound;
-                        //int countnotfound;
-
-                        //Console.Write(nodeObject);
-
                         //Create dictionary for ID and node name
                         foreach (var node in nodeObject)
                         {
-                            //Console.WriteLine(test);
-                            //Console.WriteLine(node["FunctionSignature"]);
                             string stringnodeID = node["Id"].ToString();
-
                             string stringnodename = "NONE";
 
                             try
@@ -89,7 +90,6 @@ namespace ParseJSON
 
                         }
 
-
                         foreach (var connector in connectorObject)
                         {
                             string inputID = connector["Start"].ToString();
@@ -116,10 +116,53 @@ namespace ParseJSON
                                     NodeBSig = result;
                                 }
 
-                                Console.WriteLine(NodeAID);
-                                Console.WriteLine(NodeBID);
-                                Console.WriteLine(NodeASig);
-                                Console.WriteLine(NodeBSig);
+                                // CREATE DATA MODEL
+                                //IEnumerable<NodeDataModel> existingRecords = new NodeDataModel[0];
+
+                                if (DataModels.Count < 0)
+                                {
+                                    NodeDataModel newModel = NodeDataModel.CreateNewDataModel(NodeASig, NodeBSig, NodeBID, NodeAID);
+                                    DataModels.Add(newModel);
+                                }
+
+                                if (DataModels.Count > 0)
+                                {
+                                    
+                                    IEnumerable<NodeDataModel> existingRecords = from record in DataModels
+                                            where record.NodeAId == NodeAID
+                                            select record;
+
+                                    // CHECK IF NODE HAS BEEN ADDED TO RECORD
+                                    if (existingRecords.Any())
+                                    {
+                                        NodeDataModel exisingRecord = existingRecords.First();
+                                        exisingRecord.TotalConnectionsCount = +1;
+
+                                        if (exisingRecord.NodeBId != NodeBID)
+                                        {
+                                            exisingRecord.UniqueConnectionsCount = +1;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        NodeDataModel newModel = NodeDataModel.CreateNewDataModel(NodeASig, NodeBSig, NodeBID, NodeAID);
+                                        DataModels.Add(newModel);
+                                    }
+                                    
+                                }
+                                else
+                                {
+                                    //NodeDataModel newModel = NodeDataModel.CreateNewDataModel(NodeASig, NodeBSig, NodeBID, NodeAID);
+                                    //DataModels.Add(newModel);
+                                }
+
+                                // CSV DATA DUMP
+
+                                //NodeDataModel newModel = NodeDataModel.CreateNewDataModel(NodeASig, NodeBSig, NodeBID, NodeAID);
+                                //DataModels.Add(newModel);
+
+                                var temp = DataModels;
+                                NodeDataModel.ParseNodeDataModels(DataModels);
 
                                 csvParser.AppendToCsv(NodeASig, NodeBSig, NodeAID, NodeBID);
                             }
@@ -135,6 +178,7 @@ namespace ParseJSON
                     }
 
                     csvParser.ExportCSV();
+                    //csvParserFeaturized.ExportCSV();
                     Console.WriteLine("EXPORT COMPLETE");
                     //Console.Read();
                 }

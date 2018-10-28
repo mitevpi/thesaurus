@@ -12,11 +12,13 @@ namespace ParseJSON
     {
         public StringBuilder csvcontent;
         public Regex CleanupRegex;
+        public Dictionary<string, string> customPackageMappings;
 
         public ParseDYF()
         {
             csvcontent = InitializeCsvContent();
             CleanupRegex = CreateCleanupRegex();
+            customPackageMappings = new Dictionary<string, string>();
         }
 
         public List<string> GetDyfsInDir(string path)
@@ -56,8 +58,13 @@ namespace ParseJSON
                             // CSV WRITE
                             string csvLine = matchId + "," + matchName + "," + f;
                             csvcontent.AppendLine(csvLine);
+                            customPackageMappings.Add(matchId, matchName);
                         }
-                        catch { }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
+                        
                     }
                     GetDyfsInDir(d);
                 }

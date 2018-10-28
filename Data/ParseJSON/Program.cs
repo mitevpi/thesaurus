@@ -20,16 +20,15 @@ namespace ParseJSON
             ParseDYF dyfObj = new ParseDYF();
 
             List<string> paths = dyfObj.GetDyfsInDir(packagePath);
-            //ParseDYF.ParseDyfData(paths);
             dyfObj.ExportCSV();
 
             // DYNAMO GRAPH PARSE
-            //ParseJSON();
+            ParseJSON(dyfObj);
             Console.ReadKey();
 
         }
 
-        public static void ParseJSON()
+        public static void ParseJSON(ParseDYF dyfObj)
         {
             // DEFINE GLOBALS
             //string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
@@ -121,6 +120,19 @@ namespace ParseJSON
 
                                 string NodeASig = NodeDictionary[NodeAID];
                                 string NodeBSig = NodeDictionary[NodeBID];
+
+
+                                if (dyfObj.customPackageMappings.Keys.Contains(NodeASig))
+                                {
+                                    var result = dyfObj.customPackageMappings[NodeASig];
+                                    NodeASig = result;
+                                }
+
+                                if (dyfObj.customPackageMappings.Keys.Contains(NodeBSig))
+                                {
+                                    var result = dyfObj.customPackageMappings[NodeBSig];
+                                    NodeBSig = result;
+                                }
 
                                 Console.WriteLine(NodeAID);
                                 Console.WriteLine(NodeBID);

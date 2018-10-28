@@ -9,29 +9,26 @@ namespace thesaurus
 {
     public class TrainModel
     {
-
-        public TrainModel()
-        {
-
-        }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="trainingData"></param>
         public void TrainHiddenMarkovModel(List<string[]> trainingData)
         {
-
             Accord.Math.Random.Generator.Seed = 42;
 
             // Dummy data
-            string[][] nodePairs = trainingData.ToArray();
+            var nodePairs = trainingData.ToArray();
 
             // Transform data to sequence of integer labels using a codification codebook:
             var codebook = new Codification("Nodes", nodePairs);
 
             // Create the training data for the models:
-            int[][] sequence = codebook.Transform("Nodes", nodePairs);
+            var sequence = codebook.Transform("Nodes", nodePairs);
 
             // Specify a forward topology
-            var topology = new Forward(states: 4);
-            int symbols = codebook["Nodes"].NumberOfSymbols;
+            var topology = new Forward(4);
+            var symbols = codebook["Nodes"].NumberOfSymbols;
 
             // Create the hidden Markov model
             var hmm = new HiddenMarkovModel(topology, symbols);
@@ -43,9 +40,8 @@ namespace thesaurus
             teacher.Learn(sequence);
 
             // Use the Serializer class to save model and codebook
-            Serializer.Save(obj: codebook, path: "thesaurus_codebook.accord");
-            Serializer.Save(obj: hmm, path: "thesaurus_HMModel.accord");
+            Serializer.Save(codebook, "thesaurus_codebook.accord");
+            Serializer.Save(hmm, "thesaurus_HMModel.accord");
         }
-
     }
 }

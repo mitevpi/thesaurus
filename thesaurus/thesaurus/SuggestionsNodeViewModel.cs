@@ -1,5 +1,5 @@
-﻿using GalaSoft.MvvmLight.Command;
-using ViewModelBase = GalaSoft.MvvmLight.ViewModelBase;
+﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 
 namespace thesaurus
 {

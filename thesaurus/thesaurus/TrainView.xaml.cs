@@ -1,5 +1,4 @@
-using System.Windows.Forms;
-using System.Collections.Generic;
+﻿using System.Windows.Forms;
 
 namespace thesaurus
 {
@@ -13,29 +12,33 @@ namespace thesaurus
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Train_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            if ((this.DataContext as TrainViewModel).Files.Count != 0)
+            if ((DataContext as TrainViewModel).Files.Count != 0)
             {
-                TrainViewModel trainViewModel = this.DataContext as TrainViewModel;
-                List<string[]> trainingData = ParseDYN.ParseDynData(trainViewModel.Files);
+                var trainViewModel = DataContext as TrainViewModel;
+                var trainingData = ParseDYN.ParseDynData(trainViewModel.Files);
                 trainViewModel.Model.TrainHiddenMarkovModel(trainingData);
             }
             else
             {
                 // Initializes the variables to pass to the MessageBox.Show method.
-                string message = "You did not select a folder yet, please specify";
-                string caption = "Error Detected in Folder Selection";
-                MessageBoxButtons buttons = MessageBoxButtons.OK;
-                DialogResult result;
+                const string message = "You did not select a folder yet, please specify";
+                const string caption = "Error Detected in Folder Selection";
+                const MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                 // Displays the MessageBox.
-                result = MessageBox.Show(message, caption, buttons);
+                var result = MessageBox.Show(message, caption, buttons);
 
                 if (result == System.Windows.Forms.DialogResult.Yes)
                 {
                     // Closes the parent form.
-                    this.Close();
+                    Close();
                 }
             }
         }

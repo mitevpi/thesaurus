@@ -53,10 +53,7 @@ namespace ParseJSON
                             matchName = matchName.Replace("\"", "");
                             matchName = matchName.Replace("Name=", "");
 
-
-                            //MatchCollection matches = CleanupRegex.Matches((string) matches[0]);
-                            //Console.WriteLine(matchId);
-                            //Console.Write(matchName);
+                            // CSV WRITE
                             string csvLine = matchId + "," + matchName + "," + f;
                             csvcontent.AppendLine(csvLine);
                         }

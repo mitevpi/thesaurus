@@ -19,7 +19,15 @@ namespace thesaurus
             {
                 TrainViewModel trainViewModel = this.DataContext as TrainViewModel;
                 List<string[]> trainingData = ParseDYN.ParseDynData(trainViewModel.Files);
-                trainViewModel.Model.TrainHiddenMarkovModel(trainingData);
+
+                if (TrainModel.trainingMode == "bayes")
+                {
+                    trainViewModel.Model.TrainNaiveBayesClassifier(trainingData);
+                }
+                else if (TrainModel.trainingMode == "markov")
+                {
+                    trainViewModel.Model.TrainHiddenMarkovModel(trainingData);
+                }
             }
             else
             {

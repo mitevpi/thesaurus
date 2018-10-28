@@ -4,12 +4,17 @@ using Accord.Statistics.Filters;
 using Accord.Statistics.Models.Markov.Topology;
 using System.Collections.Generic;
 using Accord.IO;
+using Accord.MachineLearning.Bayes;
+
+using Accord.Math;
+using System.Data;
+
 
 namespace thesaurus
 {
     public class TrainModel
     {
-
+        public static string trainingMode = "bayes"; //switch to "markov" to try the Hidden Markov model
         public TrainModel()
         {
 
@@ -46,5 +51,26 @@ namespace thesaurus
             Serializer.Save(obj: hmm, path: "thesaurus_HMModel.accord");
         }
 
+        public void TrainNaiveBayesClassifier(List<string[]> trainingData)
+        {
+            string[] columnNames = { "input", "output" };
+            string[][] nodePairs = trainingData.ToArray();
+            Codification codebook = new Codification(columnNames, nodePairs);
+            
+            int[][] symbols = codebook.Transform(nodePairs);
+
+            int[][] inputs = symbols.Get(null, 0, -1);
+            int[] outputs = symbols.GetColumn(-1);
+
+            // Create a new Naive Bayes learning
+            var learner = new NaiveBayesLearning();
+
+            // Learn a Naive Bayes model from the examples
+            NaiveBayes nb = learner.Learn(inputs, outputs);
+
+            // Use the Serializer class to save model and codebook
+            Serializer.Save(obj: codebook, path: "thesaurus_codebook.accord");
+            Serializer.Save(obj: nb, path: "thesaurus_bayes.accord");
+        }
     }
 }

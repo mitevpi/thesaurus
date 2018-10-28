@@ -13,7 +13,14 @@ namespace ParseJSON
     {
         static void Main(string[] args)
         {
-            ParseJSON();
+            //ParseJSON();
+            string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            string packagePath = appDataPath + "\\" + "Dynamo" + "\\" + "Dynamo Revit" + "\\" + "2.1" + "\\" + "packages";
+
+            List<string> paths =  ParseDYF.GetDyfsInDir(packagePath);
+            ParseDYF.ParseDyfData(paths);
+
+
             Console.ReadKey();
 
         }

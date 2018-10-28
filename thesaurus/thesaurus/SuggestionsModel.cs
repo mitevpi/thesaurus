@@ -7,6 +7,7 @@ using Accord.Statistics.Models.Markov;
 using Accord.Statistics.Filters;
 using System.Diagnostics;
 using Accord.IO;
+using System.IO;
 
 namespace thesaurus
 {
@@ -65,23 +66,18 @@ namespace thesaurus
 
         private void LoadModel()
         {
-            loadedHMM = Serializer.Load<HiddenMarkovModel>("thesaurus_HMM.accord");
-            loadedCodebook = Serializer.Load<Codification>("thesaurus_codebook.accord");
+            string path = "C:/Users/toulkev/dev/thesaurus/thesaurus/thesaurus/bin/Debug";
+            loadedHMM = Serializer.Load<HiddenMarkovModel>(Path.Combine(path, "thesaurus_HMModel.accord"));
+            loadedCodebook = Serializer.Load<Codification>(Path.Combine(path, "thesaurus_codebook.accord"));
         }
 
-        private void Predict()
+        public string[] Predict(string nodeName)
         {
             // Test a hard coded example
-            int code = loadedCodebook.Transform("Nodes", "int");
+            int code = loadedCodebook.Transform("Nodes", nodeName);
             int[] predictSample = loadedHMM.Predict(observations: new[] { code }, next: 1);
             string[] predictResult = loadedCodebook.Revert("Nodes", predictSample);
-
-            string seed = "int -> ";
-            foreach (string node in predictResult)
-            {
-                seed += node;
-            }
-            Debug.WriteLine(seed);
+            return predictResult;
         }
     }
 }

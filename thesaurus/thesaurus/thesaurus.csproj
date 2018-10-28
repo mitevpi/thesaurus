@@ -211,8 +211,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>xcopy /Y "$(TargetDir)thesaurus.dll" "C:\Users\ksobon\AppData\Roaming\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin\"
+xcopy /Y "$(ProjectDir)thesaurus_ViewExtensionDefinition.xml" "C:\Users\ksobon\AppData\Roaming\Dynamo\Dynamo Revit\2.0\packages\thesaurus\extra\"</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>

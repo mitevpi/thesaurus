@@ -14,7 +14,6 @@ namespace ParseJSON
     {
         static void Main(string[] args)
         {
-            //ParseJSON();
             string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string packagePath = appDataPath + "\\" + "Dynamo" + "\\" + "Dynamo Revit" + "\\" + "2.1" + "\\" + "packages";
             Regex reg = ParseDYF.CreateIDRegex();
@@ -24,7 +23,8 @@ namespace ParseJSON
             //ParseDYF.ParseDyfData(paths);
             dyfObj.ExportCSV();
 
-
+            // DYNAMO GRAPH PARSE
+            ParseJSON();
             Console.ReadKey();
 
         }

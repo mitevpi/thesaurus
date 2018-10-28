@@ -11,11 +11,12 @@ namespace ParseJSON
     public class ParseDYF
     {
         public StringBuilder csvcontent;
-        public Regex regex;
+        public Regex CleanupRegex;
 
         public ParseDYF()
         {
             csvcontent = InitializeCsvContent();
+            CleanupRegex = CreateCleanupRegex();
         }
 
         public List<string> GetDyfsInDir(string path)
@@ -41,18 +42,18 @@ namespace ParseJSON
 
                         try
                         {
-                            Console.WriteLine(matches[0]);
-                            string csvLine = matches[0] + "," + f;
+                            //string matchId = CleanupRegex.Replace(matches[0], "");
+                            string matchId = matches[0];
+                            matchId = matchId.Replace("\"", "");
+                            matchId = matchId.Replace("ID=", "");
+
+                            //MatchCollection matches = CleanupRegex.Matches((string) matches[0]);
+                            Console.WriteLine(matchId);
+                            string csvLine = matchId + "," + f;
                             csvcontent.AppendLine(csvLine);
                         }
-                        catch
-                        {
-                        }
-
-
-                        //Console.WriteLine(f);
+                        catch { }
                     }
-
                     GetDyfsInDir(d);
                 }
             }
@@ -78,40 +79,7 @@ namespace ParseJSON
             string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             File.WriteAllText(dirPath + "\\packageData.csv", csvcontent.ToString());
         }
-
-        public static void ParseDyfData(List<string> filePaths)
-        {
-            // DEFINE GLOBALS
-            DataParse csvParser = new DataParse();
-
-            foreach (var fileName in filePaths) //Loop over all the files in teh directory
-            {
-                string dyfTitle = System.IO.Path.GetFileName(fileName);
-                ////dyfTitle = dyfTitle.Remove(dyfTitle.Length - 4);
-                //Console.WriteLine(dyfTitle);
-
-                string[] temp2 = System.IO.File.ReadAllLines(fileName);
-                string temp3 = temp2[0];
-                //Console.WriteLine(temp3);
-
-                //List<string> matches = GetMatches(temp3);
-                //Console.WriteLine(matches);
-
-                //txtFirstLine.Text = lines(0)
-                //txtLastLine.Text = lines(lines.Length - 1)
-
-
-                //string temp = File.ReadLines(fileName).First();
-                //Console.WriteLine("");
-                //Console.WriteLine(temp);
-
-                using (StreamReader reader = File.OpenText(fileName))
-                {
-                    var temp = reader.ReadLine();
-                    //Console.WriteLine(temp);
-                }
-            }
-        }
+        
 
         public static Regex CreateIDRegex()
         {
@@ -127,6 +95,16 @@ namespace ParseJSON
 
 
             return reg;
+        }
+
+        public Regex CreateCleanupRegex()
+        {
+            string patternString = @"""([^""]|"""")*""";
+            //string quote = @"(")";
+
+            Regex pattern = new Regex(patternString);
+
+            return pattern;
         }
 
         public static List<string> GetMatches(string fileString)

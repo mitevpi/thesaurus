@@ -24,7 +24,7 @@ namespace ParseJSON
             dyfObj.ExportCSV();
 
             // DYNAMO GRAPH PARSE
-            ParseJSON();
+            //ParseJSON();
             Console.ReadKey();
 
         }

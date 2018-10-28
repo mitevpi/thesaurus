@@ -81,15 +81,30 @@ namespace thesaurus
                     case "bayes":
                         var bayesModel = _loadedModel as NaiveBayes;
                         var instance = _loadedCodebook.Transform(nodeName);
-                        var c = bayesModel.Decide(instance);
-                        var result = _loadedCodebook.Revert("output", c);
 
-                        return new[] { result };
+                        // This is for retrieving only one prediction
+                        // var c = bayesModel.Decide(instance);
+                        // var result = _loadedCodebook.Revert("output", c);
+
+                        double[] probs = bayesModel.Probabilities(instance);
+                        int[] sortedKeys = SortAndIndex(probs);
+
+                        int numOfPreds = 4;
+                        string[] predictions = new string[numOfPreds];
+
+                        for (int i = 0; i < 4; i++)
+                        {
+                            var prediction = _loadedCodebook.Revert("output", sortedKeys[i]);
+                            predictions[i] = prediction;
+                        }
+                        return predictions;
+
                     case "markov":
                         var markovModel = _loadedModel as HiddenMarkovModel;
                         var code = _loadedCodebook.Transform("Nodes", nodeName);
                         var predictSample = markovModel.Predict(new[] { code }, 1);
                         var predictResult = _loadedCodebook.Revert("Nodes", predictSample);
+
                         return predictResult;
                 }
 
@@ -99,6 +114,22 @@ namespace thesaurus
             {
                 return new string[] { };
             }
+        }
+
+        private int[] SortAndIndex<T>(T[] rg)
+        {
+            int i, c = rg.Length;
+            var keys = new int[c];
+            if (c > 1)
+            {
+                for (i = 0; i < c; i++)
+                    keys[i] = i;
+
+                System.Array.Sort(rg, keys);
+            }
+            // We want descending order
+            Array.Reverse(keys);
+            return keys;
         }
     }
 }

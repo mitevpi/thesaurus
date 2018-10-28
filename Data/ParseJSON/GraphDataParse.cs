@@ -90,7 +90,7 @@ namespace ParseJSON
                         }
                         else
                         {
-                            Console.WriteLine(existingRecords.Count());
+                            //Console.WriteLine(existingRecords.Count());
                             NodeDataModel exisingRecord = existingRecords.First();
                             exisingRecord.TotalConnectionsCount = +1;
 
@@ -115,11 +115,31 @@ namespace ParseJSON
 
             // NEW CSV SHIT
             StringBuilder csvcontent = new StringBuilder();
-            csvcontent.AppendLine("Node A Name,Node B Name,# Connections,# Connections Unique");
+            csvcontent.AppendLine("Node A Name,Node B Name,# Connections,# Connections Unique,Type");
+            Regex pattern = new Regex("^([^.]+)");
+
             foreach (NodeDataModel nd in nodeDataContainer.DataModels)
             {
-                string csvLine = string.Format("{0},{1},{2},{3}",
-                   nd.NodeAName, nd.NodeBName, nd.TotalConnectionsCount, nd.UniqueConnectionsCount);
+                List<string> matchStrings = new List<string>(); //Create empty container
+                MatchCollection matches = pattern.Matches(nd.NodeAName); //Get all match occurances in a document
+
+                string resultString = "EMPTY"; //Set default value for the string to placate MSVS
+
+                // Try to get node types
+                foreach (Match match in matches) //Loop over all regex matches found
+                {
+                    if (match.Success) //If the match is successful
+                    {
+                        resultString = match.Value;
+                        matchStrings.Add(resultString); 
+                    }
+                }
+
+
+
+                // Create csv row
+                string csvLine = string.Format("{0},{1},{2},{3},{4}",
+                   nd.NodeAName, nd.NodeBName, nd.TotalConnectionsCount, nd.UniqueConnectionsCount, resultString);
 
                 csvcontent.AppendLine(csvLine);
             }

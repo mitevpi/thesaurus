@@ -46,8 +46,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExportCSV.cs" />
-    <Compile Include="NestedSample.cs" />
+    <Compile Include="NodeDataModel.cs" />
     <Compile Include="ParseDYF.cs" />
+    <Compile Include="ParseJSON.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

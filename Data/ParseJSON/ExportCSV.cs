@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace ParseJSON
 {
-    public class DataParse
+    public class GraphDataParse
     {
         public StringBuilder csvcontent;
         public Regex regex;
 
-        public DataParse()
+        public GraphDataParse()
         {
             csvcontent = InitializeCsvContent();
             regex = CreateRegexPattern();

@@ -92,11 +92,11 @@ namespace ParseJSON
                         {
                             //Console.WriteLine(existingRecords.Count());
                             NodeDataModel exisingRecord = existingRecords.First();
-                            exisingRecord.TotalConnectionsCount = +1;
+                            exisingRecord.TotalConnectionsCount += 1;
 
                             if (exisingRecord.NodeBId != fields[3])
                             {
-                                exisingRecord.UniqueConnectionsCount = +1;
+                                exisingRecord.UniqueConnectionsCount += 1;
                             }
                         }
                     }
@@ -121,9 +121,9 @@ namespace ParseJSON
             foreach (NodeDataModel nd in nodeDataContainer.DataModels)
             {
                 List<string> matchStrings = new List<string>(); //Create empty container
-                MatchCollection matches = pattern.Matches(nd.NodeAName); //Get all match occurances in a document
+                MatchCollection matches = pattern.Matches(nd.NodeAName);
 
-                string nodeType = "EMPTY"; //Set default value for the string to placate MSVS
+                string nodeType = "EMPTY"; 
 
                 // Try to get node types
                 foreach (Match match in matches) //Loop over all regex matches found

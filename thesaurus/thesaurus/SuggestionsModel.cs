@@ -12,7 +12,13 @@ namespace thesaurus
 {
     public class SuggestionsModel
     {
-        private DynamoViewModel DynamoViewModel { get; set; }
+        private DynamoViewModel _dynamoViewModel { get; set; }
+
+        public DynamoViewModel DynamoViewModel
+        {
+            get { return _dynamoViewModel; }
+            set { _dynamoViewModel = value; }
+        }
         private HiddenMarkovModel loadedHMM;
         private Codification loadedCodebook;
 
@@ -22,6 +28,12 @@ namespace thesaurus
             LoadModel();
         }
 
+        /// <summary>
+        /// This handler responds to clicking on the SuggestionNodeButton and create node to the Dynamo
+        /// session current workspace
+        /// </summary>
+        /// <param name="nodeName"></param>
+        /// <returns></returns>
         public bool PlaceNode(string nodeName)
         {
             // Get Reference of DynamoModel
@@ -30,8 +42,6 @@ namespace thesaurus
 
             foreach (var se in nsm.SearchEntries)
             {
-                
-
                 if (se.FullName.EndsWith(nodeName, StringComparison.OrdinalIgnoreCase))
                 {
                     var dynMethod = se.GetType().GetMethod("ConstructNewNodeModel",

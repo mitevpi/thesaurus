@@ -37,19 +37,14 @@ namespace thesaurus
                         Dictionary<string, string> NodeDictionary = new Dictionary<string, string>();
                         Dictionary<string, string> IODictionary = new Dictionary<string, string>();
 
-                        //int countfound;
-                        //int countnotfound;
-
                         //Console.Write(nodeObject);
 
                         //Create dictionary for ID and node name
                         foreach (var node in nodeObject)
                         {
-                            //Console.WriteLine(test);
-                            //Console.WriteLine(node["FunctionSignature"]);
                             string stringnodeID = node["Id"].ToString();
 
-                            string stringnodename = "NONE";
+                            string stringnodename = string.Empty;
 
                             try
                             {
@@ -59,13 +54,12 @@ namespace thesaurus
                             catch
                             {
                                 Console.WriteLine("MISSING FUNCTION SIGNATURE");
+                                stringnodename = node["ConcreteType"].ToString().Split(',')[0];
                             }
 
-                            if (stringnodename != "NONE")
+                            if (!string.IsNullOrEmpty(stringnodename))
                             {
                                 NodeDictionary.Add(stringnodeID, stringnodename);
-
-
                                 JToken outputObject = node["Outputs"];
 
                                 foreach (var output in outputObject)

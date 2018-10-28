@@ -5,9 +5,8 @@ using System.Reflection;
 using Dynamo.Models;
 using Accord.Statistics.Models.Markov;
 using Accord.Statistics.Filters;
-using System.Diagnostics;
 using Accord.IO;
-using System.IO;
+using System.Linq;
 
 namespace thesaurus
 {
@@ -43,7 +42,7 @@ namespace thesaurus
 
             foreach (var se in nsm.SearchEntries)
             {
-                if (se.FullName.EndsWith(nodeName, StringComparison.OrdinalIgnoreCase))
+                if (se.FullName.EndsWith(nodeName, StringComparison.OrdinalIgnoreCase) || se.CreationName.EndsWith(nodeName, StringComparison.OrdinalIgnoreCase))
                 {
                     var dynMethod = se.GetType().GetMethod("ConstructNewNodeModel",
                         BindingFlags.NonPublic | BindingFlags.Instance);

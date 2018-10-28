@@ -23,6 +23,7 @@ namespace ParseJSON
         {
             // DEFINE GLOBALS
             GraphDataParse csvParser = new GraphDataParse();
+            NodeDataContainer nodeDataContainer = new NodeDataContainer();
             //GraphDataParseFeaturized csvParserFeaturized = new GraphDataParseFeaturized();
 
             //Console.WriteLine("Enter Directory Path"); //Prompt user to enter directory to search for PDFS
@@ -117,20 +118,19 @@ namespace ParseJSON
                                 }
 
                                 // CREATE DATA MODEL
-                                //IEnumerable<NodeDataModel> existingRecords = new NodeDataModel[0];
 
-                                if (DataModels.Count < 0)
-                                {
-                                    NodeDataModel newModel = NodeDataModel.CreateNewDataModel(NodeASig, NodeBSig, NodeBID, NodeAID);
-                                    DataModels.Add(newModel);
-                                }
+                                //if (DataModels.Count < 0)
+                                //{
+                                //    NodeDataModel newModel = NodeDataModel.CreateNewDataModel(NodeASig, NodeBSig, NodeBID, NodeAID);
+                                //    DataModels.Add(newModel);
+                                //}
 
-                                if (DataModels.Count > 0)
+                                if (nodeDataContainer.DataModels.Count > 0)
                                 {
                                     
-                                    IEnumerable<NodeDataModel> existingRecords = from record in DataModels
-                                            where record.NodeAId == NodeAID
-                                            select record;
+                                    IEnumerable<NodeDataModel> existingRecords = from record in nodeDataContainer.DataModels
+                                                                                 where record.NodeAId == NodeAID
+                                                                                 select record;
 
                                     // CHECK IF NODE HAS BEEN ADDED TO RECORD
                                     if (existingRecords.Any())
@@ -145,23 +145,25 @@ namespace ParseJSON
                                     }
                                     else
                                     {
-                                        NodeDataModel newModel = NodeDataModel.CreateNewDataModel(NodeASig, NodeBSig, NodeBID, NodeAID);
-                                        DataModels.Add(newModel);
+                                        //NodeDataModel newModel = NodeDataModel.CreateNewDataModel(NodeASig, NodeBSig, NodeBID, NodeAID);
+                                        //nodeDataContainer.AppendToDataContainer(newModel);
+                                        //DataModels.Add(newModel);
                                     }
                                     
                                 }
                                 else
                                 {
+                                    NodeDataModel newModel = NodeDataModel.CreateNewDataModel(NodeASig, NodeBSig, NodeBID, NodeAID);
+                                    nodeDataContainer.AppendToDataContainer(newModel);
+                                    //DataModels.Add(newModel)
                                     //NodeDataModel newModel = NodeDataModel.CreateNewDataModel(NodeASig, NodeBSig, NodeBID, NodeAID);
                                     //DataModels.Add(newModel);
                                 }
 
                                 // CSV DATA DUMP
-
                                 //NodeDataModel newModel = NodeDataModel.CreateNewDataModel(NodeASig, NodeBSig, NodeBID, NodeAID);
                                 //DataModels.Add(newModel);
-
-                                var temp = DataModels;
+                                //nodeDataContainer.AppendToDataContainer(newModel);
                                 NodeDataModel.ParseNodeDataModels(DataModels);
 
                                 csvParser.AppendToCsv(NodeASig, NodeBSig, NodeAID, NodeBID);
@@ -178,7 +180,8 @@ namespace ParseJSON
                     }
 
                     csvParser.ExportCSV();
-                    //csvParserFeaturized.ExportCSV();
+                    var parsetemp = csvParser;
+                    var temp = nodeDataContainer.DataModels.Count;
                     Console.WriteLine("EXPORT COMPLETE");
                     //Console.Read();
                 }

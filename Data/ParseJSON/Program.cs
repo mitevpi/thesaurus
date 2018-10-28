@@ -18,14 +18,17 @@ namespace ParseJSON
             string packagePath = appDataPath + "\\" + "Dynamo" + "\\" + "Dynamo Revit" + "\\" + "2.1" + "\\" + "packages";
 
             // DYNAMO PACKAGES PARSE
-            ParseDYF dyfObj = new ParseDYF();
-            List<string> paths = dyfObj.GetDyfsInDir(packagePath);
-            dyfObj.ExportCSV();
+            //ParseDYF dyfObj = new ParseDYF();
+            //List<string> paths = dyfObj.GetDyfsInDir(packagePath);
+            //dyfObj.ExportCSV();
 
-            // DYNAMO GRAPH PARSE
-            ParseJSON jsonObj = new ParseJSON();
-            jsonObj.ParseJSONs(dyfObj);
-            Console.ReadKey();
+            //// DYNAMO GRAPH PARSE
+            //ParseJSON jsonObj = new ParseJSON();
+            //jsonObj.ParseJSONs(dyfObj);
+            //Console.ReadKey();
+
+            GraphDataParse.ReadGraphCSV();
+            
 
             // PARSE FEATURIZED DATA
             //var temp = jsonObj.DataModels;

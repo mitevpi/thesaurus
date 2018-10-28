@@ -65,4 +65,19 @@ namespace ParseJSON
         }
     }
 
+    public class NodeDataContainer
+    {
+        public List<NodeDataModel> DataModels { get; set; }
+
+        public NodeDataContainer()
+        {
+            DataModels = new List<NodeDataModel>();
+        }
+
+        public void AppendToDataContainer(NodeDataModel model)
+        {
+            DataModels.Add(model);
+        }
+    }
+
 }

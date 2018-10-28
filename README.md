@@ -6,6 +6,15 @@
 
 **"Autocomplete" for [Dynamo](https://github.com/DynamoDS/Dynamo) based on statistical/machine learning models.** Please see the Project [**Presentation**](https://docs.google.com/presentation/d/1EypGPF-okLQuuB9NaoL1U_KaERHPjp_yM9HmP2DQKu0/edit?usp=sharing) Page for more details
 
+**Team:**<br/>
+Ahmed Abbas<br/>
+Petr Mitev<br/>
+Patrick Pease<br/>
+Konrad Sobon<br/>
+Aaron Tang<br/>
+Varvara Toulkeridou<br/>
+Jasmine Wright<br/><br/>
+
 The very basic workflow:
 ![Basic Workflow](Assets/workflowV1.gif)
 

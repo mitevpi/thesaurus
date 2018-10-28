@@ -1,4 +1,4 @@
 ﻿<ViewExtensionDefinition>
-  <AssemblyPath>..\bin\thesaurus.dll</AssemblyPath>
+  <AssemblyPath>..\thesaurus.dll</AssemblyPath>
   <TypeName>thesaurus.ThesaurusViewExtension</TypeName>
 </ViewExtensionDefinition>

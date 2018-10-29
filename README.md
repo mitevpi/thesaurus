@@ -2,7 +2,7 @@
 
 ![Logo](Assets/logo2.png)
 
-### TT Hackathon 2018 Project
+## TT Hackathon 2018 Project
 
 **"Autocomplete" for [Dynamo](https://github.com/DynamoDS/Dynamo) based on statistical/machine learning models.** Please see the Project [**Presentation**](https://docs.google.com/presentation/d/1EypGPF-okLQuuB9NaoL1U_KaERHPjp_yM9HmP2DQKu0/edit?usp=sharing) Page for more details
 

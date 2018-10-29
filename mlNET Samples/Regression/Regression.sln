@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27705.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Regression", "TaxiFarePrediction\Regression.csproj", "{6B2A4520-B7E5-4EF2-B39F-DABC31F11CD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Regression", "Regression\Regression.csproj", "{6B2A4520-B7E5-4EF2-B39F-DABC31F11CD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -24,12 +24,12 @@ namespace ParseJSON
             // DEFINE GLOBALS
             GraphDataParse csvParser = new GraphDataParse();
             NodeDataContainer nodeDataContainer = new NodeDataContainer();
-            //GraphDataParseFeaturized csvParserFeaturized = new GraphDataParseFeaturized();
+            GraphDataParseFeaturized csvParserFeaturized = new GraphDataParseFeaturized();
 
-            //Console.WriteLine("Enter Directory Path"); //Prompt user to enter directory to search for PDFS
-            //string dirPath = Console.ReadLine(); //Read user input
+            onsole.WriteLine("Enter Directory Path"); //Prompt user to enter directory to search for files
+            string dirPath = Console.ReadLine(); //Read user input
 
-            string dirPath = "C:\\Users\\pmitev\\Desktop\\graphs";
+            //string dirPath = "C:\\Users\\pmitev\\Desktop\\graphs";
             string[] fileEntries = Directory.GetFiles(dirPath); //Get all the files of the input directory
 
             foreach (var filepath in fileEntries)
@@ -117,14 +117,6 @@ namespace ParseJSON
                                     NodeBSig = result;
                                 }
 
-                                // CREATE DATA MODEL
-
-                                //if (DataModels.Count < 0)
-                                //{
-                                //    NodeDataModel newModel = NodeDataModel.CreateNewDataModel(NodeASig, NodeBSig, NodeBID, NodeAID);
-                                //    DataModels.Add(newModel);
-                                //}
-
                                 if (nodeDataContainer.DataModels.Count > 0)
                                 {
                                     
@@ -145,9 +137,6 @@ namespace ParseJSON
                                     }
                                     else
                                     {
-                                        //NodeDataModel newModel = NodeDataModel.CreateNewDataModel(NodeASig, NodeBSig, NodeBID, NodeAID);
-                                        //nodeDataContainer.AppendToDataContainer(newModel);
-                                        //DataModels.Add(newModel);
                                     }
                                     
                                 }
@@ -155,23 +144,13 @@ namespace ParseJSON
                                 {
                                     NodeDataModel newModel = NodeDataModel.CreateNewDataModel(NodeASig, NodeBSig, NodeBID, NodeAID);
                                     nodeDataContainer.AppendToDataContainer(newModel);
-                                    //DataModels.Add(newModel)
-                                    //NodeDataModel newModel = NodeDataModel.CreateNewDataModel(NodeASig, NodeBSig, NodeBID, NodeAID);
-                                    //DataModels.Add(newModel);
                                 }
 
-                                // CSV DATA DUMP
-                                //NodeDataModel newModel = NodeDataModel.CreateNewDataModel(NodeASig, NodeBSig, NodeBID, NodeAID);
-                                //DataModels.Add(newModel);
-                                //nodeDataContainer.AppendToDataContainer(newModel);
+                                // ADD TO CSV
                                 NodeDataModel.ParseNodeDataModels(DataModels);
-
                                 csvParser.AppendToCsv(NodeASig, NodeBSig, NodeAID, NodeBID);
                             }
-                            catch (Exception)
-                            {
-
-                            }
+                            catch (Exception){}
                         }
                     }
                     catch
@@ -179,11 +158,9 @@ namespace ParseJSON
                         Console.WriteLine("NOT JSON");
                     }
 
+                    // WRIE TO CSV
                     csvParser.ExportCSV();
-                    var parsetemp = csvParser;
-                    var temp = nodeDataContainer.DataModels.Count;
                     Console.WriteLine("EXPORT COMPLETE");
-                    //Console.Read();
                 }
 
             }

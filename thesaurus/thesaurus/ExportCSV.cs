@@ -7,47 +7,63 @@ namespace ParseJSON
 {
     public class DataParse
     {
-        public StringBuilder csvcontent;
-        public Regex regex;
+        private StringBuilder csvContent;
+        private Regex regex;
 
         public DataParse()
         {
-            csvcontent = InitializeCsvContent();
+            csvContent = InitializeCsvContent();
             regex = CreateRegexPattern();
         }
 
-        public Regex CreateRegexPattern()
+        /// <summary>
+        /// Creates a Regex pattern used to populate CSV rows.
+        /// </summary>
+        /// <returns>Pattern.</returns>
+        private static Regex CreateRegexPattern()
         {
-            Regex pattern = new Regex("[;,\t\r ]|[\n]{2}");
+            var pattern = new Regex("[;,\t\r ]|[\n]{2}");
 
             return pattern;
         }
 
-        public StringBuilder InitializeCsvContent()
+        /// <summary>
+        /// Builds CSV File Headers.
+        /// </summary>
+        /// <returns>String Builder with CSV Headers.</returns>
+        private static StringBuilder InitializeCsvContent()
         {
-            StringBuilder csvcontent = new StringBuilder();
-            csvcontent.AppendLine("Node A Name,Node B Name,Node A ID,Node B ID");
-            return csvcontent;
+            var c = new StringBuilder();
+            c.AppendLine("Node A Name,Node B Name,Node A ID,Node B ID");
+            return c;
         }
 
+        /// <summary>
+        /// Appends new line in CSV File that has info about given node pair.
+        /// </summary>
+        /// <param name="nodeAName">Name A</param>
+        /// <param name="nodeBName">Name B</param>
+        /// <param name="nodeAId">Id A</param>
+        /// <param name="nodeBId">Id B</param>
         public void AppendToCsv(string nodeAName, string nodeBName, string nodeAId, string nodeBId)
         {
-            string cleanNameA = regex.Replace(nodeAName, "_");
-            string cleanNameB = regex.Replace(nodeBName, "_");
-            string cleanIdA = regex.Replace(nodeAId, "_");
-            string cleanIdB = regex.Replace(nodeBId, "_");
+            var cleanNameA = regex.Replace(nodeAName, "_");
+            var cleanNameB = regex.Replace(nodeBName, "_");
+            var cleanIdA = regex.Replace(nodeAId, "_");
+            var cleanIdB = regex.Replace(nodeBId, "_");
 
-            string csvLine = string.Format("{0},{1},{2},{3}",
-                cleanNameA, cleanNameB, cleanIdA, cleanIdB);
+            var csvLine = $"{cleanNameA},{cleanNameB},{cleanIdA},{cleanIdB}";
 
-            csvcontent.AppendLine(csvLine);
+            csvContent.AppendLine(csvLine);
         }
 
+        /// <summary>
+        /// Saves CSV to local drive.
+        /// </summary>
         public void ExportCSV()
         {
-            string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            File.WriteAllText(dirPath + "\\graphData.csv", csvcontent.ToString());
+            var dirPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            File.WriteAllText(dirPath + "\\graphData.csv", csvContent.ToString());
         }
-
     }
 }

@@ -57,51 +57,51 @@
     </Reference>
     <Reference Include="CoreNodeModels, Version=2.0.1.5055, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamoVisualProgramming.WpfUILibrary.2.0.1.5055\lib\net45\CoreNodeModels.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="CoreNodeModelsWpf, Version=2.0.1.5055, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamoVisualProgramming.WpfUILibrary.2.0.1.5055\lib\net45\CoreNodeModelsWpf.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="DesignScriptBuiltin, Version=2.0.1.5055, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamoVisualProgramming.Core.2.0.1.5055\lib\net45\DesignScriptBuiltin.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="DSIronPython, Version=2.0.1.5055, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamoVisualProgramming.Core.2.0.1.5055\lib\net45\DSIronPython.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="DynamoApplications, Version=2.0.1.5055, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamoVisualProgramming.Core.2.0.1.5055\lib\net45\DynamoApplications.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="DynamoCore, Version=2.0.1.5055, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamoVisualProgramming.Core.2.0.1.5055\lib\net45\DynamoCore.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="DynamoCoreWpf, Version=2.0.1.5055, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamoVisualProgramming.WpfUILibrary.2.0.1.5055\lib\net45\DynamoCoreWpf.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="DynamoInstallDetective, Version=2.0.1.5055, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamoVisualProgramming.Core.2.0.1.5055\lib\net45\DynamoInstallDetective.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="DynamoServices, Version=2.0.1.5055, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamoVisualProgramming.DynamoServices.2.0.1.5055\lib\net45\DynamoServices.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="DynamoShapeManager, Version=2.0.1.5055, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamoVisualProgramming.Core.2.0.1.5055\lib\net45\DynamoShapeManager.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="DynamoUnits, Version=2.0.1.5055, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamoVisualProgramming.ZeroTouchLibrary.2.0.1.5055\lib\net45\DynamoUnits.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="DynamoUtilities, Version=2.0.1.5055, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamoVisualProgramming.Core.2.0.1.5055\lib\net45\DynamoUtilities.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
@@ -121,29 +121,29 @@
     </Reference>
     <Reference Include="Microsoft.Practices.Prism, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.Practices.Prism.Interactivity, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.4.1.0.0\lib\NET40\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="ProtoCore, Version=2.0.1.5055, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamoVisualProgramming.Core.2.0.1.5055\lib\net45\ProtoCore.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ProtoGeometry, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamoVisualProgramming.ZeroTouchLibrary.2.0.1.5055\lib\net45\ProtoGeometry.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -162,7 +162,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="VMDataBridge, Version=2.0.1.5055, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DynamoVisualProgramming.Core.2.0.1.5055\lib\net45\VMDataBridge.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
@@ -212,8 +212,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /Y "$(TargetDir)thesaurus.dll" "C:\Users\ksobon\AppData\Roaming\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin\"
-xcopy /Y "$(ProjectDir)thesaurus_ViewExtensionDefinition.xml" "C:\Users\ksobon\AppData\Roaming\Dynamo\Dynamo Revit\2.0\packages\thesaurus\extra\"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>
@@ -223,32 +223,30 @@ xcopy /Y "$(ProjectDir)thesaurus_ViewExtensionDefinition.xml" "C:\Users\ksobon\A
   </Target>
   <Target Name="AfterBuild">
   </Target>
-  <Target Name="CopyFiles">
-    <Message Text="Copy files..." Importance="high" />
-    <Message Text="$(TargetPath) copied to: $(APPDATA)\Dynamo Revit\2.0\packages\thesaurus\bin" Importance="high" />
-    <Message Text="$(TargetDir)thesaurus_ViewExtensionDefinition.xml copied to: $(APPDATA)\Dynamo Revit\2.0\packages\thesaurus\extra" Importance="high" />
-    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(APPDATA)\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)GalaSoft.MvvmLight.dll" DestinationFolder="$(APPDATA)\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)GalaSoft.MvvmLight.Extras.dll" DestinationFolder="$(APPDATA)\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)GalaSoft.MvvmLight.Platform.dll" DestinationFolder="$(APPDATA)\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)Microsoft.Expression.Interactions.dll" DestinationFolder="$(APPDATA)\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)System.Windows.Interactivity.dll" DestinationFolder="$(APPDATA)\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)thesaurus_ViewExtensionDefinition.xml" DestinationFolder="$(APPDATA)\Dynamo Revit\2.0\packages\thesaurus\extra" ContinueOnError="true" />
-    <Message Text="$(TargetPath) copied to: $(APPDATA)\Dynamo Revit\2.1\packages\thesaurus\bin" Importance="high" />
-    <Message Text="$(TargetDir)thesaurus_ViewExtensionDefinition.xml copied to: $(APPDATA)\Dynamo Revit\2.1\packages\thesaurus\extra" Importance="high" />
-    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(APPDATA)\Dynamo Revit\2.1\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)GalaSoft.MvvmLight.dll" DestinationFolder="$(APPDATA)\Dynamo Revit\2.1\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)GalaSoft.MvvmLight.Extras.dll" DestinationFolder="$(APPDATA)\Dynamo Revit\2.1\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)GalaSoft.MvvmLight.Platform.dll" DestinationFolder="$(APPDATA)\Dynamo Revit\2.1\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)Microsoft.Expression.Interactions.dll" DestinationFolder="$(APPDATA)\Dynamo Revit\2.1\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)System.Windows.Interactivity.dll" DestinationFolder="$(APPDATA)\Dynamo Revit\2.1\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)thesaurus_ViewExtensionDefinition.xml" DestinationFolder="$(APPDATA)\Dynamo Revit\2.1\packages\thesaurus\extra" ContinueOnError="true" />
-  </Target>
   <Import Project="..\packages\Accord.3.8.0\build\Accord.targets" Condition="Exists('..\packages\Accord.3.8.0\build\Accord.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Accord.3.8.0\build\Accord.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Accord.3.8.0\build\Accord.targets'))" />
+  </Target>
+  <Target Name="CopyFiles" AfterTargets="AfterBuild">
+    <Message Text="Copy files..." Importance="high" />
+    <Message Text="$(TargetPath) copied" Importance="high" />
+    <Message Text="$(TargetDir)thesaurus_ViewExtensionDefinition.xml copied" Importance="high" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)thesaurus_ViewExtensionDefinition.xml" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\extra" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)GalaSoft.MvvmLight.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)GalaSoft.MvvmLight.Extras.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)GalaSoft.MvvmLight.Platform.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)Accord.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)Accord.MachineLearning.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)Accord.MachineLearning.GPL.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)Accord.Math.Core.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)Accord.Math.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)Accord.Statistics.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)Microsoft.Expression.Interactions.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)System.Windows.Interactivity.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)CommonServiceLocator.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
   </Target>
 </Project>

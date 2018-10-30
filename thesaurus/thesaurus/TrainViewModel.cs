@@ -73,17 +73,14 @@ namespace thesaurus
             }
             else
             {
-                // Initializes the variables to pass to the MessageBox.Show method.
                 const string message = "You did not select a folder yet, please specify";
                 const string caption = "Error Detected in Folder Selection";
                 const MessageBoxButtons buttons = MessageBoxButtons.OK;
 
-                // Displays the MessageBox.
                 var result = MessageBox.Show(message, caption, buttons);
 
                 if (result == DialogResult.Yes)
                 {
-                    // Closes the parent form.
                     Win?.Close();
                 }
             }
@@ -120,22 +117,21 @@ namespace thesaurus
         {
             try
             {
+                // (Konrad) Handler sub-directories recursively.
                 foreach (var d in Directory.GetDirectories(path))
                 {
-                    Console.Out.WriteLine(d);
                     foreach (var f in Directory.GetFiles(d))
                     {
-                        // Filter out all the DYN files
-                        if (f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase))
-                            Files.Add(f);
+                        // (Konrad) Filter out all the DYN files
+                        if (f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase)) Files.Add(f);
                     }
                     DirSearch(d);
                 }
 
+                // (Konrad) Handle main directory.
                 foreach (var f in Directory.GetFiles(path))
                 {
-                    if (f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase))
-                        Files.Add(f);
+                    if (f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase)) Files.Add(f);
                 }
             }
             catch (Exception)

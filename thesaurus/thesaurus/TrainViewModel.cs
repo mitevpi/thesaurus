@@ -33,7 +33,7 @@ namespace thesaurus
         public TrainViewModel(TrainModel model)
         {
             Model = model;
-            DirectoryPath = "";
+            DirectoryPath = string.Empty;
             Files = new List<string>();
             SelectDirectory = new RelayCommand(OnSelectDirectory);
             Train = new RelayCommand(OnTrain);
@@ -112,7 +112,7 @@ namespace thesaurus
         #region Utilities
 
         /// <summary>
-        /// 
+        /// Recursively search the folder to get all the DYN files
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>

@@ -168,8 +168,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Converters.cs" />
-    <Compile Include="ExportCSV.cs" />
-    <Compile Include="ParseDYN.cs" />
+    <Compile Include="Utilities\ExportCSV.cs" />
+    <Compile Include="Utilities\ParseDYN.cs" />
     <Compile Include="SuggestionNodeView.xaml.cs">
       <DependentUpon>SuggestionNodeView.xaml</DependentUpon>
     </Compile>

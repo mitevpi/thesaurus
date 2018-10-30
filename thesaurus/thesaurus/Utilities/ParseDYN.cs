@@ -7,44 +7,41 @@ using ParseJSON;
 
 namespace thesaurus
 {
-    class ParseDYN
+    public class ParseDYN
     {
-
         public static List<string[]> ParseDynData(List<string> filePaths)
         {
-            // DEFINE GLOBALS
-            DataParse csvParser = new DataParse();
-            List<string[]> trainingData = new List<string[]>();
+            // (Petr) DEFINE GLOBALS
+            var csvParser = new DataParse();
+            var trainingData = new List<string[]>();
 
-            foreach (var fileName in filePaths) //Loop over all the files in teh directory
+            foreach (var fileName in filePaths) //Loop over all the files in the directory
             {
-                string dynTitle = System.IO.Path.GetFileName(fileName);
+                var dynTitle = Path.GetFileName(fileName);
                 dynTitle = dynTitle.Remove(dynTitle.Length - 4);
                 Console.WriteLine(dynTitle);
 
-                using (StreamReader reader = File.OpenText(fileName))
+                using (var reader = File.OpenText(fileName))
                 {
                     try
                     {
-                        // Read JSON file, and get a JToken from it for iterating
-                        JObject jObject = (JObject)JToken.ReadFrom(new JsonTextReader(reader));
+                        // (Petr) Read JSON file, and get a JToken from it for iterating
+                        var jObject = (JObject)JToken.ReadFrom(new JsonTextReader(reader));
 
-                        //Define the Nodes into a JToken
-                        JToken nodeObject = jObject["Nodes"];
-                        JToken connectorObject = jObject["Connectors"];
+                        // (Petr) Define the Nodes into a JToken
+                        var nodeObject = jObject["Nodes"];
+                        var connectorObject = jObject["Connectors"];
 
-                        //Define Dictionaries for the node and the In / Out
-                        Dictionary<string, string> NodeDictionary = new Dictionary<string, string>();
-                        Dictionary<string, string> IODictionary = new Dictionary<string, string>();
+                        // (Petr) Define Dictionaries for the node and the In / Out
+                        var NodeDictionary = new Dictionary<string, string>();
+                        var IODictionary = new Dictionary<string, string>();
 
-                        //Console.Write(nodeObject);
-
-                        //Create dictionary for ID and node name
+                        // (Petr) Create dictionary for ID and node name
                         foreach (var node in nodeObject)
                         {
-                            string stringnodeID = node["Id"].ToString();
+                            var stringnodeID = node["Id"].ToString();
 
-                            string stringnodename = string.Empty;
+                            string stringnodename;
 
                             try
                             {
@@ -60,39 +57,38 @@ namespace thesaurus
                             if (!string.IsNullOrEmpty(stringnodename))
                             {
                                 NodeDictionary.Add(stringnodeID, stringnodename);
-                                JToken outputObject = node["Outputs"];
+                                var outputObject = node["Outputs"];
 
                                 foreach (var output in outputObject)
                                 {
-                                    string outputID = output["Id"].ToString();
+                                    var outputID = output["Id"].ToString();
                                     IODictionary.Add(outputID, stringnodeID);
                                 }
-                                JToken inputObject = node["Inputs"];
+                                var inputObject = node["Inputs"];
 
                                 foreach (var inputs in inputObject)
                                 {
-                                    string inputID = inputs["Id"].ToString();
+                                    var inputID = inputs["Id"].ToString();
                                     IODictionary.Add(inputID, stringnodeID);
                                 }
-                                //Console.WriteLine(IODictionary);
                             }
 
                         }
 
                         foreach (var connector in connectorObject)
                         {
-                            string inputID = connector["Start"].ToString();
-                            string outputID = connector["End"].ToString();
+                            var inputID = connector["Start"].ToString();
+                            var outputID = connector["End"].ToString();
 
                             try
                             {
-                                string NodeAID = IODictionary[inputID];
-                                string NodeBID = IODictionary[outputID];
+                                var NodeAID = IODictionary[inputID];
+                                var NodeBID = IODictionary[outputID];
 
-                                string NodeASig = NodeDictionary[NodeAID];
-                                string NodeBSig = NodeDictionary[NodeBID];
+                                var NodeASig = NodeDictionary[NodeAID];
+                                var NodeBSig = NodeDictionary[NodeBID];
 
-                                string[] dataObservation = new string[] { NodeASig, NodeBSig };
+                                var dataObservation = new[] { NodeASig, NodeBSig };
                                 trainingData.Add(dataObservation);
 
                                 Console.WriteLine(NodeAID);
@@ -104,13 +100,13 @@ namespace thesaurus
                             }
                             catch (Exception)
                             {
-
+                                //ignored
                             }
                         }
                     }
-                    catch
+                    catch (Exception)
                     {
-
+                        //ignored
                     }
                 }
             }

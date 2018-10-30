@@ -43,16 +43,16 @@ namespace thesaurus
         #region Handlers
 
         /// <summary>
-        /// 
+        /// Handler for Window Loaded event. Stores reference to Window on VM.
         /// </summary>
-        /// <param name="obj"></param>
-        private void OnWindowLoaded(Window obj)
+        /// <param name="win">Train Window.</param>
+        private void OnWindowLoaded(Window win)
         {
-            Win = obj;
+            Win = win;
         }
 
         /// <summary>
-        /// 
+        /// Handler for Train button. Parses selected DYN files to create train dataset.
         /// </summary>
         private void OnTrain()
         {
@@ -73,24 +73,21 @@ namespace thesaurus
             }
             else
             {
-                // Initializes the variables to pass to the MessageBox.Show method.
                 const string message = "You did not select a folder yet, please specify";
                 const string caption = "Error Detected in Folder Selection";
                 const MessageBoxButtons buttons = MessageBoxButtons.OK;
 
-                // Displays the MessageBox.
                 var result = MessageBox.Show(message, caption, buttons);
 
                 if (result == DialogResult.Yes)
                 {
-                    // Closes the parent form.
                     Win?.Close();
                 }
             }
         }
 
         /// <summary>
-        /// 
+        /// Handler for Select Directory button.
         /// </summary>
         private void OnSelectDirectory()
         {
@@ -112,30 +109,28 @@ namespace thesaurus
         #region Utilities
 
         /// <summary>
-        /// Recursively search the folder to get all the DYN files
+        /// Recursively search the folder to get all the DYN files. Stores them in Files variable.
         /// </summary>
-        /// <param name="path"></param>
-        /// <returns></returns>
+        /// <param name="path">Directory path.</param>
         private void DirSearch(string path)
         {
             try
             {
+                // (Konrad) Handler sub-directories recursively.
                 foreach (var d in Directory.GetDirectories(path))
                 {
-                    Console.Out.WriteLine(d);
                     foreach (var f in Directory.GetFiles(d))
                     {
-                        // Filter out all the DYN files
-                        if (f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase))
-                            Files.Add(f);
+                        // (Konrad) Filter out all the DYN files
+                        if (f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase)) Files.Add(f);
                     }
                     DirSearch(d);
                 }
 
+                // (Konrad) Handle main directory.
                 foreach (var f in Directory.GetFiles(path))
                 {
-                    if (f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase))
-                        Files.Add(f);
+                    if (f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase)) Files.Add(f);
                 }
             }
             catch (Exception)

@@ -72,7 +72,6 @@ namespace thesaurus
 
         public void Dispose()
         {
-            
         }
 
         public void Shutdown()

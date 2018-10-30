@@ -33,7 +33,7 @@ namespace thesaurus
         public TrainViewModel(TrainModel model)
         {
             Model = model;
-            DirectoryPath = "";
+            DirectoryPath = string.Empty;
             Files = new List<string>();
             SelectDirectory = new RelayCommand(OnSelectDirectory);
             Train = new RelayCommand(OnTrain);
@@ -43,16 +43,16 @@ namespace thesaurus
         #region Handlers
 
         /// <summary>
-        /// 
+        /// Handler for Window Loaded event. Stores reference to Window on VM.
         /// </summary>
-        /// <param name="obj"></param>
-        private void OnWindowLoaded(Window obj)
+        /// <param name="win">Train Window.</param>
+        private void OnWindowLoaded(Window win)
         {
-            Win = obj;
+            Win = win;
         }
 
         /// <summary>
-        /// 
+        /// Handler for Train button. Parses selected DYN files to create train dataset.
         /// </summary>
         private void OnTrain()
         {
@@ -87,7 +87,7 @@ namespace thesaurus
         }
 
         /// <summary>
-        /// 
+        /// Handler for Select Directory button.
         /// </summary>
         private void OnSelectDirectory()
         {
@@ -109,10 +109,9 @@ namespace thesaurus
         #region Utilities
 
         /// <summary>
-        /// 
+        /// Recursively search the folder to get all the DYN files. Stores them in Files variable.
         /// </summary>
-        /// <param name="path"></param>
-        /// <returns></returns>
+        /// <param name="path">Directory path.</param>
         private void DirSearch(string path)
         {
             try

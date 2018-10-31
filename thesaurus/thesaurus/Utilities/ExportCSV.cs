@@ -58,12 +58,11 @@ namespace ParseJSON
         }
 
         /// <summary>
-        /// Saves CSV to local drive.
+        /// Saves CSV to a nominated path
         /// </summary>
-        public void ExportCSV()
+        public void ExportCSV(string path)
         {
-            var dirPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            File.WriteAllText(dirPath + "\\graphData.csv", csvContent.ToString());
+            File.WriteAllText(path + "\\graphData.csv", csvContent.ToString());
         }
     }
 }

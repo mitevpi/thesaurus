@@ -9,17 +9,18 @@ namespace thesaurus
 {
     public class ParseDYN
     {
+        public static DataParse csvParser;
+
         public static List<string[]> ParseDynData(List<string> filePaths)
         {
             // (Petr) DEFINE GLOBALS
-            var csvParser = new DataParse();
+            csvParser = new DataParse();
             var trainingData = new List<string[]>();
 
             foreach (var fileName in filePaths) //Loop over all the files in the directory
             {
                 var dynTitle = Path.GetFileName(fileName);
                 dynTitle = dynTitle.Remove(dynTitle.Length - 4);
-                Console.WriteLine(dynTitle);
 
                 using (var reader = File.OpenText(fileName))
                 {
@@ -46,7 +47,6 @@ namespace thesaurus
                             try
                             {
                                 stringnodename = node["FunctionSignature"].ToString();
-                                Console.WriteLine(stringnodename);
                             }
                             catch
                             {
@@ -110,9 +110,6 @@ namespace thesaurus
                     }
                 }
             }
-            csvParser.ExportCSV();
-            Console.Read();
-
             return trainingData;
         }
     }

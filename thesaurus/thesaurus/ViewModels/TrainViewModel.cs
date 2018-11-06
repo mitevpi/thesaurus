@@ -72,19 +72,22 @@ namespace thesaurus
                         Model.TrainHiddenMarkovModel(trainingData);
                         break;
                 }
-            }
-            else
-            {
-                const string message = "You did not select a folder yet, please specify";
-                const string caption = "Error Detected in Folder Selection";
+
+                const string message = "You finished training ML module";
+                const string caption = "Success";
                 const MessageBoxButtons buttons = MessageBoxButtons.OK;
-
                 var result = MessageBox.Show(message, caption, buttons);
-
-                if (result == DialogResult.Yes)
+                if (result == DialogResult.OK)
                 {
                     Win?.Close();
                 }
+            }
+            else
+            {
+                const string message = "Invalid folder, this could be that your are missing folder selection, or empty folder, or folder only containing Dynamo 1.X definitions. Please specify again.";
+                const string caption = "Error Detected in Folder Selection";
+                const MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBox.Show(message, caption, buttons);
             }
         }
 

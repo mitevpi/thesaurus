@@ -1,4 +1,6 @@
-﻿using Dynamo.ViewModels;
+﻿using System;
+using System.IO;
+using Dynamo.ViewModels;
 using Dynamo.Wpf.Extensions;
 using System.Windows.Controls;
 
@@ -9,6 +11,7 @@ namespace thesaurus
         private MenuItem _thesaurusMenuItem;
         private MenuItem _thesaurusTrainMenuItem;
         private MenuItem _thesaurusShowHideMenuItem;
+        public static string ThesaurusDirectory { get; set; }
 
         public void Loaded(ViewLoadedParams p)
         {
@@ -80,6 +83,8 @@ namespace thesaurus
 
         public void Startup(ViewStartupParams p)
         {
+            ThesaurusDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "thesaurus");
+            if (!Directory.Exists(ThesaurusDirectory)) Directory.CreateDirectory(ThesaurusDirectory);
         }
     }
 }

@@ -1,11 +1,16 @@
-﻿using Accord.Statistics.Models.Markov;
+﻿#region References
+
+using Accord.Statistics.Models.Markov;
 using Accord.Statistics.Models.Markov.Learning;
 using Accord.Statistics.Filters;
 using Accord.Statistics.Models.Markov.Topology;
 using System.Collections.Generic;
+using System.IO;
 using Accord.IO;
 using Accord.MachineLearning.Bayes;
 using Accord.Math;
+
+#endregion
 
 namespace thesaurus
 {
@@ -13,6 +18,10 @@ namespace thesaurus
     {
         public static string TrainingMode = "bayes"; //switch to "markov" to try the Hidden Markov model
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="trainingData"></param>
         public void TrainHiddenMarkovModel(List<string[]> trainingData)
         {
             Accord.Math.Random.Generator.Seed = 42;
@@ -40,16 +49,20 @@ namespace thesaurus
             teacher.Learn(sequence);
 
             // Use the Serializer class to save model and codebook
-            Serializer.Save(codebook, "thesaurus_codebook.accord");
-            Serializer.Save(hmm, "thesaurus_HMModel.accord");
+            Serializer.Save(codebook, Path.Combine(ThesaurusViewExtension.ThesaurusDirectory, "thesaurus_codebook.accord"));
+            Serializer.Save(hmm, Path.Combine(ThesaurusViewExtension.ThesaurusDirectory, "thesaurus_HMModel.accord"));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="trainingData"></param>
         public void TrainNaiveBayesClassifier(List<string[]> trainingData)
         {
             string[] columnNames = { "input", "output" };
             var nodePairs = trainingData.ToArray();
             var codebook = new Codification(columnNames, nodePairs);
-            
+
             var symbols = codebook.Transform(nodePairs);
 
             var inputs = symbols.Get(null, 0, -1);
@@ -62,8 +75,8 @@ namespace thesaurus
             var nb = learner.Learn(inputs, outputs);
 
             // Use the Serializer class to save model and codebook
-            Serializer.Save(codebook, "thesaurus_codebook.accord");
-            Serializer.Save(nb, "thesaurus_bayes.accord");
+            Serializer.Save(codebook, Path.Combine(ThesaurusViewExtension.ThesaurusDirectory, "thesaurus_codebook.accord"));
+            Serializer.Save(nb, Path.Combine(ThesaurusViewExtension.ThesaurusDirectory, "thesaurus_bayes.accord"));
         }
     }
 }

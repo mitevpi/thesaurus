@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿#region References
+
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Forms;
@@ -6,6 +8,8 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using thesaurus.Utilities;
 using MessageBox = System.Windows.Forms.MessageBox;
+
+#endregion
 
 namespace thesaurus
 {
@@ -59,8 +63,12 @@ namespace thesaurus
             {
                 // (Aaron) Parse all the Dyns under DirectoryPath to CSV format
                 var trainingData = ParseDYN.ParseDynData(Files);
-                // (Aaron) Export the CSV to the folder user select
-                ParseDYN.csvParser.ExportCSV(DirectoryPath);
+
+                // (Konrad) Export the CSV to the %AppData%\thesaurus folder
+                // That's the only location that we are sure user will have write access
+                // This makes it possible for user to train his/her model on graphs
+                // stored somewhere on the network where they are "read-only" for non-admins.
+                ParseDYN.csvParser.ExportCSV();
                 Model.TrainHiddenMarkovModel(trainingData);
 
                 switch (TrainModel.TrainingMode)
@@ -73,10 +81,10 @@ namespace thesaurus
                         break;
                 }
 
-                const string message = "You finished training ML module";
+                var message = Properties.Resources.Train_Success;
                 const string caption = "Success";
                 const MessageBoxButtons buttons = MessageBoxButtons.OK;
-                var result = MessageBox.Show(message, caption, buttons);
+                var result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Information);
                 if (result == DialogResult.OK)
                 {
                     Win?.Close();
@@ -84,10 +92,10 @@ namespace thesaurus
             }
             else
             {
-                const string message = "Invalid folder, this could be that your are missing folder selection, or empty folder, or folder only containing Dynamo 1.X definitions. Please specify again.";
-                const string caption = "Error Detected in Folder Selection";
+                var message = Properties.Resources.Train_FolderError;
+                const string caption = "Error";
                 const MessageBoxButtons buttons = MessageBoxButtons.OK;
-                MessageBox.Show(message, caption, buttons);
+                MessageBox.Show(message, caption, buttons, MessageBoxIcon.Error);
             }
         }
 

@@ -1,4 +1,7 @@
-﻿using System;
+﻿#region References
+
+using System;
+using System.IO;
 using Dynamo.ViewModels;
 using Dynamo.Graph.Nodes;
 using System.Reflection;
@@ -7,6 +10,8 @@ using Accord.Statistics.Models.Markov;
 using Accord.Statistics.Filters;
 using Accord.IO;
 using Accord.MachineLearning.Bayes;
+
+#endregion
 
 namespace thesaurus
 {
@@ -65,12 +70,12 @@ namespace thesaurus
             switch (TrainModel.TrainingMode)
             {
                 case "bayes":
-                    _loadedModel = Serializer.Load<NaiveBayes>("thesaurus_bayes.accord");
-                    _loadedCodebook = Serializer.Load<Codification>("thesaurus_codebook.accord");
+                    _loadedModel = Serializer.Load<NaiveBayes>(Path.Combine(ThesaurusViewExtension.ThesaurusDirectory, "thesaurus_bayes.accord"));
+                    _loadedCodebook = Serializer.Load<Codification>(Path.Combine(ThesaurusViewExtension.ThesaurusDirectory, "thesaurus_codebook.accord"));
                     break;
                 case "markov":
-                    _loadedModel = Serializer.Load<HiddenMarkovModel>("thesaurus_HMModel.accord");
-                    _loadedCodebook = Serializer.Load<Codification>("thesaurus_codebook.accord");
+                    _loadedModel = Serializer.Load<HiddenMarkovModel>(Path.Combine(ThesaurusViewExtension.ThesaurusDirectory, "thesaurus_HMModel.accord"));
+                    _loadedCodebook = Serializer.Load<Codification>(Path.Combine(ThesaurusViewExtension.ThesaurusDirectory, "thesaurus_codebook.accord"));
                     break;
             }
         }
@@ -89,10 +94,6 @@ namespace thesaurus
                     case "bayes":
                         var bayesModel = _loadedModel as NaiveBayes;
                         var instance = _loadedCodebook.Transform(nodeName);
-
-                        // (Varvara) This is for retrieving only one prediction
-                        // var c = bayesModel.Decide(instance);
-                        // var result = _loadedCodebook.Revert("output", c);
 
                         var probs = bayesModel.Probabilities(instance);
                         var sortedKeys = SortAndIndex(probs);

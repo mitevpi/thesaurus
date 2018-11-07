@@ -2,6 +2,7 @@
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
+using thesaurus;
 
 namespace ParseJSON
 {
@@ -60,9 +61,9 @@ namespace ParseJSON
         /// <summary>
         /// Saves CSV to a nominated path
         /// </summary>
-        public void ExportCSV(string path)
+        public void ExportCSV()
         {
-            File.WriteAllText(path + "\\graphData.csv", csvContent.ToString());
+            File.WriteAllText(Path.Combine(ThesaurusViewExtension.ThesaurusDirectory, "graphData.csv"), csvContent.ToString());
         }
     }
 }

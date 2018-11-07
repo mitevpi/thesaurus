@@ -13,7 +13,7 @@ Ahmed Abbas
 [Konrad Sobon](https://github.com/ksobon)
 [Aaron Tang](https://github.com/QilongTang)
 [Varvara Toulkeridou](https://github.com/varvaratou)
-Jasmine Wright
+[Jasmine Wright] (https://github.com/JasWright)
 
 The very basic workflow:
 ![Basic Workflow](Assets/workflowV1.gif)

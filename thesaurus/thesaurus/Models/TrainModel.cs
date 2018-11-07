@@ -1,6 +1,5 @@
 ﻿#region References
 
-using System;
 using Accord.Statistics.Models.Markov;
 using Accord.Statistics.Models.Markov.Learning;
 using Accord.Statistics.Filters;
@@ -18,13 +17,6 @@ namespace thesaurus
     public class TrainModel
     {
         public static string TrainingMode = "bayes"; //switch to "markov" to try the Hidden Markov model
-        public string ThesaurusDirectory { get; set; }
-
-        public TrainModel()
-        {
-            ThesaurusDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "thesaurus");
-            if (!Directory.Exists(ThesaurusDirectory)) Directory.CreateDirectory(ThesaurusDirectory);
-        }
 
         /// <summary>
         /// 
@@ -57,8 +49,8 @@ namespace thesaurus
             teacher.Learn(sequence);
 
             // Use the Serializer class to save model and codebook
-            Serializer.Save(codebook, Path.Combine(ThesaurusDirectory, "thesaurus_codebook.accord"));
-            Serializer.Save(hmm, Path.Combine(ThesaurusDirectory, "thesaurus_HMModel.accord"));
+            Serializer.Save(codebook, Path.Combine(ThesaurusViewExtension.ThesaurusDirectory, "thesaurus_codebook.accord"));
+            Serializer.Save(hmm, Path.Combine(ThesaurusViewExtension.ThesaurusDirectory, "thesaurus_HMModel.accord"));
         }
 
         /// <summary>
@@ -83,8 +75,8 @@ namespace thesaurus
             var nb = learner.Learn(inputs, outputs);
 
             // Use the Serializer class to save model and codebook
-            Serializer.Save(codebook, Path.Combine(ThesaurusDirectory, "thesaurus_codebook.accord"));
-            Serializer.Save(nb, Path.Combine(ThesaurusDirectory, "thesaurus_bayes.accord"));
+            Serializer.Save(codebook, Path.Combine(ThesaurusViewExtension.ThesaurusDirectory, "thesaurus_codebook.accord"));
+            Serializer.Save(nb, Path.Combine(ThesaurusViewExtension.ThesaurusDirectory, "thesaurus_bayes.accord"));
         }
     }
 }

@@ -10,21 +10,6 @@ namespace thesaurus
         private MenuItem _thesaurusTrainMenuItem;
         private MenuItem _thesaurusShowHideMenuItem;
 
-        public string Name
-        {
-            get { return "Thesaurus"; }
-        }
-
-        public string UniqueId
-        {
-            get { return "181fe1bd-2762-4845-878e-e4e98d55f28f"; }
-        }
-
-        public void Dispose()
-        {
-            
-        }
-
         public void Loaded(ViewLoadedParams p)
         {
             _thesaurusMenuItem = new MenuItem { Header = "Thesaurus" };
@@ -75,14 +60,26 @@ namespace thesaurus
             p.dynamoMenu.Items.Add(_thesaurusMenuItem);
         }
 
+        public string Name
+        {
+            get { return "Thesaurus"; }
+        }
+
+        public string UniqueId
+        {
+            get { return "181fe1bd-2762-4845-878e-e4e98d55f28f"; }
+        }
+
+        public void Dispose()
+        {
+        }
+
         public void Shutdown()
         {
-            
         }
 
         public void Startup(ViewStartupParams p)
         {
-            
         }
     }
 }

@@ -182,9 +182,7 @@
     <Compile Include="ViewModels\SuggestionsViewModel.cs" />
     <Compile Include="Thesaurus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="..\..\..\..\..\Desktop\TrainModel.cs">
-      <Link>Models\TrainModel.cs</Link>
-    </Compile>
+    <Compile Include="Models\TrainModel.cs" />
     <Compile Include="UserControls\TrainView.xaml.cs">
       <DependentUpon>TrainView.xaml</DependentUpon>
     </Compile>

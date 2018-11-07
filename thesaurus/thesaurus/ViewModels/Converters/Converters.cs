@@ -5,6 +5,9 @@ using System.Windows.Data;
 
 namespace thesaurus
 {
+    /// <summary>
+    /// Converts Full Namespace/Class/Method name to short name.
+    /// </summary>
     public class FullNameToShortName : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

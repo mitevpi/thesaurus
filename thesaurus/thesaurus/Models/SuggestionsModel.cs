@@ -30,33 +30,36 @@ namespace thesaurus
         /// <returns></returns>
         public bool PlaceNode(string nodeName)
         {
-            // Get Reference of DynamoModel
+            // (Aaron) Get Reference of DynamoModel
             var dm = DynamoViewModel.Model;
             var nsm = dm.SearchModel;
 
             foreach (var se in nsm.SearchEntries)
             {
-                if (se.FullName.EndsWith(nodeName, StringComparison.OrdinalIgnoreCase) || se.CreationName.EndsWith(nodeName, StringComparison.OrdinalIgnoreCase))
-                {
-                    var dynMethod = se.GetType().GetMethod("ConstructNewNodeModel",
-                        BindingFlags.NonPublic | BindingFlags.Instance);
-                    var obj = dynMethod.Invoke(se, new object[] { });
-                    var nM = obj as NodeModel;
+                if (!se.FullName.EndsWith(nodeName, StringComparison.OrdinalIgnoreCase) &&
+                    !se.CreationName.EndsWith(nodeName, StringComparison.OrdinalIgnoreCase)) continue;
 
-                    try
-                    {
-                        dm.ExecuteCommand(new DynamoModel.CreateNodeCommand(nM, 0, 0, true, false));
-                        return true;
-                    }
-                    catch (Exception)
-                    {
-                        return false;
-                    }
+                var dynMethod = se.GetType().GetMethod("ConstructNewNodeModel",
+                    BindingFlags.NonPublic | BindingFlags.Instance);
+                var obj = dynMethod.Invoke(se, new object[] { });
+                var nM = obj as NodeModel;
+
+                try
+                {
+                    dm.ExecuteCommand(new DynamoModel.CreateNodeCommand(nM, 0, 0, true, false));
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
                 }
             }
             return false;
         }
 
+        /// <summary>
+        /// Loads ML Model based on specified preferences.
+        /// </summary>
         private void LoadModel()
         {
             switch (TrainModel.TrainingMode)
@@ -72,6 +75,11 @@ namespace thesaurus
             }
         }
 
+        /// <summary>
+        /// Evaluates the model for given node name and returns a prediction.
+        /// </summary>
+        /// <param name="nodeName">Current Node Name to evaluate.</param>
+        /// <returns>Array of predicted next Nodes.</returns>
         public string[] Predict(string nodeName)
         {
             try
@@ -82,17 +90,17 @@ namespace thesaurus
                         var bayesModel = _loadedModel as NaiveBayes;
                         var instance = _loadedCodebook.Transform(nodeName);
 
-                        // This is for retrieving only one prediction
+                        // (Varvara) This is for retrieving only one prediction
                         // var c = bayesModel.Decide(instance);
                         // var result = _loadedCodebook.Revert("output", c);
 
-                        double[] probs = bayesModel.Probabilities(instance);
-                        int[] sortedKeys = SortAndIndex(probs);
+                        var probs = bayesModel.Probabilities(instance);
+                        var sortedKeys = SortAndIndex(probs);
 
-                        int numOfPreds = 4;
-                        string[] predictions = new string[numOfPreds];
+                        const int numOfPreds = 4;
+                        var predictions = new string[numOfPreds];
 
-                        for (int i = 0; i < 4; i++)
+                        for (var i = 0; i < 4; i++)
                         {
                             var prediction = _loadedCodebook.Revert("output", sortedKeys[i]);
                             predictions[i] = prediction;
@@ -116,18 +124,26 @@ namespace thesaurus
             }
         }
 
-        private int[] SortAndIndex<T>(T[] rg)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="rg"></param>
+        /// <returns></returns>
+        private static int[] SortAndIndex<T>(T[] rg)
         {
-            int i, c = rg.Length;
+            var c = rg.Length;
             var keys = new int[c];
             if (c > 1)
             {
+                int i;
                 for (i = 0; i < c; i++)
                     keys[i] = i;
 
-                System.Array.Sort(rg, keys);
+                Array.Sort(rg, keys);
             }
-            // We want descending order
+
+            // (Varvara) We want descending order
             Array.Reverse(keys);
             return keys;
         }

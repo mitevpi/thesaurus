@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Forms;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using thesaurus.Utilities;
 using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace thesaurus
@@ -33,7 +32,7 @@ namespace thesaurus
         public TrainViewModel(TrainModel model)
         {
             Model = model;
-            DirectoryPath = "";
+            DirectoryPath = string.Empty;
             Files = new List<string>();
             SelectDirectory = new RelayCommand(OnSelectDirectory);
             Train = new RelayCommand(OnTrain);
@@ -43,22 +42,25 @@ namespace thesaurus
         #region Handlers
 
         /// <summary>
-        /// 
+        /// Handler for Window Loaded event. Stores reference to Window on VM.
         /// </summary>
-        /// <param name="obj"></param>
-        private void OnWindowLoaded(Window obj)
+        /// <param name="win">Train Window.</param>
+        private void OnWindowLoaded(Window win)
         {
-            Win = obj;
+            Win = win;
         }
 
         /// <summary>
-        /// 
+        /// Handler for Train button. Parses selected DYN files to create train dataset.
         /// </summary>
         private void OnTrain()
         {
             if (Files.Any())
             {
+                // (Aaron) Parse all the Dyns under DirectoryPath to CSV format
                 var trainingData = ParseDYN.ParseDynData(Files);
+                // (Aaron) Export the CSV to the folder user select
+                ParseDYN.csvParser.ExportCSV(DirectoryPath);
                 Model.TrainHiddenMarkovModel(trainingData);
 
                 switch (TrainModel.TrainingMode)
@@ -70,27 +72,27 @@ namespace thesaurus
                         Model.TrainHiddenMarkovModel(trainingData);
                         break;
                 }
+
+                const string message = "You finished training ML module";
+                const string caption = "Success";
+                const MessageBoxButtons buttons = MessageBoxButtons.OK;
+                var result = MessageBox.Show(message, caption, buttons);
+                if (result == DialogResult.OK)
+                {
+                    Win?.Close();
+                }
             }
             else
             {
-                // Initializes the variables to pass to the MessageBox.Show method.
-                const string message = "You did not select a folder yet, please specify";
+                const string message = "Invalid folder, this could be that your are missing folder selection, or empty folder, or folder only containing Dynamo 1.X definitions. Please specify again.";
                 const string caption = "Error Detected in Folder Selection";
                 const MessageBoxButtons buttons = MessageBoxButtons.OK;
-
-                // Displays the MessageBox.
-                var result = MessageBox.Show(message, caption, buttons);
-
-                if (result == DialogResult.Yes)
-                {
-                    // Closes the parent form.
-                    Win?.Close();
-                }
+                MessageBox.Show(message, caption, buttons);
             }
         }
 
         /// <summary>
-        /// 
+        /// Handler for Select Directory button.
         /// </summary>
         private void OnSelectDirectory()
         {
@@ -103,45 +105,7 @@ namespace thesaurus
 
             var path = dialog.SelectedPath;
             DirectoryPath = path;
-            Files = new List<string>();
-            DirSearch(path);
-        }
-
-        #endregion
-
-        #region Utilities
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="path"></param>
-        /// <returns></returns>
-        private void DirSearch(string path)
-        {
-            try
-            {
-                foreach (var d in Directory.GetDirectories(path))
-                {
-                    Console.Out.WriteLine(d);
-                    foreach (var f in Directory.GetFiles(d))
-                    {
-                        // Filter out all the DYN files
-                        if (f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase))
-                            Files.Add(f);
-                    }
-                    DirSearch(d);
-                }
-
-                foreach (var f in Directory.GetFiles(path))
-                {
-                    if (f.EndsWith("dyn", StringComparison.OrdinalIgnoreCase))
-                        Files.Add(f);
-                }
-            }
-            catch (Exception)
-            {
-                // ignore 
-            }
+            Files = Helpers.DirSearch(path);
         }
 
         #endregion

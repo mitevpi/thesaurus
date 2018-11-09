@@ -5,18 +5,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:thesaurus"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-        mc:Ignorable="d" 
-        d:DesignHeight="450" d:DesignWidth="300" MaxHeight="300" MaxWidth="250">
+        mc:Ignorable="d" Title="the-Saurus" ShowInTaskbar="False" ResizeMode="NoResize"
+        d:DesignHeight="450" d:DesignWidth="300" SizeToContent="WidthAndHeight" MinWidth="250" MinHeight="380">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Closing">
             <i:InvokeCommandAction Command="{Binding WindowClosing}"/>
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <Grid>
-        <ScrollViewer VerticalScrollBarVisibility="Auto" 
-                      Height="400"
-                      Margin="0,0,0,10">
-            <ItemsControl ItemsSource="{Binding Nodes}" >
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <ItemsControl ItemsSource="{Binding Nodes}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch"/>
@@ -24,7 +22,7 @@
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate DataType="{x:Type local:SuggestionNodeView}">
-                        <local:SuggestionNodeView Margin="0,2,0,0"/>
+                        <local:SuggestionNodeView Margin="10"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>

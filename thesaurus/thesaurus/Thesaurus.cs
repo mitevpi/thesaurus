@@ -15,13 +15,13 @@ namespace thesaurus
 
         public void Loaded(ViewLoadedParams p)
         {
-            _thesaurusMenuItem = new MenuItem { Header = "Thesaurus" };
+            _thesaurusMenuItem = new MenuItem { Header = "the-Saurus" };
             var dynamoViewModel = p.DynamoWindow.DataContext as DynamoViewModel;
 
             #region Train Menu Item
 
             _thesaurusTrainMenuItem = new MenuItem { Header = "Train" };
-            _thesaurusTrainMenuItem.ToolTip = new ToolTip { Content = "Whatever description we use..." };
+            _thesaurusTrainMenuItem.ToolTip = new ToolTip { Content = "Train the-Saurus Machine Learning model." };
             _thesaurusTrainMenuItem.Click += (sender, args) =>
             {
                 var m = new TrainModel();
@@ -42,7 +42,7 @@ namespace thesaurus
             #region Show/Hide
 
             _thesaurusShowHideMenuItem = new MenuItem { Header = "Show/Hide" };
-            _thesaurusShowHideMenuItem.ToolTip = new ToolTip { Content = "Whatever description we use..." };
+            _thesaurusShowHideMenuItem.ToolTip = new ToolTip { Content = "Show the-Saurus suggestions window." };
             _thesaurusShowHideMenuItem.Click += (sender, args) =>
             {
                 var m = new SuggestionsModel(dynamoViewModel);
@@ -65,7 +65,7 @@ namespace thesaurus
 
         public string Name
         {
-            get { return "Thesaurus"; }
+            get { return "the-Saurus"; }
         }
 
         public string UniqueId

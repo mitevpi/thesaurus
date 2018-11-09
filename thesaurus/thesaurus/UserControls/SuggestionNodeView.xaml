@@ -5,14 +5,113 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:thesaurus="clr-namespace:thesaurus"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300" Width="200" Height="50">
+             d:DesignHeight="300" d:DesignWidth="300" Width="200" Height="60">
     <UserControl.Resources>
         <thesaurus:FullNameToShortName x:Key="FullNameToShortName"/>
     </UserControl.Resources>
     <Grid>
-        <Button x:Name="NodeButton" 
-                Content="{Binding NodeName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={ StaticResource FullNameToShortName}}" 
-                Margin="10,10,10,10" 
-                Command="{Binding PlaceNode, Mode=OneWay}"/>
+        <Button x:Name="NodeButton"
+                Command="{Binding PlaceNode, Mode=OneWay}" 
+                BorderThickness="0"
+                BorderBrush="Transparent" 
+                Background="Transparent"
+                Cursor="Hand"
+                HorizontalContentAlignment="Stretch" 
+                VerticalContentAlignment="Stretch">
+            <Grid ShowGridLines="False">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="5"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Border x:Name="MainBackground"
+                        Grid.Row="0" 
+                        Grid.Column="1" 
+                        Grid.ColumnSpan="3" 
+                        Grid.RowSpan="3" 
+                        Background="#CBC5C0" 
+                        BorderThickness="1,1,1,1" 
+                        BorderBrush="#605E5C"/>
+                <Border x:Name="TopBar" 
+                        Grid.Row="0" 
+                        Grid.Column="1" 
+                        Grid.ColumnSpan="3" 
+                        Background="#605E5C" 
+                        BorderThickness="1,1,1,0" 
+                        BorderBrush="#605E5C"/>
+                <Border x:Name="Input" 
+                        Grid.Row="1" 
+                        Grid.Column="1" 
+                        Background="#E5E1DE" 
+                        BorderThickness="1,0,0,0"
+                        BorderBrush="#605E5C"/>
+                <Border x:Name="Output" 
+                        Grid.Row="1" 
+                        Grid.Column="3" 
+                        Background="#E5E1DE"
+                        BorderThickness="0,0,1,0" 
+                        BorderBrush="#605E5C"/>
+                <Label x:Name="InputLabel" 
+                       Grid.Row="1" 
+                       Grid.Column="1" 
+                       Padding="0" 
+                       Margin="3,1,0,1" 
+                       FontSize="10" 
+                       Foreground="#605E5C" 
+                       VerticalContentAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       Content="Input []"/>
+                <Label x:Name="OutputLabel" 
+                       Grid.Row="1" 
+                       Grid.Column="3" 
+                       Padding="0" 
+                       Margin="0,1,3,1" 
+                       FontSize="10" 
+                       Foreground="#605E5C" 
+                       VerticalContentAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Right" 
+                       Content="Output []"/>
+                <Label x:Name="TopLabel" 
+                       Grid.Row="0" 
+                       Grid.Column="1" 
+                       Grid.ColumnSpan="3" 
+                       Padding="0" 
+                       Margin="0" 
+                       FontSize="10" 
+                       FontWeight="Bold"
+                       Foreground="White" 
+                       VerticalContentAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Center" 
+                       Content="{Binding NodeName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={ StaticResource FullNameToShortName}}"/>
+                <Border x:Name="Lacing" 
+                        Grid.Row="2" 
+                        Grid.Column="3" 
+                        Background="#605E5C" 
+                        Width="1" 
+                        Margin="0,4,3,4" 
+                        HorizontalAlignment="Right"/>
+                <Border x:Name="InputConnector" 
+                        Grid.Row="1" 
+                        Grid.Column="0" 
+                        Background="#605E5C" 
+                        CornerRadius="8,0,0,8" 
+                        Margin="1,6,0,6"/>
+                <Border x:Name="OutputConnector" 
+                        Grid.Row="1" 
+                        Grid.Column="4" 
+                        Background="#605E5C" 
+                        CornerRadius="0,8,8,0"
+                        Margin="0,6,1,6"/>
+            </Grid>
+        </Button>
     </Grid>
 </UserControl>

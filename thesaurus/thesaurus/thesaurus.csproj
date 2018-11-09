@@ -212,6 +212,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\the_saurus_32x32.ico" />
+    <Resource Include="Resources\the-Saurus_150x150.png" />
     <Content Include="thesaurus_ViewExtensionDefinition.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

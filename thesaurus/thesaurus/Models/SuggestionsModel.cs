@@ -46,7 +46,7 @@ namespace thesaurus
 
                 var dynMethod = se.GetType().GetMethod("ConstructNewNodeModel",
                     BindingFlags.NonPublic | BindingFlags.Instance);
-                var obj = dynMethod.Invoke(se, new object[] { });
+                var obj = dynMethod?.Invoke(se, new object[] { });
                 var nM = obj as NodeModel;
 
                 try
@@ -95,11 +95,11 @@ namespace thesaurus
                         var bayesModel = _loadedModel as NaiveBayes;
                         var instance = _loadedCodebook.Transform(nodeName);
 
-                        var probs = bayesModel.Probabilities(instance);
-                        var sortedKeys = SortAndIndex(probs);
+                        var probabilities = bayesModel?.Probabilities(instance);
+                        var sortedKeys = SortAndIndex(probabilities);
 
-                        const int numOfPreds = 4;
-                        var predictions = new string[numOfPreds];
+                        const int predictionCount = 4;
+                        var predictions = new string[predictionCount];
 
                         for (var i = 0; i < 4; i++)
                         {
@@ -111,7 +111,7 @@ namespace thesaurus
                     case "markov":
                         var markovModel = _loadedModel as HiddenMarkovModel;
                         var code = _loadedCodebook.Transform("Nodes", nodeName);
-                        var predictSample = markovModel.Predict(new[] { code }, 1);
+                        var predictSample = markovModel?.Predict(new[] { code }, 1);
                         var predictResult = _loadedCodebook.Revert("Nodes", predictSample);
 
                         return predictResult;

@@ -55,13 +55,13 @@ namespace thesaurus
         }
 
         /// <summary>
-        /// Handler for Train button. Parses selected DYN files to create train dataset.
+        /// Handler for Train button. Parses selected DYN files to create train data-set.
         /// </summary>
         private void OnTrain()
         {
             if (Files.Any())
             {
-                // (Aaron) Parse all the Dyns under DirectoryPath to CSV format
+                // (Aaron) Parse all the Dyn files under DirectoryPath to CSV format
                 var trainingData = ParseDYN.ParseDynData(Files);
 
                 // (Konrad) Export the CSV to the %AppData%\thesaurus folder
@@ -97,6 +97,9 @@ namespace thesaurus
                 const MessageBoxButtons buttons = MessageBoxButtons.OK;
                 MessageBox.Show(message, caption, buttons, MessageBoxIcon.Error);
             }
+
+            // (Konrad) Reset MenuItem icon.
+            ThesaurusViewExtension.SetIcon();
         }
 
         /// <summary>

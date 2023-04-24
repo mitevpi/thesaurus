@@ -9,6 +9,7 @@ using System.IO;
 using Accord.IO;
 using Accord.MachineLearning.Bayes;
 using Accord.Math;
+// ReSharper disable InvokeAsExtensionMethod
 
 #endregion
 

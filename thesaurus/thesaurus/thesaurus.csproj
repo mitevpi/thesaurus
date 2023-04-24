@@ -214,6 +214,8 @@
   <ItemGroup>
     <Resource Include="Resources\the_saurus_32x32.ico" />
     <Resource Include="Resources\the-Saurus_150x150.png" />
+    <Resource Include="Resources\check.png" />
+    <Resource Include="Resources\warning.png" />
     <Content Include="thesaurus_ViewExtensionDefinition.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -248,19 +250,19 @@
     <Message Text="Copy files..." Importance="high" />
     <Message Text="$(TargetPath) copied" Importance="high" />
     <Message Text="$(TargetDir)thesaurus_ViewExtensionDefinition.xml copied" Importance="high" />
-    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)thesaurus_ViewExtensionDefinition.xml" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\extra" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)GalaSoft.MvvmLight.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)GalaSoft.MvvmLight.Extras.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)GalaSoft.MvvmLight.Platform.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)Accord.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)Accord.MachineLearning.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)Accord.MachineLearning.GPL.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)Accord.Math.Core.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)Accord.Math.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)Accord.Statistics.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)Microsoft.Expression.Interactions.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)System.Windows.Interactivity.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
-    <Copy SourceFiles="$(TargetDir)CommonServiceLocator.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\thesaurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\the-Saurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)thesaurus_ViewExtensionDefinition.xml" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\the-Saurus\extra" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)GalaSoft.MvvmLight.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\the-Saurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)GalaSoft.MvvmLight.Extras.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\the-Saurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)GalaSoft.MvvmLight.Platform.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\the-Saurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)Accord.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\the-Saurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)Accord.MachineLearning.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\the-Saurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)Accord.MachineLearning.GPL.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\the-Saurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)Accord.Math.Core.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\the-Saurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)Accord.Math.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\the-Saurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)Accord.Statistics.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\the-Saurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)Microsoft.Expression.Interactions.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\the-Saurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)System.Windows.Interactivity.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\the-Saurus\bin" ContinueOnError="true" />
+    <Copy SourceFiles="$(TargetDir)CommonServiceLocator.dll" DestinationFolder="$(APPDATA)\Dynamo\Dynamo Revit\2.0\packages\the-Saurus\bin" ContinueOnError="true" />
   </Target>
 </Project>
